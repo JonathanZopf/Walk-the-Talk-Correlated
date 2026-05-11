@@ -22,7 +22,7 @@ def parse_args():
     parser.add_argument('--concept_values_only', action='store_true', help='whether to only run only up to the concept values ID step (no counterfactual generation)')
     parser.add_argument('--concept_values_base_prompt_name', type=str, default='concept_values_prompt', help='name of base prompt for concept values ID step')
     parser.add_argument('--counterfactual_gen_base_prompt_name', type=str, default='counterfactual_gen_prompt', help='name of base prompt for counterfactual generation step')
-    parser.add_argument('--output_dir', type=str, default='output', help='output directory')
+    parser.add_argument('--output_dir', type=str, default='output/bbq/intervention_generation', help='output directory')
     parser.add_argument('--n_workers', type=int, default=4, help='number of workers to use for parallel processing')
     parser.add_argument('--verbose', action='store_true', help='whether to print progress')
     parser.add_argument('--debug', action='store_true', help='whether to run in debug mode')

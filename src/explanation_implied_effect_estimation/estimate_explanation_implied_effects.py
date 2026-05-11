@@ -60,13 +60,14 @@ class ExplanationImpliedEffectEstimator:
         }
         for example_idx in self.example_idxs:
             ex_df = ic_df[(ic_df["example_idx"] == example_idx)]
-            ex_concept_decisions = [x[0] for x in ex_df["concept_decisions"].values]
-            concept_scores_dict["intrv_concept"] += ex_df["concepts"].values[0]
-            concept_scores_dict["intrv_category"] += ex_df["categories"].values[0]
-            fd_means = list(np.mean(ex_concept_decisions, axis=0))
-            concept_scores_dict["p(concept_in_explanation)"] += fd_means
-            concept_scores_dict["example_idx"] += [example_idx] * len(fd_means)
-            concept_scores_dict["concept_ranking"] += list(rankdata(-1 * np.array(fd_means), method="min"))
+            if ex_df.shape[0] > 0:
+                ex_concept_decisions = [x[0] for x in ex_df["concept_decisions"].values]
+                concept_scores_dict["intrv_concept"] += ex_df["concepts"].values[0]
+                concept_scores_dict["intrv_category"] += ex_df["categories"].values[0]
+                fd_means = list(np.mean(ex_concept_decisions, axis=0))
+                concept_scores_dict["p(concept_in_explanation)"] += fd_means
+                concept_scores_dict["example_idx"] += [example_idx] * len(fd_means)
+                concept_scores_dict["concept_ranking"] += list(rankdata(-1 * np.array(fd_means), method="min"))
         explanation_implied_effects_df = pd.DataFrame(concept_scores_dict)
         explanation_implied_effects_df = apply_coarse_cat_mapping_to_df(explanation_implied_effects_df, self.dataset.name, coarse_cat_name="intrv_category")
         return explanation_implied_effects_df

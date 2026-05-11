@@ -46,8 +46,7 @@ def plot_regression(concept_categories, concept_to_idx_map, x_vals, x, y, y_mean
     sorted_categories = np.array(concept_categories)[idx]
     unique_categories = np.arange(len(concept_to_idx_map))
     if use_sns_palette:
-        cmap = sns.color_palette(as_cmap=True)
-        colors = cmap[cmap_idx_start:cmap_idx_start+len(unique_categories)]
+        colors = sns.color_palette("husl", len(unique_categories))
     else:
         cmap = plt.get_cmap('viridis')
         colors = cmap(np.linspace(0, 1, len(unique_categories)))
@@ -110,8 +109,10 @@ def prepare_faith_data_for_regression(faith_df, concept_to_idx_map):
         concept_cats = [concept_to_idx_map[cat] for cat in ex_df['intrv_category'].values.tolist()]
         concept_cats_list += concept_cats
         # apply z-normalization to X and Y
-        X = (X - X.mean()) / X.std()
-        Y = (Y - Y.mean()) / Y.std()
+        # A neglectable value for eps does prevent errors if all values for example are the same (in rare cases)
+        eps = 1e-8
+        X = (X - X.mean()) / (X.std() + eps)
+        Y = (Y - Y.mean()) / (Y.std() + eps)
         regression_data_list.append((example_idx, jnp.array(X), jnp.array(Y), jnp.array(concept_cats)))
 
     full_X_jnpy = jnp.concatenate([x[1] for x in regression_data_list])

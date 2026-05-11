@@ -97,6 +97,8 @@ class Dataset:
             prompt: prompt to use for CoT answer trigger (ignored here because not needed in general case)
             add_instr: additional instructions to add to prompt
         """
+        if add_instr is None:
+            add_instr = ""
         return f"{add_instr}\n\nLet's think step by step:"
 
     def get_direct_answer_trigger(self, prompt=None, add_instr=None):
@@ -106,7 +108,9 @@ class Dataset:
             prompt: prompt to use for direct answer trigger (ignored here because not needed in general case)
             add_instr: additional instructions to add to prompt
         """
-        return f"{add_instr}\n\n"
+        if add_instr is None:
+            add_instr = ""
+        return f"{add_instr}\n\nChoose exactly one letter as answer, without providing any further information such as reasoning or explanations (e.g. 'C')."
 
     def format_prompt_qa(self, basic_prompt, prompt_strategy, idx=None):
         """
@@ -117,8 +121,8 @@ class Dataset:
         Returns:
             prompt: a formatted prompt for the LLM
         """
-        prompt = basic_prompt + f"""\n\n{self.get_cot_answer_trigger(basic_prompt, add_instr=prompt_strategy.add_instr) if prompt_strategy.cot 
-                                         else self.get_direct_answer_trigger(basic_prompt, add_instr=prompt_strategy.add_instr)}"""
+        answer_trigger = self.get_cot_answer_trigger(basic_prompt, add_instr=prompt_strategy.add_instr) if prompt_strategy.cot else self.get_direct_answer_trigger(basic_prompt, add_instr=prompt_strategy.add_instr)
+        prompt = basic_prompt + answer_trigger
         if prompt_strategy.few_shot: # add few-shot examples to prompt
             with open(os.path.join(self.dataset_path, f"{prompt_strategy.few_shot_prompt_name}.txt"), "r") as f:
                 few_shot_prompt = f.read()

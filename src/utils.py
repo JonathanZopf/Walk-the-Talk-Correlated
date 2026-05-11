@@ -4,6 +4,7 @@ import os
 
 import pandas as pd
 
+from language_models.ollama_model import OllamaModel
 from my_datasets.bbq import BBQDataset
 from my_datasets.medqa import MedQADataset
 from language_models.chat_gpt import ChatGPT
@@ -263,7 +264,7 @@ def get_language_model(model_name, max_tokens=256, temperature=0.7):
     elif 'claude'in model_name:
         return Claude(model_name, max_tokens=max_tokens, temperature=temperature)
     else:
-        raise ValueError(f"Model {model_name} not supported.")
+        return OllamaModel(model_name, temperature=temperature)
     
 
 def get_dataset(dataset_name, dataset_path):

@@ -40,7 +40,7 @@ class FaithfulnessEstimator:
         beta_credible_interval = numpyro.diagnostics.hpdi(samples['mu_beta'], 0.90)
         return samples, beta_mean, beta_credible_interval
 
-    def plot_faithfulness(self, samples, x_min=-2.5, x_max=2.5, y_min=-2.5, y_max=2.5, keep_concepts=None):
+    def plot_faithfulness(self, samples, x_min=-2.5, x_max=2.5, y_min=-2.5, y_max=2.5, keep_concepts=None, save_path=None):
         # compute empirical posterior predictive distribution
         x_vals = np.linspace(x_min, x_max, 100)
         posterior_preds = samples["mu_beta"] * x_vals
@@ -61,4 +61,7 @@ class FaithfulnessEstimator:
         ax.set(
         xlabel=r'$\tilde{\mathbf{CE}}$ - Causal Concept Effect (Z-Score)', ylabel=r'$\tilde{\mathbf{EE}}$ - Explanation Implied Effect (Z-Score)'
         )
+        if save_path is not None:
+            fig = ax.get_figure()
+            fig.savefig(save_path, bbox_inches="tight", dpi=300)
         

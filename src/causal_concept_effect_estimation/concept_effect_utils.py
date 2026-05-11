@@ -3,6 +3,7 @@ import numpyro
 import numpyro.distributions as dist
 import numpy as np
 import pandas as pd
+from scipy.special import rel_entr
 
 from utils import process_intervention_str
 
@@ -143,7 +144,10 @@ def get_posterior_dist_causal_effect_estimates_hierarchical(samples, reference_c
         prob_control_samples.append(prob_control)
         prob_treatment = compute_probabilities(intercept, beta, 1, reference_class).flatten()
         prob_treatment_samples.append(prob_treatment)
-        kl_divergence = jnp.sum(prob_treatment * jnp.log(prob_treatment / prob_control))
+
+        prob_treatment = jnp.nan_to_num(prob_treatment, nan=0.0)
+        prob_control = jnp.nan_to_num(prob_control, nan=0.0)
+        kl_divergence = jnp.sum(rel_entr(prob_treatment, prob_control))
         kl_divergence_samples.append(kl_divergence)
     
     # compute mean and 95% confidence interval of results

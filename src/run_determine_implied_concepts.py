@@ -24,9 +24,9 @@ def parse_args():
     parser.add_argument('--n_workers', type=int, default=4, help='number of workers to use for parallel processing')
     parser.add_argument('--verbose', action='store_true', help='whether to print progress')
     parser.add_argument('--debug', action='store_true', help='whether to run in debug mode')
-    parser.add_argument('--intervention_data_path', type=str, default='outputs/bbq/intervention-generation', help='path to directory with intervention data')
-    parser.add_argument('--model_response_data_path', type=str, default='outputs/bbq/model-response', help='path to directory with model responses to intervened examples')
-    parser.add_argument('--output_dir', type=str, default='outputs/bbq/implied_concepts', help='path to directory to save results')
+    parser.add_argument('--intervention_data_path', type=str, default='output/bbq/intervention_generation', help='path to directory with intervention data')
+    parser.add_argument('--model_response_data_path', type=str, default='output/bbq/model_responses', help='path to directory with model responses to intervened examples')
+    parser.add_argument('--output_dir', type=str, default='output/bbq/implied_concepts', help='path to directory to save results')
     parser.add_argument('--fresh_start', action='store_true', help='whether to start from scratch (i.e. not restart from previous run)')
     return parser.parse_args()
 
