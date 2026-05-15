@@ -83,8 +83,6 @@ def collect_model_responses(dataset, cnt, example_idx, language_model, prompting
 
 def main():
     args = parse_args()
-    print("ARGS...")
-    print(args)
     validate_args(args)
     # init dataset
     dataset = get_dataset(args.dataset, args.dataset_path)

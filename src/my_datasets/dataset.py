@@ -3,6 +3,8 @@
 import json
 import os
 
+
+
 class Dataset:
     def __init__(self, name, dataset_path):
         """
@@ -16,6 +18,10 @@ class Dataset:
 
     def __len__(self):
         return len(self.data)
+
+    def get_intervention_generator(self, arguments):
+        from intervention_generation.nl_intervention_generator import NLInterventionGenerator
+        return NLInterventionGenerator(arguments)
     
     def load_data(self):
         """

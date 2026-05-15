@@ -3,7 +3,8 @@ import json
 import time
 import os
 
-from intervention_generation.generate_interventions import InterventionGenerator
+from intervention_generation.base_intervention_generator import InterventionGenerator
+from intervention_generation.intervention_generator_arguments import InterventionGeneratorArguments
 from utils import get_dataset, get_language_model
 
 
@@ -46,20 +47,20 @@ def generate_interventions(dataset, cnt, example_idx, intervention_model, args):
     # sub directory within output directory for this example
     example_dir = os.path.join(args.output_dir, f"example_{example_idx}")
     # init intervention generator
-    ig = InterventionGenerator(
-        dataset, 
-        example_idx, 
+    ig = dataset.get_intervention_generator(
+        InterventionGeneratorArguments(        dataset,
+        example_idx,
         intervention_model,
         example_dir,
         concept_id_base_prompt_name=args.concept_id_base_prompt_name,
         concept_values_base_prompt_name=args.concept_values_base_prompt_name,
         counterfactual_gen_base_prompt_name=args.counterfactual_gen_base_prompt_name,
-        n_workers=args.n_workers, 
-        verbose=args.verbose, 
-        debug=args.debug, 
+        n_workers=args.n_workers,
+        verbose=args.verbose,
+        debug=args.debug,
         include_unknown_concept_values=args.include_unknown_concept_values,
         only_concept_removals=args.only_concept_removals,
-        restart_from_previous=not args.fresh_start
+        restart_from_previous=not args.fresh_start)
         )
     # identify concepts (and their associated categories)
     concepts, categories = ig.identify_concepts()
@@ -101,6 +102,7 @@ def main():
         try:
             generate_interventions(dataset, cnt + 1, example_idx, intervention_model, args)
         except Exception as e:
+            raise e
             print(f"ERROR: {e}")
             failed_idxs[example_idx] = str(e)
     # saved failed idxs and corresponding errors to file

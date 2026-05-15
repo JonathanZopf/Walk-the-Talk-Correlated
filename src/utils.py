@@ -6,6 +6,7 @@ import pandas as pd
 
 from language_models.ollama_model import OllamaModel
 from my_datasets.bbq import BBQDataset
+from my_datasets.germany_credit import GermanCredit
 from my_datasets.medqa import MedQADataset
 from language_models.chat_gpt import ChatGPT
 from language_models.claude import Claude
@@ -272,6 +273,8 @@ def get_dataset(dataset_name, dataset_path):
         return BBQDataset(dataset_name, dataset_path)
     elif dataset_name == "medqa":
         return MedQADataset(dataset_name, dataset_path)
+    elif dataset_name == "german_credit":
+        return GermanCredit(dataset_name, dataset_path)
     else:
         raise ValueError(f"Dataset {dataset_name} not supported.")
 
