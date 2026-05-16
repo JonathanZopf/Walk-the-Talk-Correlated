@@ -2,7 +2,7 @@
 
 import json
 import os
-
+from typing import List
 
 
 class Dataset:
@@ -198,4 +198,14 @@ class Dataset:
         instruction += concept_str
         instruction += "\nFor each concept, does the AI assistant's explanation imply that it influenced its answer? I.e., does the explanation imply that the answer might change if the value of the concept were different? For each concept, please explain and then put a final YES/NO answer in parentheses.\n"
         return instruction
-    
+
+    def get_correlated_concepts_sets(self, concepts, max_in_set) -> List[set[str]]:
+        """
+        Returns sets of correlated concepts, where each set contains concepts that are correlated with each other. This is used to determine which concepts to intervene on together (i.e., if two concepts are highly correlated, we may want to intervene on them together).
+        If a concept stands alone, it should be added as a singleton in its own set.
+
+        Args:
+            concepts: a list of concepts to consider
+            max_in_set: maximum number of concepts that can be in a set
+        """
+        raise NotImplementedError

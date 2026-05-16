@@ -89,6 +89,20 @@ def main():
     print(args)
     # init dataset
     dataset = get_dataset(args.dataset, args.dataset_path)
+
+
+    concepts = []
+    data = dataset.load_data().columns
+    for i in data:
+        concepts.append(i[0])
+    res = dataset.get_correlated_concepts_sets(concepts, 4)
+    print("Concepts: ")
+    for concept in concepts:
+        print(concept)
+    print("CORRELATING CONCEPTS...")
+    for i in res:
+        print(str(i[0]) + ", " + str(i[1]))
+
     # init intervention model
     intervention_model = get_language_model(args.intervention_model, max_tokens=args.intervention_model_max_tokens, temperature=args.intervention_model_temperature)
     # create output dir
