@@ -101,6 +101,7 @@ def main():
         try:
             collect_model_responses(dataset, cnt + 1, example_idx, language_model, prompting_strategy, args, failed_idxs)
         except Exception as e:
+            raise e
             print(f"ERROR: {e}")
             failed_idxs[example_idx] = str(e)
     # save failed examples

@@ -1,9 +1,8 @@
 import csv
 import os
-from enum import Enum
-from typing import List, Optional
+from typing import List
 
-from my_datasets.credit_entry import CreditEntry, STATUS_MAP, CREDIT_HISTORY_MAP, PURPOSE_MAP, SAVINGS_MAP, EMPLOYMENT_DURATION_MAP, INSTALLMENT_RATE_MAP, PERSONAL_STATUS_SEX_MAP, OTHER_DEBTORS_MAP, PRESENT_RESIDENCE_MAP, PROPERTY_MAP, OTHER_INSTALLMENT_PLANS_MAP, HOUSING_MAP, NUMBER_CREDITS_MAP, JOB_MAP, PEOPLE_LIABLE_MAP, TELEPHONE_MAP, FOREIGN_WORKER_MAP
+from my_datasets.credit_entry import CreditEntry
 from my_datasets.dataset import Dataset
 from my_datasets.tabular_loaded_data import TabularLoadedData
 
@@ -18,43 +17,67 @@ class GermanCredit(Dataset):
         return TabularInterventionGenerator(arguments)
 
     def format_prompt_basic(self, idx, context_idx=0, double_space=True, context_ans=False):
-        """
-        Formats a single BBQ question for the LLM in most basic format (without CoT, few shot examples, etc.).
-        Args:
-            idx: index of the question
-            context_idx: index of the context to use (weak evidence 0 or 1)
-            context_ans: whether the answer changes depending on the context
-        Returns:
-            prompt: a formatted prompt for the LLM
-        """
-        raise NotImplementedError
+        data = self.load_data().rows[context_idx]
+        prompt_path = os.path.join(self.dataset_path, "few_shot_cot_prompt.txt")
+        with open(prompt_path, 'r', encoding='utf-8') as f:
+            prompt = f.read()
+            return f"{prompt}\n{data.to_prompt_string()}"
+
+    def format_prompt_qa(self, basic_prompt, prompt_strategy, idx=None):
+        return basic_prompt
+
 
     def parse_counterfactual_output(self, counterfactual_output, includes_quality_checks=False):
         raise ValueError(
             "This method is only to be used with natural language counterfactual generation. This database should not use this.")
 
     def get_cot_answer_trigger(self, prompt, add_instr=None):
-        """
-        Returns the CoT answer trigger for a given question.
-        Args:
-            prompt: the prompt to add CoT trigger to
-            add_instr: additional instructions to add to prompt
-        Returns:
-            cot_answer_trigger: the CoT answer trigger for the question
-        """
         raise NotImplementedError
 
-    def format_question_counterfactual(self, counterfactual_dict, double_space=True):
-        raise ValueError(
-            "This method is only to be used with natural language counterfactual generation. This database should not use this.")
+    def format_question_counterfactual(self, counterfactual_dict, double_space=False):
+        return self.format_prompt_qa_counterfactual(counterfactual_dict, double_space)
+
+    def format_prompt_qa_counterfactual(self, counterfactual_dict, prompt_strategy, idx=None):
+        prompt_path = os.path.join(self.dataset_path, "few_shot_cot_prompt.txt")
+        with open(prompt_path, 'r', encoding='utf-8') as f:
+            prompt = f.read()
+            counterfactual_text = str(counterfactual_dict["edited_question"])
+            return  f"{prompt}\n{counterfactual_text}"
 
     def get_answer_choices(self):
-        """
-        Returns the answer choices for a given question.
-        Returns:
-            answer_choices: the answer choices for the question
-        """
-        raise NotImplementedError
+        return ["good credit risk", "bad credit risk"]
+
+    def extract_answer(self, response, prompt_strategy,  idx=None):
+        if "Final decision: good risk".upper() in response.upper() or "Final decision: good credit risk".upper() in response.upper():
+            return 1
+        elif "Final decision: bad risk".upper() in response.upper() or "Final decision: bad credit risk".upper() in response.upper():
+            return 0
+        else:
+            raise ValueError(f"Could not extract answer from response for example {idx}. Response: {response}")
+
+    def format_prompt_implied_concepts(self, implied_concepts_base_prompt_name, concepts, concept_values, question, response, answer):
+        prompt_path = os.path.join(self.dataset_path, f"{implied_concepts_base_prompt_name}.txt")
+        data = self.load_data()
+
+        concept_blocks = []
+        for i, concept in enumerate(concepts):
+            # go through all rows for given concept (column) and extract the possible values
+            values = set()
+            for row in data.rows:
+                row_value = row[concept]
+                values.add(row_value)
+            # If there are more than 6 possible values, only choose the first 5 ones
+            if len(values) > 6:
+                values = list(values)[:5]
+                values.append("... and more")
+            concept_blocks.append(f"{i + 1}: {concept} (possible values: {', '.join(map(str, values))})\n")
+
+        with open(prompt_path, 'r', encoding='utf-8') as f:
+            prompt = f.read()
+            prompt_with_values = prompt.replace("{CONCEPT_LIST}", "".join(concept_blocks)).replace("{QUESTION}", question).replace("{ANSWER}", answer).replace("{EXPLANATION}", response)
+            # remove all examples (between "######### Examples #########" and "######### End of Examples #########") if they exist in the prompt
+            return prompt_with_values.split("######### Examples #########")[0] + \
+                prompt_with_values.split("######### End of Examples #########")[-1]
 
     def load_data(self):
         parsed_csv = self._parse_credit_csv()
@@ -69,28 +92,28 @@ class GermanCredit(Dataset):
         with open(full_path, 'r', encoding='utf-8') as f:
             reader = csv.DictReader(f, delimiter=';')
             for row in reader:
-                # Convert fields using the maps
+                # Directly create CreditEntry with string values - no maps needed!
                 entry = CreditEntry(
-                    status=STATUS_MAP[int(row['status'])],
+                    status=row['status'],
                     duration=int(row['duration']),
-                    credit_history=CREDIT_HISTORY_MAP[int(row['credit_history'])],
-                    purpose=PURPOSE_MAP[int(row['purpose'])],
-                    amount=float(row['amount']),   # already in Euro
-                    savings=SAVINGS_MAP[int(row['savings'])],
-                    employment_duration=EMPLOYMENT_DURATION_MAP[int(row['employment_duration'])],
-                    installment_rate=INSTALLMENT_RATE_MAP[int(row['installment_rate'])],
-                    personal_status_sex=PERSONAL_STATUS_SEX_MAP[int(row['personal_status_sex'])],
-                    other_debtors=OTHER_DEBTORS_MAP[int(row['other_debtors'])],
-                    present_residence=PRESENT_RESIDENCE_MAP[int(row['present_residence'])],
-                    property=PROPERTY_MAP[int(row['property'])],
+                    credit_history=row['credit_history'],
+                    purpose=row['purpose'],
+                    amount=float(row['amount']),
+                    savings=row['savings'],
+                    employment_duration=row['employment_duration'],
+                    installment_rate=row['installment_rate'],
+                    personal_status_sex=row['personal_status_sex'],
+                    other_debtors=row['other_debtors'],
+                    present_residence=row['present_residence'],
+                    property=row['property'],
                     age=int(row['age']),
-                    other_installment_plans=OTHER_INSTALLMENT_PLANS_MAP[int(row['other_installment_plans'])],
-                    housing=HOUSING_MAP[int(row['housing'])],
-                    number_credits=NUMBER_CREDITS_MAP[int(row['number_credits'])],
-                    job=JOB_MAP[int(row['job'])],
-                    people_liable=PEOPLE_LIABLE_MAP[int(row['people_liable'])],
-                    telephone=TELEPHONE_MAP[int(row['telephone'])],
-                    foreign_worker=FOREIGN_WORKER_MAP[int(row['foreign_worker'])],
+                    other_installment_plans=row['other_installment_plans'],
+                    housing=row['housing'],
+                    number_credits=row['number_credits'],
+                    job=row['job'],
+                    people_liable=row['people_liable'],
+                    telephone=row['telephone'],
+                    foreign_worker=row['foreign_worker'],
                 )
                 entries.append(entry)
         return entries

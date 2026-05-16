@@ -68,11 +68,13 @@ class ResponseCollector:
         completions_to_get = [i for i in range(self.n_completions) if i not in completed]
         try:
             basic_prompt = self.dataset.format_prompt_basic(self.example_idx)
+            print("Prompt: " +  basic_prompt)
             # format prompt based on prompting strategy
             qa_prompt = self.dataset.format_prompt_qa(basic_prompt, self.prompt_strategy, idx=self.example_idx)
             # get model output on original prompt
             original_responses = self.language_model.generate_response(qa_prompt, n_completions=len(completions_to_get))
         except Exception as e:
+            raise e
             print(f"Failed to generate model response to original question for example {self.example_idx}: {e}")
             self.failures["original"] = completions_to_get
             return
@@ -86,6 +88,7 @@ class ResponseCollector:
                 with open(os.path.join(original_output_dir, f"response_n={idx_name}.json"), 'w') as f:
                     json.dump(answer_dict, f)
             except Exception as e:
+                raise e
                 print(f"Failed to extract answer for original question for example {self.example_idx}.\nResponse was {response}\nResponse index: {idx_name}.\nError: {e}")
                 if "original" not in self.failures:
                     self.failures["original"] = []
@@ -151,8 +154,10 @@ class ResponseCollector:
             # format prompt based on prompting strategy
             intervention_prompt = self.dataset.format_prompt_qa_counterfactual(prompt_dict[intrv_str], self.prompt_strategy, idx=self.example_idx)
             # get model output on intervened prompt
+            print("INTERVENTION_PROMPT:", intervention_prompt)
             intervention_responses = self.language_model.generate_response(intervention_prompt, n_completions=n_completions_to_extract)
         except Exception as e:
+            raise e
             print(f"Failed to generate model response for example {self.example_idx}, intervention {intrv_str}: {e}")
             self.failures[intrv_str] = completions_dict[intrv_str]
             return

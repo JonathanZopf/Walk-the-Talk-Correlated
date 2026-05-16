@@ -135,7 +135,7 @@ class Dataset:
             prompt = few_shot_prompt + prompt
         return prompt
 
-    def format_question_counterfactual(self, counterfactual_dict):
+    def format_question_counterfactual(self, counterfactual_dict, double_space=False):
         """
         Formats a single counterfactual question.
         Args:

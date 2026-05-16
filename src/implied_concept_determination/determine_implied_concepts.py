@@ -139,6 +139,8 @@ class ExplanationAnalyzer:
             values_concepts_to_check = [v for v, i in zip(concept_values, is_not_unknown) if i]
         model_response, model_answer = response_dict[response_id]
         prompt = self.dataset.format_prompt_implied_concepts(self.implied_concepts_base_prompt_name, concepts_to_check, values_concepts_to_check, basic_prompt, model_response, model_answer)
+        print("Prompt for determining concepts: \n" + prompt)
+
         try:
             responses = self.implied_concepts_model.generate_response(prompt, n_completions=self.n_completions)
             response_list = []
