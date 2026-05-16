@@ -1,0 +1,26 @@
+{
+  "intervention_str": "00100",
+  "old_values": [
+    "balance less than 0 Euro",
+    9,
+    "no credits taken or all credits paid back duly",
+    "car (used)",
+    4060.0
+  ],
+  "new_values": [
+    "balance less than 0 Euro",
+    9,
+    "all credits at this bank paid back duly",
+    "car (used)",
+    4060.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance less than 0 Euro",
+      "duration": 9,
+      "credit_history": "all credits at this bank paid back duly",
+      "purpose": "car (used)",
+      "amount": 4060.0
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "intervention_str": "00010",
+  "old_values": [
+    "balance less than 0 Euro",
+    12,
+    "all credits at this bank paid back duly",
+    "radio/television",
+    2848.0
+  ],
+  "new_values": [
+    "balance less than 0 Euro",
+    12,
+    "all credits at this bank paid back duly",
+    "others",
+    2848.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance less than 0 Euro",
+      "duration": 12,
+      "credit_history": "all credits at this bank paid back duly",
+      "purpose": "others",
+      "amount": 2848.0
+    }
+  }
+}

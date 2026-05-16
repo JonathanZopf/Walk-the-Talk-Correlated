@@ -1,0 +1,26 @@
+{
+  "intervention_str": "00010",
+  "old_values": [
+    "balance less than 0 Euro",
+    18,
+    "no credits taken or all credits paid back duly",
+    "furniture/equipment",
+    6426.0
+  ],
+  "new_values": [
+    "balance less than 0 Euro",
+    18,
+    "no credits taken or all credits paid back duly",
+    "others",
+    6426.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance less than 0 Euro",
+      "duration": 18,
+      "credit_history": "no credits taken or all credits paid back duly",
+      "purpose": "others",
+      "amount": 6426.0
+    }
+  }
+}

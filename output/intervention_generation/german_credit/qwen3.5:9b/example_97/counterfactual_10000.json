@@ -1,0 +1,26 @@
+{
+  "intervention_str": "10000",
+  "old_values": [
+    "balance less than 0 Euro",
+    36,
+    "existing credits paid back duly till now",
+    "retraining",
+    8910.0
+  ],
+  "new_values": [
+    "no checking account",
+    36,
+    "existing credits paid back duly till now",
+    "retraining",
+    8910.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "no checking account",
+      "duration": 36,
+      "credit_history": "existing credits paid back duly till now",
+      "purpose": "retraining",
+      "amount": 8910.0
+    }
+  }
+}

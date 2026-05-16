@@ -1,0 +1,26 @@
+{
+  "intervention_str": "00001",
+  "old_values": [
+    "no checking account",
+    12,
+    "no credits taken or all credits paid back duly",
+    "car (used)",
+    1304.0
+  ],
+  "new_values": [
+    "no checking account",
+    12,
+    "no credits taken or all credits paid back duly",
+    "car (used)",
+    2308.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "no checking account",
+      "duration": 12,
+      "credit_history": "no credits taken or all credits paid back duly",
+      "purpose": "car (used)",
+      "amount": 2308.0
+    }
+  }
+}

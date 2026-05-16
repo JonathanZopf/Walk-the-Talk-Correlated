@@ -1,0 +1,26 @@
+{
+  "intervention_str": "10000",
+  "old_values": [
+    "balance at least 200 Euro or salary for at least 1 year",
+    15,
+    "no credits taken or all credits paid back duly",
+    "others",
+    7112.0
+  ],
+  "new_values": [
+    "balance between 0 and 200 Euro",
+    15,
+    "no credits taken or all credits paid back duly",
+    "others",
+    7112.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance between 0 and 200 Euro",
+      "duration": 15,
+      "credit_history": "no credits taken or all credits paid back duly",
+      "purpose": "others",
+      "amount": 7112.0
+    }
+  }
+}

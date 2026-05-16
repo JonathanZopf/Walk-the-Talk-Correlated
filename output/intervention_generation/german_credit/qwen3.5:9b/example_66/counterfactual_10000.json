@@ -1,0 +1,26 @@
+{
+  "intervention_str": "10000",
+  "old_values": [
+    "balance at least 200 Euro or salary for at least 1 year",
+    12,
+    "no credits taken or all credits paid back duly",
+    "furniture/equipment",
+    6154.0
+  ],
+  "new_values": [
+    "balance less than 0 Euro",
+    12,
+    "no credits taken or all credits paid back duly",
+    "furniture/equipment",
+    6154.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance less than 0 Euro",
+      "duration": 12,
+      "credit_history": "no credits taken or all credits paid back duly",
+      "purpose": "furniture/equipment",
+      "amount": 6154.0
+    }
+  }
+}

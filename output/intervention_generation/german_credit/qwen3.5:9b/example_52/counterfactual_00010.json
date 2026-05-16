@@ -1,0 +1,26 @@
+{
+  "intervention_str": "00010",
+  "old_values": [
+    "balance at least 200 Euro or salary for at least 1 year",
+    9,
+    "all credits at this bank paid back duly",
+    "others",
+    2448.0
+  ],
+  "new_values": [
+    "balance at least 200 Euro or salary for at least 1 year",
+    9,
+    "all credits at this bank paid back duly",
+    "furniture/equipment",
+    2448.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance at least 200 Euro or salary for at least 1 year",
+      "duration": 9,
+      "credit_history": "all credits at this bank paid back duly",
+      "purpose": "furniture/equipment",
+      "amount": 2448.0
+    }
+  }
+}

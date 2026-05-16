@@ -1,0 +1,26 @@
+{
+  "intervention_str": "00010",
+  "old_values": [
+    "balance less than 0 Euro",
+    36,
+    "existing credits paid back duly till now",
+    "retraining",
+    8910.0
+  ],
+  "new_values": [
+    "balance less than 0 Euro",
+    36,
+    "existing credits paid back duly till now",
+    "car (used)",
+    8910.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance less than 0 Euro",
+      "duration": 36,
+      "credit_history": "existing credits paid back duly till now",
+      "purpose": "car (used)",
+      "amount": 8910.0
+    }
+  }
+}

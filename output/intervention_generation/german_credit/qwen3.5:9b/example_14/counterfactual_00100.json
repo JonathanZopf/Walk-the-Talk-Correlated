@@ -1,0 +1,26 @@
+{
+  "intervention_str": "00100",
+  "old_values": [
+    "no checking account",
+    18,
+    "no credits taken or all credits paid back duly",
+    "furniture/equipment",
+    3872.0
+  ],
+  "new_values": [
+    "no checking account",
+    18,
+    "all credits at this bank paid back duly",
+    "furniture/equipment",
+    3872.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "no checking account",
+      "duration": 18,
+      "credit_history": "all credits at this bank paid back duly",
+      "purpose": "furniture/equipment",
+      "amount": 3872.0
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "intervention_str": "00001",
+  "old_values": [
+    "balance between 0 and 200 Euro",
+    42,
+    "all credits at this bank paid back duly",
+    "car (new)",
+    9592.0
+  ],
+  "new_values": [
+    "balance between 0 and 200 Euro",
+    42,
+    "all credits at this bank paid back duly",
+    "car (new)",
+    6034.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance between 0 and 200 Euro",
+      "duration": 42,
+      "credit_history": "all credits at this bank paid back duly",
+      "purpose": "car (new)",
+      "amount": 6034.0
+    }
+  }
+}

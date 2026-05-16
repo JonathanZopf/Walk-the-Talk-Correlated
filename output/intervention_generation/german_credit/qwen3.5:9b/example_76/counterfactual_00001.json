@@ -1,0 +1,26 @@
+{
+  "intervention_str": "00001",
+  "old_values": [
+    "balance at least 200 Euro or salary for at least 1 year",
+    21,
+    "all credits at this bank paid back duly",
+    "car (new)",
+    6550.0
+  ],
+  "new_values": [
+    "balance at least 200 Euro or salary for at least 1 year",
+    21,
+    "all credits at this bank paid back duly",
+    "car (new)",
+    3880.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance at least 200 Euro or salary for at least 1 year",
+      "duration": 21,
+      "credit_history": "all credits at this bank paid back duly",
+      "purpose": "car (new)",
+      "amount": 3880.0
+    }
+  }
+}

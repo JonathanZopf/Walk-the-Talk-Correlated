@@ -1,0 +1,26 @@
+{
+  "intervention_str": "10000",
+  "old_values": [
+    "no checking account",
+    6,
+    "no credits taken or all credits paid back duly",
+    "furniture/equipment",
+    5294.0
+  ],
+  "new_values": [
+    "balance less than 0 Euro",
+    6,
+    "no credits taken or all credits paid back duly",
+    "furniture/equipment",
+    5294.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance less than 0 Euro",
+      "duration": 6,
+      "credit_history": "no credits taken or all credits paid back duly",
+      "purpose": "furniture/equipment",
+      "amount": 5294.0
+    }
+  }
+}

@@ -98,22 +98,7 @@ class GermanCredit(Dataset):
                     duration=int(row['duration']),
                     credit_history=row['credit_history'],
                     purpose=row['purpose'],
-                    amount=float(row['amount']),
-                    savings=row['savings'],
-                    employment_duration=row['employment_duration'],
-                    installment_rate=row['installment_rate'],
-                    personal_status_sex=row['personal_status_sex'],
-                    other_debtors=row['other_debtors'],
-                    present_residence=row['present_residence'],
-                    property=row['property'],
-                    age=int(row['age']),
-                    other_installment_plans=row['other_installment_plans'],
-                    housing=row['housing'],
-                    number_credits=row['number_credits'],
-                    job=row['job'],
-                    people_liable=row['people_liable'],
-                    telephone=row['telephone'],
-                    foreign_worker=row['foreign_worker'],
+                    amount=float(row['amount'])
                 )
                 entries.append(entry)
         return entries

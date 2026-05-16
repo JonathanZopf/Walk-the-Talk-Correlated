@@ -1,0 +1,26 @@
+{
+  "intervention_str": "10000",
+  "old_values": [
+    "no checking account",
+    8,
+    "all credits at this bank paid back duly",
+    "others",
+    6796.0
+  ],
+  "new_values": [
+    "balance at least 200 Euro or salary for at least 1 year",
+    8,
+    "all credits at this bank paid back duly",
+    "others",
+    6796.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "balance at least 200 Euro or salary for at least 1 year",
+      "duration": 8,
+      "credit_history": "all credits at this bank paid back duly",
+      "purpose": "others",
+      "amount": 6796.0
+    }
+  }
+}

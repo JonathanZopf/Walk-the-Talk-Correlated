@@ -1,0 +1,26 @@
+{
+  "intervention_str": "10000",
+  "old_values": [
+    "balance less than 0 Euro",
+    18,
+    "no credits taken or all credits paid back duly",
+    "repairs",
+    2478.0
+  ],
+  "new_values": [
+    "no checking account",
+    18,
+    "no credits taken or all credits paid back duly",
+    "repairs",
+    2478.0
+  ],
+  "parsed_counterfactual": {
+    "edited_question": {
+      "status": "no checking account",
+      "duration": 18,
+      "credit_history": "no credits taken or all credits paid back duly",
+      "purpose": "repairs",
+      "amount": 2478.0
+    }
+  }
+}
