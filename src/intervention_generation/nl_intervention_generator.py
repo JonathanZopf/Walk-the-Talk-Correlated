@@ -2,6 +2,8 @@ import copy
 import json
 import os
 import traceback
+from typing import List, Set, Tuple
+
 from IPython import embed
 
 from intervention_generation.base_intervention_generator import InterventionGenerator
@@ -11,7 +13,8 @@ from utils import parse_llm_response_concepts_and_categories, parse_llm_response
 class NLInterventionGenerator(InterventionGenerator):
     """Original natural‑language logic – all behavior unchanged."""
 
-    def identify_concepts(self):
+    def identify_concepts_within_correlation_groups(self) -> List[Set[Tuple[str, str]]]:
+        raise NotImplementedError("Correlation group identification not implemented for NLInterventionGenerator.")
         """
              Identifies concepts to test for a given question.
              Args:

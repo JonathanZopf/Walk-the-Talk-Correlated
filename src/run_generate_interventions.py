@@ -63,22 +63,29 @@ def generate_interventions(dataset, cnt, example_idx, intervention_model, args):
         restart_from_previous=not args.fresh_start)
         )
     # identify concepts (and their associated categories)
-    concepts, categories = ig.identify_concepts()
+    concepts_in_groups = ig.identify_concepts_within_correlation_groups()
+    all_concepts = [item[0] for group in concepts_in_groups for item in group]
+
+    print("CORRELATING CONCEPTS...")
+    for i in concepts_in_groups:
+        print(str(i) + ", ")
+
+
     if args.verbose:
-        print("Concepts: ", concepts)
+        print("Concepts: ", all_concepts)
         print("Categories for each factor: ", categories)
     if args.concept_id_only:
         print(f"FINISHED CONCEPT ID for example {example_idx} in {time.time() - init_time} seconds\n\n")
         return        
     # define intervention sets
-    concept_settings = ig.define_intervention_sets(concepts)
+    concept_settings = ig.define_intervention_sets(concepts_in_groups)
     if args.verbose:
         print("Concept settings: ", concept_settings)
     if args.concept_values_only:
         print(f"FINISHED CONCEPT VALUES ID for example {example_idx} in {time.time() - init_time} seconds\n\n")
         return
     # apply interventions to generate counterfactual data
-    ig.apply_interventions(concepts, concept_settings)
+    ig.apply_interventions(concept_settings)
     print(f"FINISHED COUNTERFACTUAL GENERATION for example {example_idx} in {time.time() - init_time} seconds\n\n")
 
 
@@ -89,20 +96,6 @@ def main():
     print(args)
     # init dataset
     dataset = get_dataset(args.dataset, args.dataset_path)
-
-
-    concepts = []
-    data = dataset.load_data().columns
-    for i in data:
-        concepts.append(i[0])
-    res = dataset.get_correlated_concepts_sets(concepts, 4)
-    print("Concepts: ")
-    for concept in concepts:
-        print(concept)
-    print("CORRELATING CONCEPTS...")
-    for i in res:
-        print(str(i[0]) + ", " + str(i[1]))
-
     # init intervention model
     intervention_model = get_language_model(args.intervention_model, max_tokens=args.intervention_model_max_tokens, temperature=args.intervention_model_temperature)
     # create output dir

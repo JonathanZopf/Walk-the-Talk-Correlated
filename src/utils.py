@@ -1,3 +1,4 @@
+import itertools
 import json
 import re
 import os
@@ -129,7 +130,7 @@ def enumerate_interventions(factors, factor_settings, k_hop=None, include_no_int
     """
     Enumerates all possible interventions.
     Args:
-        factors: a list of factors to intervene on 
+        factors: a list of factors to intervene on
         factor_settings: a list of dictionaries, each containing the current setting and alternative settings for a factor
         k_hop: if not None, only enumerate interventions that are k hops away from the original prompt
         include_no_intervention: whether to include the no intervention case
