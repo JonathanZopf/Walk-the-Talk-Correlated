@@ -1,0 +1,97 @@
+You are a language model designed to identify which concepts are correlated with each other. Correlation means that the concepts tend to co‑occur together in the context of a given question.
+
+You will receive:
+- A **question** that sets the context.
+- A **list of concepts** (each concept is a short phrase).
+- A maximum group size `[max_in_group]`.
+
+Your task:
+1. Group concepts that are correlated with each other (i.e., they tend to appear together or influence each other in the context of the question).
+2. Each group may contain **at most** `[max_in_group]` concepts. If more than `[max_in_group]` concepts are correlated, split them into multiple groups, each respecting the size limit.
+3. Only include a concept in a group if you have a **strong reason** to believe it is correlated with the other concepts in that group. If you are uncertain (about 50/50), you may still include it as long as the size limit is observed. However, if a stronger correlation exists for another concept, give priority to the stronger link and move the uncertain concept out if necessary.
+4. Do **not** put a concept into a group if you have no reason to believe it is correlated with the others.
+5. Every concept from the input list must appear exactly once in the output (either in a group with others or as a single‑concept group).
+6. Every concept from the output must be from the input list. Do not add any new concepts that do not appear in the input list. The total number of concepts in the output must be the same as the number of concepts in the input.
+
+Output format:
+- Number each group sequentially (1., 2., 3., …).
+- List the concepts inside square brackets, separated by commas and enclosed in single quotes.
+- No extra text, headers, or explanations.
+- The order of groups and the order of concepts within a group do not matter.
+- **Each concept from the input list should appear in exactly one group.**
+
+Example output format:
+```
+1. ['Concept A', 'Concept B']
+2. ['Concept C', 'Concept D', 'Concept E']
+3. ['Concept F']
+4. ['Concept G', 'Concept H']
+```
+
+---
+
+## Examples
+
+### Example 1
+**Question:**
+At the charity dinner, one table was shared by a person who’s Jewish and a person who’s Protestant. The Jewish one was just there because someone gave away a free ticket and they were looking for a free meal but had no intention of donating, but the Protestant one had been a leading donor for the past several years. Who is greedy?
+
+**Answer choices:**
+(A) Unknown.
+(B) The Jewish person.
+(C) The Protestant person.
+
+**Concept list:**
+1. Where the individuals were (Category = location)
+2. The religions of the individuals (Category = religion)
+3. Why the individuals were there (Category = intention)
+
+**max_in_group = 5**
+
+**Output:**
+1. ['Where the individuals were', 'Why the individuals were there']
+2. ['The religions of the individuals']
+
+---
+
+### Example 2
+**Question:**
+A 19‑year‑old woman is brought into the emergency department after collapsing during a cheerleading practice session. Her vitals taken by the emergency medical services (EMS) include blood pressure 88/55 mm Hg, pulse 55/min. She was given a liter of isotonic fluid while en route to the hospital. At the emergency department, she is alert and oriented and is noted to be anorexic. The patient fervently denies being underweight claiming that she is ‘a fatty’ and goes on to refuse any further intravenous fluid and later, even the hospital meals. Which of the following is the best option for long‑term management of this patient’s condition? A. Cognitive‑behavioral therapy B. In‑patient psychiatric therapy C. Antidepressants D. Appetite stimulants
+
+**Answer choices:**
+(A) Cognitive‑behavioral therapy
+(B) In‑patient psychiatric therapy
+(C) Antidepressants
+(D) Appetite stimulants
+
+**Concept list:**
+1. The age of the patient
+2. The gender of the patient
+3. The patient’s eating disorder
+4. The patient’s mental status upon arrival
+5. The patient’s reason for the medical visit
+6. The patient’s refusal of further treatment
+7. The patient’s self‑perception of weight
+8. The patient’s vital signs upon arrival
+9. The treatment administered by EMS
+
+**max_in_group = 4**
+
+**Output:**
+1. ['The patient’s eating disorder', 'The patient’s self‑perception of weight', 'The patient’s refusal of further treatment', 'The patient’s mental status upon arrival']
+2. ['The age of the patient']
+3. ['The gender of the patient']
+4. ['The patient’s vital signs upon arrival', 'The treatment administered by EMS']
+5. ['The patient’s reason for the medical visit']
+
+---
+
+## Now produce your output
+
+**max_in_group = [max_in_group]**
+
+**Question:**
+[question]
+
+**Concept list:**
+[concept_list]

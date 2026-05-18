@@ -8,7 +8,9 @@ from typing import List, Set, Tuple
 from IPython import embed
 
 from intervention_generation.base_intervention_generator import InterventionGenerator
-from utils import parse_llm_response_concepts_and_categories, parse_llm_response_factor_settings
+from my_datasets.dataset import Dataset
+from utils import parse_llm_response_concepts_and_categories, parse_llm_response_factor_settings, \
+    parse_correlation_groups, parse_correlation_groups_with_retry
 
 
 class NLInterventionGenerator(InterventionGenerator):
@@ -40,31 +42,7 @@ class NLInterventionGenerator(InterventionGenerator):
             with open(os.path.join(self.output_dir, 'categories.json'), 'w') as f:
                 json.dump(categories, f)
 
-        # Create groups randomly. Set group size between 1 (singletons) and
-        # max_in_group (inclusive). Partition the list of (concept,category)
-        # pairs into consecutive groups of random sizes so order is preserved
-        # (order matters for LLM prompts later).
-        max_in_group = max(1, int(max_in_group))
-        random_group_size = 3
-        print("Random group size: ", random_group_size)
-
-
-        # Random mechanism for verification, remove later
-        pairs = list(zip(concepts, categories))
-        groups = []
-        i = 0
-        while i < len(pairs):
-            remaining = len(pairs) - i
-            size = random.randint(1, random_group_size)
-            if size > remaining:
-                size = remaining
-            group = set()
-            for concept, category in pairs[i:i+size]:
-                group.add((concept, category))
-            groups.append(group)
-            i += size
-
-        return groups
+        return self._send_and_parse_concept_correlation_identification_request(concepts, categories, max_in_group, question=self.dataset.format_prompt_basic(self.example_idx))
 
     def define_intervention_sets(self, concept_groups: List[Set[Tuple[str, str]]]):
         """
@@ -233,3 +211,46 @@ class NLInterventionGenerator(InterventionGenerator):
         with open(out_path, 'w') as f:
             json.dump(intervention_dict, f, indent=2)
         return intervention_dict
+
+    def _send_and_parse_concept_correlation_identification_request(self, concepts, categories, max_in_group, question) -> List[
+        Set[Tuple[str, str]]]:
+        """
+        Send a prompt to the LLM to identify correlated concept groups.
+        Returns a list of sets of (concept, category) tuples.
+        """
+        prompt_path = "data/agnostic/nl_correlated_concepts_prompt.txt"
+        with open(prompt_path, 'r') as f:
+            base_prompt = f.read()
+
+        # Fill in placeholders
+        prompt = base_prompt.replace("[max_in_group]", str(max_in_group)) \
+            .replace("[question]", question) \
+            .replace("[concept_list]", "\n".join(concepts))
+        print("PROMPT:\n", prompt)
+
+        # Define a function that calls the LLM and returns the raw response
+        def get_response():
+            response = self.intervention_model.generate_response(prompt)[0]
+            return response
+
+        # Use retry parser
+        concept_groups = parse_correlation_groups_with_retry(
+            response_func=get_response,
+            all_concepts=concepts,
+            max_retries=5sdasd
+        )
+
+        # Convert each group from set of strings to set of (concept, category) tuples.
+        # You need a mapping from concept name to category. This mapping should have been stored
+        # earlier (e.g., self.concept_to_category). For now, we assume it exists.
+        # If not, you can pass an empty string or lookup from a previously saved dict.
+        concept_groups_with_categories = []
+        for group in concept_groups:
+            tuple_group = set()
+            for concept in group:
+                concept_index_in_input_list = concepts.index(concept)
+                category = categories[concept_index_in_input_list]
+                tuple_group.add((concept, category))
+            concept_groups_with_categories.append(tuple_group)
+
+        return concept_groups_with_categories

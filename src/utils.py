@@ -76,6 +76,124 @@ def parse_llm_response_factor_settings(response):
     return factor_settings
 
 
+import re
+from typing import List, Set, Optional
+
+import re
+from typing import List, Set, Optional, Callable
+
+
+def parse_correlation_groups(response: str, all_concepts: Optional[List[str]] = None) -> List[Set[str]]:
+    """
+    Parse the LLM response containing correlated concept groups.
+
+    Expected format:
+        1. ['Concept A', 'Concept B']
+        2. ['Concept C']
+        ...
+
+    Args:
+        response: Raw string output from the LLM.
+        all_concepts: Optional list of all concept strings that must appear exactly once.
+                      If provided, validates coverage and no extras.
+
+    Returns:
+        List of sets, each set containing concept names in one group.
+
+    Raises:
+        ValueError: If format is invalid, duplicates exist, or coverage is incorrect.
+    """
+    groups = []
+    seen_concepts = set()
+    # Regex: line starts with number, dot, optional space, then a list in brackets.
+    # Allows single-quoted strings. Handles spaces and empty lists.
+    pattern = r'^\s*\d+\.\s*\[\s*([^\]]*?)\s*\]\s*$'
+
+    lines = response.strip().split('\n')
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        match = re.match(pattern, line)
+        if not match:
+            # Non-conforming line – warn but skip (allows recovery if extra commentary exists)
+            print(f"Warning: skipping non-conforming line: {line}")
+            continue
+
+        inner = match.group(1).strip()
+        if not inner:
+            continue  # empty list, skip
+
+        # Extract quoted strings: single quotes only (per spec), but also handle double as fallback
+        items = re.findall(r"'([^']*)'|\"([^\"]*)\"", inner)
+        group_concepts = []
+        for sq, dq in items:
+            concept = sq if sq else dq
+            if concept:
+                group_concepts.append(concept)
+
+        if not group_concepts:
+            continue
+
+        # Check for duplicate concepts across groups
+        for concept in group_concepts:
+            if concept in seen_concepts:
+                raise ValueError(f"Concept '{concept}' appears in more than one group.")
+            seen_concepts.add(concept)
+
+        groups.append(set(group_concepts))
+
+    # Validate against the input list if provided
+    if all_concepts is not None:
+        all_set = set(all_concepts)
+        missing = all_set - seen_concepts
+        if missing:
+            raise ValueError(f"Missing concepts (not in any group): {missing}")
+        extra = seen_concepts - all_set
+        if extra:
+            raise ValueError(f"Extra concepts found that are not in the input list: {extra}")
+
+    return groups
+
+
+def parse_correlation_groups_with_retry(
+        response_func: Callable[[], str],
+        all_concepts: List[str],
+        max_retries: int = 3
+) -> List[Set[str]]:
+    """
+    Call response_func to get an LLM response, parse it, and retry on validation failure.
+
+    Args:
+        response_func: A callable that takes no arguments and returns a raw response string.
+        all_concepts: The list of concepts that must be covered exactly.
+        max_retries: Number of attempts before raising the last error.
+
+    Returns:
+        Validated list of sets of concepts.
+
+    Raises:
+        ValueError: If all retries fail, the last ValueError is raised.
+    """
+    last_error = None
+    for attempt in range(max_retries):
+        response = response_func()
+        print(f"DEBUG: LLM response (attempt {attempt + 1}):\n{response}\n")
+        try:
+            groups = parse_correlation_groups(response, all_concepts=all_concepts)
+            print(f"Parsing succeeded on attempt {attempt + 1}.")
+            return groups
+        except ValueError as e:
+            last_error = e
+            print(f"Attempt {attempt + 1} failed: {e}")
+            # Optionally, you could modify the prompt here to include error feedback,
+            # but for simplicity we just retry. The LLM may give different output
+            # due to temperature or non-determinism.
+            continue
+
+    raise ValueError(f"Failed to parse after {max_retries} attempts. Last error: {last_error}")
+
+
 def parse_llm_response_implied_concepts(response, n_concepts):
     """
     Parses the LLM response about which concepts are implied by the LLM's explanation.
