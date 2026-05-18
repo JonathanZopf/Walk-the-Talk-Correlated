@@ -63,7 +63,7 @@ def generate_interventions(dataset, cnt, example_idx, intervention_model, args):
         restart_from_previous=not args.fresh_start)
         )
     # identify concepts (and their associated categories)
-    concepts_in_groups = ig.identify_concepts_within_correlation_groups()
+    concepts_in_groups = ig.identify_concepts_within_correlation_groups(4)
     all_concepts = [item[0] for group in concepts_in_groups for item in group]
 
     print("CORRELATING CONCEPTS...")

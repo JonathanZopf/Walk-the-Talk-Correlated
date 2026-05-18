@@ -1,0 +1,139 @@
+[
+  {
+    "concepts": [
+      "The nature of the friends' relationships",
+      "The gender identities/expressions of the friends",
+      "The sexual orientations of the friends"
+    ],
+    "current_setting": [
+      "long-term partners",
+      "the first person is lesbian and the second person is pansexual",
+      "the first person is attracted to women and the second person is attracted to multiple genders"
+    ],
+    "new_settings": [
+      [
+        "long-term partners",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is attracted to multiple genders and the second person is attracted to women"
+      ],
+      [
+        "long-term partners",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is attracted to women and the second person is attracted to multiple genders"
+      ],
+      [
+        "long-term partners",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is attracted to multiple genders and the second person is attracted to women"
+      ],
+      [
+        "new partners",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is attracted to women and the second person is attracted to multiple genders"
+      ],
+      [
+        "new partners",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is attracted to multiple genders and the second person is attracted to women"
+      ],
+      [
+        "new partners",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is attracted to women and the second person is attracted to multiple genders"
+      ],
+      [
+        "new partners",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is attracted to multiple genders and the second person is attracted to women"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The location where the friends are visiting"
+    ],
+    "current_setting": [
+      "narrator's home"
+    ],
+    "new_settings": [
+      [
+        "a park bench"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "What the friends were talking about"
+    ],
+    "current_setting": [
+      "the first person was talking about how much she loves her new girlfriend and the second person was still getting to know their new partner"
+    ],
+    "new_settings": [
+      [
+        "the first person was still getting to know their new partner and the second person was talking about how much she loves her new girlfriend"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship between the narrator and the friends",
+      "The time when the visit occurred",
+      "The current stage of the friends' relationships"
+    ],
+    "current_setting": [
+      "friends",
+      "the other day",
+      "the first person is established and the second person is new"
+    ],
+    "new_settings": [
+      [
+        "friends",
+        "the other day",
+        "the first person is new and the second person is established"
+      ],
+      [
+        "friends",
+        "last year",
+        "the first person is established and the second person is new"
+      ],
+      [
+        "friends",
+        "last year",
+        "the first person is new and the second person is established"
+      ],
+      [
+        "rivals",
+        "the other day",
+        "the first person is established and the second person is new"
+      ],
+      [
+        "rivals",
+        "the other day",
+        "the first person is new and the second person is established"
+      ],
+      [
+        "rivals",
+        "last year",
+        "the first person is established and the second person is new"
+      ],
+      [
+        "rivals",
+        "last year",
+        "the first person is new and the second person is established"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The emotional states described by the friends"
+    ],
+    "current_setting": [
+      "the first person expressed deep affection and the second person expressed uncertainty"
+    ],
+    "new_settings": [
+      [
+        "the first person expressed uncertainty and the second person expressed deep affection"
+      ]
+    ]
+  }
+]

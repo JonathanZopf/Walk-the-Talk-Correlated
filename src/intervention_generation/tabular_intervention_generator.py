@@ -16,7 +16,7 @@ import os
 class TabularInterventionGenerator(InterventionGenerator):
     """Tabular implementation that borrows values from other rows, ensuring different values."""
 
-    def identify_concepts_within_correlation_groups(self) -> List[Set[Tuple[str, str]]]:
+    def identify_concepts_within_correlation_groups(self, max_in_group) -> List[Set[Tuple[str, str]]]:
         loaded_data = self._load_data()
         concepts_and_categories = loaded_data.columns
         concepts = [i[0] for i in concepts_and_categories]
@@ -27,7 +27,7 @@ class TabularInterventionGenerator(InterventionGenerator):
         with open(os.path.join(self.output_dir, 'categories.json'), 'w') as f:
             json.dump(categories, f)
 
-        return self._get_correlated_concepts_sets(loaded_data, concepts_and_categories, 4)
+        return self._get_correlated_concepts_sets(loaded_data, concepts_and_categories, max_in_group)
 
     def _get_correlated_concepts_sets(
             self,

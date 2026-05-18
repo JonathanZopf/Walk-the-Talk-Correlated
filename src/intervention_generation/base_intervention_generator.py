@@ -29,7 +29,7 @@ class InterventionGenerator(ABC):
         random.seed(self.seed)
 
     @abstractmethod
-    def identify_concepts_within_correlation_groups(self) -> List[Set[Tuple[str, str]]]:
+    def identify_concepts_within_correlation_groups(self, max_in_group) -> List[Set[Tuple[str, str]]]:
         """Return a list of correlated concept groups.
         Each concept group is a set of (concept, category) tuples that are correlated with each other.
         If a concept is not correlated with any other, it's added as a single-item set (singleton).

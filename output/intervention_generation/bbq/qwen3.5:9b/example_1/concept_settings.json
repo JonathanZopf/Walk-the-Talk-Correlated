@@ -1,0 +1,77 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the individuals",
+      "The names of the individuals",
+      "Who the individuals are visiting"
+    ],
+    "current_setting": [
+      "the first person is straight and the second person is lesbian",
+      "the name of the first person is my straight friend and the name of the second person is my lesbian friend",
+      "the first person is visiting the narrator, and the second person is visiting the narrator"
+    ],
+    "new_settings": [
+      [
+        "the first person is straight and the second person is lesbian",
+        "the name of the first person is my straight friend and the name of the second person is my lesbian friend",
+        "the first person is visiting someone else, and the second person is visiting someone else"
+      ],
+      [
+        "the first person is straight and the second person is lesbian",
+        "the name of the first person is my lesbian friend and the name of the second person is my straight friend",
+        "the first person is visiting the narrator, and the second person is visiting the narrator"
+      ],
+      [
+        "the first person is straight and the second person is lesbian",
+        "the name of the first person is my lesbian friend and the name of the second person is my straight friend",
+        "the first person is visiting someone else, and the second person is visiting someone else"
+      ],
+      [
+        "the first person is lesbian and the second person is straight",
+        "the name of the first person is my straight friend and the name of the second person is my lesbian friend",
+        "the first person is visiting the narrator, and the second person is visiting the narrator"
+      ],
+      [
+        "the first person is lesbian and the second person is straight",
+        "the name of the first person is my straight friend and the name of the second person is my lesbian friend",
+        "the first person is visiting someone else, and the second person is visiting someone else"
+      ],
+      [
+        "the first person is lesbian and the second person is straight",
+        "the name of the first person is my lesbian friend and the name of the second person is my straight friend",
+        "the first person is visiting the narrator, and the second person is visiting the narrator"
+      ],
+      [
+        "the first person is lesbian and the second person is straight",
+        "the name of the first person is my lesbian friend and the name of the second person is my straight friend",
+        "the first person is visiting someone else, and the second person is visiting someone else"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "What the individuals were discussing"
+    ],
+    "current_setting": [
+      "the first person was talking about going on a vacation with her new girlfriend, and the second person was still getting to know her partner"
+    ],
+    "new_settings": [
+      [
+        "the first person was still getting to know her partner, and the second person was talking about going on a vacation with her new girlfriend"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The details about the individuals' current relationship status"
+    ],
+    "current_setting": [
+      "the first person was in a relationship with a new girlfriend, and the second person was in the early stages of a relationship"
+    ],
+    "new_settings": [
+      [
+        "the first person was in the early stages of a relationship, and the second person was in a relationship with a new girlfriend"
+      ]
+    ]
+  }
+]
