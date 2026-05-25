@@ -157,7 +157,7 @@ def parse_correlation_groups(response: str, all_concepts: Optional[List[str]] = 
 
 
 def parse_correlation_groups_with_retry(
-        response_func: Callable[[], str],
+        response_func: Callable[[Optional[ValueError]], str],
         all_concepts: List[str],
         max_retries: int = 3
 ) -> List[Set[str]]:
@@ -165,7 +165,7 @@ def parse_correlation_groups_with_retry(
     Call response_func to get an LLM response, parse it, and retry on validation failure.
 
     Args:
-        response_func: A callable that takes no arguments and returns a raw response string.
+        response_func: A callable that takes one optional argument (last_error for LLM feedback) and returns a raw response string.
         all_concepts: The list of concepts that must be covered exactly.
         max_retries: Number of attempts before raising the last error.
 
@@ -177,7 +177,7 @@ def parse_correlation_groups_with_retry(
     """
     last_error = None
     for attempt in range(max_retries):
-        response = response_func()
+        response = response_func(last_error)
         print(f"DEBUG: LLM response (attempt {attempt + 1}):\n{response}\n")
         try:
             groups = parse_correlation_groups(response, all_concepts=all_concepts)

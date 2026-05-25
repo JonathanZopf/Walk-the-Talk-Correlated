@@ -128,11 +128,17 @@ class ExplanationAnalyzer:
             basic_prompt = self.dataset.format_prompt_basic(self.example_idx, double_space=False)
         else:
             assert sub_dir == "counterfactual", f"Invalid subdirectory {sub_dir}"
-            intervention = response_id.split("_")[1].split("=")[1]
-            counterfactual_file = os.path.join(self.intervention_data_path, f"example_{self.example_idx}", f"counterfactual_{intervention}.json")    
+            import re
+            match = re.search(r'(G\d+_C\d+)', response_id)
+            if not match:
+                raise ValueError(f"Cannot extract intervention pattern from response_id: {response_id}")
+            intervention = match.group(1)  # e.g., "G1_C2"
+            counterfactual_file = os.path.join(self.intervention_data_path, f"example_{self.example_idx}",
+                                               f"counterfactual_{intervention}.json")
             with open(counterfactual_file, 'r') as f:
                 counterfactual_dict = json.load(f)
-            basic_prompt = self.dataset.format_question_counterfactual(counterfactual_dict["parsed_counterfactual"], double_space=False)
+            basic_prompt = self.dataset.format_question_counterfactual(counterfactual_dict["parsed_counterfactual"],
+                                                                       double_space=False)
             # filter concepts to those not intervened on to set to unknown
             is_not_unknown = [x != "UNKNOWN" for x in counterfactual_dict["new_values"]]
             concepts_to_check = [f for f, i in zip(concepts, is_not_unknown) if i]

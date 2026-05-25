@@ -110,7 +110,7 @@ class ResponseCollector:
             if not intervention_file.startswith("counterfactual_"):
                 continue
             # get intervention_str
-            intrv_str = intervention_file.split(".")[0].split("_")[1]
+            intrv_str = intervention_file.split(".")[0].split("counterfactual_")[1]
             # check if we already have responses for this intervention 
             completed = []
             if self.restart_from_previous:

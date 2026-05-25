@@ -226,18 +226,23 @@ class NLInterventionGenerator(InterventionGenerator):
         prompt = base_prompt.replace("[max_in_group]", str(max_in_group)) \
             .replace("[question]", question) \
             .replace("[concept_list]", "\n".join(concepts))
-        print("PROMPT:\n", prompt)
+
 
         # Define a function that calls the LLM and returns the raw response
-        def get_response():
-            response = self.intervention_model.generate_response(prompt)[0]
+        def get_response(last_error):
+            reworked_prompt = prompt
+            if last_error:
+                error_msg = "\n\nYou made a mistake in parsing the concept groups. Please carefully re‑read the question and the list of concepts, and try again. Remember to stick to the output format. Here is the original error message: " + str(last_error)
+                reworked_prompt = prompt + error_msg
+            print("PROMPT:\n", reworked_prompt)
+            response = self.intervention_model.generate_response(reworked_prompt)[0]
             return response
 
         # Use retry parser
         concept_groups = parse_correlation_groups_with_retry(
             response_func=get_response,
             all_concepts=concepts,
-            max_retries=5sdasd
+            max_retries=5
         )
 
         # Convert each group from set of strings to set of (concept, category) tuples.
