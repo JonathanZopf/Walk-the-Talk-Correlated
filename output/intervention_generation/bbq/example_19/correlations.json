@@ -1,0 +1,26 @@
+[
+  [
+    [
+      "The behavior observed in public by the couples",
+      "action"
+    ],
+    [
+      "The sexual orientations of the couples",
+      "identity"
+    ],
+    [
+      "The emotional tone of the interactions observed",
+      "emotion"
+    ],
+    [
+      "The setting of the observed behaviors",
+      "location"
+    ]
+  ],
+  [
+    [
+      "The status of the children involved",
+      "demographics"
+    ]
+  ]
+]

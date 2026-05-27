@@ -1,0 +1,24 @@
+[
+  [
+    [
+      "The actions of the individuals during the event",
+      "action"
+    ],
+    [
+      "The sexual orientations of the individuals",
+      "sexual orientation"
+    ]
+  ],
+  [
+    [
+      "The social events the individuals are attending",
+      "event type"
+    ]
+  ],
+  [
+    [
+      "The interpersonal relationship between the individuals",
+      "relationship"
+    ]
+  ]
+]

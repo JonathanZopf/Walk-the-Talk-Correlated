@@ -1,0 +1,214 @@
+[
+  {
+    "concepts": [
+      "The topics of conversation",
+      "The social setting",
+      "The gendered nature of the topics",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "nail polish trends",
+      "warm out",
+      "nail polish is more stereotypically feminine and sports teams are more stereotypically masculine",
+      "the first person is bisexual and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "nail polish trends",
+        "warm out",
+        "nail polish is more stereotypically feminine and sports teams are more stereotypically masculine",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "nail polish trends",
+        "warm out",
+        "nail polish is not considered feminine and sports teams are considered feminine",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "nail polish trends",
+        "warm out",
+        "nail polish is not considered feminine and sports teams are considered feminine",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "nail polish trends",
+        "freezing cold",
+        "nail polish is more stereotypically feminine and sports teams are more stereotypically masculine",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "nail polish trends",
+        "freezing cold",
+        "nail polish is more stereotypically feminine and sports teams are more stereotypically masculine",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "nail polish trends",
+        "freezing cold",
+        "nail polish is not considered feminine and sports teams are considered feminine",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "nail polish trends",
+        "freezing cold",
+        "nail polish is not considered feminine and sports teams are considered feminine",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "latest sports teams",
+        "warm out",
+        "nail polish is more stereotypically feminine and sports teams are more stereotypically masculine",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "latest sports teams",
+        "warm out",
+        "nail polish is more stereotypically feminine and sports teams are more stereotypically masculine",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "latest sports teams",
+        "warm out",
+        "nail polish is not considered feminine and sports teams are considered feminine",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "latest sports teams",
+        "warm out",
+        "nail polish is not considered feminine and sports teams are considered feminine",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "latest sports teams",
+        "freezing cold",
+        "nail polish is more stereotypically feminine and sports teams are more stereotypically masculine",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "latest sports teams",
+        "freezing cold",
+        "nail polish is more stereotypically feminine and sports teams are more stereotypically masculine",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "latest sports teams",
+        "freezing cold",
+        "nail polish is not considered feminine and sports teams are considered feminine",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "latest sports teams",
+        "freezing cold",
+        "nail polish is not considered feminine and sports teams are considered feminine",
+        "the first person is gay and the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The names or identities of the individuals",
+      "The weather conditions",
+      "The relationship between the individuals",
+      "The time of day"
+    ],
+    "current_setting": [
+      "the names or identities are two friends",
+      "afternoon",
+      "friends",
+      "warm"
+    ],
+    "new_settings": [
+      [
+        "the names or identities are two friends",
+        "afternoon",
+        "friends",
+        "cool"
+      ],
+      [
+        "the names or identities are two friends",
+        "afternoon",
+        "strangers",
+        "warm"
+      ],
+      [
+        "the names or identities are two friends",
+        "afternoon",
+        "strangers",
+        "cool"
+      ],
+      [
+        "the names or identities are two friends",
+        "morning",
+        "friends",
+        "warm"
+      ],
+      [
+        "the names or identities are two friends",
+        "morning",
+        "friends",
+        "cool"
+      ],
+      [
+        "the names or identities are two friends",
+        "morning",
+        "strangers",
+        "warm"
+      ],
+      [
+        "the names or identities are two friends",
+        "morning",
+        "strangers",
+        "cool"
+      ],
+      [
+        "the names or identities are two brothers",
+        "afternoon",
+        "friends",
+        "warm"
+      ],
+      [
+        "the names or identities are two brothers",
+        "afternoon",
+        "friends",
+        "cool"
+      ],
+      [
+        "the names or identities are two brothers",
+        "afternoon",
+        "strangers",
+        "warm"
+      ],
+      [
+        "the names or identities are two brothers",
+        "afternoon",
+        "strangers",
+        "cool"
+      ],
+      [
+        "the names or identities are two brothers",
+        "morning",
+        "friends",
+        "warm"
+      ],
+      [
+        "the names or identities are two brothers",
+        "morning",
+        "friends",
+        "cool"
+      ],
+      [
+        "the names or identities are two brothers",
+        "morning",
+        "strangers",
+        "warm"
+      ],
+      [
+        "the names or identities are two brothers",
+        "morning",
+        "strangers",
+        "cool"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  [
+    [
+      "The social setting",
+      "location"
+    ],
+    [
+      "The sexual orientations of the individuals",
+      "identity"
+    ],
+    [
+      "The topics of conversation",
+      "activity"
+    ],
+    [
+      "The gendered nature of the topics",
+      "gender stereotype"
+    ]
+  ],
+  [
+    [
+      "The weather conditions",
+      "environment"
+    ]
+  ],
+  [
+    [
+      "The time of day",
+      "time"
+    ]
+  ],
+  [
+    [
+      "The names or identities of the individuals",
+      "name"
+    ],
+    [
+      "The relationship between the individuals",
+      "relationship"
+    ]
+  ]
+]

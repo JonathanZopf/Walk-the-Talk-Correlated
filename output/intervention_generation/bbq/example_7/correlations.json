@@ -1,0 +1,32 @@
+[
+  [
+    [
+      "The sexual orientations of the individuals",
+      "identity/orientation"
+    ],
+    [
+      "The relationship status of the individuals",
+      "relationship"
+    ],
+    [
+      "The context of adoption",
+      "social event"
+    ]
+  ],
+  [
+    [
+      "The current actions or conversations of the individuals",
+      "action"
+    ],
+    [
+      "The expressed doubts or fears of the individuals",
+      "emotion/mindset"
+    ]
+  ],
+  [
+    [
+      "The future plans of the individuals",
+      "intention"
+    ]
+  ]
+]

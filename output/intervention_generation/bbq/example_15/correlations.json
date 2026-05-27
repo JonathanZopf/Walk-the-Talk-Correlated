@@ -1,0 +1,42 @@
+[
+  [
+    [
+      "What the individuals were asking about",
+      "action"
+    ],
+    [
+      "The sexual orientations of the individuals",
+      "sexual orientation"
+    ]
+  ],
+  [
+    [
+      "The ages of the individuals involved",
+      "age"
+    ]
+  ],
+  [
+    [
+      "The genders of the individuals",
+      "gender"
+    ]
+  ],
+  [
+    [
+      "Why the individuals were there",
+      "intention"
+    ]
+  ],
+  [
+    [
+      "Where the individuals were",
+      "location"
+    ]
+  ],
+  [
+    [
+      "The relationship between the individuals",
+      "relationship"
+    ]
+  ]
+]

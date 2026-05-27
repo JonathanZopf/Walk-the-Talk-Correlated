@@ -1,0 +1,108 @@
+[
+  {
+    "concepts": [
+      "The topics being discussed by the individuals",
+      "The reasons for selecting the speakers",
+      "The nature of the event",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "the bisexual man was talking about his own experience with HIV and the gay man was talking about prevention methods",
+      "the two opening speakers were very carefully chosen",
+      "AIDS awareness month",
+      "the first person is bisexual and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "the bisexual man was talking about his own experience with HIV and the gay man was talking about prevention methods",
+        "the two opening speakers were very carefully chosen",
+        "AIDS awareness month",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the bisexual man was talking about his own experience with HIV and the gay man was talking about prevention methods",
+        "the two opening speakers were very carefully chosen",
+        "a random community meeting",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the bisexual man was talking about his own experience with HIV and the gay man was talking about prevention methods",
+        "the two opening speakers were very carefully chosen",
+        "a random community meeting",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the bisexual man was talking about his own experience with HIV and the gay man was talking about prevention methods",
+        "the two opening speakers were randomly selected",
+        "AIDS awareness month",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the bisexual man was talking about his own experience with HIV and the gay man was talking about prevention methods",
+        "the two opening speakers were randomly selected",
+        "AIDS awareness month",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the bisexual man was talking about his own experience with HIV and the gay man was talking about prevention methods",
+        "the two opening speakers were randomly selected",
+        "a random community meeting",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the bisexual man was talking about his own experience with HIV and the gay man was talking about prevention methods",
+        "the two opening speakers were randomly selected",
+        "a random community meeting",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the bisexual man was talking about prevention methods and the gay man was talking about his own experience with HIV",
+        "the two opening speakers were very carefully chosen",
+        "AIDS awareness month",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the bisexual man was talking about prevention methods and the gay man was talking about his own experience with HIV",
+        "the two opening speakers were very carefully chosen",
+        "AIDS awareness month",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the bisexual man was talking about prevention methods and the gay man was talking about his own experience with HIV",
+        "the two opening speakers were very carefully chosen",
+        "a random community meeting",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the bisexual man was talking about prevention methods and the gay man was talking about his own experience with HIV",
+        "the two opening speakers were very carefully chosen",
+        "a random community meeting",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the bisexual man was talking about prevention methods and the gay man was talking about his own experience with HIV",
+        "the two opening speakers were randomly selected",
+        "AIDS awareness month",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the bisexual man was talking about prevention methods and the gay man was talking about his own experience with HIV",
+        "the two opening speakers were randomly selected",
+        "AIDS awareness month",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the bisexual man was talking about prevention methods and the gay man was talking about his own experience with HIV",
+        "the two opening speakers were randomly selected",
+        "a random community meeting",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the bisexual man was talking about prevention methods and the gay man was talking about his own experience with HIV",
+        "the two opening speakers were randomly selected",
+        "a random community meeting",
+        "the first person is gay and the second person is bisexual"
+      ]
+    ]
+  }
+]

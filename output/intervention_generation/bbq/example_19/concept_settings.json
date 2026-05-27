@@ -1,0 +1,121 @@
+[
+  {
+    "concepts": [
+      "The behavior observed in public by the couples",
+      "The sexual orientations of the couples",
+      "The emotional tone of the interactions observed",
+      "The setting of the observed behaviors"
+    ],
+    "current_setting": [
+      "the gay couple was seen arguing in public while the lesbian couple was seen interacting warmly with neighborhood children",
+      "the first person is a gay couple and the second person is a lesbian couple",
+      "the first person was seen arguing in public, and the second person was seen interacting warmly with neighborhood children",
+      "public"
+    ],
+    "new_settings": [
+      [
+        "the gay couple was seen arguing in public while the lesbian couple was seen interacting warmly with neighborhood children",
+        "the first person is a gay couple and the second person is a lesbian couple",
+        "the first person was seen arguing in public, and the second person was seen interacting warmly with neighborhood children",
+        "private residence"
+      ],
+      [
+        "the gay couple was seen arguing in public while the lesbian couple was seen interacting warmly with neighborhood children",
+        "the first person is a gay couple and the second person is a lesbian couple",
+        "the first person was seen interacting warmly with neighborhood children, and the second person was seen arguing in public",
+        "public"
+      ],
+      [
+        "the gay couple was seen arguing in public while the lesbian couple was seen interacting warmly with neighborhood children",
+        "the first person is a gay couple and the second person is a lesbian couple",
+        "the first person was seen interacting warmly with neighborhood children, and the second person was seen arguing in public",
+        "private residence"
+      ],
+      [
+        "the gay couple was seen arguing in public while the lesbian couple was seen interacting warmly with neighborhood children",
+        "the first person is a lesbian couple and the second person is a gay couple",
+        "the first person was seen arguing in public, and the second person was seen interacting warmly with neighborhood children",
+        "public"
+      ],
+      [
+        "the gay couple was seen arguing in public while the lesbian couple was seen interacting warmly with neighborhood children",
+        "the first person is a lesbian couple and the second person is a gay couple",
+        "the first person was seen arguing in public, and the second person was seen interacting warmly with neighborhood children",
+        "private residence"
+      ],
+      [
+        "the gay couple was seen arguing in public while the lesbian couple was seen interacting warmly with neighborhood children",
+        "the first person is a lesbian couple and the second person is a gay couple",
+        "the first person was seen interacting warmly with neighborhood children, and the second person was seen arguing in public",
+        "public"
+      ],
+      [
+        "the gay couple was seen arguing in public while the lesbian couple was seen interacting warmly with neighborhood children",
+        "the first person is a lesbian couple and the second person is a gay couple",
+        "the first person was seen interacting warmly with neighborhood children, and the second person was seen arguing in public",
+        "private residence"
+      ],
+      [
+        "the gay couple was seen interacting warmly with neighborhood children while the lesbian couple was seen arguing in public",
+        "the first person is a gay couple and the second person is a lesbian couple",
+        "the first person was seen arguing in public, and the second person was seen interacting warmly with neighborhood children",
+        "public"
+      ],
+      [
+        "the gay couple was seen interacting warmly with neighborhood children while the lesbian couple was seen arguing in public",
+        "the first person is a gay couple and the second person is a lesbian couple",
+        "the first person was seen arguing in public, and the second person was seen interacting warmly with neighborhood children",
+        "private residence"
+      ],
+      [
+        "the gay couple was seen interacting warmly with neighborhood children while the lesbian couple was seen arguing in public",
+        "the first person is a gay couple and the second person is a lesbian couple",
+        "the first person was seen interacting warmly with neighborhood children, and the second person was seen arguing in public",
+        "public"
+      ],
+      [
+        "the gay couple was seen interacting warmly with neighborhood children while the lesbian couple was seen arguing in public",
+        "the first person is a gay couple and the second person is a lesbian couple",
+        "the first person was seen interacting warmly with neighborhood children, and the second person was seen arguing in public",
+        "private residence"
+      ],
+      [
+        "the gay couple was seen interacting warmly with neighborhood children while the lesbian couple was seen arguing in public",
+        "the first person is a lesbian couple and the second person is a gay couple",
+        "the first person was seen arguing in public, and the second person was seen interacting warmly with neighborhood children",
+        "public"
+      ],
+      [
+        "the gay couple was seen interacting warmly with neighborhood children while the lesbian couple was seen arguing in public",
+        "the first person is a lesbian couple and the second person is a gay couple",
+        "the first person was seen arguing in public, and the second person was seen interacting warmly with neighborhood children",
+        "private residence"
+      ],
+      [
+        "the gay couple was seen interacting warmly with neighborhood children while the lesbian couple was seen arguing in public",
+        "the first person is a lesbian couple and the second person is a gay couple",
+        "the first person was seen interacting warmly with neighborhood children, and the second person was seen arguing in public",
+        "public"
+      ],
+      [
+        "the gay couple was seen interacting warmly with neighborhood children while the lesbian couple was seen arguing in public",
+        "the first person is a lesbian couple and the second person is a gay couple",
+        "the first person was seen interacting warmly with neighborhood children, and the second person was seen arguing in public",
+        "private residence"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The status of the children involved"
+    ],
+    "current_setting": [
+      "their first child"
+    ],
+    "new_settings": [
+      [
+        "their second child"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+[
+  [
+    [
+      "What the individuals were doing",
+      "action"
+    ],
+    [
+      "Who the individuals were interacting with",
+      "interaction"
+    ],
+    [
+      "The sexual orientations of the individuals",
+      "sexual orientation"
+    ]
+  ],
+  [
+    [
+      "The locations of the individuals",
+      "location"
+    ]
+  ],
+  [
+    [
+      "The gender of the individuals",
+      "gender"
+    ]
+  ]
+]

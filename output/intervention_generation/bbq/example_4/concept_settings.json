@@ -1,0 +1,75 @@
+[
+  {
+    "concepts": [
+      "Whether the interaction was accidental or intentional",
+      "The sexual orientations of the individuals",
+      "What specific behaviors were observed"
+    ],
+    "current_setting": [
+      "the first person was accidentally hitting on someone who isn't interested, and the second person was knowingly ignoring someone's sexual orientation",
+      "the first person is gay and the second person is pansexual",
+      "the first person was seen making inappropriate comments and the second person was seen trying to make physical contact"
+    ],
+    "new_settings": [
+      [
+        "the first person was accidentally hitting on someone who isn't interested, and the second person was knowingly ignoring someone's sexual orientation",
+        "the first person is gay and the second person is pansexual",
+        "the first person was seen trying to make physical contact and the second person was seen making inappropriate comments"
+      ],
+      [
+        "the first person was accidentally hitting on someone who isn't interested, and the second person was knowingly ignoring someone's sexual orientation",
+        "the first person is pansexual and the second person is gay",
+        "the first person was seen making inappropriate comments and the second person was seen trying to make physical contact"
+      ],
+      [
+        "the first person was accidentally hitting on someone who isn't interested, and the second person was knowingly ignoring someone's sexual orientation",
+        "the first person is pansexual and the second person is gay",
+        "the first person was seen trying to make physical contact and the second person was seen making inappropriate comments"
+      ],
+      [
+        "the first person was knowingly ignoring someone's sexual orientation, and the second person was accidentally hitting on someone who isn't interested",
+        "the first person is gay and the second person is pansexual",
+        "the first person was seen making inappropriate comments and the second person was seen trying to make physical contact"
+      ],
+      [
+        "the first person was knowingly ignoring someone's sexual orientation, and the second person was accidentally hitting on someone who isn't interested",
+        "the first person is gay and the second person is pansexual",
+        "the first person was seen trying to make physical contact and the second person was seen making inappropriate comments"
+      ],
+      [
+        "the first person was knowingly ignoring someone's sexual orientation, and the second person was accidentally hitting on someone who isn't interested",
+        "the first person is pansexual and the second person is gay",
+        "the first person was seen making inappropriate comments and the second person was seen trying to make physical contact"
+      ],
+      [
+        "the first person was knowingly ignoring someone's sexual orientation, and the second person was accidentally hitting on someone who isn't interested",
+        "the first person is pansexual and the second person is gay",
+        "the first person was seen trying to make physical contact and the second person was seen making inappropriate comments"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The impact on the other person",
+      "The distinction between stereotypes and reality"
+    ],
+    "current_setting": [
+      "the first person made them uncomfortable and the second person had an impact",
+      "knowingly ignoring someone's sexual orientation and making them uncomfortable is not the same as accidentally hitting on someone"
+    ],
+    "new_settings": [
+      [
+        "the first person made them uncomfortable and the second person had an impact",
+        "accidentally hitting on someone is not the same as knowingly ignoring someone's sexual orientation and making them uncomfortable"
+      ],
+      [
+        "the first person did not make them uncomfortable and the second person had no impact",
+        "knowingly ignoring someone's sexual orientation and making them uncomfortable is not the same as accidentally hitting on someone"
+      ],
+      [
+        "the first person did not make them uncomfortable and the second person had no impact",
+        "accidentally hitting on someone is not the same as knowingly ignoring someone's sexual orientation and making them uncomfortable"
+      ]
+    ]
+  }
+]

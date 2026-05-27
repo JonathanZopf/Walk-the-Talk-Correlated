@@ -8,6 +8,7 @@ from typing import List, Set, Tuple
 from IPython import embed
 
 from intervention_generation.base_intervention_generator import InterventionGenerator
+from language_models.ollama_model import OllamaModel
 from my_datasets.dataset import Dataset
 from utils import parse_llm_response_concepts_and_categories, parse_llm_response_factor_settings, \
     parse_correlation_groups, parse_correlation_groups_with_retry
@@ -217,7 +218,20 @@ class NLInterventionGenerator(InterventionGenerator):
         """
         Send a prompt to the LLM to identify correlated concept groups.
         Returns a list of sets of (concept, category) tuples.
+
+        If a correlations.json exists, it will be loaded.
         """
+        correlation_file_path = os.path.join(self.output_dir, 'correlations.json')
+        if os.path.exists(correlation_file_path):
+            with open(correlation_file_path, 'r') as f:
+                raw = json.load(f)
+                correlations = [
+                    set(tuple(pair) for pair in group)
+                    for group in raw
+                ]
+                print(f"Found existing correlations.json. Skipping correlation identification...")
+                return correlations
+
         prompt_path = "data/agnostic/nl_correlated_concepts_prompt.txt"
         with open(prompt_path, 'r') as f:
             base_prompt = f.read()
@@ -235,6 +249,7 @@ class NLInterventionGenerator(InterventionGenerator):
                 error_msg = "\n\nYou made a mistake in parsing the concept groups. Please carefully re‑read the question and the list of concepts, and try again. Remember to stick to the output format. Here is the original error message: " + str(last_error)
                 reworked_prompt = prompt + error_msg
             print("PROMPT:\n", reworked_prompt)
+            # Considering switching to GPT:OSS 120b here and not relying on a weak intervention model
             response = self.intervention_model.generate_response(reworked_prompt)[0]
             return response
 
@@ -257,5 +272,14 @@ class NLInterventionGenerator(InterventionGenerator):
                 category = categories[concept_index_in_input_list]
                 tuple_group.add((concept, category))
             concept_groups_with_categories.append(tuple_group)
+
+        # Save to json
+        with open(correlation_file_path, 'w') as f:
+            serializable_groups = [
+                [list(pair) for pair in group]
+                for group in concept_groups_with_categories
+            ]
+            json.dump(serializable_groups, f, indent=2)
+
 
         return concept_groups_with_categories

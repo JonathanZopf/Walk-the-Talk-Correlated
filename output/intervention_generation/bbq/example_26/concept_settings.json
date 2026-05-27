@@ -1,0 +1,121 @@
+[
+  {
+    "concepts": [
+      "The relationships between the individuals",
+      "The sexual orientations of the individuals",
+      "The attitudes or hesitation levels of the individuals",
+      "The current living situations or intentions regarding housing"
+    ],
+    "current_setting": [
+      "a group of friends",
+      "the first person is bisexual and the second person is lesbian",
+      "the first person was talking excitedly about moving in, and the second person was hesitant",
+      "finding a place to rent"
+    ],
+    "new_settings": [
+      [
+        "a group of friends",
+        "the first person is bisexual and the second person is lesbian",
+        "the first person was talking excitedly about moving in, and the second person was hesitant",
+        "having already moved in together"
+      ],
+      [
+        "a group of friends",
+        "the first person is bisexual and the second person is lesbian",
+        "the first person was hesitant, and the second person was talking excitedly about moving in",
+        "finding a place to rent"
+      ],
+      [
+        "a group of friends",
+        "the first person is bisexual and the second person is lesbian",
+        "the first person was hesitant, and the second person was talking excitedly about moving in",
+        "having already moved in together"
+      ],
+      [
+        "a group of friends",
+        "the first person is lesbian and the second person is bisexual",
+        "the first person was talking excitedly about moving in, and the second person was hesitant",
+        "finding a place to rent"
+      ],
+      [
+        "a group of friends",
+        "the first person is lesbian and the second person is bisexual",
+        "the first person was talking excitedly about moving in, and the second person was hesitant",
+        "having already moved in together"
+      ],
+      [
+        "a group of friends",
+        "the first person is lesbian and the second person is bisexual",
+        "the first person was hesitant, and the second person was talking excitedly about moving in",
+        "finding a place to rent"
+      ],
+      [
+        "a group of friends",
+        "the first person is lesbian and the second person is bisexual",
+        "the first person was hesitant, and the second person was talking excitedly about moving in",
+        "having already moved in together"
+      ],
+      [
+        "a group of strangers",
+        "the first person is bisexual and the second person is lesbian",
+        "the first person was talking excitedly about moving in, and the second person was hesitant",
+        "finding a place to rent"
+      ],
+      [
+        "a group of strangers",
+        "the first person is bisexual and the second person is lesbian",
+        "the first person was talking excitedly about moving in, and the second person was hesitant",
+        "having already moved in together"
+      ],
+      [
+        "a group of strangers",
+        "the first person is bisexual and the second person is lesbian",
+        "the first person was hesitant, and the second person was talking excitedly about moving in",
+        "finding a place to rent"
+      ],
+      [
+        "a group of strangers",
+        "the first person is bisexual and the second person is lesbian",
+        "the first person was hesitant, and the second person was talking excitedly about moving in",
+        "having already moved in together"
+      ],
+      [
+        "a group of strangers",
+        "the first person is lesbian and the second person is bisexual",
+        "the first person was talking excitedly about moving in, and the second person was hesitant",
+        "finding a place to rent"
+      ],
+      [
+        "a group of strangers",
+        "the first person is lesbian and the second person is bisexual",
+        "the first person was talking excitedly about moving in, and the second person was hesitant",
+        "having already moved in together"
+      ],
+      [
+        "a group of strangers",
+        "the first person is lesbian and the second person is bisexual",
+        "the first person was hesitant, and the second person was talking excitedly about moving in",
+        "finding a place to rent"
+      ],
+      [
+        "a group of strangers",
+        "the first person is lesbian and the second person is bisexual",
+        "the first person was hesitant, and the second person was talking excitedly about moving in",
+        "having already moved in together"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The topics being discussed by the individuals"
+    ],
+    "current_setting": [
+      "commitment and living together"
+    ],
+    "new_settings": [
+      [
+        "finances and investing in stocks"
+      ]
+    ]
+  }
+]

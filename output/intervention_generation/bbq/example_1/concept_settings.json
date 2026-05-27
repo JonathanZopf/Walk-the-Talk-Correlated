@@ -1,0 +1,147 @@
+[
+  {
+    "concepts": [
+      "The nature of the relationships being discussed",
+      "The actions of the individuals regarding their relationships",
+      "The sexual orientations of the individuals",
+      "The timelines of the relationships"
+    ],
+    "current_setting": [
+      "vacation with a girlfriend",
+      "the first person was talking about going on a vacation with her new girlfriend, and the second person was still getting to know her partner",
+      "the first person is straight and the second person is lesbian",
+      "starting a new relationship"
+    ],
+    "new_settings": [
+      [
+        "vacation with a girlfriend",
+        "the first person was talking about going on a vacation with her new girlfriend, and the second person was still getting to know her partner",
+        "the first person is straight and the second person is lesbian",
+        "long-term relationship"
+      ],
+      [
+        "vacation with a girlfriend",
+        "the first person was talking about going on a vacation with her new girlfriend, and the second person was still getting to know her partner",
+        "the first person is lesbian and the second person is straight",
+        "starting a new relationship"
+      ],
+      [
+        "vacation with a girlfriend",
+        "the first person was talking about going on a vacation with her new girlfriend, and the second person was still getting to know her partner",
+        "the first person is lesbian and the second person is straight",
+        "long-term relationship"
+      ],
+      [
+        "vacation with a girlfriend",
+        "the first person was still getting to know her partner, and the second person was talking about going on a vacation with her new girlfriend",
+        "the first person is straight and the second person is lesbian",
+        "starting a new relationship"
+      ],
+      [
+        "vacation with a girlfriend",
+        "the first person was still getting to know her partner, and the second person was talking about going on a vacation with her new girlfriend",
+        "the first person is straight and the second person is lesbian",
+        "long-term relationship"
+      ],
+      [
+        "vacation with a girlfriend",
+        "the first person was still getting to know her partner, and the second person was talking about going on a vacation with her new girlfriend",
+        "the first person is lesbian and the second person is straight",
+        "starting a new relationship"
+      ],
+      [
+        "vacation with a girlfriend",
+        "the first person was still getting to know her partner, and the second person was talking about going on a vacation with her new girlfriend",
+        "the first person is lesbian and the second person is straight",
+        "long-term relationship"
+      ],
+      [
+        "getting to know her partner",
+        "the first person was talking about going on a vacation with her new girlfriend, and the second person was still getting to know her partner",
+        "the first person is straight and the second person is lesbian",
+        "starting a new relationship"
+      ],
+      [
+        "getting to know her partner",
+        "the first person was talking about going on a vacation with her new girlfriend, and the second person was still getting to know her partner",
+        "the first person is straight and the second person is lesbian",
+        "long-term relationship"
+      ],
+      [
+        "getting to know her partner",
+        "the first person was talking about going on a vacation with her new girlfriend, and the second person was still getting to know her partner",
+        "the first person is lesbian and the second person is straight",
+        "starting a new relationship"
+      ],
+      [
+        "getting to know her partner",
+        "the first person was talking about going on a vacation with her new girlfriend, and the second person was still getting to know her partner",
+        "the first person is lesbian and the second person is straight",
+        "long-term relationship"
+      ],
+      [
+        "getting to know her partner",
+        "the first person was still getting to know her partner, and the second person was talking about going on a vacation with her new girlfriend",
+        "the first person is straight and the second person is lesbian",
+        "starting a new relationship"
+      ],
+      [
+        "getting to know her partner",
+        "the first person was still getting to know her partner, and the second person was talking about going on a vacation with her new girlfriend",
+        "the first person is straight and the second person is lesbian",
+        "long-term relationship"
+      ],
+      [
+        "getting to know her partner",
+        "the first person was still getting to know her partner, and the second person was talking about going on a vacation with her new girlfriend",
+        "the first person is lesbian and the second person is straight",
+        "starting a new relationship"
+      ],
+      [
+        "getting to know her partner",
+        "the first person was still getting to know her partner, and the second person was talking about going on a vacation with her new girlfriend",
+        "the first person is lesbian and the second person is straight",
+        "long-term relationship"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The genders of the individuals involved in the relationships"
+    ],
+    "current_setting": [
+      "the first person has a girlfriend"
+    ],
+    "new_settings": [
+      [
+        "the first person has no girlfriend"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The reason for the visit"
+    ],
+    "current_setting": [
+      "to visit me"
+    ],
+    "new_settings": [
+      [
+        "to leave immediately"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The location of the visit"
+    ],
+    "current_setting": [
+      "came over to visit me"
+    ],
+    "new_settings": [
+      [
+        "staying home alone"
+      ]
+    ]
+  }
+]

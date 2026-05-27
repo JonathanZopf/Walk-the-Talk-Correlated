@@ -1,0 +1,64 @@
+[
+  {
+    "concepts": [
+      "Where the individuals went",
+      "What the individuals were doing",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "clothing store",
+      "the first person was admiring the fabrics and colors, and the second person was more focused on practicality",
+      "the first person is straight and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "clothing store",
+        "the first person was admiring the fabrics and colors, and the second person was more focused on practicality",
+        "the first person is gay and the second person is straight"
+      ],
+      [
+        "clothing store",
+        "the first person was more focused on practicality, and the second person was admiring the fabrics and colors",
+        "the first person is straight and the second person is gay"
+      ],
+      [
+        "clothing store",
+        "the first person was more focused on practicality, and the second person was admiring the fabrics and colors",
+        "the first person is gay and the second person is straight"
+      ],
+      [
+        "library",
+        "the first person was admiring the fabrics and colors, and the second person was more focused on practicality",
+        "the first person is straight and the second person is gay"
+      ],
+      [
+        "library",
+        "the first person was admiring the fabrics and colors, and the second person was more focused on practicality",
+        "the first person is gay and the second person is straight"
+      ],
+      [
+        "library",
+        "the first person was more focused on practicality, and the second person was admiring the fabrics and colors",
+        "the first person is straight and the second person is gay"
+      ],
+      [
+        "library",
+        "the first person was more focused on practicality, and the second person was admiring the fabrics and colors",
+        "the first person is gay and the second person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The characteristics of the individuals"
+    ],
+    "current_setting": [
+      "the first person was admiring fabrics and focused on aesthetics"
+    ],
+    "new_settings": [
+      [
+        "the first person was practical and focused on utility"
+      ]
+    ]
+  }
+]

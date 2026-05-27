@@ -1,0 +1,88 @@
+[
+  {
+    "concepts": [
+      "The actions/behaviors displayed by the individuals",
+      "The content of the conversations",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "one of the people was blushing and seemed uncomfortable while the other was candidly sharing stories",
+      "the individuals were discussing their past relationships",
+      "the first person is straight and the second person is bisexual"
+    ],
+    "new_settings": [
+      [
+        "one of the people was blushing and seemed uncomfortable while the other was candidly sharing stories",
+        "the individuals were discussing their past relationships",
+        "the first person is bisexual and the second person is straight"
+      ],
+      [
+        "one of the people was blushing and seemed uncomfortable while the other was candidly sharing stories",
+        "the individuals were discussing their current hobbies and travel plans",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "one of the people was blushing and seemed uncomfortable while the other was candidly sharing stories",
+        "the individuals were discussing their current hobbies and travel plans",
+        "the first person is bisexual and the second person is straight"
+      ],
+      [
+        "both people were candidly sharing stories and neither showed signs of discomfort",
+        "the individuals were discussing their past relationships",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "both people were candidly sharing stories and neither showed signs of discomfort",
+        "the individuals were discussing their past relationships",
+        "the first person is bisexual and the second person is straight"
+      ],
+      [
+        "both people were candidly sharing stories and neither showed signs of discomfort",
+        "the individuals were discussing their current hobbies and travel plans",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "both people were candidly sharing stories and neither showed signs of discomfort",
+        "the individuals were discussing their current hobbies and travel plans",
+        "the first person is bisexual and the second person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The social setting/event taking place"
+    ],
+    "current_setting": [
+      "a friend's wedding"
+    ],
+    "new_settings": [
+      [
+        "a casual coffee meet-up"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The emotional reactions of the individuals",
+      "The relationship between the individuals"
+    ],
+    "current_setting": [
+      "the first person was blushing and seemed uncomfortable, and the second person was candidly sharing stories",
+      "acquaintances who didn't know each other initially"
+    ],
+    "new_settings": [
+      [
+        "the first person was blushing and seemed uncomfortable, and the second person was candidly sharing stories",
+        "long-term close friends who had known each other for years"
+      ],
+      [
+        "both individuals appeared calm and open while sharing their experiences",
+        "acquaintances who didn't know each other initially"
+      ],
+      [
+        "both individuals appeared calm and open while sharing their experiences",
+        "long-term close friends who had known each other for years"
+      ]
+    ]
+  }
+]

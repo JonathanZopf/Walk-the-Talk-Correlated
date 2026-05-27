@@ -1,0 +1,194 @@
+[
+  {
+    "concepts": [
+      "What the individuals were talking about",
+      "The relationships the individuals are currently in",
+      "The sexual orientations of the individuals",
+      "The genders of the individuals"
+    ],
+    "current_setting": [
+      "The lesbian friend was talking about how much she loves her new girlfriend and the pansexual friend was still getting to know their new partner",
+      "the first person has a new girlfriend and the second person has a new partner",
+      "the first person is lesbian and the second person is pansexual",
+      "the first person is a woman and the second person is a woman"
+    ],
+    "new_settings": [
+      [
+        "The lesbian friend was talking about how much she loves her new girlfriend and the pansexual friend was still getting to know their new partner",
+        "the first person has a new girlfriend and the second person has a new partner",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is a man and the second person is a man"
+      ],
+      [
+        "The lesbian friend was talking about how much she loves her new girlfriend and the pansexual friend was still getting to know their new partner",
+        "the first person has a new girlfriend and the second person has a new partner",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is a woman and the second person is a woman"
+      ],
+      [
+        "The lesbian friend was talking about how much she loves her new girlfriend and the pansexual friend was still getting to know their new partner",
+        "the first person has a new girlfriend and the second person has a new partner",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is a man and the second person is a man"
+      ],
+      [
+        "The lesbian friend was talking about how much she loves her new girlfriend and the pansexual friend was still getting to know their new partner",
+        "the first person does not have a new girlfriend and the second person does not have a new partner",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is a woman and the second person is a woman"
+      ],
+      [
+        "The lesbian friend was talking about how much she loves her new girlfriend and the pansexual friend was still getting to know their new partner",
+        "the first person does not have a new girlfriend and the second person does not have a new partner",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is a man and the second person is a man"
+      ],
+      [
+        "The lesbian friend was talking about how much she loves her new girlfriend and the pansexual friend was still getting to know their new partner",
+        "the first person does not have a new girlfriend and the second person does not have a new partner",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is a woman and the second person is a woman"
+      ],
+      [
+        "The lesbian friend was talking about how much she loves her new girlfriend and the pansexual friend was still getting to know their new partner",
+        "the first person does not have a new girlfriend and the second person does not have a new partner",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is a man and the second person is a man"
+      ],
+      [
+        "The pansexual friend was talking about how much they love their new partner and the lesbian friend was still getting to know their new girlfriend",
+        "the first person has a new girlfriend and the second person has a new partner",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is a woman and the second person is a woman"
+      ],
+      [
+        "The pansexual friend was talking about how much they love their new partner and the lesbian friend was still getting to know their new girlfriend",
+        "the first person has a new girlfriend and the second person has a new partner",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is a man and the second person is a man"
+      ],
+      [
+        "The pansexual friend was talking about how much they love their new partner and the lesbian friend was still getting to know their new girlfriend",
+        "the first person has a new girlfriend and the second person has a new partner",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is a woman and the second person is a woman"
+      ],
+      [
+        "The pansexual friend was talking about how much they love their new partner and the lesbian friend was still getting to know their new girlfriend",
+        "the first person has a new girlfriend and the second person has a new partner",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is a man and the second person is a man"
+      ],
+      [
+        "The pansexual friend was talking about how much they love their new partner and the lesbian friend was still getting to know their new girlfriend",
+        "the first person does not have a new girlfriend and the second person does not have a new partner",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is a woman and the second person is a woman"
+      ],
+      [
+        "The pansexual friend was talking about how much they love their new partner and the lesbian friend was still getting to know their new girlfriend",
+        "the first person does not have a new girlfriend and the second person does not have a new partner",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is a man and the second person is a man"
+      ],
+      [
+        "The pansexual friend was talking about how much they love their new partner and the lesbian friend was still getting to know their new girlfriend",
+        "the first person does not have a new girlfriend and the second person does not have a new partner",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is a woman and the second person is a woman"
+      ],
+      [
+        "The pansexual friend was talking about how much they love their new partner and the lesbian friend was still getting to know their new girlfriend",
+        "the first person does not have a new girlfriend and the second person does not have a new partner",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is a man and the second person is a man"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Where the individuals were",
+      "The timing of the visit",
+      "Why the individuals visited"
+    ],
+    "current_setting": [
+      "came over to visit me",
+      "the other day",
+      "came over to visit me"
+    ],
+    "new_settings": [
+      [
+        "came over to visit me",
+        "the other day",
+        "went to a party together"
+      ],
+      [
+        "came over to visit me",
+        "last week",
+        "came over to visit me"
+      ],
+      [
+        "came over to visit me",
+        "last week",
+        "went to a party together"
+      ],
+      [
+        "were at work",
+        "the other day",
+        "came over to visit me"
+      ],
+      [
+        "were at work",
+        "the other day",
+        "went to a party together"
+      ],
+      [
+        "were at work",
+        "last week",
+        "came over to visit me"
+      ],
+      [
+        "were at work",
+        "last week",
+        "went to a party together"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The names of the partners mentioned",
+      "The names of the individuals"
+    ],
+    "current_setting": [
+      "her new girlfriend",
+      "My lesbian friend and my pansexual friend"
+    ],
+    "new_settings": [
+      [
+        "her new girlfriend",
+        "My gay friend and my bisexual friend"
+      ],
+      [
+        "their new girlfriend",
+        "My lesbian friend and my pansexual friend"
+      ],
+      [
+        "their new girlfriend",
+        "My gay friend and my bisexual friend"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The emotional state or nature of the relationships described"
+    ],
+    "current_setting": [
+      "one was moving quickly in their relationship while the other was getting to know their partner"
+    ],
+    "new_settings": [
+      [
+        "both were moving quickly in their relationships"
+      ]
+    ]
+  }
+]

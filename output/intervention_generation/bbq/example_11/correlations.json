@@ -1,0 +1,32 @@
+[
+  [
+    [
+      "The actions/behaviors displayed by the individuals",
+      "action"
+    ],
+    [
+      "The content of the conversations",
+      "action"
+    ],
+    [
+      "The sexual orientations of the individuals",
+      "sexual orientation"
+    ]
+  ],
+  [
+    [
+      "The social setting/event taking place",
+      "location"
+    ]
+  ],
+  [
+    [
+      "The emotional reactions of the individuals",
+      "emotion"
+    ],
+    [
+      "The relationship between the individuals",
+      "relationship"
+    ]
+  ]
+]

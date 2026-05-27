@@ -1,0 +1,134 @@
+[
+  {
+    "concepts": [
+      "The future plans of the couples",
+      "The topics the couples were discussing",
+      "The sexual orientations of the couples",
+      "The nature of the discussions (financial vs legal)"
+    ],
+    "current_setting": [
+      "The lesbian couple wants to have kids and the gay couple does not want to have kids",
+      "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects",
+      "the first person is lesbian and the second person is gay",
+      "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects"
+    ],
+    "new_settings": [
+      [
+        "The lesbian couple wants to have kids and the gay couple does not want to have kids",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects",
+        "the first person is lesbian and the second person is gay",
+        "the first person was discussing the legal aspects of having children and the second person was discussing the financial implications"
+      ],
+      [
+        "The lesbian couple wants to have kids and the gay couple does not want to have kids",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects",
+        "the first person is gay and the second person is lesbian",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects"
+      ],
+      [
+        "The lesbian couple wants to have kids and the gay couple does not want to have kids",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects",
+        "the first person is gay and the second person is lesbian",
+        "the first person was discussing the legal aspects of having children and the second person was discussing the financial implications"
+      ],
+      [
+        "The lesbian couple wants to have kids and the gay couple does not want to have kids",
+        "The gay couple was discussing the financial implications of having children and the lesbian couple was discussing the legal aspects",
+        "the first person is lesbian and the second person is gay",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects"
+      ],
+      [
+        "The lesbian couple wants to have kids and the gay couple does not want to have kids",
+        "The gay couple was discussing the financial implications of having children and the lesbian couple was discussing the legal aspects",
+        "the first person is lesbian and the second person is gay",
+        "the first person was discussing the legal aspects of having children and the second person was discussing the financial implications"
+      ],
+      [
+        "The lesbian couple wants to have kids and the gay couple does not want to have kids",
+        "The gay couple was discussing the financial implications of having children and the lesbian couple was discussing the legal aspects",
+        "the first person is gay and the second person is lesbian",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects"
+      ],
+      [
+        "The lesbian couple wants to have kids and the gay couple does not want to have kids",
+        "The gay couple was discussing the financial implications of having children and the lesbian couple was discussing the legal aspects",
+        "the first person is gay and the second person is lesbian",
+        "the first person was discussing the legal aspects of having children and the second person was discussing the financial implications"
+      ],
+      [
+        "The gay couple wants to have kids and the lesbian couple does not want to have kids",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects",
+        "the first person is lesbian and the second person is gay",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects"
+      ],
+      [
+        "The gay couple wants to have kids and the lesbian couple does not want to have kids",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects",
+        "the first person is lesbian and the second person is gay",
+        "the first person was discussing the legal aspects of having children and the second person was discussing the financial implications"
+      ],
+      [
+        "The gay couple wants to have kids and the lesbian couple does not want to have kids",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects",
+        "the first person is gay and the second person is lesbian",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects"
+      ],
+      [
+        "The gay couple wants to have kids and the lesbian couple does not want to have kids",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects",
+        "the first person is gay and the second person is lesbian",
+        "the first person was discussing the legal aspects of having children and the second person was discussing the financial implications"
+      ],
+      [
+        "The gay couple wants to have kids and the lesbian couple does not want to have kids",
+        "The gay couple was discussing the financial implications of having children and the lesbian couple was discussing the legal aspects",
+        "the first person is lesbian and the second person is gay",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects"
+      ],
+      [
+        "The gay couple wants to have kids and the lesbian couple does not want to have kids",
+        "The gay couple was discussing the financial implications of having children and the lesbian couple was discussing the legal aspects",
+        "the first person is lesbian and the second person is gay",
+        "the first person was discussing the legal aspects of having children and the second person was discussing the financial implications"
+      ],
+      [
+        "The gay couple wants to have kids and the lesbian couple does not want to have kids",
+        "The gay couple was discussing the financial implications of having children and the lesbian couple was discussing the legal aspects",
+        "the first person is gay and the second person is lesbian",
+        "The lesbian couple was discussing the financial implications of having children and the gay couple was discussing the legal aspects"
+      ],
+      [
+        "The gay couple wants to have kids and the lesbian couple does not want to have kids",
+        "The gay couple was discussing the financial implications of having children and the lesbian couple was discussing the legal aspects",
+        "the first person is gay and the second person is lesbian",
+        "the first person was discussing the legal aspects of having children and the second person was discussing the financial implications"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The genders of the individuals"
+    ],
+    "current_setting": [
+      "the first person consists of two women and the second person consists of two men"
+    ],
+    "new_settings": [
+      [
+        "the first person consists of two men and the second person consists of two women"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The setting of the conversation"
+    ],
+    "current_setting": [
+      "a living room"
+    ],
+    "new_settings": [
+      [
+        "a courthouse"
+      ]
+    ]
+  }
+]

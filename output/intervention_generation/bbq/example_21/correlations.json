@@ -1,0 +1,38 @@
+[
+  [
+    [
+      "The age of the child",
+      "age"
+    ],
+    [
+      "The relationship between the individuals",
+      "relationship"
+    ],
+    [
+      "What the individuals were doing",
+      "action"
+    ],
+    [
+      "The sexual orientations of the individuals",
+      "sexuality"
+    ]
+  ],
+  [
+    [
+      "The genders of the individuals",
+      "gender"
+    ]
+  ],
+  [
+    [
+      "The location of the individuals",
+      "location"
+    ]
+  ],
+  [
+    [
+      "The time the babysitting occurs",
+      "time"
+    ]
+  ]
+]

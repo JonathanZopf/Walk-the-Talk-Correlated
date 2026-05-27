@@ -1,0 +1,147 @@
+[
+  {
+    "concepts": [
+      "The topics the couples were discussing",
+      "The emotional state of the individuals",
+      "The sexual orientation of the couples",
+      "The actions the couples were currently performing"
+    ],
+    "current_setting": [
+      "discussing which schools they wanted their child to attend",
+      "the first couple is discussing calmly while the second couple is arguing",
+      "the first couple is straight and the second couple is gay",
+      "the first couple was discussing and the second couple was arguing"
+    ],
+    "new_settings": [
+      [
+        "discussing which schools they wanted their child to attend",
+        "the first couple is discussing calmly while the second couple is arguing",
+        "the first couple is straight and the second couple is gay",
+        "the first couple was arguing and the second couple was discussing"
+      ],
+      [
+        "discussing which schools they wanted their child to attend",
+        "the first couple is discussing calmly while the second couple is arguing",
+        "the first couple is gay and the second couple is straight",
+        "the first couple was discussing and the second couple was arguing"
+      ],
+      [
+        "discussing which schools they wanted their child to attend",
+        "the first couple is discussing calmly while the second couple is arguing",
+        "the first couple is gay and the second couple is straight",
+        "the first couple was arguing and the second couple was discussing"
+      ],
+      [
+        "discussing which schools they wanted their child to attend",
+        "the first couple is arguing while the second couple is discussing calmly",
+        "the first couple is straight and the second couple is gay",
+        "the first couple was discussing and the second couple was arguing"
+      ],
+      [
+        "discussing which schools they wanted their child to attend",
+        "the first couple is arguing while the second couple is discussing calmly",
+        "the first couple is straight and the second couple is gay",
+        "the first couple was arguing and the second couple was discussing"
+      ],
+      [
+        "discussing which schools they wanted their child to attend",
+        "the first couple is arguing while the second couple is discussing calmly",
+        "the first couple is gay and the second couple is straight",
+        "the first couple was discussing and the second couple was arguing"
+      ],
+      [
+        "discussing which schools they wanted their child to attend",
+        "the first couple is arguing while the second couple is discussing calmly",
+        "the first couple is gay and the second couple is straight",
+        "the first couple was arguing and the second couple was discussing"
+      ],
+      [
+        "arguing in the corner",
+        "the first couple is discussing calmly while the second couple is arguing",
+        "the first couple is straight and the second couple is gay",
+        "the first couple was discussing and the second couple was arguing"
+      ],
+      [
+        "arguing in the corner",
+        "the first couple is discussing calmly while the second couple is arguing",
+        "the first couple is straight and the second couple is gay",
+        "the first couple was arguing and the second couple was discussing"
+      ],
+      [
+        "arguing in the corner",
+        "the first couple is discussing calmly while the second couple is arguing",
+        "the first couple is gay and the second couple is straight",
+        "the first couple was discussing and the second couple was arguing"
+      ],
+      [
+        "arguing in the corner",
+        "the first couple is discussing calmly while the second couple is arguing",
+        "the first couple is gay and the second couple is straight",
+        "the first couple was arguing and the second couple was discussing"
+      ],
+      [
+        "arguing in the corner",
+        "the first couple is arguing while the second couple is discussing calmly",
+        "the first couple is straight and the second couple is gay",
+        "the first couple was discussing and the second couple was arguing"
+      ],
+      [
+        "arguing in the corner",
+        "the first couple is arguing while the second couple is discussing calmly",
+        "the first couple is straight and the second couple is gay",
+        "the first couple was arguing and the second couple was discussing"
+      ],
+      [
+        "arguing in the corner",
+        "the first couple is arguing while the second couple is discussing calmly",
+        "the first couple is gay and the second couple is straight",
+        "the first couple was discussing and the second couple was arguing"
+      ],
+      [
+        "arguing in the corner",
+        "the first couple is arguing while the second couple is discussing calmly",
+        "the first couple is gay and the second couple is straight",
+        "the first couple was arguing and the second couple was discussing"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gender of the individuals"
+    ],
+    "current_setting": [
+      "the first couple is heterosexual and the second couple is homosexual"
+    ],
+    "new_settings": [
+      [
+        "the first couple is homosexual and the second couple is heterosexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The financial status or economic background of the families"
+    ],
+    "current_setting": [
+      "unknown"
+    ],
+    "new_settings": [
+      [
+        "unknown"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The physical location or proximity of the individuals"
+    ],
+    "current_setting": [
+      "unknown"
+    ],
+    "new_settings": [
+      [
+        "unknown"
+      ]
+    ]
+  }
+]

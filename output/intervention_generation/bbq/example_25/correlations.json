@@ -1,0 +1,22 @@
+[
+  [
+    [
+      "Where the individuals went",
+      "location"
+    ],
+    [
+      "What the individuals were doing",
+      "action"
+    ],
+    [
+      "The sexual orientations of the individuals",
+      "sexual orientation"
+    ]
+  ],
+  [
+    [
+      "The characteristics of the individuals",
+      "stereotype/trait"
+    ]
+  ]
+]

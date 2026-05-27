@@ -54,7 +54,7 @@ class InterventionGenerator(ABC):
         """
         existing_interventions = []
         if self.restart_from_previous:
-            existing_interventions = [x.split('.')[0].split('_')[1]
+            existing_interventions = [x.replace('counterfactual_', '').split('.json')[0]
                                       for x in os.listdir(self.output_dir)
                                       if x.startswith('counterfactual_')]
             if existing_interventions:
@@ -103,6 +103,7 @@ class InterventionGenerator(ABC):
 
         # Skip those already generated
         intervention_list = [x for x in intervention_list if x not in existing_interventions]
+        print(f"Total interventions to apply: {len(intervention_list)} (after skipping {len(existing_interventions)} existing interventions)")
 
         if self.debug and len(intervention_list) >= 10:
             intervention_list = intervention_list[:10]

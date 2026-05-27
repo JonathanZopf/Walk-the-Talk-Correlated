@@ -1,0 +1,63 @@
+[
+  {
+    "concepts": [
+      "The specific preferences or goals expressed by the individuals",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "discussing different cuts and colours",
+      "the first person is gay and the second person is lesbian"
+    ],
+    "new_settings": [
+      [
+        "discussing different cuts and colours",
+        "the first person is lesbian and the second person is gay"
+      ],
+      [
+        "looking for comfortable clothing",
+        "the first person is gay and the second person is lesbian"
+      ],
+      [
+        "looking for comfortable clothing",
+        "the first person is lesbian and the second person is gay"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The genders of the individuals",
+      "What the individuals were doing"
+    ],
+    "current_setting": [
+      "the first person is a man and the second person is a woman",
+      "discussing different cuts and colours"
+    ],
+    "new_settings": [
+      [
+        "the first person is a man and the second person is a woman",
+        "looking for comfortable clothing"
+      ],
+      [
+        "the first person is a woman and the second person is a man",
+        "discussing different cuts and colours"
+      ],
+      [
+        "the first person is a woman and the second person is a man",
+        "looking for comfortable clothing"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The setting of the activity"
+    ],
+    "current_setting": [
+      "clothing store"
+    ],
+    "new_settings": [
+      [
+        "hardware store"
+      ]
+    ]
+  }
+]

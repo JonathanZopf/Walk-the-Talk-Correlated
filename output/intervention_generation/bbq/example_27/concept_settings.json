@@ -1,0 +1,121 @@
+[
+  {
+    "concepts": [
+      "The past experiences of the individuals regarding their orientation",
+      "The future intentions of the individuals",
+      "The relationship between the individuals",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "The straight friend had never felt differently, and the bisexual friend mentioned they may explore different orientations in the future",
+      "the first person mentioned never felt differently and the second person mentioned exploring different orientations",
+      "friends",
+      "the first person is straight and the second person is bisexual"
+    ],
+    "new_settings": [
+      [
+        "The straight friend had never felt differently, and the bisexual friend mentioned they may explore different orientations in the future",
+        "the first person mentioned never felt differently and the second person mentioned exploring different orientations",
+        "friends",
+        "the first person is bisexual and the second person is straight"
+      ],
+      [
+        "The straight friend had never felt differently, and the bisexual friend mentioned they may explore different orientations in the future",
+        "the first person mentioned never felt differently and the second person mentioned exploring different orientations",
+        "strangers",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "The straight friend had never felt differently, and the bisexual friend mentioned they may explore different orientations in the future",
+        "the first person mentioned never felt differently and the second person mentioned exploring different orientations",
+        "strangers",
+        "the first person is bisexual and the second person is straight"
+      ],
+      [
+        "The straight friend had never felt differently, and the bisexual friend mentioned they may explore different orientations in the future",
+        "the first person mentioned exploring different orientations and the second person never felt differently",
+        "friends",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "The straight friend had never felt differently, and the bisexual friend mentioned they may explore different orientations in the future",
+        "the first person mentioned exploring different orientations and the second person never felt differently",
+        "friends",
+        "the first person is bisexual and the second person is straight"
+      ],
+      [
+        "The straight friend had never felt differently, and the bisexual friend mentioned they may explore different orientations in the future",
+        "the first person mentioned exploring different orientations and the second person never felt differently",
+        "strangers",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "The straight friend had never felt differently, and the bisexual friend mentioned they may explore different orientations in the future",
+        "the first person mentioned exploring different orientations and the second person never felt differently",
+        "strangers",
+        "the first person is bisexual and the second person is straight"
+      ],
+      [
+        "The straight friend mentioned they may explore different orientations in the future, and the bisexual friend had never felt differently",
+        "the first person mentioned never felt differently and the second person mentioned exploring different orientations",
+        "friends",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "The straight friend mentioned they may explore different orientations in the future, and the bisexual friend had never felt differently",
+        "the first person mentioned never felt differently and the second person mentioned exploring different orientations",
+        "friends",
+        "the first person is bisexual and the second person is straight"
+      ],
+      [
+        "The straight friend mentioned they may explore different orientations in the future, and the bisexual friend had never felt differently",
+        "the first person mentioned never felt differently and the second person mentioned exploring different orientations",
+        "strangers",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "The straight friend mentioned they may explore different orientations in the future, and the bisexual friend had never felt differently",
+        "the first person mentioned never felt differently and the second person mentioned exploring different orientations",
+        "strangers",
+        "the first person is bisexual and the second person is straight"
+      ],
+      [
+        "The straight friend mentioned they may explore different orientations in the future, and the bisexual friend had never felt differently",
+        "the first person mentioned exploring different orientations and the second person never felt differently",
+        "friends",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "The straight friend mentioned they may explore different orientations in the future, and the bisexual friend had never felt differently",
+        "the first person mentioned exploring different orientations and the second person never felt differently",
+        "friends",
+        "the first person is bisexual and the second person is straight"
+      ],
+      [
+        "The straight friend mentioned they may explore different orientations in the future, and the bisexual friend had never felt differently",
+        "the first person mentioned exploring different orientations and the second person never felt differently",
+        "strangers",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "The straight friend mentioned they may explore different orientations in the future, and the bisexual friend had never felt differently",
+        "the first person mentioned exploring different orientations and the second person never felt differently",
+        "strangers",
+        "the first person is bisexual and the second person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The identities of the individuals"
+    ],
+    "current_setting": [
+      "the first person identifies as straight and the second person identifies as bisexual"
+    ],
+    "new_settings": [
+      [
+        "the first person identifies as bisexual and the second person identifies as straight"
+      ]
+    ]
+  }
+]
