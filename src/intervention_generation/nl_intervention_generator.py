@@ -5,8 +5,6 @@ import traceback
 import random
 from typing import List, Set, Tuple
 
-from IPython import embed
-
 from intervention_generation.base_intervention_generator import InterventionGenerator
 from language_models.ollama_model import OllamaModel
 from my_datasets.dataset import Dataset
@@ -31,6 +29,7 @@ class NLInterventionGenerator(InterventionGenerator):
             prompt = self.dataset.format_prompt_concept_id(self.example_idx,
                                                            self.concept_id_base_prompt_name)
             response = self.intervention_model.generate_response(prompt)[0]
+            print("Response for concept identification:", response)
             try:
                 concepts, categories = parse_llm_response_concepts_and_categories(response)
             except Exception as e:
@@ -195,7 +194,6 @@ class NLInterventionGenerator(InterventionGenerator):
         try:
             parsed_counterfactual = self.dataset.parse_counterfactual_output(counterfactual)
         except Exception as e:
-            embed()
             print(traceback.format_exc())
             raise Exception(f"Parsing failed for counterfactual {counterfactual}. Error: {e}")
 

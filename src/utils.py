@@ -28,19 +28,29 @@ def parse_llm_response_concepts_and_categories(response):
         concepts: a list of concepts identified by the LLM
         categories: a list of the category associated with each concept
     """
+
+    # Matton introduce a substring based method here, but it seemed to fail occationally
+    # Therefore, we use a regex instead which I think is more stable
+
     response_lines = response.strip().split("\n")
     concepts = []
     categories = []
-    # check that factors match desired format
+
+    pattern = r'^\d+\.\s*(.*?)\s*\(Category\s*[=]\s*(.*?)\)\s*$'
+
     for idx, line in enumerate(response_lines):
-        if not line.startswith(str(idx+1)):
-            raise ValueError(f"Concept ({idx+1}) {line} does not match expected format. Full response was {response}")
-        try:
-            concept, category = line.split(" (Category = ")
-        except ValueError:
-            raise ValueError(f"Concept ({idx+1}) {line} does not match expected format for category extraction.")
-        concepts.append(concept.strip()[3:].strip()) # remove leading number
-        categories.append(category[:-1].strip()) # remove trailing parenthesis
+        match = re.match(pattern, line)
+
+        if not match:
+            raise ValueError(
+                f"Concept ({idx + 1}) {line} does not match expected format."
+            )
+
+        concept, category = match.groups()
+
+        concepts.append(concept.strip())
+        categories.append(category.strip())
+
     return concepts, categories
 
 
