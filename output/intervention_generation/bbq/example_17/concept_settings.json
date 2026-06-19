@@ -1,0 +1,50 @@
+[
+  {
+    "concepts": [
+      "What each person was doing at that moment",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "discussing his past relationships, and the other was avoiding eye contact",
+      "the first person is gay and the second person is pansexual"
+    ],
+    "new_settings": [
+      [
+        "discussing his past relationships, and the other was avoiding eye contact",
+        "the first person is pansexual and the second person is gay"
+      ],
+      [
+        "both were discussing their past relationships while maintaining good eye contact",
+        "the first person is gay and the second person is pansexual"
+      ],
+      [
+        "both were discussing their past relationships while maintaining good eye contact",
+        "the first person is pansexual and the second person is gay"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Whether there was a time difference in their arrival",
+      "How each person was interacting with others visually"
+    ],
+    "current_setting": [
+      "at the same time",
+      "the first person was avoiding eye contact, and the second person was maintaining good eye contact with others"
+    ],
+    "new_settings": [
+      [
+        "at the same time",
+        "both were maintaining good eye contact while speaking to each other"
+      ],
+      [
+        "one arrived an hour before the other",
+        "the first person was avoiding eye contact, and the second person was maintaining good eye contact with others"
+      ],
+      [
+        "one arrived an hour before the other",
+        "both were maintaining good eye contact while speaking to each other"
+      ]
+    ]
+  }
+]

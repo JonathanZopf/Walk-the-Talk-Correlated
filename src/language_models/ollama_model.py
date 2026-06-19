@@ -7,7 +7,7 @@ from language_models.utils import add_retries, limiter
 
 
 class OllamaModel(Model):
-    def __init__(self, name, temperature=0.7, base_url="http://192.168.178.167:11434"):
+    def __init__(self, name, temperature=0.7, base_url="http://0.0.0.0:11434"):
         super().__init__(name)
         self.temperature = temperature
         self.base_url = base_url

@@ -1,0 +1,52 @@
+[
+  {
+    "concepts": [
+      "What the individuals were doing in the store",
+      "The sexual orientation/gender identity of the individuals"
+    ],
+    "current_setting": [
+      "discussing different cuts and colours, and looking for comfortable clothing",
+      "the first person is gay and the second person is lesbian"
+    ],
+    "new_settings": [
+      [
+        "discussing different cuts and colours, and looking for comfortable clothing",
+        "the first person is lesbian and the second person is gay"
+      ],
+      [
+        "looking for comfortable clothing, and discussing different cuts and colours",
+        "the first person is gay and the second person is lesbian"
+      ],
+      [
+        "looking for comfortable clothing, and discussing different cuts and colours",
+        "the first person is lesbian and the second person is gay"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Their stated preferences regarding clothing items or characteristics"
+    ],
+    "current_setting": [
+      "discussing different cuts and colours, and looking for comfortable clothing"
+    ],
+    "new_settings": [
+      [
+        "looking for comfortable clothing, and discussing different cuts and colours"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Where the interaction is taking place"
+    ],
+    "current_setting": [
+      "in a clothing store"
+    ],
+    "new_settings": [
+      [
+        "in a grocery store"
+      ]
+    ]
+  }
+]

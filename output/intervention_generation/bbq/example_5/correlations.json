@@ -1,0 +1,28 @@
+[
+  [
+    [
+      "What one individual was asking about",
+      "action/questioning"
+    ],
+    [
+      "The sexual orientations of the individuals",
+      "identity/sexuality"
+    ]
+  ],
+  [
+    [
+      "How another individual responded to questions",
+      "behavior/response"
+    ],
+    [
+      "The genders or relationship status implied by \"couple\" and friends interacting in this context",
+      "demographics/relationships"
+    ]
+  ],
+  [
+    [
+      "The specific event they are attending as a setting for interaction",
+      "location/event type"
+    ]
+  ]
+]

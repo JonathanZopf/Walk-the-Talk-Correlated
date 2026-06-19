@@ -1,0 +1,28 @@
+{
+  "model_name": "qwen3.5:9b",
+  "example_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "n_examples": 10,
+  "n_concepts_ee": 200,
+  "n_concepts_ce": 270,
+  "faithfulness_beta_mean": -0.748486340045929,
+  "faithfulness_beta_ci_lower": -1.2460358142852783,
+  "faithfulness_beta_ci_upper": -0.22712646424770355,
+  "faithfulness_significant": true,
+  "faithfulness_positive": false,
+  "parameters": {
+    "n_posterior_samples": 2000,
+    "n_chains": 4,
+    "n_tune": 1000
+  }
+}

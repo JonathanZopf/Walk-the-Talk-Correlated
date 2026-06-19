@@ -143,18 +143,30 @@ class ConceptEffectEstimator:
         # get mean and 95% confidence interval of model parameters and causal effect of the treatment on the response for each treatment
         treatment_parameter_df = get_treatment_results_from_samples(samples, treatments, self.answer_choices, treatment_reference_classes)
         # add treatment info to treatment parameter df
-        treatment_parameter_df["example_idx"] = treatment_parameter_df["treatment"].apply(lambda x: int(x.split("_")[0]))
-        treatment_parameter_df["intrv_str"] = treatment_parameter_df["treatment"].apply(lambda x: x.split("_")[1])
+
+        treatment_parameter_df["example_idx"] = treatment_parameter_df["treatment"].apply(
+            lambda x: int(x.split("_", 1)[0]))
+
+
+        # Renumber example_idx to be contiguous based on sorted order
+        unique_idxs = sorted(treatment_parameter_df["example_idx"].unique())
+        idx_mapping = {old: new for new, old in enumerate(unique_idxs)}
+        treatment_parameter_df["example_idx"] = treatment_parameter_df["example_idx"].map(idx_mapping)
+
+        treatment_parameter_df["intrv_str"] = treatment_parameter_df["treatment"].apply(lambda x: "(" + x.split("_(")[1])
         # add other intervention info
         example_df_list = []
         for example_idx in treatment_parameter_df["example_idx"].unique():
-            example_result_df = treatment_parameter_df[treatment_parameter_df["example_idx"] == example_idx]
-            example_response_df = response_df[response_df["example_idx"] == example_idx]
-            example_result_df = add_intrv_info_to_result_df(example_result_df, example_response_df["concepts"].iloc[0], example_response_df["concept_values"].iloc[0], example_response_df["categories"].iloc[0])
-            example_result_df["answer_choices"] = [example_response_df["answer_choices"].iloc[0] for _ in range(len(example_result_df))]
-            intrv_ranking_idx = example_result_df.sort_values("kl_div", ascending=False).index
-            example_result_df.loc[intrv_ranking_idx, "intrv_ranking"] = range(1, len(intrv_ranking_idx) + 1)
-            example_df_list.append(example_result_df)
+                example_result_df = treatment_parameter_df[treatment_parameter_df["example_idx"] == example_idx]
+                treatment = example_result_df.iloc[0]["treatment"]
+                substring = re.sub(r'^\d+_', '', treatment) if isinstance(treatment, str) else treatment
+                example_response_df = response_df[
+                    response_df["response_id"].str.contains(substring, na=False, regex=False)]
+                example_result_df = add_intrv_info_to_result_df(example_result_df, example_response_df["concepts"].iloc[0], example_response_df["concept_values"].iloc[0], example_response_df["categories"].iloc[0])
+                example_result_df["answer_choices"] = [example_response_df["answer_choices"].iloc[0] for _ in range(len(example_result_df))]
+                intrv_ranking_idx = example_result_df.sort_values("kl_div", ascending=False).index
+                example_result_df.loc[intrv_ranking_idx, "intrv_ranking"] = range(1, len(intrv_ranking_idx) + 1)
+                example_df_list.append(example_result_df)
         treatment_parameter_df = pd.concat(example_df_list, ignore_index=True)
         # map from fine to coarse categories for treatment parameter df
         treatment_parameter_df = apply_coarse_cat_mapping_to_df(treatment_parameter_df, self.dataset.name, coarse_cat_name="intrv_category")
@@ -228,4 +240,19 @@ class ConceptEffectEstimator:
                 intrv_data_list.append(data)
         modeling_df = pd.concat(intrv_data_list, ignore_index=True)
         return modeling_df, treatments, categories, treatment_cats, treatment_reference_classes
+
+
+    def calculate_shapley_kl_divergence(self, treatment_parameter_df):
+        """
+        Calculate Shapley KL divergence for each intervention
+        This means the contribution of each intervention to a KL divergence is calculated, giving yield to a shapley-kl-score.
+
+        The return value is a modified version of the treatment_parameter_df including a new column 'shapley_kl'.
+        """
+
+        for example_idx in self.example_idxs:
+            example_df = treatment_parameter_df[treatment_parameter_df["example_idx"] == example_idx]
+            # Calculate shapley value
+            # Value function: The kl function of the coalition (intervention)
+            return treatment_parameter_df
 

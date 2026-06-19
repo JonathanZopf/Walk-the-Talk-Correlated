@@ -82,7 +82,6 @@ def main():
         try:
             determine_implied_concepts(dataset, cnt + 1, example_idx, implied_concepts_model, args, failed_idxs)
         except Exception as e:
-            raise e
             print(f"ERROR: {e}")
             failed_idxs[example_idx] = str(e)
     # save failed examples

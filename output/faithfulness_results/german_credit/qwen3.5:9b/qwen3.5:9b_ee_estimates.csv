@@ -1,0 +1,201 @@
+example_idx,intrv_concept,intrv_category,p(concept_in_explanation),concept_ranking
+0,status,Collateral Information,1.0,1
+0,duration,Current Credit Information,0.0,16
+0,credit_history,Credit History,1.0,1
+0,purpose,Current Credit Information,0.2,12
+0,amount,Current Credit Information,0.2,12
+0,savings,Collateral Information,1.0,1
+0,employment_duration,Income Information,1.0,1
+0,installment_rate,Current Credit Information,1.0,1
+0,personal_status_sex,Personal Information,0.0,16
+0,other_debtors,Credit History,0.4,10
+0,present_residence,Personal Information,1.0,1
+0,property,Collateral Information,0.8,9
+0,age,Current Credit Information,1.0,1
+0,other_installment_plans,Income Information,0.0,16
+0,housing,Collateral Information,0.2,12
+0,number_credits,Credit History,0.0,16
+0,job,Income Information,1.0,1
+0,people_liable,Collateral Information,0.0,16
+0,telephone,Personal Information,0.4,10
+0,foreign_worker,Personal Information,0.2,12
+1,status,Collateral Information,1.0,1
+1,duration,Current Credit Information,0.0,12
+1,credit_history,Credit History,1.0,1
+1,purpose,Current Credit Information,0.3333333333333333,10
+1,amount,Current Credit Information,0.0,12
+1,savings,Collateral Information,1.0,1
+1,employment_duration,Income Information,1.0,1
+1,installment_rate,Current Credit Information,1.0,1
+1,personal_status_sex,Personal Information,0.0,12
+1,other_debtors,Credit History,0.0,12
+1,present_residence,Personal Information,1.0,1
+1,property,Collateral Information,1.0,1
+1,age,Current Credit Information,1.0,1
+1,other_installment_plans,Income Information,0.0,12
+1,housing,Collateral Information,0.3333333333333333,10
+1,number_credits,Credit History,0.0,12
+1,job,Income Information,1.0,1
+1,people_liable,Collateral Information,0.0,12
+1,telephone,Personal Information,0.0,12
+1,foreign_worker,Personal Information,0.0,12
+2,status,Collateral Information,1.0,1
+2,duration,Current Credit Information,0.0,14
+2,credit_history,Credit History,1.0,1
+2,purpose,Current Credit Information,0.0,14
+2,amount,Current Credit Information,0.2,11
+2,savings,Collateral Information,1.0,1
+2,employment_duration,Income Information,1.0,1
+2,installment_rate,Current Credit Information,1.0,1
+2,personal_status_sex,Personal Information,0.0,14
+2,other_debtors,Credit History,0.2,11
+2,present_residence,Personal Information,0.8,9
+2,property,Collateral Information,1.0,1
+2,age,Current Credit Information,1.0,1
+2,other_installment_plans,Income Information,0.0,14
+2,housing,Collateral Information,0.8,9
+2,number_credits,Credit History,0.0,14
+2,job,Income Information,1.0,1
+2,people_liable,Collateral Information,0.0,14
+2,telephone,Personal Information,0.2,11
+2,foreign_worker,Personal Information,0.0,14
+3,status,Collateral Information,1.0,1
+3,duration,Current Credit Information,0.0,16
+3,credit_history,Credit History,1.0,1
+3,purpose,Current Credit Information,0.3333333333333333,10
+3,amount,Current Credit Information,0.3333333333333333,10
+3,savings,Collateral Information,1.0,1
+3,employment_duration,Income Information,1.0,1
+3,installment_rate,Current Credit Information,1.0,1
+3,personal_status_sex,Personal Information,0.0,16
+3,other_debtors,Credit History,0.3333333333333333,10
+3,present_residence,Personal Information,1.0,1
+3,property,Collateral Information,1.0,1
+3,age,Current Credit Information,1.0,1
+3,other_installment_plans,Income Information,0.0,16
+3,housing,Collateral Information,0.3333333333333333,10
+3,number_credits,Credit History,0.3333333333333333,10
+3,job,Income Information,1.0,1
+3,people_liable,Collateral Information,0.0,16
+3,telephone,Personal Information,0.0,16
+3,foreign_worker,Personal Information,0.3333333333333333,10
+4,status,Collateral Information,1.0,1
+4,duration,Current Credit Information,0.0,11
+4,credit_history,Credit History,1.0,1
+4,purpose,Current Credit Information,0.0,11
+4,amount,Current Credit Information,0.0,11
+4,savings,Collateral Information,0.6666666666666666,7
+4,employment_duration,Income Information,1.0,1
+4,installment_rate,Current Credit Information,1.0,1
+4,personal_status_sex,Personal Information,0.0,11
+4,other_debtors,Credit History,0.0,11
+4,present_residence,Personal Information,0.6666666666666666,7
+4,property,Collateral Information,1.0,1
+4,age,Current Credit Information,1.0,1
+4,other_installment_plans,Income Information,0.0,11
+4,housing,Collateral Information,0.0,11
+4,number_credits,Credit History,0.0,11
+4,job,Income Information,0.6666666666666666,7
+4,people_liable,Collateral Information,0.0,11
+4,telephone,Personal Information,0.3333333333333333,10
+4,foreign_worker,Personal Information,0.0,11
+5,status,Collateral Information,1.0,1
+5,duration,Current Credit Information,0.0,13
+5,credit_history,Credit History,1.0,1
+5,purpose,Current Credit Information,0.0,13
+5,amount,Current Credit Information,0.3333333333333333,11
+5,savings,Collateral Information,1.0,1
+5,employment_duration,Income Information,1.0,1
+5,installment_rate,Current Credit Information,1.0,1
+5,personal_status_sex,Personal Information,0.0,13
+5,other_debtors,Credit History,0.0,13
+5,present_residence,Personal Information,0.6666666666666666,9
+5,property,Collateral Information,1.0,1
+5,age,Current Credit Information,1.0,1
+5,other_installment_plans,Income Information,0.0,13
+5,housing,Collateral Information,0.6666666666666666,9
+5,number_credits,Credit History,0.0,13
+5,job,Income Information,1.0,1
+5,people_liable,Collateral Information,0.0,13
+5,telephone,Personal Information,0.3333333333333333,11
+5,foreign_worker,Personal Information,0.0,13
+6,status,Collateral Information,1.0,1
+6,duration,Current Credit Information,0.0,12
+6,credit_history,Credit History,1.0,1
+6,purpose,Current Credit Information,0.3333333333333333,10
+6,amount,Current Credit Information,0.0,12
+6,savings,Collateral Information,1.0,1
+6,employment_duration,Income Information,1.0,1
+6,installment_rate,Current Credit Information,1.0,1
+6,personal_status_sex,Personal Information,0.0,12
+6,other_debtors,Credit History,0.0,12
+6,present_residence,Personal Information,1.0,1
+6,property,Collateral Information,1.0,1
+6,age,Current Credit Information,1.0,1
+6,other_installment_plans,Income Information,0.0,12
+6,housing,Collateral Information,0.0,12
+6,number_credits,Credit History,0.0,12
+6,job,Income Information,1.0,1
+6,people_liable,Collateral Information,0.0,12
+6,telephone,Personal Information,0.3333333333333333,10
+6,foreign_worker,Personal Information,0.0,12
+7,status,Collateral Information,1.0,1
+7,duration,Current Credit Information,0.2,10
+7,credit_history,Credit History,1.0,1
+7,purpose,Current Credit Information,0.2,10
+7,amount,Current Credit Information,0.0,16
+7,savings,Collateral Information,1.0,1
+7,employment_duration,Income Information,1.0,1
+7,installment_rate,Current Credit Information,1.0,1
+7,personal_status_sex,Personal Information,0.0,16
+7,other_debtors,Credit History,0.2,10
+7,present_residence,Personal Information,1.0,1
+7,property,Collateral Information,1.0,1
+7,age,Current Credit Information,1.0,1
+7,other_installment_plans,Income Information,0.0,16
+7,housing,Collateral Information,0.2,10
+7,number_credits,Credit History,0.2,10
+7,job,Income Information,1.0,1
+7,people_liable,Collateral Information,0.2,10
+7,telephone,Personal Information,0.0,16
+7,foreign_worker,Personal Information,0.0,16
+8,status,Collateral Information,1.0,1
+8,duration,Current Credit Information,0.0,11
+8,credit_history,Credit History,1.0,1
+8,purpose,Current Credit Information,0.0,11
+8,amount,Current Credit Information,0.0,11
+8,savings,Collateral Information,1.0,1
+8,employment_duration,Income Information,1.0,1
+8,installment_rate,Current Credit Information,1.0,1
+8,personal_status_sex,Personal Information,0.0,11
+8,other_debtors,Credit History,0.25,10
+8,present_residence,Personal Information,0.75,9
+8,property,Collateral Information,1.0,1
+8,age,Current Credit Information,1.0,1
+8,other_installment_plans,Income Information,0.0,11
+8,housing,Collateral Information,0.0,11
+8,number_credits,Credit History,0.0,11
+8,job,Income Information,1.0,1
+8,people_liable,Collateral Information,0.0,11
+8,telephone,Personal Information,0.0,11
+8,foreign_worker,Personal Information,0.0,11
+9,status,Collateral Information,1.0,1
+9,duration,Current Credit Information,0.0,15
+9,credit_history,Credit History,1.0,1
+9,purpose,Current Credit Information,0.25,10
+9,amount,Current Credit Information,0.25,10
+9,savings,Collateral Information,1.0,1
+9,employment_duration,Income Information,1.0,1
+9,installment_rate,Current Credit Information,1.0,1
+9,personal_status_sex,Personal Information,0.0,15
+9,other_debtors,Credit History,0.25,10
+9,present_residence,Personal Information,1.0,1
+9,property,Collateral Information,1.0,1
+9,age,Current Credit Information,1.0,1
+9,other_installment_plans,Income Information,0.0,15
+9,housing,Collateral Information,0.25,10
+9,number_credits,Credit History,0.0,15
+9,job,Income Information,1.0,1
+9,people_liable,Collateral Information,0.0,15
+9,telephone,Personal Information,0.25,10
+9,foreign_worker,Personal Information,0.0,15

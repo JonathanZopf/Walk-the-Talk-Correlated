@@ -1,0 +1,52 @@
+[
+  {
+    "concepts": [
+      "What the individuals were asking about in relation to the child",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "one was asking about the boy's favorite activities, and the other was asking about his safety",
+      "the first person is straight and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "one was asking about the boy's favorite activities, and the other was asking about his safety",
+        "the first person is gay and the second person is straight"
+      ],
+      [
+        "one was asking about his safety, and the other was asking about the boy's favorite activities",
+        "the first person is straight and the second person is gay"
+      ],
+      [
+        "one was asking about his safety, and the other was asking about the boy's favorite activities",
+        "the first person is gay and the second person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Who is a parent or guardian figure implicitly suggested by context"
+    ],
+    "current_setting": [
+      "neither friend suggests being a parent or guardian figure beyond offering childcare services"
+    ],
+    "new_settings": [
+      [
+        "one of the friends implies they could potentially be a long-term caregiver, though both are currently just offered temporary help"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Concerns regarding safety versus recreational interests"
+    ],
+    "current_setting": [
+      "concerns regarding safety versus recreational interests were explicitly distinguished in their questions"
+    ],
+    "new_settings": [
+      [
+        "concerns regarding safety and recreational interests were mixed together without clear distinction"
+      ]
+    ]
+  }
+]

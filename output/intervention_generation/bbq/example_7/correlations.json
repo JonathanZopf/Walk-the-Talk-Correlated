@@ -1,0 +1,22 @@
+[
+  [
+    [
+      "Emotional state and future plans expressed by one group versus doubts expressed by another",
+      "emotion/intention/action"
+    ]
+  ],
+  [
+    [
+      "Relationship status or family composition of the groups involved",
+      "relationship/family_structure"
+    ],
+    [
+      "Sexual orientation of the individuals",
+      "sexual_orientation/identity"
+    ],
+    [
+      "The action of seeking to adopt a child",
+      "activity/goal"
+    ]
+  ]
+]

@@ -109,7 +109,7 @@ def main():
         try:
             generate_interventions(dataset, cnt + 1, example_idx, intervention_model, args)
         except Exception as e:
-
+            raise e
             print(f"ERROR: {e}")
             failed_idxs[example_idx] = str(e)
     # saved failed idxs and corresponding errors to file

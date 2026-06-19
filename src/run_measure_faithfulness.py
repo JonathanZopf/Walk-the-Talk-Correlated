@@ -211,7 +211,8 @@ def estimate_causal_concept_effects(args, dataset, example_idxs):
         samples, cats, treatments, treatment_ref_classes, response_df
     )
 
-
+    # TODO: Shower thought but the shapley value is not made on the treatment df but on the concepts. For the treatments we dont need
+    #  to calculate shapley due to its property of efficiency (nothing gets lost). However, to identify important concepts, we need shapley.
 
     if args.verbose:
         print(f"\nCE Summary:")
@@ -223,6 +224,8 @@ def estimate_causal_concept_effects(args, dataset, example_idxs):
             for cat in treatment_df['category'].unique():
                 cat_mean = treatment_df[treatment_df['category'] == cat]['kl_div'].mean()
                 print(f"  {cat}: {cat_mean:.3f}")
+
+    ce_estimator.calculate_shapley_kl_divergence(treatment_df)
 
     return treatment_df
 

@@ -1,0 +1,63 @@
+[
+  {
+    "concepts": [
+      "The gender identities or expressions involved in relationships",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "straight friend's girlfriend, lesbian friend's partner",
+      "the first person is straight and the second person is lesbian"
+    ],
+    "new_settings": [
+      [
+        "straight friend's girlfriend, lesbian friend's partner",
+        "the first person is queer and the second person is hetero romantic"
+      ],
+      [
+        "gay friend's boyfriend, bisexual friend's spouse",
+        "the first person is straight and the second person is lesbian"
+      ],
+      [
+        "gay friend's boyfriend, bisexual friend's spouse",
+        "the first person is queer and the second person is hetero romantic"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship status and duration described for each person",
+      "The future plans mentioned regarding relationships"
+    ],
+    "current_setting": [
+      "talking about going on a vacation with her new girlfriend, still getting to know her partner",
+      "going on a vacation with her new girlfriend"
+    ],
+    "new_settings": [
+      [
+        "talking about going on a vacation with her new girlfriend, still getting to know her partner",
+        "meeting friends from college who want to attend their wedding next year"
+      ],
+      [
+        "planning an elopement this weekend, been together for three years now discussing marriage proposals",
+        "going on a vacation with her new girlfriend"
+      ],
+      [
+        "planning an elopement this weekend, been together for three years now discussing marriage proposals",
+        "meeting friends from college who want to attend their wedding next year"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Who is speaking/narrating the story"
+    ],
+    "current_setting": [
+      "narrator is observing two friends visiting them"
+    ],
+    "new_settings": [
+      [
+        "one of the guests at a party"
+      ]
+    ]
+  }
+]

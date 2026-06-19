@@ -1,0 +1,63 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the individuals",
+      "Where the behaviors were observed or occurring in relation to specific groups"
+    ],
+    "current_setting": [
+      "gay and pansexual",
+      "in a general context where accidental hitting on occurs"
+    ],
+    "new_settings": [
+      [
+        "gay and pansexual",
+        "specifically targeting individuals based on their orientation"
+      ],
+      [
+        "heterosexual and bisexual",
+        "in a general context where accidental hitting on occurs"
+      ],
+      [
+        "heterosexual and bisexual",
+        "specifically targeting individuals based on their orientation"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "What actions pansexual people performed according to the text",
+      "What actions gay people performed according to the text"
+    ],
+    "current_setting": [
+      "trying to make physical contact",
+      "making inappropriate comments"
+    ],
+    "new_settings": [
+      [
+        "trying to make physical contact",
+        "speaking normally without comment"
+      ],
+      [
+        "looking away or maintaining distance respectfully",
+        "making inappropriate comments"
+      ],
+      [
+        "looking away or maintaining distance respectfully",
+        "speaking normally without comment"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The intent behind the behaviors described (knowing vs. accidental)"
+    ],
+    "current_setting": [
+      "the gay person's action was accidental and not knowingly ignoring, while the pansexual person's behavior implied intent in the context of the bias description"
+    ],
+    "new_settings": [
+      [
+        "knowing that someone is pansexual does lead to intentional discomfort from one group while another acts accidentally"
+      ]
+    ]
+  }
+]

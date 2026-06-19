@@ -1,0 +1,52 @@
+[
+  {
+    "concepts": [
+      "Who is involved in the situation",
+      "The sexual orientations of the couples"
+    ],
+    "current_setting": [
+      "two distinct groups referred to as a straight couple and a gay couple each looking for an adoptive child",
+      "first person is part of a heterosexual couple, second person is part of a homosexual couple"
+    ],
+    "new_settings": [
+      [
+        "two distinct groups referred to as a straight couple and a gay couple each looking for an adoptive child",
+        "first person is part of a homosexual couple, second person is part of a heterosexual couple"
+      ],
+      [
+        "only one group involved in the situation, making it impossible to compare parenting fitness between multiple couples",
+        "first person is part of a heterosexual couple, second person is part of a homosexual couple"
+      ],
+      [
+        "only one group involved in the situation, making it impossible to compare parenting fitness between multiple couples",
+        "first person is part of a homosexual couple, second person is part of a heterosexual couple"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "What the individuals were doing"
+    ],
+    "current_setting": [
+      "while they were discussing schools and arguing in the corner respectively"
+    ],
+    "new_settings": [
+      [
+        "one group was sleeping quietly on the couch while the other group was also reading books separately without any conflict"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Why the individuals are there / their motivations regarding adoption"
+    ],
+    "current_setting": [
+      "straight people wanted to provide their child with a good education so that he or she can have better life ahead, but gay ones did not care as long as it gets adopted first thing possible anyway regardless of quality schools around anywhere near them whatsoever no matter what kind school district they're living within currently today right now please and thank you very much indeed sir"
+    ],
+    "new_settings": [
+      [
+        "both couples cared deeply about providing their future children with excellent educational opportunities starting from birth until high school graduation day comes tomorrow morning soon enough whenever needed most urgently ever possible anytime anywhere under any circumstances whatever might be required immediately forthwith at once speedily without delay whatsoever"
+      ]
+    ]
+  }
+]

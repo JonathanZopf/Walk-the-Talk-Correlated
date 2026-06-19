@@ -598,14 +598,24 @@ def apply_coarse_cat_mapping_to_df(df, dataset_name,coarse_cat_name="intrv_categ
 ####################################################################################################
 
 def process_intervention_str(intrv_str, concept, concept_values, categories):
-    intrv_bool = [x != "0" for x in intrv_str]
-    intrv_idx = intrv_bool.index(True)
-    intrv_concept = concept[intrv_idx]
-    intrv_category = categories[intrv_idx]
-    original_value = concept_values[intrv_idx]["current_setting"]
+    if not (intrv_str.__contains__("(") and intrv_str.__contains__(")")):
+        raise ValueError(f"Invalid intrv: {intrv_str}")
+    intrv_str_intervention_setting_part = intrv_str[intrv_str.index("(")+1:intrv_str.index(")")]
+    intrv_bool = [x != "0" for x in intrv_str_intervention_setting_part]
+    intrv_idx = int(intrv_str_intervention_setting_part, 2) - 1
+    if intrv_idx < 0:
+        raise ValueError(f"Negative intervention id not allowed. Perhaps the original is falsly treated as an intrv here.")
+    try:
+        original_value = concept_values[intrv_idx]["current_setting"]
+    except:
+        raise ValueError(f"Invalid concept value")
     intrv_char = intrv_str[intrv_idx]
     assert len(concept_values[intrv_idx]["new_settings"]), "Current method handles only a single alternative value for each concept."
     new_value = "UNKNOWN" if intrv_char == '-' else concept_values[intrv_idx]["new_settings"][0]
-    intrv_name = f"{intrv_concept}: {original_value} -> {new_value}"
-    return intrv_bool, intrv_idx, intrv_concept, intrv_category, original_value, new_value, intrv_name
+    intrv_name = []
+    for index, intrv_concept in enumerate(concept):
+        intrv_category = categories[index]
+        intrv_name.append(f"{intrv_concept}: {original_value} -> {new_value}")
+
+    return intrv_bool, intrv_idx, intrv_concept, intrv_category, original_value, new_value, "\n".join(intrv_name)
     

@@ -60,13 +60,7 @@ class InterventionGenerator(ABC):
             if existing_interventions:
                 print(f"Found {len(existing_interventions)} existing interventions. Skipping...")
 
-        # -----------------------------------------------------------------
-        # 1. Determine if concept_settings use the group format
-        #    (i.e. each entry has a "concepts" key)
-        # -----------------------------------------------------------------
-        is_group_format = all("concepts" in cs for cs in concept_settings)
 
-        if is_group_format:
             # Flatten all concepts across groups to give a complete list to apply_single_intervention
             all_concepts = []
             for cs in concept_settings:
@@ -74,32 +68,17 @@ class InterventionGenerator(ABC):
             # Make unique, preserving order
             seen = set()
             all_concepts = [c for c in all_concepts if not (c in seen or seen.add(c))]
-        else:
-            # Legacy flat format: we need a concepts list. Here we assume
-            # concept_settings items have a "concept" key, but the original code
-            # didn't store concepts; adapt to what you actually have.
-            # For safety, raise an error if we can't obtain them.
-            raise NotImplementedError(
-                "apply_interventions with flat concept_settings is not supported in this version. "
-                "Please ensure define_intervention_sets returns group format."
-            )
 
-        # -----------------------------------------------------------------
-        # 2. Build the intervention list
-        # -----------------------------------------------------------------
         intervention_list = []
-
-        if is_group_format:
-            # Group‑based enumeration: one intervention per combination per group
-            for group_idx, group_setting in enumerate(concept_settings):
-                n_combos = len(group_setting["new_settings"])
-                for combo_idx in range(n_combos):
-                    intrv_str = f"G{group_idx}_C{combo_idx}"
-                    intervention_list.append(intrv_str)
-        else:
-            # (Old path – not used now, kept for reference)
-            # intervention_list = enumerate_interventions(concepts, concept_settings, ...)
-            pass
+        # Group‑based enumeration: one intervention per combination per group
+        for group_idx, group_setting in enumerate(concept_settings):
+            n_combos = len(group_setting["new_settings"])
+            for combo_idx in range(n_combos):
+                # make string to encode using 0 and 1 if intervention is applied for concept
+                concept_setting_string = ''.join(["1" if group_setting["current_setting"][x] != group_setting["new_settings"][combo_idx][x] else "0" for x in range(len(group_setting["concepts"]))])
+                intrv_str = f"G{group_idx}_C{combo_idx}_({concept_setting_string})"
+                print("Intrv:", intrv_str)
+                intervention_list.append(intrv_str)
 
         # Skip those already generated
         intervention_list = [x for x in intervention_list if x not in existing_interventions]

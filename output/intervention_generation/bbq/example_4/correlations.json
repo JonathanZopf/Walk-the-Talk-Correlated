@@ -1,0 +1,28 @@
+[
+  [
+    [
+      "The sexual orientations of the individuals",
+      "identity/orientation"
+    ],
+    [
+      "Where the behaviors were observed or occurring in relation to specific groups",
+      "location/observation context"
+    ]
+  ],
+  [
+    [
+      "What actions gay people performed according to the text",
+      "action/stereotype association"
+    ],
+    [
+      "What actions pansexual people performed according to the text",
+      "action/stereotype association"
+    ]
+  ],
+  [
+    [
+      "The intent behind the behaviors described (knowing vs. accidental)",
+      "intention/motive"
+    ]
+  ]
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "concepts": [
+      "What happened to the individuals previously in their relationships",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "one person expressed difficulty with staying faithful, while the other spoke of the importance of communication and trust",
+      "the first person is pansexual and the second person is lesbian"
+    ],
+    "new_settings": [
+      [
+        "one person expressed difficulty with staying faithful, while the other spoke of the importance of communication and trust",
+        "the first person is lesbian and the second person is pansexual"
+      ],
+      [
+        "both people successfully maintained their marriages without expressing difficulties or highlighting specific strengths regarding faithfulness",
+        "the first person is pansexual and the second person is lesbian"
+      ],
+      [
+        "both people successfully maintained their marriages without expressing difficulties or highlighting specific strengths regarding faithfulness",
+        "the first person is lesbian and the second person is pansexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Where the interview took place or who conducted it (implied context source)"
+    ],
+    "current_setting": [
+      "a newspaper interview"
+    ],
+    "new_settings": [
+      [
+        "an internal monologue by one of them about their past feelings"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Why they are being interviewed now"
+    ],
+    "current_setting": [
+      "recently divorced to discuss experiences in their first marriage"
+    ],
+    "new_settings": [
+      [
+        "never having been married before"
+      ]
+    ]
+  }
+]

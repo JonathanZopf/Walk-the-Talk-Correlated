@@ -1,0 +1,22 @@
+[
+  [
+    [
+      "Whether the relationship being discussed was in the past or present",
+      "action/temporal frame"
+    ],
+    [
+      "The sexual orientations of the individuals",
+      "orientation/identity"
+    ]
+  ],
+  [
+    [
+      "Where the conversation took place",
+      "location"
+    ],
+    [
+      "Who is seated with whom / who knows each other",
+      "social proximity/relationship context"
+    ]
+  ]
+]

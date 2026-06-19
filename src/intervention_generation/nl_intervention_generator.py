@@ -146,13 +146,17 @@ class NLInterventionGenerator(InterventionGenerator):
     def apply_single_intervention(self, intervention_str, all_concepts, concept_settings):
         """
         Apply one group‑level intervention.
-        intervention_str format: "G{group_idx}_C{combo_idx}"
+        intervention_str format: "G{group_idx}_C{combo_idx}_({concept_setting_str})"
         """
-        parts = intervention_str[1:].split('_C')
-        if len(parts) != 2:
+        # TODO: This solution is beyond ugly: introduce an improved one which is better readable
+        parts = [intervention_str[1:].split('_C')[0], intervention_str[1:].split('_C')[1].split('_(')[0], intervention_str[1:].split('_C')[1].split('_(')[1].replace(')', '')]
+        print("Parsed parts: ", parts)
+        if len(parts) != 3:
             raise ValueError(f"Unexpected intervention string format: {intervention_str}")
         group_idx = int(parts[0])
         combo_idx = int(parts[1])
+        concept_setting_str = parts[2]
+
 
         group_setting = concept_settings[group_idx]
         group_concepts = group_setting["concepts"]

@@ -277,7 +277,7 @@ class TabularInterventionGenerator(InterventionGenerator):
         if len(parts) != 2:
             raise ValueError(f"Unexpected intervention string format: {intervention_str}")
         group_idx = int(parts[0])
-        combo_idx = int(parts[1])
+        combo_idx = int(parts[1].split('_(')[0])
 
         group_setting = concept_settings[group_idx]
         group_concepts = group_setting["concepts"]

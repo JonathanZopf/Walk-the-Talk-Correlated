@@ -1,0 +1,22 @@
+[
+  [
+    [
+      "The sexual orientations of the individuals",
+      "sexuality/orientation"
+    ],
+    [
+      "What one individual was seen doing with a child",
+      "action/observation"
+    ]
+  ],
+  [
+    [
+      "What the other individual was doing (related to parenting books)",
+      "action/observation"
+    ],
+    [
+      "Whether there are new neighbors in the apartment complex",
+      "location/housing situation"
+    ]
+  ]
+]

@@ -5,7 +5,6 @@ import os
 import json
 
 import numpy as np
-from IPython import embed
 
 
 class ResponseCollector:
