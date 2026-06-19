@@ -65,13 +65,15 @@ def parse_llm_response_factor_settings(response):
     response_lines = response.strip().split("\n")
     factor_settings = []
     for idx, line in enumerate(response_lines):
-        if not line.startswith(str(idx+1)):
-            raise ValueError(f"Concept Values {idx+1} ({line}) does not match expected format. Full response was {response}")
+        if not line.startswith(str(idx + 1)):
+            raise ValueError(
+                f"Concept Values {idx + 1} ({line}) does not match expected format. Full response was {response}")
         line = line.strip()[3:].strip()
         if not line.startswith('(A)') or ('(B.1)' not in line and '(B)' not in line):
-            raise ValueError(f"Concept Values at line {idx+1} ({line}) do not match expected format.")
+            raise ValueError(f"Concept Values at line {idx + 1} ({line}) do not match expected format.")
         if '(B.3)' in line:
-            raise ValueError(f"Concept Values at line {idx+1} ({line}) do not match expected format (parsing does not handle more than 2 alternative values currently).")
+            raise ValueError(
+                f"Concept Values at line {idx + 1} ({line}) do not match expected format (parsing does not handle more than 2 alternative values currently).")
         if '(B.1)' in line:
             current_setting = line.split('(B.1)')[0].split('(A)')[1].strip()
         else:
@@ -217,12 +219,14 @@ def parse_llm_response_implied_concepts(response, n_concepts):
     pattern = re.compile(r'\d+\.\s')
     concept_decisions = pattern.split(response)[1:]
     if len(concept_decisions) != n_concepts:
-        raise ValueError(f"Number of concept decisions does not match expected number of concepts. Expected {n_concepts}, got {len(concept_decisions)}. Full response was {response}.")
+        raise ValueError(
+            f"Number of concept decisions does not match expected number of concepts. Expected {n_concepts}, got {len(concept_decisions)}. Full response was {response}.")
     parsed_fds = []
     for idx, concept_decision in enumerate(concept_decisions):
         decision_bools = ["YES" in concept_decision, "NO" in concept_decision]
         if sum(decision_bools) != 1:
-            raise ValueError(f"Concept decision {idx+1} does not match expected format. (Did not provide yes/no decision). Full response was {response}.")
+            raise ValueError(
+                f"Concept decision {idx + 1} does not match expected format. (Did not provide yes/no decision). Full response was {response}.")
         parsed_fds.append(1 if "YES" in concept_decision else 0)
     return parsed_fds, response
 
@@ -251,7 +255,8 @@ def enumerate_interventions_helper(intervention_list, intervention_str, factors,
         enumerate_interventions_helper(intervention_list, intervention_str + "0", factors, factor_settings, k_hop)
         # loop over possible interventions
         for idx in range(len(factor_settings[len(intervention_str)]["new_settings"])):
-            enumerate_interventions_helper(intervention_list, intervention_str + str(idx+1), factors, factor_settings, k_hop)
+            enumerate_interventions_helper(intervention_list, intervention_str + str(idx + 1), factors, factor_settings,
+                                           k_hop)
 
 
 def enumerate_interventions(factors, factor_settings, k_hop=None, include_no_intervention=True, mark_removals=True):
@@ -274,9 +279,10 @@ def enumerate_interventions(factors, factor_settings, k_hop=None, include_no_int
             intrv_str = intervention_list[idx]
             for j in range(len(intrv_str)):
                 if intrv_str[j] != "0" and factor_settings[j]['new_settings'][int(intrv_str[j]) - 1] == "UNKNOWN":
-                    intrv_str = intrv_str[:j] + "-" + intrv_str[j+1:]
+                    intrv_str = intrv_str[:j] + "-" + intrv_str[j + 1:]
             intervention_list[idx] = intrv_str
     return intervention_list
+
 
 ####################################################################################################
 ## Experiment Output Loading Utils ##
@@ -346,19 +352,19 @@ def load_counterfactual_model_responses(model_response_path, example_idx, concep
     Returns:
         dataframe with counterfactual model responses
     """
-    response_dict = {"intrv_str": [], 
-                        "intrv_bool": [],
-                        "intrv_idx": [],
-                        "intrv_concept": [],
-                        "intrv_category": [],
-                        "original_value": [],
-                        "new_value": [],
-                        "intrv_name": [],
-                        "response_id": [], 
-                        "prompt": [], 
-                        "response": [], 
-                        "answer": [], 
-                        }
+    response_dict = {"intrv_str": [],
+                     "intrv_bool": [],
+                     "intrv_idx": [],
+                     "intrv_concept": [],
+                     "intrv_category": [],
+                     "original_value": [],
+                     "new_value": [],
+                     "intrv_name": [],
+                     "response_id": [],
+                     "prompt": [],
+                     "response": [],
+                     "answer": [],
+                     }
     example_counterfactual_response_dir = os.path.join(model_response_path, f"example_{example_idx}", "counterfactual")
     for response_file in os.listdir(example_counterfactual_response_dir):
         assert response_file.startswith("response_counterfactual="), f"Invalid response file: {response_file}"
@@ -371,7 +377,8 @@ def load_counterfactual_model_responses(model_response_path, example_idx, concep
         response_dict["prompt"].append(response["prompt"])
         response_dict["response"].append(response["response"])
         response_dict["answer"].append(response["answer"])
-        intrv_bool, intrv_idx, intrv_concept, intrv_category, original_value, new_value, intrv_name = process_intervention_str(intervention_str, concepts, concept_values, categories)
+        intrv_bool, intrv_idx, intrv_concept, intrv_category, original_value, new_value, intrv_name = process_intervention_str(
+            intervention_str, concepts, concept_values, categories)
         response_dict["intrv_bool"].append(intrv_bool)
         response_dict["intrv_idx"].append(intrv_idx)
         response_dict["intrv_concept"].append(intrv_concept)
@@ -391,11 +398,11 @@ def get_language_model(model_name, max_tokens=256, temperature=0.7):
         return ChatGPT(model_name, temperature=temperature)
     elif model_name == 'text-davinci-003' or model_name == 'gpt-3.5-turbo-instruct':
         return CompletionGPT(model_name, max_tokens=max_tokens, temperature=temperature)
-    elif 'claude'in model_name:
+    elif 'claude' in model_name:
         return Claude(model_name, max_tokens=max_tokens, temperature=temperature)
     else:
         return OllamaModel(model_name, temperature=temperature)
-    
+
 
 def get_dataset(dataset_name, dataset_path):
     if dataset_name == "bbq":
@@ -465,10 +472,10 @@ CONCEPT2CAT_CORRECT_BBQ = {
 
 # patient demographics categories
 DEMOGRAPHIC_CATS_MEDQA = [
-    "age", 
-    "gender", 
-    "race", 
-    "sex",  
+    "age",
+    "gender",
+    "race",
+    "sex",
     "socioeconomic status"
 ]
 
@@ -557,9 +564,9 @@ BEHAVIORAL_CATS_MEDQA = [
     "third-party observations",
     "patient concerns",
     "reason for visit",
-    "social history", 
+    "social history",
     "lifestyle",
-    "travel history", 
+    "travel history",
     "family dynamics",
     "environmental factors",
     "physical characteristics",
@@ -581,7 +588,8 @@ COARSE_CATEGORY_MAPPING_INV_MEDQA = {
 
 COARSE_CATEGORY_MAPPING_MEDQA = {v: k for k, values in COARSE_CATEGORY_MAPPING_INV_MEDQA.items() for v in values}
 
-def apply_coarse_cat_mapping_to_df(df, dataset_name,coarse_cat_name="intrv_category_coarse"):
+
+def apply_coarse_cat_mapping_to_df(df, dataset_name, coarse_cat_name="intrv_category_coarse"):
     if dataset_name == "bbq":
         df[coarse_cat_name] = df["intrv_category"].apply(lambda x: COARSE_CAT_MAP_BBQ.get(x, x))
         for concept, cat in CONCEPT2CAT_CORRECT_BBQ.items():
@@ -598,24 +606,14 @@ def apply_coarse_cat_mapping_to_df(df, dataset_name,coarse_cat_name="intrv_categ
 ####################################################################################################
 
 def process_intervention_str(intrv_str, concept, concept_values, categories):
-    if not (intrv_str.__contains__("(") and intrv_str.__contains__(")")):
-        raise ValueError(f"Invalid intrv: {intrv_str}")
-    intrv_str_intervention_setting_part = intrv_str[intrv_str.index("(")+1:intrv_str.index(")")]
-    intrv_bool = [x != "0" for x in intrv_str_intervention_setting_part]
-    intrv_idx = int(intrv_str_intervention_setting_part, 2) - 1
-    if intrv_idx < 0:
-        raise ValueError(f"Negative intervention id not allowed. Perhaps the original is falsly treated as an intrv here.")
-    try:
-        original_value = concept_values[intrv_idx]["current_setting"]
-    except:
-        raise ValueError(f"Invalid concept value")
+    intrv_bool = [x != "0" for x in intrv_str]
+    intrv_idx = intrv_bool.index(True)
+    intrv_concept = concept[intrv_idx]
+    intrv_category = categories[intrv_idx]
+    original_value = concept_values[intrv_idx]["current_setting"]
     intrv_char = intrv_str[intrv_idx]
-    assert len(concept_values[intrv_idx]["new_settings"]), "Current method handles only a single alternative value for each concept."
+    assert len(concept_values[intrv_idx][
+                   "new_settings"]), "Current method handles only a single alternative value for each concept."
     new_value = "UNKNOWN" if intrv_char == '-' else concept_values[intrv_idx]["new_settings"][0]
-    intrv_name = []
-    for index, intrv_concept in enumerate(concept):
-        intrv_category = categories[index]
-        intrv_name.append(f"{intrv_concept}: {original_value} -> {new_value}")
-
-    return intrv_bool, intrv_idx, intrv_concept, intrv_category, original_value, new_value, "\n".join(intrv_name)
-    
+    intrv_name = f"{intrv_concept}: {original_value} -> {new_value}"
+    return intrv_bool, intrv_idx, intrv_concept, intrv_category, original_value, new_value, intrv_name
