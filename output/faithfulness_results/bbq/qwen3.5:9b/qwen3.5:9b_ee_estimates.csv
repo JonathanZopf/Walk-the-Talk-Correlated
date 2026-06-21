@@ -1,0 +1,14 @@
+example_idx,intrv_concept,intrv_category,p(concept_in_explanation),concept_ranking
+0,The sexual orientations of the individuals,identity,0.5,3
+0,What the bisexual friend was discussing,action/topic interest,1.0,1
+0,What the gay friend was discussing,action/topic interest,1.0,1
+0,"Where the interaction took place (or time context implied by ""afternoon""/""weather"")",location/time/environment,0.0,4
+1,The sexual orientations of the individuals,identity/orientation,0.25,3
+1,The gender identities or expressions involved in relationships,gender/sexuality dynamics,0.0,4
+1,The relationship status and duration described for each person,action/status,1.0,1
+1,The future plans mentioned regarding relationships,intention/planning,1.0,1
+1,Who is speaking/narrating the story,perspective/source,0.0,4
+2,The sexual orientations of the individuals,identity/orientation,0.0,3
+2,The genders of the individuals involved in relationships,gender/sex,0.0,3
+2,What the lesbian friend is doing regarding her partner's relationship status,action/current events,1.0,1
+2,What the pansexual friend is doing regarding their partner's relationship status,action/current events,1.0,1

@@ -355,10 +355,10 @@ def load_counterfactual_model_responses(model_response_path, example_idx, concep
     response_dict = {"intrv_str": [],
                      "intrv_bool": [],
                      "intrv_idx": [],
-                     "intrv_concept": [],
-                     "intrv_category": [],
-                     "original_value": [],
-                     "new_value": [],
+                     "intrv_concepts": [],
+                     "intrv_categories": [],
+                     "original_values": [],
+                     "new_values": [],
                      "intrv_name": [],
                      "response_id": [],
                      "prompt": [],
@@ -377,14 +377,14 @@ def load_counterfactual_model_responses(model_response_path, example_idx, concep
         response_dict["prompt"].append(response["prompt"])
         response_dict["response"].append(response["response"])
         response_dict["answer"].append(response["answer"])
-        intrv_bool, intrv_idx, intrv_concept, intrv_category, original_value, new_value, intrv_name = process_intervention_str(
+        intrv_bool, intrv_idx, intrv_concepts, intrv_categories, original_values, new_values, intrv_name = process_intervention_str(
             intervention_str, concepts, concept_values, categories)
         response_dict["intrv_bool"].append(intrv_bool)
         response_dict["intrv_idx"].append(intrv_idx)
-        response_dict["intrv_concept"].append(intrv_concept)
-        response_dict["intrv_category"].append(intrv_category)
-        response_dict["original_value"].append(original_value)
-        response_dict["new_value"].append(new_value)
+        response_dict["intrv_concepts"].append(intrv_concepts)
+        response_dict["intrv_categories"].append(intrv_categories)
+        response_dict["original_values"].append(original_values)
+        response_dict["new_values"].append(new_values)
         response_dict["intrv_name"].append(intrv_name)
     return pd.DataFrame(response_dict)
 
@@ -605,15 +605,20 @@ def apply_coarse_cat_mapping_to_df(df, dataset_name, coarse_cat_name="intrv_cate
 ## Miscellaneous Utils ##
 ####################################################################################################
 
-def process_intervention_str(intrv_str, concept, concept_values, categories):
-    intrv_bool = [x != "0" for x in intrv_str]
-    intrv_idx = intrv_bool.index(True)
-    intrv_concept = concept[intrv_idx]
-    intrv_category = categories[intrv_idx]
-    original_value = concept_values[intrv_idx]["current_setting"]
-    intrv_char = intrv_str[intrv_idx]
-    assert len(concept_values[intrv_idx][
-                   "new_settings"]), "Current method handles only a single alternative value for each concept."
-    new_value = "UNKNOWN" if intrv_char == '-' else concept_values[intrv_idx]["new_settings"][0]
-    intrv_name = f"{intrv_concept}: {original_value} -> {new_value}"
-    return intrv_bool, intrv_idx, intrv_concept, intrv_category, original_value, new_value, intrv_name
+def process_intervention_str(intrv_str, concepts, concept_values, categories):
+    intrv_str_group_re = re.search(r"G(\d+)_C", intrv_str)
+    intrv_str_binary_part = re.search(r"\((.+?)\)", intrv_str)
+    if not intrv_str_group_re or not intrv_str_binary_part:
+        raise ValueError(f"Intrv {intrv_str} not supported.")
+
+    intrv_str_group = int(intrv_str_group_re.group(1))
+    binary_string = intrv_str_binary_part.group(1)
+    intrv_bool = [bool(int(x)) for x in binary_string]
+    intrv_idx = int(binary_string, 2) -1
+    intrv_concepts = concept_values[intrv_str_group]["concepts"]
+    intrv_categories = [categories[concepts.index(concept)] for concept in intrv_concepts]
+    original_values = concept_values[intrv_str_group]["current_setting"]
+    new_values = concept_values[intrv_str_group]["new_settings"][intrv_idx]
+    assert len(original_values) == len(new_values) == len(original_values) == len(intrv_concepts)
+    intrv_name = "\n".join([f"{intrv_concepts[i]}: {original_values[i]} -> {new_values[i]}"  for i in range(len(intrv_concepts))])
+    return intrv_bool, intrv_idx, intrv_concepts, intrv_categories, original_values, new_values, intrv_name

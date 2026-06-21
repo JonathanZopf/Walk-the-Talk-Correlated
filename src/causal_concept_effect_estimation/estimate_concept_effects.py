@@ -80,7 +80,7 @@ class ConceptEffectEstimator:
         original_responses_df["intrv_str"] = "0" * len(concepts)
         original_responses_df["intrv_bool"] = [[False] * len(concepts) for _ in range(len(original_responses_df))]
         original_responses_df["intrv_idx"] = None
-        original_responses_df["intrv_concept"] = None
+        original_responses_df["intrv_concepts"] = None
         original_responses_df["original_value"] = None
         original_responses_df["new_value"] = None
         original_responses_df["intrv_name"] = "original"
