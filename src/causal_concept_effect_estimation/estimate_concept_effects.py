@@ -1,9 +1,9 @@
+import itertools
 import os
-import re
 
-import pandas as pd
-import numpy as np
 import jax.numpy as jnp
+import numpy as np
+import pandas as pd
 from jax import random as jax_random
 from numpyro.infer import MCMC, NUTS
 
@@ -81,8 +81,8 @@ class ConceptEffectEstimator:
         original_responses_df["intrv_bool"] = [[False] * len(concepts) for _ in range(len(original_responses_df))]
         original_responses_df["intrv_idx"] = None
         original_responses_df["intrv_concepts"] = None
-        original_responses_df["original_value"] = None
-        original_responses_df["new_value"] = None
+        original_responses_df["original_values"] = None
+        original_responses_df["new_values"] = None
         original_responses_df["intrv_name"] = "original"
         original_responses_df["is_original"] = True
         counterfactual_responses_df["is_original"] = False
@@ -99,7 +99,7 @@ class ConceptEffectEstimator:
             response_df["answer_choices"] = [self.dataset.data[example_idx]["answer_choices"] for _ in
                                              range(len(response_df))]
         # map from fine to coarse categories
-        response_df = apply_coarse_cat_mapping_to_df(response_df, self.dataset.name, coarse_cat_name="intrv_category")
+        response_df = apply_coarse_cat_mapping_to_df(response_df, self.dataset.name, coarse_cat_name="intrv_categories")
         return response_df
 
     def fit_logistic_regression_hierarchical_bayesian(self, response_df):
@@ -175,7 +175,7 @@ class ConceptEffectEstimator:
         treatment_parameter_df = pd.concat(example_df_list, ignore_index=True)
         # map from fine to coarse categories for treatment parameter df
         treatment_parameter_df = apply_coarse_cat_mapping_to_df(treatment_parameter_df, self.dataset.name,
-                                                                coarse_cat_name="intrv_category")
+                                                                       coarse_cat_name="intrv_categories")
         return category_parameter_df, treatment_parameter_df
 
     def prepare_response_data_for_modeling_all(self, response_df):
@@ -202,9 +202,11 @@ class ConceptEffectEstimator:
             lambda x: treatments.index(x["treatment_id"]), axis=1)
 
         # get full set of categories
-        categories = list(counterfactual_response_df["intrv_category"].unique())
-        counterfactual_response_df["category_idx"] = counterfactual_response_df.apply(
-            lambda x: categories.index(x["intrv_category"]), axis=1)
+        categories = list( set(itertools.chain.from_iterable(counterfactual_response_df["intrv_categories"])))
+        category_to_idx = {category: idx for idx, category in enumerate(categories)}
+        counterfactual_response_df["categories_idx"] = counterfactual_response_df["intrv_categories"].apply(
+            lambda cat_list: [category_to_idx[cat] for cat in cat_list]
+        )
 
         # get categories for each treatment
         treatment_cats = []
@@ -212,8 +214,7 @@ class ConceptEffectEstimator:
         treatment_reference_classes = []
         for treatment_id in treatments:
             treatment_df = counterfactual_response_df[counterfactual_response_df["treatment_id"] == treatment_id]
-            assert len(treatment_df["category_idx"].unique()) == 1, "Each treatment should have only one category."
-            treatment_cats.append(treatment_df["category_idx"].iloc[0])
+            treatment_cats.append(treatment_df["categories_idx"].iloc[0])
             treatment_reference_classes.append(treatment_df["reference_class"].iloc[0])
 
         # loop over examples
@@ -228,13 +229,14 @@ class ConceptEffectEstimator:
                 intrv_response_df = ex_counterfactual_response_df[
                     ex_counterfactual_response_df["intrv_str"] == intrv_str]
                 treatment_idx = treatments.index(f"{example_idx}_{intrv_str}")
-                category_idx = categories.index(intrv_response_df["intrv_category"].iloc[0])
+                cats_to_look_for = intrv_response_df["intrv_categories"].iloc[0]
+                categories_idx = [category_to_idx[cat] for cat in cats_to_look_for]
                 data = pd.DataFrame({
                     'X': np.array([0] * len(ex_original_response_df) + [1] * len(intrv_response_df)),
                     'Y': ex_original_response_df["answer"].tolist() + intrv_response_df["answer"].tolist(),
                     'treatment_idx': [treatment_idx] * len(ex_original_response_df) + [treatment_idx] * len(
                         intrv_response_df),
-                    'category_idx': [category_idx] * len(ex_original_response_df) + [category_idx] * len(
+                    'categories_idx': [categories_idx] * len(ex_original_response_df) + [categories_idx] * len(
                         intrv_response_df),
                     'example_idx': [example_idx] * len(ex_original_response_df) + [example_idx] * len(intrv_response_df)
                 })
@@ -246,7 +248,7 @@ class ConceptEffectEstimator:
                             'X': [0, 1],
                             'Y': [answer_choice, answer_choice],
                             'treatment_idx': [treatment_idx, treatment_idx],
-                            'category_idx': [category_idx, category_idx],
+                            'categories_idx': [categories_idx, categories_idx],
                             'example_idx': [example_idx, example_idx]
                         })
                         data = pd.concat([data, smoothing_data], ignore_index=True)

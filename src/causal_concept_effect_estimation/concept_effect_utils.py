@@ -28,11 +28,16 @@ class LogisticRegressionModel:
         # sample intercept
         intercept = numpyro.sample(f'intercept{e_idx}', dist.Normal(0, 1), sample_shape=(self.n_responses-1,))
         # sample betas for each feature, from category-specific priors
+
+        # TODO: Heavily scrutinize those parts, I modified them to avoid exceptions but I am not sure if they break compatibility with the original metric
         if n_feats != 0:
             with numpyro.plate(f"feature_{e_idx}", n_feats):
                 beta_scale = scale[cat]
-                beta = numpyro.sample(f'beta{e_idx}', dist.Normal(0, beta_scale), sample_shape=(self.n_responses-1,))
-            logits = jnp.matmul(X, jnp.transpose(beta)) + intercept
+                beta = numpyro.sample(f'beta{e_idx}', dist.Normal(
+            jnp.zeros(self.n_responses - 1),
+            beta_scale
+        ))
+            logits = X @ beta + intercept
         else:
             logits = jnp.zeros((n_samples, self.n_responses-1)) + intercept
         # add in logits for reference class
@@ -71,13 +76,13 @@ def add_intrv_info_to_result_df(result_df, concepts, concept_values, categories)
     result_df["intrv_name"] = ""
     result_df["intrv_category"] = ""
     def add_intrv_info_to_row(x):
-        intrv_bool, intrv_idx, intrv_concept, intrv_category, original_value, new_value, intrv_name = process_intervention_str(x["intrv_str"], concepts, concept_values, categories)
+        intrv_bool, intrv_idx, intrv_concepts, intrv_categories, original_values, new_values, intrv_name = process_intervention_str(x["treatment"], concepts, concept_values, categories)
         x["intrv_bool"] = intrv_bool
         x["intrv_idx"] = intrv_idx
-        x["intrv_concept"] = intrv_concept
-        x["intrv_category"] = intrv_category
-        x["original_value"] = original_value
-        x["new_value"] = new_value
+        x["intrv_concepts"] = intrv_concepts
+        x["intrv_categories"] = intrv_categories
+        x["original_values"] = original_values
+        x["new_values"] = new_values
         x["intrv_name"] = intrv_name
         return x
     result_df = result_df.apply(add_intrv_info_to_row, axis=1)

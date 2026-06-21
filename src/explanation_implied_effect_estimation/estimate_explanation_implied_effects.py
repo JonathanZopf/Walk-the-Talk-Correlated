@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import rankdata
 
-from utils import process_intervention_str, load_intervention_information, apply_coarse_cat_mapping_to_df
+from utils import process_intervention_str, load_intervention_information, apply_coarse_cat_mapping_to_df_legacy
 
 
 class ExplanationImpliedEffectEstimator:
@@ -69,7 +69,7 @@ class ExplanationImpliedEffectEstimator:
                 concept_scores_dict["example_idx"] += [example_idx] * len(fd_means)
                 concept_scores_dict["concept_ranking"] += list(rankdata(-1 * np.array(fd_means), method="min"))
         explanation_implied_effects_df = pd.DataFrame(concept_scores_dict)
-        explanation_implied_effects_df = apply_coarse_cat_mapping_to_df(explanation_implied_effects_df, self.dataset.name, coarse_cat_name="intrv_category")
+        explanation_implied_effects_df = apply_coarse_cat_mapping_to_df_legacy(explanation_implied_effects_df, self.dataset.name, coarse_cat_name="intrv_category")
         return explanation_implied_effects_df
     
     def load_example_data(self, example_idx, load_counterfactual_responses=True):

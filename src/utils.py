@@ -1,5 +1,6 @@
 import itertools
 import json
+import math
 import re
 import os
 
@@ -589,13 +590,30 @@ COARSE_CATEGORY_MAPPING_INV_MEDQA = {
 COARSE_CATEGORY_MAPPING_MEDQA = {v: k for k, values in COARSE_CATEGORY_MAPPING_INV_MEDQA.items() for v in values}
 
 
-def apply_coarse_cat_mapping_to_df(df, dataset_name, coarse_cat_name="intrv_category_coarse"):
+# TODO: Remove this method since it does not support multiple concepts in one intervention
+def apply_coarse_cat_mapping_to_df_legacy(df, dataset_name, coarse_cat_name="intrv_category_coarse"):
     if dataset_name == "bbq":
         df[coarse_cat_name] = df["intrv_category"].apply(lambda x: COARSE_CAT_MAP_BBQ.get(x, x))
         for concept, cat in CONCEPT2CAT_CORRECT_BBQ.items():
             df.loc[(df["intrv_concept"] == concept), coarse_cat_name] = cat
     elif dataset_name == "medqa":
         df[coarse_cat_name] = df["intrv_category"].apply(lambda x: COARSE_CATEGORY_MAPPING_MEDQA.get(x, x))
+    else:
+        raise ValueError(f"Dataset {dataset_name} not supported.")
+    return df
+
+# TODO: Coarse mapping does not seem to work properly, investiage that
+def apply_coarse_cat_mapping_to_df(df, dataset_name, coarse_cat_name="intrv_categories_coarse"):
+    if dataset_name == "bbq":
+        df[coarse_cat_name] = df["intrv_categories"].apply(
+            lambda cat_list: [COARSE_CAT_MAP_BBQ.get(cat, cat) for cat in cat_list] if not isinstance(cat_list, float) else math.nan
+        )
+        for concept, cat in CONCEPT2CAT_CORRECT_BBQ.items():
+            df.loc[(df["intrv_concepts"] == concept), coarse_cat_name] = [[cat]] * len(df[df["intrv_concepts"] == concept])
+    elif dataset_name == "medqa":
+        df[coarse_cat_name] = df["intrv_categories"].apply(
+            lambda cat_list: [COARSE_CATEGORY_MAPPING_MEDQA.get(cat, cat) for cat in cat_list] if not isinstance(cat_list, float) else math.nan
+        )
     else:
         raise ValueError(f"Dataset {dataset_name} not supported.")
     return df
@@ -614,11 +632,12 @@ def process_intervention_str(intrv_str, concepts, concept_values, categories):
     intrv_str_group = int(intrv_str_group_re.group(1))
     binary_string = intrv_str_binary_part.group(1)
     intrv_bool = [bool(int(x)) for x in binary_string]
-    intrv_idx = int(binary_string, 2) -1
+    intrv_idx_within_group = int(binary_string, 2) -1
+    intrv_idx_global = intrv_str_group * 128 + intrv_idx_within_group
     intrv_concepts = concept_values[intrv_str_group]["concepts"]
     intrv_categories = [categories[concepts.index(concept)] for concept in intrv_concepts]
     original_values = concept_values[intrv_str_group]["current_setting"]
-    new_values = concept_values[intrv_str_group]["new_settings"][intrv_idx]
+    new_values = concept_values[intrv_str_group]["new_settings"][intrv_idx_within_group]
     assert len(original_values) == len(new_values) == len(original_values) == len(intrv_concepts)
     intrv_name = "\n".join([f"{intrv_concepts[i]}: {original_values[i]} -> {new_values[i]}"  for i in range(len(intrv_concepts))])
-    return intrv_bool, intrv_idx, intrv_concepts, intrv_categories, original_values, new_values, intrv_name
+    return intrv_bool, intrv_idx_global, intrv_concepts, intrv_categories, original_values, new_values, intrv_name
