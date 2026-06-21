@@ -74,7 +74,7 @@ def add_intrv_info_to_result_df(result_df, concepts, concept_values, categories)
         DataFrame with the intervention information added to the result dataframe
     """
     result_df["intrv_name"] = ""
-    result_df["intrv_category"] = ""
+    result_df["intrv_categories"] = ""
     def add_intrv_info_to_row(x):
         intrv_bool, intrv_idx, intrv_concepts, intrv_categories, original_values, new_values, intrv_name = process_intervention_str(x["treatment"], concepts, concept_values, categories)
         x["intrv_bool"] = intrv_bool

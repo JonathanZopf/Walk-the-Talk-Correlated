@@ -589,19 +589,6 @@ COARSE_CATEGORY_MAPPING_INV_MEDQA = {
 
 COARSE_CATEGORY_MAPPING_MEDQA = {v: k for k, values in COARSE_CATEGORY_MAPPING_INV_MEDQA.items() for v in values}
 
-
-# TODO: Remove this method since it does not support multiple concepts in one intervention
-def apply_coarse_cat_mapping_to_df_legacy(df, dataset_name, coarse_cat_name="intrv_category_coarse"):
-    if dataset_name == "bbq":
-        df[coarse_cat_name] = df["intrv_category"].apply(lambda x: COARSE_CAT_MAP_BBQ.get(x, x))
-        for concept, cat in CONCEPT2CAT_CORRECT_BBQ.items():
-            df.loc[(df["intrv_concept"] == concept), coarse_cat_name] = cat
-    elif dataset_name == "medqa":
-        df[coarse_cat_name] = df["intrv_category"].apply(lambda x: COARSE_CATEGORY_MAPPING_MEDQA.get(x, x))
-    else:
-        raise ValueError(f"Dataset {dataset_name} not supported.")
-    return df
-
 # TODO: Coarse mapping does not seem to work properly, investiage that
 def apply_coarse_cat_mapping_to_df(df, dataset_name, coarse_cat_name="intrv_categories_coarse"):
     if dataset_name == "bbq":

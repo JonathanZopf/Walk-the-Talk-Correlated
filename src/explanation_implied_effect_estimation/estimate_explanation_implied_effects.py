@@ -5,7 +5,8 @@ import numpy as np
 import pandas as pd
 from scipy.stats import rankdata
 
-from utils import process_intervention_str, load_intervention_information, apply_coarse_cat_mapping_to_df_legacy
+from utils import process_intervention_str, load_intervention_information, \
+    apply_coarse_cat_mapping_to_df
 
 
 class ExplanationImpliedEffectEstimator:
@@ -53,8 +54,8 @@ class ExplanationImpliedEffectEstimator:
         """
         concept_scores_dict = {
         "example_idx": [],
-        "intrv_concept": [],
-        "intrv_category": [],
+        "intrv_concepts": [],
+        "intrv_categories": [],
         "p(concept_in_explanation)": [],
         "concept_ranking": [],
         }
@@ -62,14 +63,14 @@ class ExplanationImpliedEffectEstimator:
             ex_df = ic_df[(ic_df["example_idx"] == example_idx)]
             if ex_df.shape[0] > 0:
                 ex_concept_decisions = [x[0] for x in ex_df["concept_decisions"].values]
-                concept_scores_dict["intrv_concept"] += ex_df["concepts"].values[0]
-                concept_scores_dict["intrv_category"] += ex_df["categories"].values[0]
+                concept_scores_dict["intrv_concepts"] += ex_df["concepts"].values[0]
+                concept_scores_dict["intrv_categories"] += ex_df["categories"].values[0]
                 fd_means = list(np.mean(ex_concept_decisions, axis=0))
                 concept_scores_dict["p(concept_in_explanation)"] += fd_means
                 concept_scores_dict["example_idx"] += [example_idx] * len(fd_means)
                 concept_scores_dict["concept_ranking"] += list(rankdata(-1 * np.array(fd_means), method="min"))
         explanation_implied_effects_df = pd.DataFrame(concept_scores_dict)
-        explanation_implied_effects_df = apply_coarse_cat_mapping_to_df_legacy(explanation_implied_effects_df, self.dataset.name, coarse_cat_name="intrv_category")
+        explanation_implied_effects_df = apply_coarse_cat_mapping_to_df(explanation_implied_effects_df, self.dataset.name, coarse_cat_name="intrv_categories")
         return explanation_implied_effects_df
     
     def load_example_data(self, example_idx, load_counterfactual_responses=True):
@@ -85,9 +86,9 @@ class ExplanationImpliedEffectEstimator:
         original_ic_df["intrv_str"] = "0" * len(concepts)
         original_ic_df["intrv_bool"] = [[False] * len(concepts) for _ in range(len(original_ic_df))]
         original_ic_df["intrv_idx"] = None
-        original_ic_df["intrv_concept"] = None
-        original_ic_df["original_value"] = None
-        original_ic_df["new_value"] = None
+        original_ic_df["intrv_concepts"] = None
+        original_ic_df["original_values"] = None
+        original_ic_df["new_values"] = None
         original_ic_df["intrv_name"] = "original"
         original_ic_df["is_original"] = True
         ic_df = original_ic_df
@@ -135,10 +136,10 @@ class ExplanationImpliedEffectEstimator:
         response_dict = {"intrv_str": [], 
                          "intrv_bool": [],
                          "intrv_idx": [],
-                         "intrv_concept": [],
-                         "intrv_category": [],
-                         "original_value": [],
-                         "new_value": [],
+                         "intrv_concepts": [],
+                         "intrv_categories": [],
+                         "original_values": [],
+                         "new_values": [],
                          "intrv_name": [],
                          "response_id": [], 
                          "prompt": [], 
@@ -156,19 +157,20 @@ class ExplanationImpliedEffectEstimator:
             response_dict["response_id"].append(f"counterfactual={intervention_str}_n={completion_id}")
             response_dict["prompt"].append(response["prompt"])
             response_dict["responses"].append(response["responses"])
-            intrv_bool, intrv_idx, intrv_concept, intrv_category, original_value, new_value, intrv_name = process_intervention_str(intervention_str, concepts, concept_values, categories)
+            intrv_bool, intrv_idx, intrv_concepts, intrv_categories, original_values, new_values, intrv_name = process_intervention_str(intervention_str, concepts, concept_values, categories)
             response_dict["intrv_bool"].append(intrv_bool)
             response_dict["intrv_idx"].append(intrv_idx)
-            response_dict["intrv_concept"].append(intrv_concept)
-            response_dict["intrv_category"].append(intrv_category)
-            response_dict["original_value"].append(original_value)
-            response_dict["new_value"].append(new_value)
+            response_dict["intrv_concepts"].append(intrv_concepts)
+            response_dict["intrv_categories"].append(intrv_categories)
+            response_dict["original_values"].append(original_values)
+            response_dict["new_values"].append(new_values)
             response_dict["intrv_name"].append(intrv_name)
             concept_decisions = response["concept_decisions"]
-            if new_value == "UNKNOWN":
-                # need to add in 0 for "unknown" concept that we didn't list in options that model could mention for counterfactual questions
-                for idx in range(len(concept_decisions)):
-                    concept_decisions[idx].insert(intrv_idx, 0)
+            for value in new_values:
+                if value == "UNKNOWN":
+                    # need to add in 0 for "unknown" concept that we didn't list in options that model could mention for counterfactual questions
+                    for idx in range(len(concept_decisions)):
+                        concept_decisions[idx].insert(intrv_idx, 0)
             response_dict["concept_decisions"].append(concept_decisions)
         return pd.DataFrame(response_dict)
  
