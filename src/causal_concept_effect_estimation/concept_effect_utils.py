@@ -3,6 +3,7 @@ import numpyro
 import numpyro.distributions as dist
 import numpy as np
 import pandas as pd
+from scipy.special import rel_entr
 
 from utils import process_intervention_str
 
@@ -14,7 +15,7 @@ class LogisticRegressionModel:
     def __init__(self, response_categories):
         self.response_categories = response_categories
         self.n_responses = len(response_categories)
-    
+
     def __call__(self, scale, X, Y, cat, e_idx, reference_class):
         """
         Args:
@@ -47,7 +48,7 @@ class MultiDatasetModel:
     def __init__(self, inner_model, n_categories):
         self.inner_model = inner_model
         self.n_categories = n_categories
-    
+
     def __call__(self, data_list):
         # put prior on variance of beta for each category
         scale = numpyro.sample('sigma', dist.InverseGamma(0.001, 0.001), sample_shape=(self.n_categories,))
@@ -144,13 +145,14 @@ def get_posterior_dist_causal_effect_estimates_hierarchical(samples, reference_c
         intercept = samples[f'intercept{treatment_idx}'][i]
         beta = samples[f'beta{treatment_idx}'][i]
         beta_samples.append(beta)
-        prob_control = compute_probabilities(intercept, beta, 0, reference_class).flatten()
+        # Those changes compared to Matton's original make the calculation more robust against potential nan values
+        prob_control = jnp.nan_to_num(compute_probabilities(intercept, beta, 0, reference_class).flatten(), nan=0.0)
         prob_control_samples.append(prob_control)
-        prob_treatment = compute_probabilities(intercept, beta, 1, reference_class).flatten()
+        prob_treatment = jnp.nan_to_num(compute_probabilities(intercept, beta, 1, reference_class).flatten(), nan=0.0)
         prob_treatment_samples.append(prob_treatment)
-        kl_divergence = jnp.sum(prob_treatment * jnp.log(prob_treatment / prob_control))
+        kl_divergence = jnp.sum(rel_entr(prob_treatment, prob_control))
         kl_divergence_samples.append(kl_divergence)
-    
+
     # compute mean and 95% confidence interval of results
     prob_control_samples = jnp.array(prob_control_samples)
     prob_treatment_samples = jnp.array(prob_treatment_samples)
@@ -168,7 +170,7 @@ def get_posterior_dist_causal_effect_estimates_hierarchical(samples, reference_c
         'prob_treatment_hdi': prob_treatment_hdi,
         'kl_div_mean': kl_divergence_mean,
         'kl_div_hdi': kl_divergence_hdi,
-        'kl_div_samples': np.array(kl_divergence_samples)  
+        'kl_div_samples': np.array(kl_divergence_samples)
     }
 
 def get_treatment_results_from_samples(samples, treatments, answer_choices, reference_classes):
@@ -177,7 +179,7 @@ def get_treatment_results_from_samples(samples, treatments, answer_choices, refe
     Args:
         samples: samples from the model
         treatments: list of treatments
-        answer_choices: list of the answer choice options for the response variable 
+        answer_choices: list of the answer choice options for the response variable
         reference_classes: reference classes for each treatment's logistic regression sub-model
     Returns:
         DataFrame with the mean and 95% confidence interval of the parameters and causal effect of the treatment on the response for each treatment
@@ -199,14 +201,14 @@ def get_treatment_results_from_samples(samples, treatments, answer_choices, refe
             + ["kl_div_ci_high"] \
             + ['kl_div_samples']
     result_dict.update({col: [] for col in result_cols})
-    
+
     # get results for each treatment
     for idx in range(len(treatments)):
         print(f"working on treatment {idx + 1} out of {len(treatments)}")
         reference_class_idx = reference_classes[idx]
         posterior_ce_estimates = get_posterior_dist_causal_effect_estimates_hierarchical(samples, reference_class_idx, idx)
         non_reference_class_idxs = [x for x in answer_choices if x != reference_class_idx]
-        
+
         # get results (mean and 95% confidence interval) for each parameter
         for parameter in parameter_names:
             parameter_means = np.mean(samples[f"{parameter}{idx}"], axis=0).flatten()
@@ -231,7 +233,7 @@ def get_treatment_results_from_samples(samples, treatments, answer_choices, refe
             result_dict[f"p_y={answer_choice}|X=0"].append(posterior_ce_estimates['prob_control_mean'][answer_choice].item())
             result_dict[f"p_y={answer_choice}|X=0_ci_low"].append(posterior_ce_estimates['prob_control_hdi'][0][answer_choice])
             result_dict[f"p_y={answer_choice}|X=0_ci_high"].append(posterior_ce_estimates['prob_control_hdi'][1][answer_choice])
-        
+
         result_dict["kl_div"].append(posterior_ce_estimates['kl_div_mean'].item())
         result_dict["kl_div_ci_low"].append(posterior_ce_estimates['kl_div_hdi'][0])
         result_dict["kl_div_ci_high"].append(posterior_ce_estimates['kl_div_hdi'][1])

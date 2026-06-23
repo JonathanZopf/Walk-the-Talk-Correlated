@@ -37,112 +37,76 @@ class ShapleyCEConverter:
         self.group_col = group_col
         self.approximate_missing_coalitions = approximate_missing_coalitions
 
-    # --------------------------------------------------
-    # Public API
-    # --------------------------------------------------
-
     def convert(self):
-        """
-        Returns exploded CE dataframe with one row per concept and
-        Shapley-attributed KL divergence.
-        """
-
+        """Return exploded CE dataframe with one row per concept and Shapley‑attributed KL divergence."""
         df = self.ce_df.copy()
 
-        # --------------------------------------
-        # Parse list columns if stored as strings
-        # --------------------------------------
-
-        df[self.concept_col] = df[self.concept_col].apply(
-            self._parse_if_needed
-        )
-
-        df[self.category_col] = df[self.category_col].apply(
-            self._parse_if_needed
-        )
+        # Parse string representations to sorted tuples of concept names
+        df[self.concept_col] = df[self.concept_col].apply(self._parse_to_tuple)
+        df[self.category_col] = df[self.category_col].apply(self._parse_to_tuple)
 
         shapley_rows = []
 
         for example_idx, example_df in df.groupby(self.example_col):
-
             for group_idx, group_df in example_df.groupby(self.group_col):
-                coalition_value_map = {}
-
+                coalition_value = {}
                 category_lookup = {}
 
-                # --------------------------
-                # Build coalition -> value
-                # --------------------------
-
                 for _, row in group_df.iterrows():
+                    concepts = row[self.concept_col]
+                    categories = row[self.category_col]
+                    coalition_value[concepts] = row[self.value_col]
 
-                    coalition = frozenset(row[self.concept_col])
-                    value = row[self.value_col]
-                    coalition_value_map[coalition] = row[self.value_col]
+                    # Build category lookup for all concepts appearing in this group
+                    for concept, cat in zip(concepts, categories):
+                        category_lookup[concept] = cat
 
-                    for concept, category in zip(
-                        row[self.concept_col],
-                        row[self.category_col]
-                    ):
-                        category_lookup[concept] = category
+                all_concepts = set().union(*coalition_value.keys())
 
-                all_concepts = set()
-
-                for coalition in coalition_value_map:
-                    all_concepts.update(coalition)
-
-                try:
-                    shapley_values = self._compute_shapley_values(
-                        all_concepts,
-                        coalition_value_map
-                    )
-                except:
-                    raise Exception(f"Could not compute shapley values for example {example_idx}, coalition {coalition_value_map} and players {all_concepts}")
+                # Compute Shapley values
+                shapley_values = self._compute_shapley_values(
+                    all_concepts, coalition_value
+                )
 
                 for concept in all_concepts:
                     category = category_lookup.get(concept)
                     shapley = shapley_values.get(concept)
                     if category is None or shapley is None:
-                        raise ValueError(f"Missing category or shapley value for concept \"{concept}\" in example {example_idx}")
+                        raise ValueError(
+                            f"Missing category or Shapley value for concept {concept!r} "
+                            f"in example {example_idx}"
+                        )
+                    shapley_rows.append({
+                        self.example_col: example_idx,
+                        self.concept_col: concept,
+                        self.category_col: category,
+                        "shapley_kl_div": shapley,
+                    })
 
-                    shapley_rows.append(
-                        {
-                            self.example_col: example_idx,
-                            self.concept_col: concept,
-                            self.category_col: category,
-                            "shapley_kl_div": shapley
-                        }
-                    )
+        return pd.DataFrame(shapley_rows)
 
-        shapley_df = pd.DataFrame(shapley_rows)
-        return shapley_df
-
-    # --------------------------------------------------
-    # Shapley computation
-    # --------------------------------------------------
-    def _convert_coalition_map(self, coalition_value_map):
-        converted = {
-            tuple(sorted(coalition)): value
-            for coalition, value in coalition_value_map.items()
-        }
-        return converted
 
     def _compute_shapley_values(
         self,
         players,
-        coalition_value_map,
+        coalition_values,
     ):
 
         calculator = ShapleyCombinations(players)
 
-        coalitions = self._convert_coalition_map(coalition_value_map)
         possible_coalitions = {
             tuple(sorted(c))
             for c in calculator.get_all_coalitions()
         }
 
-        existing_coalitions = set(coalitions.keys())
+        existing_coalitions = set(coalition_values.keys())
         missing_coalitions = possible_coalitions - existing_coalitions
+
+        # Two problems with current "missing coalition" handling:
+        # 1. Using the mean for approximating the value is simple and non-bloated but very primitive
+        # 2. If the quality of the generated counterfactuals and their response is of low quality, many coalitions need
+        # to be replicated, massively reducing the accuracy of the approximation and the shapley values.
+        # We should be looking to not return shapley kl values in this case.
 
         if missing_coalitions:
 
@@ -156,55 +120,43 @@ class ShapleyCEConverter:
                 f"Approximating values."
             )
 
-            existing_values = list(coalitions.values())
+            existing_values = list(coalition_values.values())
 
             for missing in missing_coalitions:
                 # simplest approximation: mean of observed coalitions
                 approx_value = float(np.mean(existing_values))
 
-                coalitions[missing] = approx_value
+                coalition_values[missing] = approx_value
 
                 print(
                     f"Approximated coalition {missing} "
                     f"with value {approx_value}"
                 )
 
-        shapley_values = calculator.calculate_shapley_values(coalitions)
+        shapley_values = calculator.calculate_shapley_values(coalition_values)
         return shapley_values
 
-    # --------------------------------------------------
-    # Helpers
-    # --------------------------------------------------
-
-    def _parse_if_needed(self, x):
-
+    def _parse_to_tuple(self, x):
+        """Parse various input formats into a sorted tuple of strings."""
         if isinstance(x, list):
-            return x
-
+            return tuple(sorted(x))
         if pd.isna(x):
-            return []
-
+            return tuple()
         if isinstance(x, str):
-
             try:
-                return ast.literal_eval(x)
-
+                parsed = ast.literal_eval(x)
+                if isinstance(parsed, list):
+                    return tuple(sorted(parsed))
             except Exception:
+                pass  # fall through to manual parsing
 
-                x = x.strip()
-
-                if (
-                    x.startswith("[")
-                    and x.endswith("]")
-                ):
-                    x = x[1:-1]
-
-                if len(x) == 0:
-                    return []
-
-                return [
-                    item.strip()
-                    for item in x.split(",")
-                ]
-
-        return [x]
+            x = x.strip()
+            if x.startswith("[") and x.endswith("]"):
+                x = x[1:-1]
+            if not x.strip():
+                return tuple()
+            # Split by comma and clean each item
+            items = [item.strip() for item in x.split(",") if item.strip()]
+            return tuple(sorted(items))
+        # If it's something else, treat as single concept
+        return tuple(sorted([str(x)]))

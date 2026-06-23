@@ -18,6 +18,7 @@ import sys
 import numpy as np
 import pandas as pd
 
+from causal_concept_effect_estimation.shapley_ce_converter import ShapleyCEConverter
 from my_datasets.dataset import Dataset
 from utils import get_dataset
 
@@ -36,6 +37,9 @@ def parse_args():
         description='Measure faithfulness of LLM explanations using causal concept effects',
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
+
+    # Error handling
+    parser.add_argument('--approximate_missing_coalitions', type=bool, default=True, help='Approximate missing coalitions in Shapley CE estimation. If false, raise an Exception if any coalitions are missing.')
 
     # Data paths
     parser.add_argument('--dataset', type=str, default='bbq',
@@ -237,7 +241,7 @@ def measure_faithfulness(args, ee_df, ce_df):
     Args:
         args: Command line arguments
         ee_df: DataFrame with explanation-implied effects
-        ce_df: DataFrame with causal concept effects
+        ce_df: DataFrame with causal concept effects (not yet shapley-converted)
 
     Returns:
         Tuple of (faithfulness_samples, beta_mean, beta_credible_interval)
@@ -246,10 +250,16 @@ def measure_faithfulness(args, ee_df, ce_df):
         print("\n" + "=" * 60)
         print("STEP 3: Measuring Causal Concept Faithfulness")
         print("=" * 60)
+        print("Converting CE dataframe to shapley CE dataframe (by having each concept on its own row)")
+
+    converter = ShapleyCEConverter(ce_df, approximate_missing_coalitions=args.approximate_missing_coalitions)
+    shapley_ce_df = converter.convert()
+
+    if args.verbose:
         print("Correlating EE and CE estimates...")
 
     # Initialize faithfulness estimator
-    faithfulness_estimator = FaithfulnessEstimator(ee_df, ce_df)
+    faithfulness_estimator = FaithfulnessEstimator(ee_df, shapley_ce_df)
 
     # Estimate faithfulness (hierarchical Bayesian regression)
     if args.verbose:

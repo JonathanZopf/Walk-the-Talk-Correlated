@@ -10,11 +10,9 @@ from faithfulness_estimation.faithfulness_utils import prepare_faith_data_for_re
 
 
 class FaithfulnessEstimator:
-    def __init__(self, ee_df, ce_df, multi_intrv_per_concept=True, categories=None):
+    def __init__(self, ee_df, shapley_ce, multi_intrv_per_concept=True, categories=None):
         self.ee_df = ee_df
-        self.ce_df = ce_df
-        shapley_ce_converter = ShapleyCEConverter(ce_df=self.ce_df)
-        shapley_ce = shapley_ce_converter.convert()
+        self.shapley_ce = shapley_ce
         self.faith_df = shapley_ce.merge(ee_df, on=["example_idx", "intrv_concepts", "intrv_categories"])
         if multi_intrv_per_concept:
             # take mean causal concept effect for each concept in each example (across intervention settings)
