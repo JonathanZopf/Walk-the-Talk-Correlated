@@ -4,6 +4,8 @@ import numpy as np
 import numpyro
 from numpyro.infer import MCMC, NUTS
 
+from causal_concept_effect_estimation import shapley_ce_converter
+from causal_concept_effect_estimation.shapley_ce_converter import ShapleyCEConverter
 from faithfulness_estimation.faithfulness_utils import prepare_faith_data_for_regression, LinearRegressionOuterModel, LinearRegressionInnerModel, plot_regression
 
 
@@ -11,16 +13,18 @@ class FaithfulnessEstimator:
     def __init__(self, ee_df, ce_df, multi_intrv_per_concept=True, categories=None):
         self.ee_df = ee_df
         self.ce_df = ce_df
-        self.faith_df = ce_df.merge(ee_df, on=["example_idx", "intrv_concept", "intrv_category"])
+        shapley_ce_converter = ShapleyCEConverter(ce_df=self.ce_df)
+        shapley_ce = shapley_ce_converter.convert()
+        self.faith_df = shapley_ce.merge(ee_df, on=["example_idx", "intrv_concepts", "intrv_categories"])
         if multi_intrv_per_concept:
             # take mean causal concept effect for each concept in each example (across intervention settings)
-            self.grouped_faith_df = self.faith_df.groupby(["example_idx", "intrv_concept"])["kl_div"].mean().to_frame().reset_index()
-            self.grouped_faith_df = self.grouped_faith_df.merge(self.faith_df[["example_idx", "intrv_concept", "intrv_category", "p(concept_in_explanation)"]], on=["example_idx", "intrv_concept"], how="left").drop_duplicates()
+            self.grouped_faith_df = self.faith_df.groupby(["example_idx", "intrv_concepts"])["shapley_kl_div"].mean().to_frame().reset_index()
+            self.grouped_faith_df = self.grouped_faith_df.merge(self.faith_df[["example_idx", "intrv_concepts", "intrv_categories", "p(concept_in_explanation)"]], on=["example_idx", "intrv_concepts"], how="left").drop_duplicates()
         else:
             self.grouped_faith_df = self.faith_df
         self.categories = categories
         if categories is None:
-            categories = sorted(self.grouped_faith_df['intrv_category'].unique())
+            categories = sorted(self.grouped_faith_df['intrv_categories'].unique())
         self.concept_to_idx_map = {concept: idx for idx, concept in enumerate(categories)}
         # prepare data for regression
         self.regression_data_list, self.concept_cats_list, self.full_X_jnpy, self.full_Y_jnpy = prepare_faith_data_for_regression(self.grouped_faith_df, self.concept_to_idx_map)

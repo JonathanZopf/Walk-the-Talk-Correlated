@@ -39,9 +39,12 @@ class ConceptEffectEstimator:
         """
         response_dfs = []
         for example_idx in self.example_idxs:
-            response_df = self.load_example_data(example_idx)
-            response_df["example_idx"] = example_idx
-            response_dfs.append(response_df)
+            try:
+                response_df = self.load_example_data(example_idx)
+                response_df["example_idx"] = example_idx
+                response_dfs.append(response_df)
+            except Exception as e:
+                print(f"Error loading example {example_idx}, skipping")
         full_response_df = pd.concat(response_dfs, ignore_index=True)
         if standardize_order:
             if not os.path.exists(os.path.join(self.model_response_path, "order_index.pkl")):

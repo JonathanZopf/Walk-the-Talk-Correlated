@@ -593,14 +593,16 @@ COARSE_CATEGORY_MAPPING_MEDQA = {v: k for k, values in COARSE_CATEGORY_MAPPING_I
 def apply_coarse_cat_mapping_to_df(df, dataset_name, coarse_cat_name="intrv_categories_coarse"):
     if dataset_name == "bbq":
         df[coarse_cat_name] = df["intrv_categories"].apply(
-            lambda cat_list: [COARSE_CAT_MAP_BBQ.get(cat, cat) for cat in cat_list] if not isinstance(cat_list, float) else math.nan
+            lambda cat_list: [COARSE_CAT_MAP_BBQ.get(cat, cat) for cat in cat_list] if isinstance(cat_list, list) else cat_list
         )
         for concept, cat in CONCEPT2CAT_CORRECT_BBQ.items():
             df.loc[(df["intrv_concepts"] == concept), coarse_cat_name] = [[cat]] * len(df[df["intrv_concepts"] == concept])
     elif dataset_name == "medqa":
         df[coarse_cat_name] = df["intrv_categories"].apply(
-            lambda cat_list: [COARSE_CATEGORY_MAPPING_MEDQA.get(cat, cat) for cat in cat_list] if not isinstance(cat_list, float) else math.nan
+            lambda cat_list: [COARSE_CATEGORY_MAPPING_MEDQA.get(cat, cat) for cat in cat_list] if isinstance(cat_list, list) else cat_list
         )
+    elif dataset_name == "german_credit":
+        pass
     else:
         raise ValueError(f"Dataset {dataset_name} not supported.")
     return df
@@ -621,10 +623,15 @@ def process_intervention_str(intrv_str, concepts, concept_values, categories):
     intrv_bool = [bool(int(x)) for x in binary_string]
     intrv_idx_within_group = int(binary_string, 2) -1
     intrv_idx_global = intrv_str_group * 128 + intrv_idx_within_group
-    intrv_concepts = concept_values[intrv_str_group]["concepts"]
-    intrv_categories = [categories[concepts.index(concept)] for concept in intrv_concepts]
     original_values = concept_values[intrv_str_group]["current_setting"]
     new_values = concept_values[intrv_str_group]["new_settings"][intrv_idx_within_group]
-    assert len(original_values) == len(new_values) == len(original_values) == len(intrv_concepts)
-    intrv_name = "\n".join([f"{intrv_concepts[i]}: {original_values[i]} -> {new_values[i]}"  for i in range(len(intrv_concepts))])
-    return intrv_bool, intrv_idx_global, intrv_concepts, intrv_categories, original_values, new_values, intrv_name
+    # Only keep concepts where values have changed in intervention
+    original_intrv_concepts = concept_values[intrv_str_group]["concepts"]
+    changed_intrv_concepts = [concept for concept, orig_val, new_val in zip(original_intrv_concepts, original_values, new_values) if orig_val != new_val]
+    intrv_categories = [categories[concepts.index(concept)] for concept in changed_intrv_concepts]
+    # Sanity check
+    assert len(original_values) == len(new_values)
+    assert len(intrv_categories) == len(changed_intrv_concepts)
+    assert len(changed_intrv_concepts) > 0
+    intrv_name = "\n".join([f"{original_intrv_concepts[i]}: {original_values[i]} -> {new_values[i]}"  for i in range(len(original_intrv_concepts))])
+    return intrv_bool, intrv_idx_global, changed_intrv_concepts, intrv_categories, original_values, new_values, intrv_name

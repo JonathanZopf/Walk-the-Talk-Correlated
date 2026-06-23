@@ -18,6 +18,9 @@ import sys
 import numpy as np
 import pandas as pd
 
+from my_datasets.dataset import Dataset
+from utils import get_dataset
+
 # Add the src directory to path if needed
 sys.path.append('../src')
 
@@ -139,7 +142,7 @@ def estimate_explanation_implied_effects(args, dataset, example_idxs):
     # Load data
     if args.verbose:
         print("Loading implied concepts data...")
-    ic_df = ee_estimator.load_data(load_counterfactual_responses=False)
+    ic_df = ee_estimator.load_data(load_counterfactual_responses=True)
 
     if args.verbose:
         print(f"Loaded data for {len(ic_df)} concept-question pairs")
@@ -432,7 +435,7 @@ def main():
     # Initialize dataset
     if args.verbose:
         print(f"\nLoading dataset: {args.dataset} from {args.dataset_path}")
-    dataset = BBQDataset(args.dataset, args.dataset_path)
+    dataset = get_dataset(dataset_name=args.dataset, dataset_path=args.dataset_path)
 
     example_idxs = get_example_indices(args, dataset)
     if args.verbose:

@@ -3,7 +3,6 @@ import numpyro
 import numpyro.distributions as dist
 import numpy as np
 import pandas as pd
-from scipy.special import rel_entr
 
 from utils import process_intervention_str
 
@@ -28,16 +27,15 @@ class LogisticRegressionModel:
         # sample intercept
         intercept = numpyro.sample(f'intercept{e_idx}', dist.Normal(0, 1), sample_shape=(self.n_responses-1,))
         # sample betas for each feature, from category-specific priors
-
-        # TODO: Heavily scrutinize those parts, I modified them to avoid exceptions but I am not sure if they break compatibility with the original metric
         if n_feats != 0:
             with numpyro.plate(f"feature_{e_idx}", n_feats):
-                beta_scale = scale[cat]
-                beta = numpyro.sample(f'beta{e_idx}', dist.Normal(
-            jnp.zeros(self.n_responses - 1),
-            beta_scale
-        ))
-            logits = X @ beta + intercept
+                # CHANGE: scale[cat] must be either scalar or length of n_feats which is not given anymore with the multi-concept support
+                # Combining multiple cathegories into one common prior
+                category_scales = scale[cat]
+                beta_scale = jnp.sqrt(jnp.sum(category_scales ** 2))
+                beta = numpyro.sample(f'beta{e_idx}', dist.Normal(jnp.zeros((n_feats, self.n_responses - 1))
+                                                                  , beta_scale))
+                logits = X @ beta + intercept
         else:
             logits = jnp.zeros((n_samples, self.n_responses-1)) + intercept
         # add in logits for reference class
@@ -74,6 +72,7 @@ def add_intrv_info_to_result_df(result_df, concepts, concept_values, categories)
         DataFrame with the intervention information added to the result dataframe
     """
     result_df["intrv_name"] = ""
+    result_df["intrv_category"] = ""
     result_df["intrv_categories"] = ""
     def add_intrv_info_to_row(x):
         intrv_bool, intrv_idx, intrv_concepts, intrv_categories, original_values, new_values, intrv_name = process_intervention_str(x["treatment"], concepts, concept_values, categories)
@@ -149,10 +148,7 @@ def get_posterior_dist_causal_effect_estimates_hierarchical(samples, reference_c
         prob_control_samples.append(prob_control)
         prob_treatment = compute_probabilities(intercept, beta, 1, reference_class).flatten()
         prob_treatment_samples.append(prob_treatment)
-
-        prob_treatment = jnp.nan_to_num(prob_treatment, nan=0.0)
-        prob_control = jnp.nan_to_num(prob_control, nan=0.0)
-        kl_divergence = jnp.sum(rel_entr(prob_treatment, prob_control))
+        kl_divergence = jnp.sum(prob_treatment * jnp.log(prob_treatment / prob_control))
         kl_divergence_samples.append(kl_divergence)
     
     # compute mean and 95% confidence interval of results

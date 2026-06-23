@@ -39,9 +39,12 @@ class ExplanationImpliedEffectEstimator:
         """
         response_dfs = []
         for example_idx in self.example_idxs:
-            response_df = self.load_example_data(example_idx, load_counterfactual_responses=load_counterfactual_responses)
-            response_df["example_idx"] = example_idx
-            response_dfs.append(response_df)
+            try:
+                response_df = self.load_example_data(example_idx, load_counterfactual_responses=load_counterfactual_responses)
+                response_df["example_idx"] = example_idx
+                response_dfs.append(response_df)
+            except:
+                print(f"Error loading example {example_idx}, skipping")
         return pd.concat(response_dfs, ignore_index=True)
     
     def estimate_implied_effects(self, ic_df):
