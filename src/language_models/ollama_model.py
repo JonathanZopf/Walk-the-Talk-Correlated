@@ -7,7 +7,7 @@ from language_models.utils import add_retries, limiter
 
 
 class OllamaModel(Model):
-    def __init__(self, name, temperature=0.7, base_url="http://0.0.0.0:11434"):
+    def __init__(self, name, temperature=0.7, base_url="http://192.168.0.8:11434"):
         super().__init__(name)
         self.temperature = temperature
         self.base_url = base_url
@@ -18,7 +18,6 @@ class OllamaModel(Model):
         responses = []
         starting_time = time.time()
         for _ in range(n_completions):
-            print("Generating response for prompt:\n", prompt)
 
             res = requests.post(
                 f"{self.base_url}/api/generate",
@@ -38,5 +37,6 @@ class OllamaModel(Model):
             responses.append(data["response"])
 
         ending_time = time.time()
-        print("Completed generating response in {:.2f} seconds".format(ending_time - starting_time))
+        prompt_size = len(prompt.split())
+        print("Completed generating response in {:.2f} seconds for prompt of size {} words".format(ending_time - starting_time, prompt_size))
         return responses

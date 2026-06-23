@@ -260,31 +260,6 @@ def enumerate_interventions_helper(intervention_list, intervention_str, factors,
                                            k_hop)
 
 
-def enumerate_interventions(factors, factor_settings, k_hop=None, include_no_intervention=True, mark_removals=True):
-    """
-    Enumerates all possible interventions.
-    Args:
-        factors: a list of factors to intervene on
-        factor_settings: a list of dictionaries, each containing the current setting and alternative settings for a factor
-        k_hop: if not None, only enumerate interventions that are k hops away from the original prompt
-        include_no_intervention: whether to include the no intervention case
-        mark_removals: whether to mark removal interventions with a special symobol
-    """
-    intervention_list = []
-    enumerate_interventions_helper(intervention_list, "", factors, factor_settings, k_hop)
-    no_intrv_str = "0" * len(factors)
-    if not include_no_intervention and no_intrv_str in intervention_list:
-        intervention_list.remove(no_intrv_str)
-    if mark_removals:
-        for idx in range(len(intervention_list)):
-            intrv_str = intervention_list[idx]
-            for j in range(len(intrv_str)):
-                if intrv_str[j] != "0" and factor_settings[j]['new_settings'][int(intrv_str[j]) - 1] == "UNKNOWN":
-                    intrv_str = intrv_str[:j] + "-" + intrv_str[j + 1:]
-            intervention_list[idx] = intrv_str
-    return intervention_list
-
-
 ####################################################################################################
 ## Experiment Output Loading Utils ##
 ####################################################################################################

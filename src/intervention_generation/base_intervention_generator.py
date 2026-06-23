@@ -7,7 +7,7 @@ from typing import List, Set, Tuple
 
 
 class InterventionGenerator(ABC):
-    """Abstract base class – defines the interface and common workflow."""
+    """Abstract base class – defines the interface and common workflow. Largely inherited from Mattons original."""
 
     def __init__(self, intervention_generator_arguments):
         self.dataset = intervention_generator_arguments.dataset
@@ -77,7 +77,6 @@ class InterventionGenerator(ABC):
                 # make string to encode using 0 and 1 if intervention is applied for concept
                 concept_setting_string = ''.join(["1" if group_setting["current_setting"][x] != group_setting["new_settings"][combo_idx][x] else "0" for x in range(len(group_setting["concepts"]))])
                 intrv_str = f"G{group_idx}_C{combo_idx}_({concept_setting_string})"
-                print("Intrv:", intrv_str)
                 intervention_list.append(intrv_str)
 
         # Skip those already generated

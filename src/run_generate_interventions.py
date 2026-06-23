@@ -30,6 +30,7 @@ def parse_args():
     parser.add_argument('--include_unknown_concept_values', action='store_true', help='whether to include unknown as a concept value in the intervention generation')
     parser.add_argument('--only_concept_removals', action='store_true', help='whether to only generate interventions that remove concepts')
     parser.add_argument('--fresh_start', action='store_true', help='whether to start from scratch (i.e. not restart from previous run)')
+    parser.add_argument('--max_interventions_in_correlation_groups', type=int, default=4, help='maximum number of interventions in each group that will be considered as correlated')
     return parser.parse_args()
 
 
@@ -39,6 +40,7 @@ def validate_args(args):
     Args: command line arguments parsed with the argparse library
     """
     assert not (args.concept_values_only and args.concept_id_only), "Can't have both concept id only and concept values only. Please set only one of them to True."
+    assert args.max_interventions_in_correlation_groups > 0, "max_interventions_in_correlation_groups must be greater than 0"
 
 
 def generate_interventions(dataset, cnt, example_idx, intervention_model, args):
@@ -63,17 +65,8 @@ def generate_interventions(dataset, cnt, example_idx, intervention_model, args):
         restart_from_previous=not args.fresh_start)
         )
     # identify concepts (and their associated categories)
-    concepts_in_groups = ig.identify_concepts_within_correlation_groups(4)
-    all_concepts = [item[0] for group in concepts_in_groups for item in group]
+    concepts_in_groups = ig.identify_concepts_within_correlation_groups(args.max_interventions_in_correlation_groups)
 
-    print("CORRELATING CONCEPTS...")
-    for i in concepts_in_groups:
-        print(str(i) + ", ")
-
-
-    if args.verbose:
-        print("Concepts: ", all_concepts)
-        print("Categories for each factor: ", categories)
     if args.concept_id_only:
         print(f"FINISHED CONCEPT ID for example {example_idx} in {time.time() - init_time} seconds\n\n")
         return        
@@ -109,7 +102,6 @@ def main():
         try:
             generate_interventions(dataset, cnt + 1, example_idx, intervention_model, args)
         except Exception as e:
-            raise e
             print(f"ERROR: {e}")
             failed_idxs[example_idx] = str(e)
     # saved failed idxs and corresponding errors to file

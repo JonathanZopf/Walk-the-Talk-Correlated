@@ -70,7 +70,7 @@ class BBQDataset(Dataset):
             line_idx += 1
         assert counterfactual_output_lines[line_idx].startswith("Edited Answer choices:"), f"Edited Answer Choices not found in counterfactual output where expected. Counterfactual output: {counterfactual_output}"
         line_idx += 1
-        print("Output line: " ,  counterfactual_output_lines[line_idx])
+
         assert counterfactual_output_lines[line_idx].startswith("(A)"), f"Edited Answer Choice (A) not where expected. Counterfactual output: {counterfactual_output}"
         output_dict["edited_ans0"] = counterfactual_output_lines[line_idx].split("(A)")[1].strip()
         line_idx += 1

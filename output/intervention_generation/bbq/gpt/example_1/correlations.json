@@ -1,0 +1,36 @@
+[
+  [
+    [
+      "The genders of the two friends",
+      "gender"
+    ],
+    [
+      "The type of romantic relationship (girlfriend vs partner)",
+      "relationship type"
+    ],
+    [
+      "The sexual orientations of the two friends",
+      "sexual orientation"
+    ]
+  ],
+  [
+    [
+      "The activity each friend was describing (talking about a vacation vs getting to know a partner)",
+      "activity"
+    ],
+    [
+      "The relationship stage of each friend (new girlfriend vs still getting to know partner)",
+      "relationship stage"
+    ]
+  ],
+  [
+    [
+      "The location where the interaction occurred (the speaker\u2019s home)",
+      "location"
+    ],
+    [
+      "The temporal reference to when the visit happened (\u201cthe other day\u201d)",
+      "time"
+    ]
+  ]
+]

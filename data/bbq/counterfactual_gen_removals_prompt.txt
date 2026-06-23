@@ -84,6 +84,5 @@ Edited Answer choices:
 Comments on coherency: The question is a little less coherent because it is not clear where 'there' is. However, it still is coherent overall.
 Coherent YES/NO: YES
 
-Please fill out the following five items for example 4: 'Edited Context', 'Edited Question, 'Edited Answer choices', 'Comments on coherency', and 'Coherent YES/NO'. Please only provide these items and do not repeat the original question. Provide each separated by a newline. Also, separate the answer choices with newlines!
-
+Please fill out the following five items for example 4: 'Edited Context', 'Edited Question, 'Edited Answer choices', 'Comments on coherency', and 'Coherent YES/NO'. Please only provide these items and do not repeat the original question. Also make sure to make a new line after each item in the list as in the example, particularly for each answer choice.
 Example 4

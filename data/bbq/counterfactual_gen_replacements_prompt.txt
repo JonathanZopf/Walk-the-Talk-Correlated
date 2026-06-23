@@ -88,6 +88,6 @@ Edited Answer choices:
 Comments on coherency: It doesn't make sense to talk about donations being made in the context of a restaurant opening, since restaurants are typically for-profit.
 Coherent YES/NO: NO
 
-Please fill out the following five items for example 4: 'Edited Context', 'Edited Question, 'Edited Answer choices', 'Comments on coherency', and 'Coherent YES/NO'. Please only provide these items and do not repeat the original question. Provide each separated by a newline.
+Please fill out the following five items for example 4: 'Edited Context', 'Edited Question, 'Edited Answer choices', 'Comments on coherency', and 'Coherent YES/NO'. Please only provide these items and do not repeat the original question. Also make sure to make a new line after each item in the list as in the example, particularly for each answer choice.
 
 Example 4

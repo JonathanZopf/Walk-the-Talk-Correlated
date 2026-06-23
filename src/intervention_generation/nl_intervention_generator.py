@@ -1,6 +1,7 @@
 import copy
 import json
 import os
+import re
 import traceback
 import random
 from typing import List, Set, Tuple
@@ -13,10 +14,9 @@ from utils import parse_llm_response_concepts_and_categories, parse_llm_response
 
 
 class NLInterventionGenerator(InterventionGenerator):
-
     def identify_concepts_within_correlation_groups(self, max_in_group) -> List[Set[Tuple[str, str]]]:
         """
-        Identify concepts and (for now) put each into its own singleton group.
+        Identify concepts and look which are correlated.
         Returns a list of sets of (concept, category) tuples.
         """
         if self.restart_from_previous and os.path.exists(os.path.join(self.output_dir, 'concepts.json')):
@@ -29,7 +29,6 @@ class NLInterventionGenerator(InterventionGenerator):
             prompt = self.dataset.format_prompt_concept_id(self.example_idx,
                                                            self.concept_id_base_prompt_name)
             response = self.intervention_model.generate_response(prompt)[0]
-            print("Response for concept identification:", response)
             try:
                 concepts, categories = parse_llm_response_concepts_and_categories(response)
             except Exception as e:
@@ -74,18 +73,26 @@ class NLInterventionGenerator(InterventionGenerator):
         # -----------------------------------------------------------------
         # 2. Get per‑concept current and alternative values from the LLM
         # -----------------------------------------------------------------
-        prompt = self.dataset.format_prompt_concept_values(self.example_idx,
-                                                           self.concept_values_base_prompt_name,
-                                                           all_concepts)
-        response = self.intervention_model.generate_response(prompt)[0]
-        try:
-            per_concept_settings = parse_llm_response_factor_settings(response)
-            # per_concept_settings is a list of dicts:
-            #   [{"current_setting": ..., "new_settings": [...]}, ...]
-            # in the same order as all_concepts
-        except Exception as e:
-            print(traceback.format_exc())
-            raise Exception(f"Concept settings identification failed: {e}")
+        if self.only_concept_removals:
+            # Sometimes we want to remove concepts, not changing their value as an alternative form of creating counterfactuals
+            # In this case such as that all possible different values within a coalition are being iterated trough,
+            # we want to remove the concepts with all possible combinations: e.g. a,b -> original, then: A,b; a,B; A,B
+            # TODO
+            raise NotImplementedError("Look how to implement this")
+
+        else:
+            prompt = self.dataset.format_prompt_concept_values(self.example_idx,
+                                                               self.concept_values_base_prompt_name,
+                                                               all_concepts)
+            response = self.intervention_model.generate_response(prompt)[0]
+            try:
+                per_concept_settings = parse_llm_response_factor_settings(response)
+                # per_concept_settings is a list of dicts:
+                #   [{"current_setting": ..., "new_settings": [...]}, ...]
+                # in the same order as all_concepts
+            except Exception as e:
+                print(traceback.format_exc())
+                raise Exception(f"Concept settings identification failed: {e}")
 
         # Build a dictionary: concept -> its settings dict
         concept_setting_map = dict(zip(all_concepts, per_concept_settings))
@@ -148,23 +155,20 @@ class NLInterventionGenerator(InterventionGenerator):
         Apply one group‑level intervention.
         intervention_str format: "G{group_idx}_C{combo_idx}_({concept_setting_str})"
         """
-        # TODO: This solution is beyond ugly: introduce an improved one which is better readable
-        parts = [intervention_str[1:].split('_C')[0], intervention_str[1:].split('_C')[1].split('_(')[0], intervention_str[1:].split('_C')[1].split('_(')[1].replace(')', '')]
-        print("Parsed parts: ", parts)
-        if len(parts) != 3:
+        # Parse the intervention string
+        match = re.match(r'^G(\d+)_C(\d+)_\(([^)]+)\)$', intervention_str)
+        if not match:
             raise ValueError(f"Unexpected intervention string format: {intervention_str}")
-        group_idx = int(parts[0])
-        combo_idx = int(parts[1])
-        concept_setting_str = parts[2]
 
+        group_idx = int(match.group(1))
+        combo_idx = int(match.group(2))
+        concept_setting_str = match.group(3)
 
         group_setting = concept_settings[group_idx]
         group_concepts = group_setting["concepts"]
-        alt_values_tuple = group_setting["new_settings"][combo_idx]  # list of values
+        alt_values_tuple = group_setting["new_settings"][combo_idx]
 
-        # -----------------------------------------------------------------
         # Build a map concept -> current value from all groups
-        # -----------------------------------------------------------------
         concept_current = {}
         for gs in concept_settings:
             for concept, cur_val in zip(gs["concepts"], gs["current_setting"]):
@@ -182,9 +186,8 @@ class NLInterventionGenerator(InterventionGenerator):
         # Intervention boolean vector: True where new value differs from old
         intervention_bool = [old != new for old, new in zip(old_values, new_values)]
 
-        # -----------------------------------------------------------------
+
         # Generate counterfactual using the LLM
-        # -----------------------------------------------------------------
         counterfactual_gen_prompt = self.dataset.format_prompt_counterfactual_gen(
             self.example_idx,
             self.counterfactual_gen_base_prompt_name,
@@ -250,7 +253,7 @@ class NLInterventionGenerator(InterventionGenerator):
             if last_error:
                 error_msg = "\n\nYou made a mistake in parsing the concept groups. Please carefully re‑read the question and the list of concepts, and try again. Remember to stick to the output format. Here is the original error message: " + str(last_error)
                 reworked_prompt = prompt + error_msg
-            print("PROMPT:\n", reworked_prompt)
+
             # Considering switching to GPT:OSS 120b here and not relying on a weak intervention model
             response = self.intervention_model.generate_response(reworked_prompt)[0]
             return response

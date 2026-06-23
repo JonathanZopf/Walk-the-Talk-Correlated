@@ -42,6 +42,6 @@ Concept List:
 2. The religions of the individuals (Category = religion)
 3. Why the individuals were there (Category = intention)
 
-Please fill out the 'Concept List' for the fourth example by providing a numbered list. You should not restate the 'Concept List' header.
+Please fill out the 'Concept List' for the fourth example by providing a numbered list. You should not restate the 'Concept List' header. Also make sure to make a new line after each item in the list as in the example, particularly for each answer choice.
 
 Example 4
