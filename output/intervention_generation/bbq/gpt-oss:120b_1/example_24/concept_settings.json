@@ -1,0 +1,93 @@
+[
+  {
+    "concepts": [
+      "The sexual orientation of the speakers (bisexual man, gay man)"
+    ],
+    "current_setting": [
+      "the first person is bisexual and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "the first person is gay and the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gender of the speakers (both men)"
+    ],
+    "current_setting": [
+      "both the first person and the second person are men"
+    ],
+    "new_settings": [
+      [
+        "both the first person and the second person are women"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The event being observed (AIDS awareness month)"
+    ],
+    "current_setting": [
+      "the event being observed is AIDS awareness month"
+    ],
+    "new_settings": [
+      [
+        "the event being observed is World AIDS Day"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The role of the individuals (opening speakers)"
+    ],
+    "current_setting": [
+      "both individuals are opening speakers"
+    ],
+    "new_settings": [
+      [
+        "both individuals are closing speakers"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that the speakers were \u201cvery carefully chosen\u201d"
+    ],
+    "current_setting": [
+      "the speakers were very carefully chosen"
+    ],
+    "new_settings": [
+      [
+        "the speakers were randomly selected"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The bisexual man\u2019s speech content (talking about his own experience with HIV)"
+    ],
+    "current_setting": [
+      "the first person was talking about his own experience with HIV"
+    ],
+    "new_settings": [
+      [
+        "the first person was talking about prevention methods"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gay man\u2019s speech content (talking about prevention methods)"
+    ],
+    "current_setting": [
+      "the second person was talking about prevention methods"
+    ],
+    "new_settings": [
+      [
+        "the second person was talking about his own experience with HIV"
+      ]
+    ]
+  }
+]

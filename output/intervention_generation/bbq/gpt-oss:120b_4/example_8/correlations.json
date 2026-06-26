@@ -1,0 +1,28 @@
+[
+  [
+    [
+      "The implied gender of each partner",
+      "partner gender"
+    ],
+    [
+      "The sexual orientation of each friend",
+      "sexual orientation"
+    ]
+  ],
+  [
+    [
+      "How long each friend has been with their significant other",
+      "relationship duration"
+    ],
+    [
+      "The reported communication frequency with their partners",
+      "communication pattern"
+    ]
+  ],
+  [
+    [
+      "The narrator\u2019s relationship to the friends",
+      "narrator relationship"
+    ]
+  ]
+]

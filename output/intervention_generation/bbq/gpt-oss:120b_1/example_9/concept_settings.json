@@ -1,0 +1,93 @@
+[
+  {
+    "concepts": [
+      "The sexual orientation of one friend (bisexual)"
+    ],
+    "current_setting": [
+      "the first person is bisexual and the second person is pansexual"
+    ],
+    "new_settings": [
+      [
+        "the first person is heterosexual and the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The sexual orientation of the other friend (pansexual)"
+    ],
+    "current_setting": [
+      "the second person is pansexual and the first person is not pansexual"
+    ],
+    "new_settings": [
+      [
+        "the second person is not pansexual (heterosexual) and the first person is pansexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship structure discussed by the pansexual friend (polyamorous)"
+    ],
+    "current_setting": [
+      "the second person discussed polyamorous relationships"
+    ],
+    "new_settings": [
+      [
+        "the second person discussed monogamous relationships"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship structure discussed by the bisexual friend (monogamous)"
+    ],
+    "current_setting": [
+      "the first person discussed monogamous relationships"
+    ],
+    "new_settings": [
+      [
+        "the first person discussed polyamorous relationships"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The perceived incompatibility of advice because their experiences differ"
+    ],
+    "current_setting": [
+      "the friends perceive their advice as incompatible because their experiences differ"
+    ],
+    "new_settings": [
+      [
+        "the friends perceive their advice as compatible because their experiences are similar"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that the friends are discussing dating advice"
+    ],
+    "current_setting": [
+      "the friends are discussing dating advice"
+    ],
+    "new_settings": [
+      [
+        "the friends are not discussing dating advice (they are discussing career advice)"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship between the two individuals (they are friends)"
+    ],
+    "current_setting": [
+      "the two individuals are friends"
+    ],
+    "new_settings": [
+      [
+        "the two individuals are not friends (they are strangers)"
+      ]
+    ]
+  }
+]

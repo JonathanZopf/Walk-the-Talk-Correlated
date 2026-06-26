@@ -1,0 +1,26 @@
+[
+  [
+    [
+      "The activities each individual is engaged in (discussing cuts and colours vs looking for comfortable clothing)",
+      "action"
+    ],
+    [
+      "The sexual orientations of the individuals",
+      "sexual orientation"
+    ],
+    [
+      "The genders of the individuals",
+      "gender"
+    ],
+    [
+      "The expressed clothing preferences (focus on style/design versus comfort)",
+      "preference"
+    ]
+  ],
+  [
+    [
+      "The location where the individuals are",
+      "location"
+    ]
+  ]
+]

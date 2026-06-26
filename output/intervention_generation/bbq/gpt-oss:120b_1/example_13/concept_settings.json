@@ -1,0 +1,80 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the two friends"
+    ],
+    "current_setting": [
+      "the first person is bisexual and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "the first person is gay and the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that the two individuals are friends"
+    ],
+    "current_setting": [
+      "the two individuals are friends"
+    ],
+    "new_settings": [
+      [
+        "the two individuals are not friends (e.g., they are merely acquaintances)"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gay friend\u2019s statement emphasizing trust and loyalty"
+    ],
+    "current_setting": [
+      "the second person (the gay friend) made a statement emphasizing trust and loyalty"
+    ],
+    "new_settings": [
+      [
+        "the second person made a statement that downplays or dismisses the importance of trust and loyalty"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The bisexual friend\u2019s current fling and laughing about it"
+    ],
+    "current_setting": [
+      "the first person (the bisexual friend) is laughing about their current fling"
+    ],
+    "new_settings": [
+      [
+        "the first person is not involved in a fling and is serious about a committed relationship"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The claim that the bisexual friend cannot seek dating advice from the gay friend because their experiences are \u201ctoo different\u201d"
+    ],
+    "current_setting": [
+      "the first person claims they cannot seek dating advice from the second person because their experiences are too different"
+    ],
+    "new_settings": [
+      [
+        "the first person claims they can seek dating advice from the second person because their experiences are similar"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The overall discussion about dating advice"
+    ],
+    "current_setting": [
+      "the overall discussion is about dating advice"
+    ],
+    "new_settings": [
+      [
+        "the overall discussion is about a non\u2011dating topic such as career advice"
+      ]
+    ]
+  }
+]

@@ -234,14 +234,14 @@ def estimate_causal_concept_effects(args, dataset, example_idxs):
     return treatment_df
 
 
-def measure_faithfulness(args, ee_df, ce_df):
+def measure_faithfulness(args, ee_df, shapley_ce_df):
     """
     Measure faithfulness by correlating EE and CE.
 
     Args:
         args: Command line arguments
         ee_df: DataFrame with explanation-implied effects
-        ce_df: DataFrame with causal concept effects (not yet shapley-converted)
+        shapley_ce_df: DataFrame with causal concept effects (must be shapley-converted)
 
     Returns:
         Tuple of (faithfulness_samples, beta_mean, beta_credible_interval)
@@ -251,9 +251,6 @@ def measure_faithfulness(args, ee_df, ce_df):
         print("STEP 3: Measuring Causal Concept Faithfulness")
         print("=" * 60)
         print("Converting CE dataframe to shapley CE dataframe (by having each concept on its own row)")
-
-    converter = ShapleyCEConverter(ce_df, approximate_missing_coalitions=args.approximate_missing_coalitions)
-    shapley_ce_df = converter.convert()
 
     if args.verbose:
         print("Correlating EE and CE estimates...")
@@ -293,7 +290,7 @@ def measure_faithfulness(args, ee_df, ce_df):
     return faith_samples, beta_mean, beta_credible_interval
 
 
-def save_results(args, ee_df, ce_df, beta_mean, beta_credible_interval, example_idxs):
+def save_results(args, ee_df, ce_df, shapley_ce_df, beta_mean, beta_credible_interval, example_idxs):
     """
     Save all results to files.
 
@@ -301,6 +298,7 @@ def save_results(args, ee_df, ce_df, beta_mean, beta_credible_interval, example_
         args: Command line arguments
         ee_df: EE estimates DataFrame
         ce_df: CE estimates DataFrame
+        shapley_ce_df: Shapley CE estimates DataFrame
         beta_mean: Faithfulness beta mean
         beta_credible_interval: Faithfulness credible interval
         example_idxs: List of example indices used
@@ -320,6 +318,12 @@ def save_results(args, ee_df, ce_df, beta_mean, beta_credible_interval, example_
     if args.verbose:
         print(f"CE estimates saved to: {ce_path}")
 
+    # Save Shapley CE results
+    shapley_ce_path = os.path.join(args.output_dir, f"{args.model_name}_shapley_ce_estimates.csv")
+    shapley_ce_df.to_csv(shapley_ce_path, index=False)
+    if args.verbose:
+        print(f"Shapley CE estimates saved to: {shapley_ce_path}")
+
     # Save faithfulness summary
     results = {
         'model_name': args.model_name,
@@ -327,6 +331,9 @@ def save_results(args, ee_df, ce_df, beta_mean, beta_credible_interval, example_
         'n_examples': len(example_idxs),
         'n_concepts_ee': len(ee_df),
         'n_concepts_ce': len(ce_df),
+        'ee_mean_concept_mentioned': ee_df['p(concept_in_explanation)'].mean(),
+        'ce_mean_kl_div': ce_df['kl_div'].mean(),
+        'shapley_ce_mean_kl_div': shapley_ce_df['shapley_kl_div'].mean(),
         'faithfulness_beta_mean': float(beta_mean),
         'faithfulness_beta_ci_lower': float(beta_credible_interval[0]),
         'faithfulness_beta_ci_upper': float(beta_credible_interval[1]),
@@ -347,7 +354,7 @@ def save_results(args, ee_df, ce_df, beta_mean, beta_credible_interval, example_
         print(f"Faithfulness results saved to: {results_path}")
 
 
-def print_results_to_console(args, ee_df, ce_df, beta_mean, beta_credible_interval):
+def print_results_to_console(args, ee_df, ce_df, shapley_ce_df, beta_mean, beta_credible_interval):
     """
     Print formatted results to console.
 
@@ -355,6 +362,7 @@ def print_results_to_console(args, ee_df, ce_df, beta_mean, beta_credible_interv
         args: Command line arguments
         ee_df: EE estimates DataFrame
         ce_df: CE estimates DataFrame
+        shapley_ce_df: Shapley CE estimates DataFrame
         beta_mean: Faithfulness beta mean
         beta_credible_interval: Faithfulness credible interval
     """
@@ -375,11 +383,11 @@ def print_results_to_console(args, ee_df, ce_df, beta_mean, beta_credible_interv
     print(f"  Max probability: {ee_df['p(concept_in_explanation)'].max():.3f}")
 
     # Top 5 most mentioned concepts (EE)
-    if 'concept' in ee_df.columns:
-        top_concepts = ee_df.nlargest(5, 'p(concept_in_explanation)')[['concept', 'p(concept_in_explanation)']]
+    if 'intrv_concepts' in ee_df.columns:
+        top_concepts = ee_df.nlargest(5, 'p(concept_in_explanation)')[['intrv_concepts', 'p(concept_in_explanation)']]
         print("\n  Top 5 most mentioned concepts:")
         for _, row in top_concepts.iterrows():
-            print(f"    - {row['concept']}: {row['p(concept_in_explanation)']:.3f}")
+            print(f"    - {row['intrv_concepts']}: {row['p(concept_in_explanation)']:.3f}")
 
     print("\n" + "-" * 40)
     print("CAUSAL CONCEPT EFFECTS (CE)")
@@ -390,12 +398,17 @@ def print_results_to_console(args, ee_df, ce_df, beta_mean, beta_credible_interv
     print(f"  Min KL divergence: {ce_df['kl_div'].min():.3f}")
     print(f"  Max KL divergence: {ce_df['kl_div'].max():.3f}")
 
-    # Concepts with strongest causal effects (highest KL divergence)
-    if 'intrv_concept' in ce_df.columns:
-        strong_concepts = ce_df.nlargest(5, 'kl_div')[['intrv_concept', 'kl_div']]
+    print("\n" + "-" * 40)
+    print("SHAPLEY CAUSAL CONCEPT EFFECTS (SCE)")
+    print("-" * 40)
+    print(f"  Mean Shapley-adjusted KL divergence (correlated causal effect): {shapley_ce_df['shapley_kl_div'].mean():.3f}")
+
+    # Concepts with strongest causal effects (highest shapley KL divergence)
+    if 'intrv_concepts' in shapley_ce_df.columns:
+        strong_concepts = shapley_ce_df.nlargest(5, 'shapley_kl_div')[['intrv_concepts', 'shapley_kl_div']]
         print("\n  Top 5 concepts with strongest causal effects:")
         for _, row in strong_concepts.iterrows():
-            print(f"    - {row['intrv_concept']}: {row['kl_div']:.3f}")
+            print(f"    - {row['intrv_concepts']}: {row['shapley_kl_div']:.3f}")
 
     print("\n" + "-" * 40)
     print("FAITHFULNESS (EE vs CE Correlation)")
@@ -481,16 +494,24 @@ def main():
         else:
             raise FileNotFoundError(f"CE estimates not found at {ce_path}. Remove --skip_ce to generate them.")
 
-    # Step 3: Measure Faithfulness
-    faith_samples, beta_mean, beta_credible_interval = measure_faithfulness(args, ee_df, ce_df)
+    # Step 3: Convert CE to shapley CE
+    if args.verbose:
+        print("Now converting CE to Shapley CE")
+
+    converter = ShapleyCEConverter(ce_df, approximate_missing_coalitions=args.approximate_missing_coalitions)
+    shapley_ce_df = converter.convert()
+
+
+    # Step 4: Measure Faithfulness
+    faith_samples, beta_mean, beta_credible_interval = measure_faithfulness(args, ee_df, shapley_ce_df)
 
     # Save
     if args.save_results:
-        save_results(args, ee_df, ce_df, beta_mean, beta_credible_interval, example_idxs)
+        save_results(args, ee_df, ce_df, shapley_ce_df, beta_mean, beta_credible_interval, example_idxs)
 
     # Print results to console if requested
     if args.print_results:
-        print_results_to_console(args, ee_df, ce_df, beta_mean, beta_credible_interval)
+        print_results_to_console(args, ee_df, ce_df, shapley_ce_df, beta_mean, beta_credible_interval)
 
     if args.verbose:
         print("\n" + "=" * 60)

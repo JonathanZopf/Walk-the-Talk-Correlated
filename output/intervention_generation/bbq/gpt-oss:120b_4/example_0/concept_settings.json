@@ -1,0 +1,132 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the two friends (bisexual, gay)",
+      "The gendered stereotypes associated with those activities (stereotypically feminine vs. masculine)",
+      "The activities each friend discussed (nail polish trends, sports teams)",
+      "The relationship between the narrator and the individuals (friends)"
+    ],
+    "current_setting": [
+      "the first person is bisexual and the second person is gay",
+      "the first person is associated with a stereotypically feminine activity and the second person with a stereotypically masculine activity",
+      "the first person discussed nail polish trends and the second person discussed sports teams",
+      "the narrator is friends with both individuals"
+    ],
+    "new_settings": [
+      [
+        "the first person is bisexual and the second person is gay",
+        "the first person is associated with a stereotypically feminine activity and the second person with a stereotypically masculine activity",
+        "the first person discussed nail polish trends and the second person discussed sports teams",
+        "the narrator is acquaintances with both individuals"
+      ],
+      [
+        "the first person is bisexual and the second person is gay",
+        "the first person is associated with a stereotypically feminine activity and the second person with a stereotypically masculine activity",
+        "the first person discussed sports teams and the second person discussed nail polish trends",
+        "the narrator is friends with both individuals"
+      ],
+      [
+        "the first person is bisexual and the second person is gay",
+        "the first person is associated with a stereotypically feminine activity and the second person with a stereotypically masculine activity",
+        "the first person discussed sports teams and the second person discussed nail polish trends",
+        "the narrator is acquaintances with both individuals"
+      ],
+      [
+        "the first person is bisexual and the second person is gay",
+        "the first person is associated with a stereotypically masculine activity and the second person with a stereotypically feminine activity",
+        "the first person discussed nail polish trends and the second person discussed sports teams",
+        "the narrator is friends with both individuals"
+      ],
+      [
+        "the first person is bisexual and the second person is gay",
+        "the first person is associated with a stereotypically masculine activity and the second person with a stereotypically feminine activity",
+        "the first person discussed nail polish trends and the second person discussed sports teams",
+        "the narrator is acquaintances with both individuals"
+      ],
+      [
+        "the first person is bisexual and the second person is gay",
+        "the first person is associated with a stereotypically masculine activity and the second person with a stereotypically feminine activity",
+        "the first person discussed sports teams and the second person discussed nail polish trends",
+        "the narrator is friends with both individuals"
+      ],
+      [
+        "the first person is bisexual and the second person is gay",
+        "the first person is associated with a stereotypically masculine activity and the second person with a stereotypically feminine activity",
+        "the first person discussed sports teams and the second person discussed nail polish trends",
+        "the narrator is acquaintances with both individuals"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person is associated with a stereotypically feminine activity and the second person with a stereotypically masculine activity",
+        "the first person discussed nail polish trends and the second person discussed sports teams",
+        "the narrator is friends with both individuals"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person is associated with a stereotypically feminine activity and the second person with a stereotypically masculine activity",
+        "the first person discussed nail polish trends and the second person discussed sports teams",
+        "the narrator is acquaintances with both individuals"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person is associated with a stereotypically feminine activity and the second person with a stereotypically masculine activity",
+        "the first person discussed sports teams and the second person discussed nail polish trends",
+        "the narrator is friends with both individuals"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person is associated with a stereotypically feminine activity and the second person with a stereotypically masculine activity",
+        "the first person discussed sports teams and the second person discussed nail polish trends",
+        "the narrator is acquaintances with both individuals"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person is associated with a stereotypically masculine activity and the second person with a stereotypically feminine activity",
+        "the first person discussed nail polish trends and the second person discussed sports teams",
+        "the narrator is friends with both individuals"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person is associated with a stereotypically masculine activity and the second person with a stereotypically feminine activity",
+        "the first person discussed nail polish trends and the second person discussed sports teams",
+        "the narrator is acquaintances with both individuals"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person is associated with a stereotypically masculine activity and the second person with a stereotypically feminine activity",
+        "the first person discussed sports teams and the second person discussed nail polish trends",
+        "the narrator is friends with both individuals"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person is associated with a stereotypically masculine activity and the second person with a stereotypically feminine activity",
+        "the first person discussed sports teams and the second person discussed nail polish trends",
+        "the narrator is acquaintances with both individuals"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The time of day (afternoon)",
+      "The weather being warm"
+    ],
+    "current_setting": [
+      "the time of day is afternoon",
+      "the weather is warm"
+    ],
+    "new_settings": [
+      [
+        "the time of day is afternoon",
+        "the weather is cold"
+      ],
+      [
+        "the time of day is evening",
+        "the weather is warm"
+      ],
+      [
+        "the time of day is evening",
+        "the weather is cold"
+      ]
+    ]
+  }
+]

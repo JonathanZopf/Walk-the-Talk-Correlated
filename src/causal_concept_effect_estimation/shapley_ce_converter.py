@@ -71,16 +71,18 @@ class ShapleyCEConverter:
                 for concept in all_concepts:
                     category = category_lookup.get(concept)
                     shapley = shapley_values.get(concept)
+
                     if category is None or shapley is None:
                         raise ValueError(
                             f"Missing category or Shapley value for concept {concept!r} "
                             f"in example {example_idx}"
                         )
+
                     shapley_rows.append({
                         self.example_col: example_idx,
                         self.concept_col: concept,
                         self.category_col: category,
-                        "shapley_kl_div": shapley,
+                        "shapley_kl_div": shapley
                     })
 
         return pd.DataFrame(shapley_rows)

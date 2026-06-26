@@ -1,0 +1,67 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "the first person is straight and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "the first person is gay and the second person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The genders of the individuals"
+    ],
+    "current_setting": [
+      "the first person is a man and the second person is also a man"
+    ],
+    "new_settings": [
+      [
+        "the first person is a woman and the second person is also a woman"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The location where they are"
+    ],
+    "current_setting": [
+      "clothing store"
+    ],
+    "new_settings": [
+      [
+        "hardware store"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The observed behaviors (admiring fabrics and colors vs focusing on practicality)"
+    ],
+    "current_setting": [
+      "the first person was focused on practicality, and the second person was admiring fabrics and colors"
+    ],
+    "new_settings": [
+      [
+        "the first person was admiring fabrics and colors, and the second person was focused on practicality"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The implied interest in fashion"
+    ],
+    "current_setting": [
+      "the first person had low implied interest in fashion, and the second person had high implied interest in fashion"
+    ],
+    "new_settings": [
+      [
+        "the first person had high implied interest in fashion, and the second person had low implied interest in fashion"
+      ]
+    ]
+  }
+]

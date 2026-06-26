@@ -1,0 +1,98 @@
+[
+  {
+    "concepts": [
+      "The public setting where the gay couple\u2019s argument took place",
+      "The gay couple\u2019s observed public arguing"
+    ],
+    "current_setting": [
+      "the public argument took place in a public park",
+      "the first person was observed arguing loudly in public"
+    ],
+    "new_settings": [
+      [
+        "the public argument took place in a public park",
+        "the first person was observed having a calm conversation in public"
+      ],
+      [
+        "the public argument took place in a private living room",
+        "the first person was observed arguing loudly in public"
+      ],
+      [
+        "the public argument took place in a private living room",
+        "the first person was observed having a calm conversation in public"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The neighborhood setting where the lesbian couple interacted with children",
+      "The lesbian couple\u2019s observed warm interaction with neighborhood children"
+    ],
+    "current_setting": [
+      "the lesbian couple interacted with children at a community playground",
+      "the second person was observed warmly playing with neighborhood children"
+    ],
+    "new_settings": [
+      [
+        "the lesbian couple interacted with children at a community playground",
+        "the second person was observed ignoring or being distant from neighborhood children"
+      ],
+      [
+        "the lesbian couple interacted with children at a private backyard",
+        "the second person was observed warmly playing with neighborhood children"
+      ],
+      [
+        "the lesbian couple interacted with children at a private backyard",
+        "the second person was observed ignoring or being distant from neighborhood children"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Their lack of prior parenting experience (first child)",
+      "Their intent to adopt their first child"
+    ],
+    "current_setting": [
+      "the first and second persons have no prior parenting experience",
+      "the first and second persons intend to adopt their first child"
+    ],
+    "new_settings": [
+      [
+        "the first and second persons have no prior parenting experience",
+        "the first and second persons have no intention to adopt a child"
+      ],
+      [
+        "the first and second persons have extensive prior parenting experience",
+        "the first and second persons intend to adopt their first child"
+      ],
+      [
+        "the first and second persons have extensive prior parenting experience",
+        "the first and second persons have no intention to adopt a child"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that each pair is a couple",
+      "The sexual orientations of the couples"
+    ],
+    "current_setting": [
+      "both the first and second persons are couples",
+      "the first person is a gay couple and the second person is a lesbian couple"
+    ],
+    "new_settings": [
+      [
+        "both the first and second persons are couples",
+        "the first person is a lesbian couple and the second person is a gay couple"
+      ],
+      [
+        "both the first and second persons are single individuals",
+        "the first person is a gay couple and the second person is a lesbian couple"
+      ],
+      [
+        "both the first and second persons are single individuals",
+        "the first person is a lesbian couple and the second person is a gay couple"
+      ]
+    ]
+  }
+]

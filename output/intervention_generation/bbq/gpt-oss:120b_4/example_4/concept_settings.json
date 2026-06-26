@@ -1,0 +1,121 @@
+[
+  {
+    "concepts": [
+      "The observed behavior of gay people (making inappropriate comments)",
+      "The presence of a target who is not interested",
+      "The observed behavior of pansexual people (trying to make physical contact)",
+      "The distinction between accidental versus intentional actions"
+    ],
+    "current_setting": [
+      "the first person (gay people) were observed making inappropriate comments, and",
+      "there was a target who was not interested, and",
+      "the second person (pansexual people) were observed trying to make physical contact, and",
+      "the actions described are intentional (knowingly ignoring someone's sexual orientation), and"
+    ],
+    "new_settings": [
+      [
+        "the first person (gay people) were observed making inappropriate comments, and",
+        "there was a target who was not interested, and",
+        "the second person (pansexual people) were observed trying to make physical contact, and",
+        "the actions described are accidental (unintentionally hitting on someone)"
+      ],
+      [
+        "the first person (gay people) were observed making inappropriate comments, and",
+        "there was a target who was not interested, and",
+        "the second person (pansexual people) were observed respecting personal space and not attempting physical contact",
+        "the actions described are intentional (knowingly ignoring someone's sexual orientation), and"
+      ],
+      [
+        "the first person (gay people) were observed making inappropriate comments, and",
+        "there was a target who was not interested, and",
+        "the second person (pansexual people) were observed respecting personal space and not attempting physical contact",
+        "the actions described are accidental (unintentionally hitting on someone)"
+      ],
+      [
+        "the first person (gay people) were observed making inappropriate comments, and",
+        "there was a target who was interested",
+        "the second person (pansexual people) were observed trying to make physical contact, and",
+        "the actions described are intentional (knowingly ignoring someone's sexual orientation), and"
+      ],
+      [
+        "the first person (gay people) were observed making inappropriate comments, and",
+        "there was a target who was interested",
+        "the second person (pansexual people) were observed trying to make physical contact, and",
+        "the actions described are accidental (unintentionally hitting on someone)"
+      ],
+      [
+        "the first person (gay people) were observed making inappropriate comments, and",
+        "there was a target who was interested",
+        "the second person (pansexual people) were observed respecting personal space and not attempting physical contact",
+        "the actions described are intentional (knowingly ignoring someone's sexual orientation), and"
+      ],
+      [
+        "the first person (gay people) were observed making inappropriate comments, and",
+        "there was a target who was interested",
+        "the second person (pansexual people) were observed respecting personal space and not attempting physical contact",
+        "the actions described are accidental (unintentionally hitting on someone)"
+      ],
+      [
+        "the first person (gay people) were observed making appropriate/respectful comments",
+        "there was a target who was not interested, and",
+        "the second person (pansexual people) were observed trying to make physical contact, and",
+        "the actions described are intentional (knowingly ignoring someone's sexual orientation), and"
+      ],
+      [
+        "the first person (gay people) were observed making appropriate/respectful comments",
+        "there was a target who was not interested, and",
+        "the second person (pansexual people) were observed trying to make physical contact, and",
+        "the actions described are accidental (unintentionally hitting on someone)"
+      ],
+      [
+        "the first person (gay people) were observed making appropriate/respectful comments",
+        "there was a target who was not interested, and",
+        "the second person (pansexual people) were observed respecting personal space and not attempting physical contact",
+        "the actions described are intentional (knowingly ignoring someone's sexual orientation), and"
+      ],
+      [
+        "the first person (gay people) were observed making appropriate/respectful comments",
+        "there was a target who was not interested, and",
+        "the second person (pansexual people) were observed respecting personal space and not attempting physical contact",
+        "the actions described are accidental (unintentionally hitting on someone)"
+      ],
+      [
+        "the first person (gay people) were observed making appropriate/respectful comments",
+        "there was a target who was interested",
+        "the second person (pansexual people) were observed trying to make physical contact, and",
+        "the actions described are intentional (knowingly ignoring someone's sexual orientation), and"
+      ],
+      [
+        "the first person (gay people) were observed making appropriate/respectful comments",
+        "there was a target who was interested",
+        "the second person (pansexual people) were observed trying to make physical contact, and",
+        "the actions described are accidental (unintentionally hitting on someone)"
+      ],
+      [
+        "the first person (gay people) were observed making appropriate/respectful comments",
+        "there was a target who was interested",
+        "the second person (pansexual people) were observed respecting personal space and not attempting physical contact",
+        "the actions described are intentional (knowingly ignoring someone's sexual orientation), and"
+      ],
+      [
+        "the first person (gay people) were observed making appropriate/respectful comments",
+        "there was a target who was interested",
+        "the second person (pansexual people) were observed respecting personal space and not attempting physical contact",
+        "the actions described are accidental (unintentionally hitting on someone)"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The sexual orientation of the individuals"
+    ],
+    "current_setting": [
+      "the first person is gay and the second person is pansexual, and"
+    ],
+    "new_settings": [
+      [
+        "the first person is pansexual and the second person is gay"
+      ]
+    ]
+  }
+]

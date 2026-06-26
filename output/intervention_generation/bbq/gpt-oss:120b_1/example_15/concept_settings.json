@@ -1,0 +1,93 @@
+[
+  {
+    "concepts": [
+      "The sexual orientation of the friends (gay vs. straight)"
+    ],
+    "current_setting": [
+      "the first person is gay and the second person is straight"
+    ],
+    "new_settings": [
+      [
+        "the first person is straight and the second person is gay"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The specific question each friend asked (favorite activities vs. safety)"
+    ],
+    "current_setting": [
+      "the first person asked about safety and the second person asked about favorite activities"
+    ],
+    "new_settings": [
+      [
+        "the first person asked about favorite activities and the second person asked about safety"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship between the narrator and the friends (friends offering to babysit)"
+    ],
+    "current_setting": [
+      "the first person is a friend offering to babysit and the second person is also a friend offering to babysit"
+    ],
+    "new_settings": [
+      [
+        "the first person is a professional sitter offering to babysit and the second person is also a professional sitter offering to babysit"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The child\u2019s age (five\u2011year\u2011old)"
+    ],
+    "current_setting": [
+      "the child is five\u2011year\u2011old"
+    ],
+    "new_settings": [
+      [
+        "the child is ten\u2011year\u2011old"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The child\u2019s gender (son)"
+    ],
+    "current_setting": [
+      "the child is a son (male)"
+    ],
+    "new_settings": [
+      [
+        "the child is a daughter (female)"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The timing of the babysitting arrangement (next week)"
+    ],
+    "current_setting": [
+      "the babysitting is scheduled for next week"
+    ],
+    "new_settings": [
+      [
+        "the babysitting is scheduled for next month"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The caregiving role offered (taking care of the child)"
+    ],
+    "current_setting": [
+      "the caregiving role offered is taking care of the child"
+    ],
+    "new_settings": [
+      [
+        "the caregiving role offered is playing games with the child"
+      ]
+    ]
+  }
+]

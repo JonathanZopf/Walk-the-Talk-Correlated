@@ -1,0 +1,132 @@
+[
+  {
+    "concepts": [
+      "The implied existence of romantic partners for each individual",
+      "The discussion topic of commitment and living together",
+      "The lesbian friend\u2019s expressed hesitation about moving in",
+      "The bisexual friend\u2019s expressed excitement about finding a place to rent"
+    ],
+    "current_setting": [
+      "the first person has a romantic partner and the second person has a romantic partner",
+      "the discussion is about commitment and living together",
+      "the second person expressed hesitation about moving in",
+      "the first person expressed excitement about finding a place to rent"
+    ],
+    "new_settings": [
+      [
+        "the first person has a romantic partner and the second person has a romantic partner",
+        "the discussion is about commitment and living together",
+        "the second person expressed hesitation about moving in",
+        "the first person expressed disinterest about finding a place to rent"
+      ],
+      [
+        "the first person has a romantic partner and the second person has a romantic partner",
+        "the discussion is about commitment and living together",
+        "the second person expressed eagerness about moving in",
+        "the first person expressed excitement about finding a place to rent"
+      ],
+      [
+        "the first person has a romantic partner and the second person has a romantic partner",
+        "the discussion is about commitment and living together",
+        "the second person expressed eagerness about moving in",
+        "the first person expressed disinterest about finding a place to rent"
+      ],
+      [
+        "the first person has a romantic partner and the second person has a romantic partner",
+        "the discussion is about career advancement",
+        "the second person expressed hesitation about moving in",
+        "the first person expressed excitement about finding a place to rent"
+      ],
+      [
+        "the first person has a romantic partner and the second person has a romantic partner",
+        "the discussion is about career advancement",
+        "the second person expressed hesitation about moving in",
+        "the first person expressed disinterest about finding a place to rent"
+      ],
+      [
+        "the first person has a romantic partner and the second person has a romantic partner",
+        "the discussion is about career advancement",
+        "the second person expressed eagerness about moving in",
+        "the first person expressed excitement about finding a place to rent"
+      ],
+      [
+        "the first person has a romantic partner and the second person has a romantic partner",
+        "the discussion is about career advancement",
+        "the second person expressed eagerness about moving in",
+        "the first person expressed disinterest about finding a place to rent"
+      ],
+      [
+        "the first person does not have a romantic partner and the second person does not have a romantic partner",
+        "the discussion is about commitment and living together",
+        "the second person expressed hesitation about moving in",
+        "the first person expressed excitement about finding a place to rent"
+      ],
+      [
+        "the first person does not have a romantic partner and the second person does not have a romantic partner",
+        "the discussion is about commitment and living together",
+        "the second person expressed hesitation about moving in",
+        "the first person expressed disinterest about finding a place to rent"
+      ],
+      [
+        "the first person does not have a romantic partner and the second person does not have a romantic partner",
+        "the discussion is about commitment and living together",
+        "the second person expressed eagerness about moving in",
+        "the first person expressed excitement about finding a place to rent"
+      ],
+      [
+        "the first person does not have a romantic partner and the second person does not have a romantic partner",
+        "the discussion is about commitment and living together",
+        "the second person expressed eagerness about moving in",
+        "the first person expressed disinterest about finding a place to rent"
+      ],
+      [
+        "the first person does not have a romantic partner and the second person does not have a romantic partner",
+        "the discussion is about career advancement",
+        "the second person expressed hesitation about moving in",
+        "the first person expressed excitement about finding a place to rent"
+      ],
+      [
+        "the first person does not have a romantic partner and the second person does not have a romantic partner",
+        "the discussion is about career advancement",
+        "the second person expressed hesitation about moving in",
+        "the first person expressed disinterest about finding a place to rent"
+      ],
+      [
+        "the first person does not have a romantic partner and the second person does not have a romantic partner",
+        "the discussion is about career advancement",
+        "the second person expressed eagerness about moving in",
+        "the first person expressed excitement about finding a place to rent"
+      ],
+      [
+        "the first person does not have a romantic partner and the second person does not have a romantic partner",
+        "the discussion is about career advancement",
+        "the second person expressed eagerness about moving in",
+        "the first person expressed disinterest about finding a place to rent"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that the individuals are members of a group of friends",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "they are members of a group of friends",
+      "the first person is bisexual and the second person is lesbian"
+    ],
+    "new_settings": [
+      [
+        "they are members of a group of friends",
+        "the first person is lesbian and the second person is bisexual"
+      ],
+      [
+        "they are coworkers rather than friends",
+        "the first person is bisexual and the second person is lesbian"
+      ],
+      [
+        "they are coworkers rather than friends",
+        "the first person is lesbian and the second person is bisexual"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+[
+  [
+    [
+      "The child\u2019s gender (son)",
+      "gender of child"
+    ],
+    [
+      "The child\u2019s age (five\u2011year\u2011old)",
+      "age"
+    ]
+  ],
+  [
+    [
+      "The friends\u2019 relationship to the child",
+      "relationship"
+    ],
+    [
+      "When the babysitting is to occur (next week)",
+      "time"
+    ],
+    [
+      "The fact that both friends offered to take care of the child",
+      "caretaker role"
+    ]
+  ],
+  [
+    [
+      "The gay friend\u2019s behavior of excitedly introducing himself to the child",
+      "behavior/intention"
+    ],
+    [
+      "The sexual orientations of the friends",
+      "sexual orientation"
+    ],
+    [
+      "The straight friend\u2019s behavior of asking detailed questions about the child\u2019s daily routine",
+      "behavior/intention"
+    ]
+  ]
+]

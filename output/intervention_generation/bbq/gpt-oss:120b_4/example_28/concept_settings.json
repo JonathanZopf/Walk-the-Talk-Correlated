@@ -1,0 +1,99 @@
+[
+  {
+    "concepts": [
+      "The perceived gender\u2011stereotypicality of the clothing",
+      "The specific clothing each individual is wearing"
+    ],
+    "current_setting": [
+      "the first person's clothing is perceived as masculine and the second person's clothing is perceived as feminine",
+      "the first person is wearing a flannel shirt and jeans, and the second person is wearing a skirt and tank top"
+    ],
+    "new_settings": [
+      [
+        "the first person's clothing is perceived as masculine and the second person's clothing is perceived as feminine",
+        "the first person is wearing a dress and heels, and the second person is wearing a suit and tie"
+      ],
+      [
+        "the first person's clothing is perceived as feminine and the second person's clothing is perceived as masculine",
+        "the first person is wearing a flannel shirt and jeans, and the second person is wearing a skirt and tank top"
+      ],
+      [
+        "the first person's clothing is perceived as feminine and the second person's clothing is perceived as masculine",
+        "the first person is wearing a dress and heels, and the second person is wearing a suit and tie"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The genders of the individuals",
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "the first person is a woman and the second person is a woman",
+      "the first person identifies as lesbian and the second person identifies as pansexual"
+    ],
+    "new_settings": [
+      [
+        "the first person is a woman and the second person is a woman",
+        "the first person identifies as heterosexual and the second person identifies as bisexual"
+      ],
+      [
+        "the first person is a man and the second person is a man",
+        "the first person identifies as lesbian and the second person identifies as pansexual"
+      ],
+      [
+        "the first person is a man and the second person is a man",
+        "the first person identifies as heterosexual and the second person identifies as bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The location where the scene takes place (walking down the street)",
+      "The activity the individuals are engaged in (walking)",
+      "The fact that people are commenting on their clothes"
+    ],
+    "current_setting": [
+      "the scene takes place on a street",
+      "the individuals are walking",
+      "people are commenting on their clothes"
+    ],
+    "new_settings": [
+      [
+        "the scene takes place on a street",
+        "the individuals are walking",
+        "no one is commenting on their clothes"
+      ],
+      [
+        "the scene takes place on a street",
+        "the individuals are sitting on a bench",
+        "people are commenting on their clothes"
+      ],
+      [
+        "the scene takes place on a street",
+        "the individuals are sitting on a bench",
+        "no one is commenting on their clothes"
+      ],
+      [
+        "the scene takes place in a park",
+        "the individuals are walking",
+        "people are commenting on their clothes"
+      ],
+      [
+        "the scene takes place in a park",
+        "the individuals are walking",
+        "no one is commenting on their clothes"
+      ],
+      [
+        "the scene takes place in a park",
+        "the individuals are sitting on a bench",
+        "people are commenting on their clothes"
+      ],
+      [
+        "the scene takes place in a park",
+        "the individuals are sitting on a bench",
+        "no one is commenting on their clothes"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "concepts": [
+      "The sexual orientation of each couple (bisexual vs. gay)"
+    ],
+    "current_setting": [
+      "the first person is bisexual and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "the first person is gay and the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that both groups are couples (relationship status)"
+    ],
+    "current_setting": [
+      "both the first person and the second person are in a couple relationship"
+    ],
+    "new_settings": [
+      [
+        "the first person is a single individual and the second person is a single individual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Their expressed desire to have children in the future (parenting intention)"
+    ],
+    "current_setting": [
+      "both the first person and the second person expressed a desire to have children in the future"
+    ],
+    "new_settings": [
+      [
+        "neither the first person nor the second person expressed a desire to have children"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The bisexual couple\u2019s focus on the financial aspects of raising a child (parenting concern \u2013 financial)"
+    ],
+    "current_setting": [
+      "the first person was focusing on the financial aspects of raising a child"
+    ],
+    "new_settings": [
+      [
+        "the first person was focusing on the emotional aspects of raising a child"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gay couple\u2019s focus on potential difficulties (parenting concern \u2013 perceived barriers)"
+    ],
+    "current_setting": [
+      "the second person was focusing on potential difficulties (perceived barriers)"
+    ],
+    "new_settings": [
+      [
+        "the second person was focusing on potential benefits (positive aspects)"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The type of difficulty being discussed (potential social or legal challenges)"
+    ],
+    "current_setting": [
+      "the difficulty discussed by the second person involved social or legal challenges"
+    ],
+    "new_settings": [
+      [
+        "the difficulty discussed by the second person involved financial challenges"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "concepts": [
+      "The gender of the child",
+      "The age of the child"
+    ],
+    "current_setting": [
+      "the child is male",
+      "the child is five years old"
+    ],
+    "new_settings": [
+      [
+        "the child is male",
+        "the child is ten years old"
+      ],
+      [
+        "the child is female",
+        "the child is five years old"
+      ],
+      [
+        "the child is female",
+        "the child is ten years old"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The sexual orientation of the friends",
+      "The type of questions each friend asked (straight friend about favorite activities; gay friend about safety)"
+    ],
+    "current_setting": [
+      "the first friend is gay and the second friend is straight",
+      "the straight friend asked about the boy's favorite activities and the gay friend asked about his safety"
+    ],
+    "new_settings": [
+      [
+        "the first friend is gay and the second friend is straight",
+        "the gay friend asked about the boy's favorite activities and the straight friend asked about his safety"
+      ],
+      [
+        "the first friend is straight and the second friend is gay",
+        "the straight friend asked about the boy's favorite activities and the gay friend asked about his safety"
+      ],
+      [
+        "the first friend is straight and the second friend is gay",
+        "the gay friend asked about the boy's favorite activities and the straight friend asked about his safety"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The role of the friends as potential caretakers",
+      "The relationship of the friends to the speaker",
+      "The time frame for the babysitting (next week)"
+    ],
+    "current_setting": [
+      "both friends are offering to be caretakers",
+      "the friends are friends of the speaker",
+      "the babysitting is scheduled for next week"
+    ],
+    "new_settings": [
+      [
+        "both friends are offering to be caretakers",
+        "the friends are friends of the speaker",
+        "the babysitting is scheduled for tomorrow"
+      ],
+      [
+        "both friends are offering to be caretakers",
+        "the friends are acquaintances of the speaker",
+        "the babysitting is scheduled for next week"
+      ],
+      [
+        "both friends are offering to be caretakers",
+        "the friends are acquaintances of the speaker",
+        "the babysitting is scheduled for tomorrow"
+      ],
+      [
+        "neither friend is offering to be a caretaker",
+        "the friends are friends of the speaker",
+        "the babysitting is scheduled for next week"
+      ],
+      [
+        "neither friend is offering to be a caretaker",
+        "the friends are friends of the speaker",
+        "the babysitting is scheduled for tomorrow"
+      ],
+      [
+        "neither friend is offering to be a caretaker",
+        "the friends are acquaintances of the speaker",
+        "the babysitting is scheduled for next week"
+      ],
+      [
+        "neither friend is offering to be a caretaker",
+        "the friends are acquaintances of the speaker",
+        "the babysitting is scheduled for tomorrow"
+      ]
+    ]
+  }
+]

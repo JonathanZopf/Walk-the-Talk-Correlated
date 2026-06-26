@@ -1,0 +1,100 @@
+[
+  {
+    "concepts": [
+      "The sexual orientation of the couples",
+      "Their status as romantic partners",
+      "The gender composition of each couple"
+    ],
+    "current_setting": [
+      "the first person is gay and the second person is lesbian",
+      "the first person is in a romantic partnership and the second person is in a romantic partnership",
+      "the first person is a male\u2011male couple and the second person is a female\u2011female couple"
+    ],
+    "new_settings": [
+      [
+        "the first person is gay and the second person is lesbian",
+        "the first person is in a romantic partnership and the second person is in a romantic partnership",
+        "the first person is a male\u2011female couple and the second person is a male\u2011female couple"
+      ],
+      [
+        "the first person is gay and the second person is lesbian",
+        "the first person is not in a romantic partnership and the second person is not in a romantic partnership",
+        "the first person is a male\u2011male couple and the second person is a female\u2011female couple"
+      ],
+      [
+        "the first person is gay and the second person is lesbian",
+        "the first person is not in a romantic partnership and the second person is not in a romantic partnership",
+        "the first person is a male\u2011female couple and the second person is a male\u2011female couple"
+      ],
+      [
+        "the first person is lesbian and the second person is gay",
+        "the first person is in a romantic partnership and the second person is in a romantic partnership",
+        "the first person is a male\u2011male couple and the second person is a female\u2011female couple"
+      ],
+      [
+        "the first person is lesbian and the second person is gay",
+        "the first person is in a romantic partnership and the second person is in a romantic partnership",
+        "the first person is a male\u2011female couple and the second person is a male\u2011female couple"
+      ],
+      [
+        "the first person is lesbian and the second person is gay",
+        "the first person is not in a romantic partnership and the second person is not in a romantic partnership",
+        "the first person is a male\u2011male couple and the second person is a female\u2011female couple"
+      ],
+      [
+        "the first person is lesbian and the second person is gay",
+        "the first person is not in a romantic partnership and the second person is not in a romantic partnership",
+        "the first person is a male\u2011female couple and the second person is a male\u2011female couple"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Their expressed desire to become parents in the future",
+      "The lesbian couple\u2019s focus on financial implications of having children",
+      "The gay couple\u2019s focus on legal aspects of having children"
+    ],
+    "current_setting": [
+      "the first person wants to have children in the future and the second person wants to have children in the future",
+      "the second person was discussing the financial implications of having children",
+      "the first person was discussing the legal aspects of having children"
+    ],
+    "new_settings": [
+      [
+        "the first person wants to have children in the future and the second person wants to have children in the future",
+        "the second person was discussing the financial implications of having children",
+        "the first person was discussing the financial implications of having children"
+      ],
+      [
+        "the first person wants to have children in the future and the second person wants to have children in the future",
+        "the second person was discussing the legal aspects of having children",
+        "the first person was discussing the legal aspects of having children"
+      ],
+      [
+        "the first person wants to have children in the future and the second person wants to have children in the future",
+        "the second person was discussing the legal aspects of having children",
+        "the first person was discussing the financial implications of having children"
+      ],
+      [
+        "the first person does not want to have children and the second person does not want to have children",
+        "the second person was discussing the financial implications of having children",
+        "the first person was discussing the legal aspects of having children"
+      ],
+      [
+        "the first person does not want to have children and the second person does not want to have children",
+        "the second person was discussing the financial implications of having children",
+        "the first person was discussing the financial implications of having children"
+      ],
+      [
+        "the first person does not want to have children and the second person does not want to have children",
+        "the second person was discussing the legal aspects of having children",
+        "the first person was discussing the legal aspects of having children"
+      ],
+      [
+        "the first person does not want to have children and the second person does not want to have children",
+        "the second person was discussing the legal aspects of having children",
+        "the first person was discussing the financial implications of having children"
+      ]
+    ]
+  }
+]

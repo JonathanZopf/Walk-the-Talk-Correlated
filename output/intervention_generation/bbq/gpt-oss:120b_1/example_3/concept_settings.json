@@ -1,0 +1,80 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the couples"
+    ],
+    "current_setting": [
+      "the first person is gay and the second person is lesbian"
+    ],
+    "new_settings": [
+      [
+        "the first person is lesbian and the second person is gay"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gender composition of each couple"
+    ],
+    "current_setting": [
+      "the first person is a male\u2011male couple and the second person is a female\u2011female couple"
+    ],
+    "new_settings": [
+      [
+        "the first person is a female\u2011female couple and the second person is a male\u2011male couple"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship status (both are couples)"
+    ],
+    "current_setting": [
+      "both the first person and the second person are couples"
+    ],
+    "new_settings": [
+      [
+        "the first person is single and the second person is single"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Their expressed intention to have children in the future"
+    ],
+    "current_setting": [
+      "the first person and the second person expressed an intention to have children in the future"
+    ],
+    "new_settings": [
+      [
+        "the first person and the second person expressed no intention to have children in the future"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The lesbian couple\u2019s focus on financial implications"
+    ],
+    "current_setting": [
+      "the second person (the lesbian couple) was focusing on financial implications"
+    ],
+    "new_settings": [
+      [
+        "the second person was focusing on emotional aspects"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gay couple\u2019s focus on legal aspects"
+    ],
+    "current_setting": [
+      "the first person (the gay couple) was focusing on legal aspects"
+    ],
+    "new_settings": [
+      [
+        "the first person was focusing on financial implications"
+      ]
+    ]
+  }
+]

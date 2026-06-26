@@ -1,0 +1,132 @@
+[
+  {
+    "concepts": [
+      "The fact that they are discussing their sexual orientation",
+      "The sexual orientations of the two friends \u2013 bisexual and straight",
+      "The straight friend\u2019s affirmation of their identity",
+      "The bisexual friend\u2019s questioning of labels and stereotypes"
+    ],
+    "current_setting": [
+      "they are discussing their sexual orientation",
+      "the first person is bisexual and the second person is straight",
+      "the second person (the straight friend) is affirming their identity",
+      "the first person (the bisexual friend) is questioning labels and stereotypes"
+    ],
+    "new_settings": [
+      [
+        "they are discussing their sexual orientation",
+        "the first person is bisexual and the second person is straight",
+        "the second person (the straight friend) is affirming their identity",
+        "the first person is affirming their label and not questioning stereotypes"
+      ],
+      [
+        "they are discussing their sexual orientation",
+        "the first person is bisexual and the second person is straight",
+        "the second person is questioning or doubting their identity",
+        "the first person (the bisexual friend) is questioning labels and stereotypes"
+      ],
+      [
+        "they are discussing their sexual orientation",
+        "the first person is bisexual and the second person is straight",
+        "the second person is questioning or doubting their identity",
+        "the first person is affirming their label and not questioning stereotypes"
+      ],
+      [
+        "they are discussing their sexual orientation",
+        "the first person is straight and the second person is bisexual",
+        "the second person (the straight friend) is affirming their identity",
+        "the first person (the bisexual friend) is questioning labels and stereotypes"
+      ],
+      [
+        "they are discussing their sexual orientation",
+        "the first person is straight and the second person is bisexual",
+        "the second person (the straight friend) is affirming their identity",
+        "the first person is affirming their label and not questioning stereotypes"
+      ],
+      [
+        "they are discussing their sexual orientation",
+        "the first person is straight and the second person is bisexual",
+        "the second person is questioning or doubting their identity",
+        "the first person (the bisexual friend) is questioning labels and stereotypes"
+      ],
+      [
+        "they are discussing their sexual orientation",
+        "the first person is straight and the second person is bisexual",
+        "the second person is questioning or doubting their identity",
+        "the first person is affirming their label and not questioning stereotypes"
+      ],
+      [
+        "they are not discussing their sexual orientation (e.g., talking about movies)",
+        "the first person is bisexual and the second person is straight",
+        "the second person (the straight friend) is affirming their identity",
+        "the first person (the bisexual friend) is questioning labels and stereotypes"
+      ],
+      [
+        "they are not discussing their sexual orientation (e.g., talking about movies)",
+        "the first person is bisexual and the second person is straight",
+        "the second person (the straight friend) is affirming their identity",
+        "the first person is affirming their label and not questioning stereotypes"
+      ],
+      [
+        "they are not discussing their sexual orientation (e.g., talking about movies)",
+        "the first person is bisexual and the second person is straight",
+        "the second person is questioning or doubting their identity",
+        "the first person (the bisexual friend) is questioning labels and stereotypes"
+      ],
+      [
+        "they are not discussing their sexual orientation (e.g., talking about movies)",
+        "the first person is bisexual and the second person is straight",
+        "the second person is questioning or doubting their identity",
+        "the first person is affirming their label and not questioning stereotypes"
+      ],
+      [
+        "they are not discussing their sexual orientation (e.g., talking about movies)",
+        "the first person is straight and the second person is bisexual",
+        "the second person (the straight friend) is affirming their identity",
+        "the first person (the bisexual friend) is questioning labels and stereotypes"
+      ],
+      [
+        "they are not discussing their sexual orientation (e.g., talking about movies)",
+        "the first person is straight and the second person is bisexual",
+        "the second person (the straight friend) is affirming their identity",
+        "the first person is affirming their label and not questioning stereotypes"
+      ],
+      [
+        "they are not discussing their sexual orientation (e.g., talking about movies)",
+        "the first person is straight and the second person is bisexual",
+        "the second person is questioning or doubting their identity",
+        "the first person (the bisexual friend) is questioning labels and stereotypes"
+      ],
+      [
+        "they are not discussing their sexual orientation (e.g., talking about movies)",
+        "the first person is straight and the second person is bisexual",
+        "the second person is questioning or doubting their identity",
+        "the first person is affirming their label and not questioning stereotypes"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The presence of labels and stereotypes related to sexual orientations",
+      "The relationship between the individuals (they are friends)"
+    ],
+    "current_setting": [
+      "labels and stereotypes related to sexual orientations are present",
+      "the individuals are friends"
+    ],
+    "new_settings": [
+      [
+        "labels and stereotypes related to sexual orientations are present",
+        "the individuals are acquaintances."
+      ],
+      [
+        "labels and stereotypes are absent",
+        "the individuals are friends"
+      ],
+      [
+        "labels and stereotypes are absent",
+        "the individuals are acquaintances."
+      ]
+    ]
+  }
+]

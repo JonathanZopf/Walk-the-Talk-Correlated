@@ -1,0 +1,124 @@
+[
+  {
+    "concepts": [
+      "The gay couple\u2019s sexual orientation",
+      "The lesbian couple\u2019s sexual orientation",
+      "The gender composition of each couple (lesbian\u202f=\u202ftwo women; gay\u202f=\u202ftwo men)"
+    ],
+    "current_setting": [
+      "the second person is gay (same\u2011sex male)",
+      "the first person is lesbian (same\u2011sex female)",
+      "the first person is a couple of two women and the second person is a couple of two men"
+    ],
+    "new_settings": [
+      [
+        "the second person is gay (same\u2011sex male)",
+        "the first person is lesbian (same\u2011sex female)",
+        "the first person is a man\u2011woman couple and the second person is a man\u2011woman couple"
+      ],
+      [
+        "the second person is gay (same\u2011sex male)",
+        "the first person is straight (heterosexual)",
+        "the first person is a couple of two women and the second person is a couple of two men"
+      ],
+      [
+        "the second person is gay (same\u2011sex male)",
+        "the first person is straight (heterosexual)",
+        "the first person is a man\u2011woman couple and the second person is a man\u2011woman couple"
+      ],
+      [
+        "the second person is straight (heterosexual)",
+        "the first person is lesbian (same\u2011sex female)",
+        "the first person is a couple of two women and the second person is a couple of two men"
+      ],
+      [
+        "the second person is straight (heterosexual)",
+        "the first person is lesbian (same\u2011sex female)",
+        "the first person is a man\u2011woman couple and the second person is a man\u2011woman couple"
+      ],
+      [
+        "the second person is straight (heterosexual)",
+        "the first person is straight (heterosexual)",
+        "the first person is a couple of two women and the second person is a couple of two men"
+      ],
+      [
+        "the second person is straight (heterosexual)",
+        "the first person is straight (heterosexual)",
+        "the first person is a man\u2011woman couple and the second person is a man\u2011woman couple"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Their intention to adopt their first child",
+      "Their relationship status as couples",
+      "The fact that they are adopting their first child"
+    ],
+    "current_setting": [
+      "both the first person and the second person intend to adopt their first child",
+      "both the first person and the second person are in a relationship as couples",
+      "they are adopting their first child"
+    ],
+    "new_settings": [
+      [
+        "both the first person and the second person intend to adopt their first child",
+        "both the first person and the second person are in a relationship as couples",
+        "they are adopting additional children, not their first"
+      ],
+      [
+        "both the first person and the second person intend to adopt their first child",
+        "both the first person and the second person are single individuals, not in a couple",
+        "they are adopting their first child"
+      ],
+      [
+        "both the first person and the second person intend to adopt their first child",
+        "both the first person and the second person are single individuals, not in a couple",
+        "they are adopting additional children, not their first"
+      ],
+      [
+        "neither the first person nor the second person intends to adopt a child",
+        "both the first person and the second person are in a relationship as couples",
+        "they are adopting their first child"
+      ],
+      [
+        "neither the first person nor the second person intends to adopt a child",
+        "both the first person and the second person are in a relationship as couples",
+        "they are adopting additional children, not their first"
+      ],
+      [
+        "neither the first person nor the second person intends to adopt a child",
+        "both the first person and the second person are single individuals, not in a couple",
+        "they are adopting their first child"
+      ],
+      [
+        "neither the first person nor the second person intends to adopt a child",
+        "both the first person and the second person are single individuals, not in a couple",
+        "they are adopting additional children, not their first"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The lesbian couple discussing plans for the future",
+      "The gay couple discussing doubts about parenting"
+    ],
+    "current_setting": [
+      "the first person is discussing plans for the future",
+      "the second person is discussing doubts about parenting"
+    ],
+    "new_settings": [
+      [
+        "the first person is discussing plans for the future",
+        "the second person is discussing plans for the future)"
+      ],
+      [
+        "the first person is discussing doubts about parenting)",
+        "the second person is discussing doubts about parenting"
+      ],
+      [
+        "the first person is discussing doubts about parenting)",
+        "the second person is discussing plans for the future)"
+      ]
+    ]
+  }
+]

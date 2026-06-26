@@ -1,0 +1,32 @@
+[
+  [
+    [
+      "The sexual orientations of the individuals",
+      "sexual orientation"
+    ]
+  ],
+  [
+    [
+      "The genders of the individuals",
+      "gender"
+    ]
+  ],
+  [
+    [
+      "The venue where the interaction occurs",
+      "location"
+    ]
+  ],
+  [
+    [
+      "The actions each person is taking inside the store",
+      "behavior"
+    ]
+  ],
+  [
+    [
+      "The expressed clothing preferences (fashion focus vs comfort)",
+      "preference"
+    ]
+  ]
+]

@@ -1,0 +1,36 @@
+[
+  [
+    [
+      "The gender of the child",
+      "gender"
+    ],
+    [
+      "The age of the child",
+      "age"
+    ]
+  ],
+  [
+    [
+      "The sexual orientation of the friends",
+      "sexual orientation"
+    ],
+    [
+      "The type of questions each friend asked (straight friend about favorite activities; gay friend about safety)",
+      "intention"
+    ]
+  ],
+  [
+    [
+      "The role of the friends as potential caretakers",
+      "role"
+    ],
+    [
+      "The relationship of the friends to the speaker",
+      "relationship"
+    ],
+    [
+      "The time frame for the babysitting (next week)",
+      "time"
+    ]
+  ]
+]

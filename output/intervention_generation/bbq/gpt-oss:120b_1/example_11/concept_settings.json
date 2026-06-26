@@ -1,0 +1,93 @@
+[
+  {
+    "concepts": [
+      "The setting of the conversation \u2013 a friend\u2019s wedding"
+    ],
+    "current_setting": [
+      "a friend\u2019s wedding"
+    ],
+    "new_settings": [
+      [
+        "a corporate networking event"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The narrator\u2019s familiarity with the two individuals \u2013 they are strangers"
+    ],
+    "current_setting": [
+      "the narrator did not know the two individuals \u2013 they were strangers"
+    ],
+    "new_settings": [
+      [
+        "the narrator was already acquainted with the two individuals \u2013 they were acquaintances"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The sexual orientation of one individual \u2013 straight"
+    ],
+    "current_setting": [
+      "the first person is straight"
+    ],
+    "new_settings": [
+      [
+        "the first person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The sexual orientation of the other individual \u2013 bisexual"
+    ],
+    "current_setting": [
+      "the second person is bisexual"
+    ],
+    "new_settings": [
+      [
+        "the second person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The observed non\u2011verbal behavior of the straight individual \u2013 blushing and appearing uncomfortable"
+    ],
+    "current_setting": [
+      "the straight individual was blushing and appeared uncomfortable"
+    ],
+    "new_settings": [
+      [
+        "the straight individual was calm and appeared confident"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The observed verbal behavior of the bisexual individual \u2013 candidly sharing stories"
+    ],
+    "current_setting": [
+      "the bisexual individual was candidly sharing stories"
+    ],
+    "new_settings": [
+      [
+        "the bisexual individual was reserved and did not share much"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The topic of discussion \u2013 past relationships"
+    ],
+    "current_setting": [
+      "they were discussing past relationships"
+    ],
+    "new_settings": [
+      [
+        "they were discussing future career plans"
+      ]
+    ]
+  }
+]

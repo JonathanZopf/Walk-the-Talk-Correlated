@@ -1,0 +1,93 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the friends (gay, bisexual)"
+    ],
+    "current_setting": [
+      "the first person is gay and the second person is bisexual"
+    ],
+    "new_settings": [
+      [
+        "the first person is bisexual and the second person is gay"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The friendship between the two individuals"
+    ],
+    "current_setting": [
+      "the two individuals are friends"
+    ],
+    "new_settings": [
+      [
+        "the two individuals are not friends (e.g., acquaintances or rivals)"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The upcoming speed\u2011dating event they are attending"
+    ],
+    "current_setting": [
+      "they are attending a speed\u2011dating event"
+    ],
+    "new_settings": [
+      [
+        "they are attending a different type of event, such as a book\u2011club meeting"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The bisexual friend\u2019s action of asking many questions about the other attendees"
+    ],
+    "current_setting": [
+      "the bisexual friend was asking a lot of questions about the other attendees"
+    ],
+    "new_settings": [
+      [
+        "the bisexual friend was not asking many questions about the other attendees (e.g., remained silent)"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gay friend\u2019s action of confidently discussing the type of person they are looking for"
+    ],
+    "current_setting": [
+      "the gay friend was confidently discussing the type of person they were looking for"
+    ],
+    "new_settings": [
+      [
+        "the gay friend was not confidently discussing the type of person they were looking for (e.g., expressed uncertainty)"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The bisexual friend\u2019s inquisitive/curious attitude"
+    ],
+    "current_setting": [
+      "the bisexual friend displayed an inquisitive/curious attitude"
+    ],
+    "new_settings": [
+      [
+        "the bisexual friend displayed an uninterested/unconcerned attitude"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gay friend\u2019s confident/assertive attitude"
+    ],
+    "current_setting": [
+      "the gay friend displayed a confident/assertive attitude"
+    ],
+    "new_settings": [
+      [
+        "the gay friend displayed a timid/shy attitude"
+      ]
+    ]
+  }
+]

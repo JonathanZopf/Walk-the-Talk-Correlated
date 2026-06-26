@@ -1,0 +1,100 @@
+[
+  {
+    "concepts": [
+      "The gender label of the partners (girlfriend vs. partner)",
+      "The sexual orientations of the friends",
+      "The relationship stage/intimacy of each friend with their new partner"
+    ],
+    "current_setting": [
+      "the first person's partner is labeled \u201cgirlfriend\u201d and the second person's partner is labeled \u201cpartner\u201d",
+      "the first person is lesbian and the second person is pansexual",
+      "the first person is at a more advanced/intimate stage with their new partner, while the second person is still getting to know theirs"
+    ],
+    "new_settings": [
+      [
+        "the first person's partner is labeled \u201cgirlfriend\u201d and the second person's partner is labeled \u201cpartner\u201d",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is still getting to know their new partner, while the second person is at a more advanced/intimate stage"
+      ],
+      [
+        "the first person's partner is labeled \u201cgirlfriend\u201d and the second person's partner is labeled \u201cpartner\u201d",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is at a more advanced/intimate stage with their new partner, while the second person is still getting to know theirs"
+      ],
+      [
+        "the first person's partner is labeled \u201cgirlfriend\u201d and the second person's partner is labeled \u201cpartner\u201d",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is still getting to know their new partner, while the second person is at a more advanced/intimate stage"
+      ],
+      [
+        "the first person's partner is labeled \u201cpartner\u201d and the second person's partner is labeled \u201cgirlfriend\u201d",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is at a more advanced/intimate stage with their new partner, while the second person is still getting to know theirs"
+      ],
+      [
+        "the first person's partner is labeled \u201cpartner\u201d and the second person's partner is labeled \u201cgirlfriend\u201d",
+        "the first person is lesbian and the second person is pansexual",
+        "the first person is still getting to know their new partner, while the second person is at a more advanced/intimate stage"
+      ],
+      [
+        "the first person's partner is labeled \u201cpartner\u201d and the second person's partner is labeled \u201cgirlfriend\u201d",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is at a more advanced/intimate stage with their new partner, while the second person is still getting to know theirs"
+      ],
+      [
+        "the first person's partner is labeled \u201cpartner\u201d and the second person's partner is labeled \u201cgirlfriend\u201d",
+        "the first person is pansexual and the second person is lesbian",
+        "the first person is still getting to know their new partner, while the second person is at a more advanced/intimate stage"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The location of the visit (the narrator\u2019s home)",
+      "The fact that both friends came over to visit the narrator",
+      "The time reference \u201cthe other day\u201d"
+    ],
+    "current_setting": [
+      "the visit took place at the narrator\u2019s home",
+      "both friends came over to visit the narrator",
+      "the event happened \u201cthe other day\u201d"
+    ],
+    "new_settings": [
+      [
+        "the visit took place at the narrator\u2019s home",
+        "both friends came over to visit the narrator",
+        "the event happened \u201clast month\u201d"
+      ],
+      [
+        "the visit took place at the narrator\u2019s home",
+        "only the first friend came over to visit the narrator",
+        "the event happened \u201cthe other day\u201d"
+      ],
+      [
+        "the visit took place at the narrator\u2019s home",
+        "only the first friend came over to visit the narrator",
+        "the event happened \u201clast month\u201d"
+      ],
+      [
+        "the visit took place at a coffee shop",
+        "both friends came over to visit the narrator",
+        "the event happened \u201cthe other day\u201d"
+      ],
+      [
+        "the visit took place at a coffee shop",
+        "both friends came over to visit the narrator",
+        "the event happened \u201clast month\u201d"
+      ],
+      [
+        "the visit took place at a coffee shop",
+        "only the first friend came over to visit the narrator",
+        "the event happened \u201cthe other day\u201d"
+      ],
+      [
+        "the visit took place at a coffee shop",
+        "only the first friend came over to visit the narrator",
+        "the event happened \u201clast month\u201d"
+      ]
+    ]
+  }
+]

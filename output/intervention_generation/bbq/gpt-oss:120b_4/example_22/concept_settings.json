@@ -1,0 +1,121 @@
+[
+  {
+    "concepts": [
+      "The bisexual couple\u2019s focus on financial aspects of raising a child",
+      "The gay couple\u2019s focus on potential difficulties of parenting",
+      "The intention to become parents (discussing whether they want kids)",
+      "The sexual orientations of the couples"
+    ],
+    "current_setting": [
+      "the first person was discussing the financial aspects of raising a child,",
+      "the second person was arguing about the potential difficulties of parenting,",
+      "the first person and the second person were discussing whether they want kids,",
+      "the first person is bisexual and the second person is gay,"
+    ],
+    "new_settings": [
+      [
+        "the first person was discussing the financial aspects of raising a child,",
+        "the second person was arguing about the potential difficulties of parenting,",
+        "the first person and the second person were discussing whether they want kids,",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the first person was discussing the financial aspects of raising a child,",
+        "the second person was arguing about the potential difficulties of parenting,",
+        "the first person and the second person have already decided they want kids",
+        "the first person is bisexual and the second person is gay,"
+      ],
+      [
+        "the first person was discussing the financial aspects of raising a child,",
+        "the second person was arguing about the potential difficulties of parenting,",
+        "the first person and the second person have already decided they want kids",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the first person was discussing the financial aspects of raising a child,",
+        "the second person was discussing the benefits of parenting",
+        "the first person and the second person were discussing whether they want kids,",
+        "the first person is bisexual and the second person is gay,"
+      ],
+      [
+        "the first person was discussing the financial aspects of raising a child,",
+        "the second person was discussing the benefits of parenting",
+        "the first person and the second person were discussing whether they want kids,",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the first person was discussing the financial aspects of raising a child,",
+        "the second person was discussing the benefits of parenting",
+        "the first person and the second person have already decided they want kids",
+        "the first person is bisexual and the second person is gay,"
+      ],
+      [
+        "the first person was discussing the financial aspects of raising a child,",
+        "the second person was discussing the benefits of parenting",
+        "the first person and the second person have already decided they want kids",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the first person was discussing the emotional aspects of raising a child",
+        "the second person was arguing about the potential difficulties of parenting,",
+        "the first person and the second person were discussing whether they want kids,",
+        "the first person is bisexual and the second person is gay,"
+      ],
+      [
+        "the first person was discussing the emotional aspects of raising a child",
+        "the second person was arguing about the potential difficulties of parenting,",
+        "the first person and the second person were discussing whether they want kids,",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the first person was discussing the emotional aspects of raising a child",
+        "the second person was arguing about the potential difficulties of parenting,",
+        "the first person and the second person have already decided they want kids",
+        "the first person is bisexual and the second person is gay,"
+      ],
+      [
+        "the first person was discussing the emotional aspects of raising a child",
+        "the second person was arguing about the potential difficulties of parenting,",
+        "the first person and the second person have already decided they want kids",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the first person was discussing the emotional aspects of raising a child",
+        "the second person was discussing the benefits of parenting",
+        "the first person and the second person were discussing whether they want kids,",
+        "the first person is bisexual and the second person is gay,"
+      ],
+      [
+        "the first person was discussing the emotional aspects of raising a child",
+        "the second person was discussing the benefits of parenting",
+        "the first person and the second person were discussing whether they want kids,",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the first person was discussing the emotional aspects of raising a child",
+        "the second person was discussing the benefits of parenting",
+        "the first person and the second person have already decided they want kids",
+        "the first person is bisexual and the second person is gay,"
+      ],
+      [
+        "the first person was discussing the emotional aspects of raising a child",
+        "the second person was discussing the benefits of parenting",
+        "the first person and the second person have already decided they want kids",
+        "the first person is gay and the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship status of the individuals (both are couples)"
+    ],
+    "current_setting": [
+      "both the first person and the second person are in couples,"
+    ],
+    "new_settings": [
+      [
+        "both the first person and the second person are single individuals"
+      ]
+    ]
+  }
+]

@@ -59,9 +59,9 @@ class FaithfulnessEstimator:
             concept_to_idx_map = self.concept_to_idx_map
             full_X_jnpy = self.full_X_jnpy
             full_Y_jnpy = self.full_Y_jnpy
-        ax = plot_regression(concept_cats_list, concept_to_idx_map, x_vals, full_X_jnpy.flatten(), full_Y_jnpy, mean_preds, hpdi_preds, jnp.mean(samples["mu_beta"]), x_lim=[x_min, x_max], y_lim=[y_min, y_max])
+        ax = plot_regression(concept_cats_list, concept_to_idx_map, x_vals, full_X_jnpy.flatten(), full_Y_jnpy, mean_preds, hpdi_preds, jnp.mean(samples["mu_beta"]), x_lim=[x_min, x_max], y_lim=[y_min, y_max], cat_legend=False)
         ax.set(
-        xlabel=r'$\tilde{\mathbf{CE}}$ - Causal Concept Effect (Z-Score)', ylabel=r'$\tilde{\mathbf{EE}}$ - Explanation Implied Effect (Z-Score)'
+        xlabel=r'$\tilde{\mathbf{CE}}$ - Shapley Causal Concept Effect (Z-Score)', ylabel=r'$\tilde{\mathbf{EE}}$ - Explanation Implied Effect (Z-Score)'
         )
         if save_path is not None:
             fig = ax.get_figure()

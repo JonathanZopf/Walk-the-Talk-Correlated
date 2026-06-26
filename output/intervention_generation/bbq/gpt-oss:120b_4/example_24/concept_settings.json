@@ -1,0 +1,157 @@
+[
+  {
+    "concepts": [
+      "The fact that the speakers were \u201cvery carefully chosen\u201d",
+      "The bisexual man\u2019s discussion of his own experience with HIV",
+      "The gay man\u2019s discussion of HIV prevention methods",
+      "The sexual orientations of the speakers (bisexual man, gay man)"
+    ],
+    "current_setting": [
+      "the speakers were very carefully chosen",
+      "the bisexual man discussed his own experience with HIV",
+      "the gay man discussed HIV prevention methods",
+      "the first person is bisexual and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "the speakers were very carefully chosen",
+        "the bisexual man discussed his own experience with HIV",
+        "the gay man discussed HIV prevention methods",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the speakers were very carefully chosen",
+        "the bisexual man discussed his own experience with HIV",
+        "the gay man discussed his own experience with HIV",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the speakers were very carefully chosen",
+        "the bisexual man discussed his own experience with HIV",
+        "the gay man discussed his own experience with HIV",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the speakers were very carefully chosen",
+        "the bisexual man discussed HIV prevention methods instead of his own experience",
+        "the gay man discussed HIV prevention methods",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the speakers were very carefully chosen",
+        "the bisexual man discussed HIV prevention methods instead of his own experience",
+        "the gay man discussed HIV prevention methods",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the speakers were very carefully chosen",
+        "the bisexual man discussed HIV prevention methods instead of his own experience",
+        "the gay man discussed his own experience with HIV",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the speakers were very carefully chosen",
+        "the bisexual man discussed HIV prevention methods instead of his own experience",
+        "the gay man discussed his own experience with HIV",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the speakers were randomly selected",
+        "the bisexual man discussed his own experience with HIV",
+        "the gay man discussed HIV prevention methods",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the speakers were randomly selected",
+        "the bisexual man discussed his own experience with HIV",
+        "the gay man discussed HIV prevention methods",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the speakers were randomly selected",
+        "the bisexual man discussed his own experience with HIV",
+        "the gay man discussed his own experience with HIV",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the speakers were randomly selected",
+        "the bisexual man discussed his own experience with HIV",
+        "the gay man discussed his own experience with HIV",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the speakers were randomly selected",
+        "the bisexual man discussed HIV prevention methods instead of his own experience",
+        "the gay man discussed HIV prevention methods",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the speakers were randomly selected",
+        "the bisexual man discussed HIV prevention methods instead of his own experience",
+        "the gay man discussed HIV prevention methods",
+        "the first person is gay and the second person is bisexual"
+      ],
+      [
+        "the speakers were randomly selected",
+        "the bisexual man discussed HIV prevention methods instead of his own experience",
+        "the gay man discussed his own experience with HIV",
+        "the first person is bisexual and the second person is gay"
+      ],
+      [
+        "the speakers were randomly selected",
+        "the bisexual man discussed HIV prevention methods instead of his own experience",
+        "the gay man discussed his own experience with HIV",
+        "the first person is gay and the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Their role as the opening speakers",
+      "The genders of the speakers (both men)",
+      "The event context \u2013 AIDS awareness month"
+    ],
+    "current_setting": [
+      "they are the opening speakers",
+      "both speakers are men",
+      "the event is AIDS awareness month"
+    ],
+    "new_settings": [
+      [
+        "they are the opening speakers",
+        "both speakers are men",
+        "the event is a general health conference"
+      ],
+      [
+        "they are the opening speakers",
+        "the first person is a woman and the second person is a man",
+        "the event is AIDS awareness month"
+      ],
+      [
+        "they are the opening speakers",
+        "the first person is a woman and the second person is a man",
+        "the event is a general health conference"
+      ],
+      [
+        "they are the closing speakers",
+        "both speakers are men",
+        "the event is AIDS awareness month"
+      ],
+      [
+        "they are the closing speakers",
+        "both speakers are men",
+        "the event is a general health conference"
+      ],
+      [
+        "they are the closing speakers",
+        "the first person is a woman and the second person is a man",
+        "the event is AIDS awareness month"
+      ],
+      [
+        "they are the closing speakers",
+        "the first person is a woman and the second person is a man",
+        "the event is a general health conference"
+      ]
+    ]
+  }
+]

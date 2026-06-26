@@ -1,0 +1,74 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the two friends",
+      "The genders of the two friends"
+    ],
+    "current_setting": [
+      "the first person is straight and the second person is lesbian",
+      "the first person is a woman and the second person is a woman"
+    ],
+    "new_settings": [
+      [
+        "the first person is straight and the second person is lesbian",
+        "the first person is a man and the second person is a man"
+      ],
+      [
+        "the first person is lesbian and the second person is straight",
+        "the first person is a woman and the second person is a woman"
+      ],
+      [
+        "the first person is lesbian and the second person is straight",
+        "the first person is a man and the second person is a man"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship stage of each friend (new girlfriend vs still getting to know partner)",
+      "The activities each friend was engaged in (talking about a vacation vs still getting to know partner)"
+    ],
+    "current_setting": [
+      "the first person has a new girlfriend while the second person is still getting to know their partner",
+      "the first person was talking about a vacation and the second person was still getting to know their partner"
+    ],
+    "new_settings": [
+      [
+        "the first person has a new girlfriend while the second person is still getting to know their partner",
+        "the first person was still getting to know their partner and the second person was talking about a vacation"
+      ],
+      [
+        "the first person is still getting to know their partner while the second person has a new girlfriend",
+        "the first person was talking about a vacation and the second person was still getting to know their partner"
+      ],
+      [
+        "the first person is still getting to know their partner while the second person has a new girlfriend",
+        "the first person was still getting to know their partner and the second person was talking about a vacation"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The location where the interaction took place (my home)",
+      "The time reference \u201cthe other day\u201d"
+    ],
+    "current_setting": [
+      "the interaction took place at my home",
+      "the time reference is \u201cthe other day\u201d"
+    ],
+    "new_settings": [
+      [
+        "the interaction took place at my home",
+        "the time reference is \u201clast week\u201d"
+      ],
+      [
+        "the interaction took place at a coffee shop",
+        "the time reference is \u201cthe other day\u201d"
+      ],
+      [
+        "the interaction took place at a coffee shop",
+        "the time reference is \u201clast week\u201d"
+      ]
+    ]
+  }
+]

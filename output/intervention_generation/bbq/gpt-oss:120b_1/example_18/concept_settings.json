@@ -1,0 +1,67 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "the first person is gay and the second person is lesbian"
+    ],
+    "new_settings": [
+      [
+        "the first person is straight and the second person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The genders of the individuals"
+    ],
+    "current_setting": [
+      "the first person is a man and the second person is a woman"
+    ],
+    "new_settings": [
+      [
+        "the first person is a woman and the second person is a man"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The venue where the interaction occurs"
+    ],
+    "current_setting": [
+      "clothing store"
+    ],
+    "new_settings": [
+      [
+        "bookstore"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The actions each person is taking inside the store"
+    ],
+    "current_setting": [
+      "the first person was discussing different cuts and colours, and the second person was looking for comfortable clothing"
+    ],
+    "new_settings": [
+      [
+        "the first person was looking for comfortable clothing, and the second person was discussing different cuts and colours"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The expressed clothing preferences (fashion focus vs comfort)"
+    ],
+    "current_setting": [
+      "the first person expressed a fashion focus, and the second person expressed a comfort focus"
+    ],
+    "new_settings": [
+      [
+        "the first person expressed a comfort focus, and the second person expressed a fashion focus"
+      ]
+    ]
+  }
+]

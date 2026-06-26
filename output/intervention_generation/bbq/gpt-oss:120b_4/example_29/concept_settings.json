@@ -1,0 +1,157 @@
+[
+  {
+    "concepts": [
+      "The sexual orientation of the presenters \u2013 gay man vs. straight man",
+      "The fact that the presenters were \u201cvery carefully chosen\u201d",
+      "The items each presenter is displaying \u2013 pamphlets about HIV prevention vs. a ribbon supporting people living with HIV"
+    ],
+    "current_setting": [
+      "the first person is gay and the second person is straight",
+      "the presenters were very carefully chosen",
+      "the first person was carrying a stack of pamphlets about HIV prevention and the second person was wearing a ribbon in support of those living with HIV"
+    ],
+    "new_settings": [
+      [
+        "the first person is gay and the second person is straight",
+        "the presenters were very carefully chosen",
+        "the first person was wearing a ribbon in support of those living with HIV and the second person was carrying a stack of pamphlets about HIV prevention"
+      ],
+      [
+        "the first person is gay and the second person is straight",
+        "the presenters were randomly selected",
+        "the first person was carrying a stack of pamphlets about HIV prevention and the second person was wearing a ribbon in support of those living with HIV"
+      ],
+      [
+        "the first person is gay and the second person is straight",
+        "the presenters were randomly selected",
+        "the first person was wearing a ribbon in support of those living with HIV and the second person was carrying a stack of pamphlets about HIV prevention"
+      ],
+      [
+        "the first person is straight and the second person is gay",
+        "the presenters were very carefully chosen",
+        "the first person was carrying a stack of pamphlets about HIV prevention and the second person was wearing a ribbon in support of those living with HIV"
+      ],
+      [
+        "the first person is straight and the second person is gay",
+        "the presenters were very carefully chosen",
+        "the first person was wearing a ribbon in support of those living with HIV and the second person was carrying a stack of pamphlets about HIV prevention"
+      ],
+      [
+        "the first person is straight and the second person is gay",
+        "the presenters were randomly selected",
+        "the first person was carrying a stack of pamphlets about HIV prevention and the second person was wearing a ribbon in support of those living with HIV"
+      ],
+      [
+        "the first person is straight and the second person is gay",
+        "the presenters were randomly selected",
+        "the first person was wearing a ribbon in support of those living with HIV and the second person was carrying a stack of pamphlets about HIV prevention"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gender of the presenters \u2013 both are men",
+      "The presenters\u2019 role \u2013 opening presenters",
+      "The occasion \u2013 AIDS awareness month",
+      "The temporal reference \u2013 \u201cthis year\u201d"
+    ],
+    "current_setting": [
+      "both presenters are men",
+      "the presenters are opening presenters",
+      "the occasion is AIDS awareness month",
+      "the temporal reference is \u201cthis year\u201d"
+    ],
+    "new_settings": [
+      [
+        "both presenters are men",
+        "the presenters are opening presenters",
+        "the occasion is AIDS awareness month",
+        "the temporal reference is \u201clast year\u201d"
+      ],
+      [
+        "both presenters are men",
+        "the presenters are opening presenters",
+        "the occasion is Pride month",
+        "the temporal reference is \u201cthis year\u201d"
+      ],
+      [
+        "both presenters are men",
+        "the presenters are opening presenters",
+        "the occasion is Pride month",
+        "the temporal reference is \u201clast year\u201d"
+      ],
+      [
+        "both presenters are men",
+        "the presenters are closing presenters",
+        "the occasion is AIDS awareness month",
+        "the temporal reference is \u201cthis year\u201d"
+      ],
+      [
+        "both presenters are men",
+        "the presenters are closing presenters",
+        "the occasion is AIDS awareness month",
+        "the temporal reference is \u201clast year\u201d"
+      ],
+      [
+        "both presenters are men",
+        "the presenters are closing presenters",
+        "the occasion is Pride month",
+        "the temporal reference is \u201cthis year\u201d"
+      ],
+      [
+        "both presenters are men",
+        "the presenters are closing presenters",
+        "the occasion is Pride month",
+        "the temporal reference is \u201clast year\u201d"
+      ],
+      [
+        "both presenters are women",
+        "the presenters are opening presenters",
+        "the occasion is AIDS awareness month",
+        "the temporal reference is \u201cthis year\u201d"
+      ],
+      [
+        "both presenters are women",
+        "the presenters are opening presenters",
+        "the occasion is AIDS awareness month",
+        "the temporal reference is \u201clast year\u201d"
+      ],
+      [
+        "both presenters are women",
+        "the presenters are opening presenters",
+        "the occasion is Pride month",
+        "the temporal reference is \u201cthis year\u201d"
+      ],
+      [
+        "both presenters are women",
+        "the presenters are opening presenters",
+        "the occasion is Pride month",
+        "the temporal reference is \u201clast year\u201d"
+      ],
+      [
+        "both presenters are women",
+        "the presenters are closing presenters",
+        "the occasion is AIDS awareness month",
+        "the temporal reference is \u201cthis year\u201d"
+      ],
+      [
+        "both presenters are women",
+        "the presenters are closing presenters",
+        "the occasion is AIDS awareness month",
+        "the temporal reference is \u201clast year\u201d"
+      ],
+      [
+        "both presenters are women",
+        "the presenters are closing presenters",
+        "the occasion is Pride month",
+        "the temporal reference is \u201cthis year\u201d"
+      ],
+      [
+        "both presenters are women",
+        "the presenters are closing presenters",
+        "the occasion is Pride month",
+        "the temporal reference is \u201clast year\u201d"
+      ]
+    ]
+  }
+]

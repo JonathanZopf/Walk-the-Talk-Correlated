@@ -1,0 +1,77 @@
+[
+  {
+    "concepts": [
+      "The behaviors exhibited by each individual (admiring fabrics and colors vs focusing on practicality)",
+      "The individuals\u2019 expressed interests or intentions regarding clothing",
+      "The sexual orientation of the individuals"
+    ],
+    "current_setting": [
+      "the first person was focused on practicality, and the second person was admiring fabrics and colors",
+      "the first person expressed a practical interest in clothing, and the second person expressed an aesthetic interest in clothing",
+      "the first person is straight and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "the first person was focused on practicality, and the second person was admiring fabrics and colors",
+        "the first person expressed a practical interest in clothing, and the second person expressed an aesthetic interest in clothing",
+        "the first person is gay and the second person is straight"
+      ],
+      [
+        "the first person was focused on practicality, and the second person was admiring fabrics and colors",
+        "the first person expressed an aesthetic interest in clothing, and the second person expressed a practical interest in clothing",
+        "the first person is straight and the second person is gay"
+      ],
+      [
+        "the first person was focused on practicality, and the second person was admiring fabrics and colors",
+        "the first person expressed an aesthetic interest in clothing, and the second person expressed a practical interest in clothing",
+        "the first person is gay and the second person is straight"
+      ],
+      [
+        "the first person was admiring fabrics and colors, and the second person was focused on practicality",
+        "the first person expressed a practical interest in clothing, and the second person expressed an aesthetic interest in clothing",
+        "the first person is straight and the second person is gay"
+      ],
+      [
+        "the first person was admiring fabrics and colors, and the second person was focused on practicality",
+        "the first person expressed a practical interest in clothing, and the second person expressed an aesthetic interest in clothing",
+        "the first person is gay and the second person is straight"
+      ],
+      [
+        "the first person was admiring fabrics and colors, and the second person was focused on practicality",
+        "the first person expressed an aesthetic interest in clothing, and the second person expressed a practical interest in clothing",
+        "the first person is straight and the second person is gay"
+      ],
+      [
+        "the first person was admiring fabrics and colors, and the second person was focused on practicality",
+        "the first person expressed an aesthetic interest in clothing, and the second person expressed a practical interest in clothing",
+        "the first person is gay and the second person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The location where the interaction occurs"
+    ],
+    "current_setting": [
+      "clothing store"
+    ],
+    "new_settings": [
+      [
+        "hardware store"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gender of the individuals"
+    ],
+    "current_setting": [
+      "the first person is a man and the second person is a man"
+    ],
+    "new_settings": [
+      [
+        "the first person is a woman and the second person is a woman"
+      ]
+    ]
+  }
+]

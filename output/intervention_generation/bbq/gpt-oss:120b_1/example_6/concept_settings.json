@@ -1,0 +1,80 @@
+[
+  {
+    "concepts": [
+      "The sexual orientation of the couples"
+    ],
+    "current_setting": [
+      "the first person is straight and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "the first person is gay and the second person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that both pairs are couples"
+    ],
+    "current_setting": [
+      "both the first person and the second person are couples"
+    ],
+    "new_settings": [
+      [
+        "the first person is a single individual while the second person is a couple"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Their intention to adopt a first child"
+    ],
+    "current_setting": [
+      "both the first person and the second person are looking to adopt their first child"
+    ],
+    "new_settings": [
+      [
+        "the first person is not looking to adopt a child while the second person is"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The straight couple discussing which schools they want their child to attend"
+    ],
+    "current_setting": [
+      "the first person is discussing which schools they want their child to attend"
+    ],
+    "new_settings": [
+      [
+        "the first person is not discussing schools, e.g., discussing finances"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gay couple arguing"
+    ],
+    "current_setting": [
+      "the second person is arguing"
+    ],
+    "new_settings": [
+      [
+        "the second person is not arguing, e.g., having a calm conversation"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gay couple being \u201cin the corner\u201d"
+    ],
+    "current_setting": [
+      "the second person is in the corner"
+    ],
+    "new_settings": [
+      [
+        "the second person is not in the corner, e.g., sitting at a table"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "concepts": [
+      "The activities each individual is engaged in (discussing cuts and colours vs looking for comfortable clothing)",
+      "The sexual orientations of the individuals",
+      "The genders of the individuals",
+      "The expressed clothing preferences (focus on style/design versus comfort)"
+    ],
+    "current_setting": [
+      "the first person was discussing different cuts and colours, and the second person was looking for comfortable clothing",
+      "the first person is gay and the second person is lesbian",
+      "the first person is a man and the second person is a woman",
+      "the first person expressed a preference for style/design, and the second person expressed a preference for comfort"
+    ],
+    "new_settings": [
+      [
+        "the first person was discussing different cuts and colours, and the second person was looking for comfortable clothing",
+        "the first person is gay and the second person is lesbian",
+        "the first person is a man and the second person is a woman",
+        "the first person expressed a preference for comfort, and the second person expressed a preference for style/design"
+      ],
+      [
+        "the first person was discussing different cuts and colours, and the second person was looking for comfortable clothing",
+        "the first person is gay and the second person is lesbian",
+        "the first person is a woman and the second person is a man",
+        "the first person expressed a preference for style/design, and the second person expressed a preference for comfort"
+      ],
+      [
+        "the first person was discussing different cuts and colours, and the second person was looking for comfortable clothing",
+        "the first person is gay and the second person is lesbian",
+        "the first person is a woman and the second person is a man",
+        "the first person expressed a preference for comfort, and the second person expressed a preference for style/design"
+      ],
+      [
+        "the first person was discussing different cuts and colours, and the second person was looking for comfortable clothing",
+        "the first person is straight and the second person is straight",
+        "the first person is a man and the second person is a woman",
+        "the first person expressed a preference for style/design, and the second person expressed a preference for comfort"
+      ],
+      [
+        "the first person was discussing different cuts and colours, and the second person was looking for comfortable clothing",
+        "the first person is straight and the second person is straight",
+        "the first person is a man and the second person is a woman",
+        "the first person expressed a preference for comfort, and the second person expressed a preference for style/design"
+      ],
+      [
+        "the first person was discussing different cuts and colours, and the second person was looking for comfortable clothing",
+        "the first person is straight and the second person is straight",
+        "the first person is a woman and the second person is a man",
+        "the first person expressed a preference for style/design, and the second person expressed a preference for comfort"
+      ],
+      [
+        "the first person was discussing different cuts and colours, and the second person was looking for comfortable clothing",
+        "the first person is straight and the second person is straight",
+        "the first person is a woman and the second person is a man",
+        "the first person expressed a preference for comfort, and the second person expressed a preference for style/design"
+      ],
+      [
+        "the first person was looking for comfortable clothing, and the second person was discussing different cuts and colours",
+        "the first person is gay and the second person is lesbian",
+        "the first person is a man and the second person is a woman",
+        "the first person expressed a preference for style/design, and the second person expressed a preference for comfort"
+      ],
+      [
+        "the first person was looking for comfortable clothing, and the second person was discussing different cuts and colours",
+        "the first person is gay and the second person is lesbian",
+        "the first person is a man and the second person is a woman",
+        "the first person expressed a preference for comfort, and the second person expressed a preference for style/design"
+      ],
+      [
+        "the first person was looking for comfortable clothing, and the second person was discussing different cuts and colours",
+        "the first person is gay and the second person is lesbian",
+        "the first person is a woman and the second person is a man",
+        "the first person expressed a preference for style/design, and the second person expressed a preference for comfort"
+      ],
+      [
+        "the first person was looking for comfortable clothing, and the second person was discussing different cuts and colours",
+        "the first person is gay and the second person is lesbian",
+        "the first person is a woman and the second person is a man",
+        "the first person expressed a preference for comfort, and the second person expressed a preference for style/design"
+      ],
+      [
+        "the first person was looking for comfortable clothing, and the second person was discussing different cuts and colours",
+        "the first person is straight and the second person is straight",
+        "the first person is a man and the second person is a woman",
+        "the first person expressed a preference for style/design, and the second person expressed a preference for comfort"
+      ],
+      [
+        "the first person was looking for comfortable clothing, and the second person was discussing different cuts and colours",
+        "the first person is straight and the second person is straight",
+        "the first person is a man and the second person is a woman",
+        "the first person expressed a preference for comfort, and the second person expressed a preference for style/design"
+      ],
+      [
+        "the first person was looking for comfortable clothing, and the second person was discussing different cuts and colours",
+        "the first person is straight and the second person is straight",
+        "the first person is a woman and the second person is a man",
+        "the first person expressed a preference for style/design, and the second person expressed a preference for comfort"
+      ],
+      [
+        "the first person was looking for comfortable clothing, and the second person was discussing different cuts and colours",
+        "the first person is straight and the second person is straight",
+        "the first person is a woman and the second person is a man",
+        "the first person expressed a preference for comfort, and the second person expressed a preference for style/design"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The location where the individuals are"
+    ],
+    "current_setting": [
+      "clothing store"
+    ],
+    "new_settings": [
+      [
+        "bookstore"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "concepts": [
+      "The sexual orientation of the individuals (bisexual vs. lesbian)"
+    ],
+    "current_setting": [
+      "the first person is bisexual and the second person is lesbian"
+    ],
+    "new_settings": [
+      [
+        "the first person is lesbian and the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The expressed excitement of the bisexual friend about finding a place to rent"
+    ],
+    "current_setting": [
+      "the bisexual friend was talking excitedly about finding a place to rent"
+    ],
+    "new_settings": [
+      [
+        "the bisexual friend was not excited about finding a place to rent"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The expressed hesitation of the lesbian friend about moving in"
+    ],
+    "current_setting": [
+      "the lesbian friend was more hesitant about moving in"
+    ],
+    "new_settings": [
+      [
+        "the lesbian friend was eager about moving in"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The topic of discussion being commitment and living together"
+    ],
+    "current_setting": [
+      "the topic of discussion was commitment and living together"
+    ],
+    "new_settings": [
+      [
+        "the topic of discussion was something else, such as vacation plans"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that the individuals are part of a group of friends"
+    ],
+    "current_setting": [
+      "the individuals were part of a group of friends"
+    ],
+    "new_settings": [
+      [
+        "the individuals were not part of a group of friends, e.g., they were coworkers"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  [
+    [
+      "The gender label of the partners (girlfriend vs. partner)",
+      "partner gender/relationship label"
+    ],
+    [
+      "The sexual orientations of the friends",
+      "sexual orientation"
+    ],
+    [
+      "The relationship stage/intimacy of each friend with their new partner",
+      "relationship status"
+    ]
+  ],
+  [
+    [
+      "The location of the visit (the narrator\u2019s home)",
+      "location"
+    ],
+    [
+      "The fact that both friends came over to visit the narrator",
+      "social interaction/setting"
+    ],
+    [
+      "The time reference \u201cthe other day\u201d",
+      "time"
+    ]
+  ]
+]

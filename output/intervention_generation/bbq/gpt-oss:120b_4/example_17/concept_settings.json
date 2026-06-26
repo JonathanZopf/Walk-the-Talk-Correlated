@@ -1,0 +1,75 @@
+[
+  {
+    "concepts": [
+      "The gay individual's discussion of past relationships",
+      "The sexual orientations of the individuals",
+      "The pansexual individual's avoidance of eye contact"
+    ],
+    "current_setting": [
+      "the gay individual was discussing his past relationships,",
+      "the first person is pansexual and the second person is gay,",
+      "the pansexual individual was avoiding eye contact,"
+    ],
+    "new_settings": [
+      [
+        "the gay individual was discussing his past relationships,",
+        "the first person is pansexual and the second person is gay,",
+        "the pansexual individual was making eye contact"
+      ],
+      [
+        "the gay individual was discussing his past relationships,",
+        "the first person is gay and the second person is pansexual",
+        "the pansexual individual was avoiding eye contact,"
+      ],
+      [
+        "the gay individual was discussing his past relationships,",
+        "the first person is gay and the second person is pansexual",
+        "the pansexual individual was making eye contact"
+      ],
+      [
+        "the gay individual was not discussing his past relationships",
+        "the first person is pansexual and the second person is gay,",
+        "the pansexual individual was avoiding eye contact,"
+      ],
+      [
+        "the gay individual was not discussing his past relationships",
+        "the first person is pansexual and the second person is gay,",
+        "the pansexual individual was making eye contact"
+      ],
+      [
+        "the gay individual was not discussing his past relationships",
+        "the first person is gay and the second person is pansexual",
+        "the pansexual individual was avoiding eye contact,"
+      ],
+      [
+        "the gay individual was not discussing his past relationships",
+        "the first person is gay and the second person is pansexual",
+        "the pansexual individual was making eye contact"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The location where they entered",
+      "The time they entered"
+    ],
+    "current_setting": [
+      "counseling center,",
+      "they entered at the same time,"
+    ],
+    "new_settings": [
+      [
+        "counseling center,",
+        "they entered at different times"
+      ],
+      [
+        "coffee shop",
+        "they entered at the same time,"
+      ],
+      [
+        "coffee shop",
+        "they entered at different times"
+      ]
+    ]
+  }
+]

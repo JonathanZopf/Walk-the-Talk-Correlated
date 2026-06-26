@@ -1,0 +1,67 @@
+[
+  {
+    "concepts": [
+      "The sexual orientation identities of the two friends"
+    ],
+    "current_setting": [
+      "the first person identifies as straight and the second person identifies as bisexual"
+    ],
+    "new_settings": [
+      [
+        "the first person identifies as bisexual and the second person identifies as straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The past experience each friend reports about feeling different or not"
+    ],
+    "current_setting": [
+      "the first person reports never having felt different, and the second person reports having felt different before"
+    ],
+    "new_settings": [
+      [
+        "the first person reports having felt different before, and the second person reports never having felt different"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The expressed future intention or openness to exploring different orientations"
+    ],
+    "current_setting": [
+      "the first person expresses no intention to explore different orientations, and the second person expresses openness to exploring different orientations in the future"
+    ],
+    "new_settings": [
+      [
+        "the first person expresses openness to exploring different orientations in the future, and the second person expresses no intention to explore different orientations"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship between the individuals (they are friends)"
+    ],
+    "current_setting": [
+      "the two individuals are friends"
+    ],
+    "new_settings": [
+      [
+        "the two individuals are acquaintances"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The topic of conversation (discussion of sexual orientation)"
+    ],
+    "current_setting": [
+      "they are discussing sexual orientation"
+    ],
+    "new_settings": [
+      [
+        "they are discussing politics"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "concepts": [
+      "The implied gender of each partner",
+      "The sexual orientation of each friend"
+    ],
+    "current_setting": [
+      "the first person's partner is a woman and the second person's partner is a man",
+      "the first person is lesbian and the second person is straight"
+    ],
+    "new_settings": [
+      [
+        "the first person's partner is a woman and the second person's partner is a man",
+        "the first person is straight and the second person is lesbian"
+      ],
+      [
+        "the first person's partner is a man and the second person's partner is a woman",
+        "the first person is lesbian and the second person is straight"
+      ],
+      [
+        "the first person's partner is a man and the second person's partner is a woman",
+        "the first person is straight and the second person is lesbian"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "How long each friend has been with their significant other",
+      "The reported communication frequency with their partners"
+    ],
+    "current_setting": [
+      "the first person has been with their significant other for several years and the second person has been with their significant other for several years",
+      "the first person often has long conversations with their partner and the second person rarely talks with their partner"
+    ],
+    "new_settings": [
+      [
+        "the first person has been with their significant other for several years and the second person has been with their significant other for several years",
+        "the first person rarely talks with their partner and the second person often has long conversations with their partner"
+      ],
+      [
+        "the first person has been with their significant other for several years and the second person has been with their significant other for only a few months",
+        "the first person often has long conversations with their partner and the second person rarely talks with their partner"
+      ],
+      [
+        "the first person has been with their significant other for several years and the second person has been with their significant other for only a few months",
+        "the first person rarely talks with their partner and the second person often has long conversations with their partner"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The narrator\u2019s relationship to the friends"
+    ],
+    "current_setting": [
+      "I am a friend of both individuals"
+    ],
+    "new_settings": [
+      [
+        "I am only an acquaintance of both individuals"
+      ]
+    ]
+  }
+]

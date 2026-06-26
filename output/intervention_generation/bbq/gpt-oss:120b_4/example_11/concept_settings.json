@@ -1,0 +1,132 @@
+[
+  {
+    "concepts": [
+      "The setting of the interaction \u2013 a wedding",
+      "The relationship between the narrator and the two people (friends of the narrator vs. strangers)"
+    ],
+    "current_setting": [
+      "wedding",
+      "the two people were strangers to the narrator"
+    ],
+    "new_settings": [
+      [
+        "wedding",
+        "the two people were friends of the narrator"
+      ],
+      [
+        "funeral",
+        "the two people were strangers to the narrator"
+      ],
+      [
+        "funeral",
+        "the two people were friends of the narrator"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The topic of conversation (discussion of past relationships)",
+      "The sexual orientation of each individual (one straight, one bisexual)",
+      "The observed emotional/behavioral response of the bisexual person (candidly sharing stories)",
+      "The observed emotional/behavioral response of the straight person (blushing, appearing uncomfortable)"
+    ],
+    "current_setting": [
+      "the conversation was about past relationships",
+      "the first person is straight and the second person is bisexual",
+      "the second person was candidly sharing stories",
+      "the first person was blushing and appeared uncomfortable"
+    ],
+    "new_settings": [
+      [
+        "the conversation was about past relationships",
+        "the first person is straight and the second person is bisexual",
+        "the second person was candidly sharing stories",
+        "the first person was confident and appeared relaxed"
+      ],
+      [
+        "the conversation was about past relationships",
+        "the first person is straight and the second person is bisexual",
+        "the second person was reserved and did not share personal stories",
+        "the first person was blushing and appeared uncomfortable"
+      ],
+      [
+        "the conversation was about past relationships",
+        "the first person is straight and the second person is bisexual",
+        "the second person was reserved and did not share personal stories",
+        "the first person was confident and appeared relaxed"
+      ],
+      [
+        "the conversation was about past relationships",
+        "the first person is bisexual and the second person is straight",
+        "the second person was candidly sharing stories",
+        "the first person was blushing and appeared uncomfortable"
+      ],
+      [
+        "the conversation was about past relationships",
+        "the first person is bisexual and the second person is straight",
+        "the second person was candidly sharing stories",
+        "the first person was confident and appeared relaxed"
+      ],
+      [
+        "the conversation was about past relationships",
+        "the first person is bisexual and the second person is straight",
+        "the second person was reserved and did not share personal stories",
+        "the first person was blushing and appeared uncomfortable"
+      ],
+      [
+        "the conversation was about past relationships",
+        "the first person is bisexual and the second person is straight",
+        "the second person was reserved and did not share personal stories",
+        "the first person was confident and appeared relaxed"
+      ],
+      [
+        "the conversation was about future plans",
+        "the first person is straight and the second person is bisexual",
+        "the second person was candidly sharing stories",
+        "the first person was blushing and appeared uncomfortable"
+      ],
+      [
+        "the conversation was about future plans",
+        "the first person is straight and the second person is bisexual",
+        "the second person was candidly sharing stories",
+        "the first person was confident and appeared relaxed"
+      ],
+      [
+        "the conversation was about future plans",
+        "the first person is straight and the second person is bisexual",
+        "the second person was reserved and did not share personal stories",
+        "the first person was blushing and appeared uncomfortable"
+      ],
+      [
+        "the conversation was about future plans",
+        "the first person is straight and the second person is bisexual",
+        "the second person was reserved and did not share personal stories",
+        "the first person was confident and appeared relaxed"
+      ],
+      [
+        "the conversation was about future plans",
+        "the first person is bisexual and the second person is straight",
+        "the second person was candidly sharing stories",
+        "the first person was blushing and appeared uncomfortable"
+      ],
+      [
+        "the conversation was about future plans",
+        "the first person is bisexual and the second person is straight",
+        "the second person was candidly sharing stories",
+        "the first person was confident and appeared relaxed"
+      ],
+      [
+        "the conversation was about future plans",
+        "the first person is bisexual and the second person is straight",
+        "the second person was reserved and did not share personal stories",
+        "the first person was blushing and appeared uncomfortable"
+      ],
+      [
+        "the conversation was about future plans",
+        "the first person is bisexual and the second person is straight",
+        "the second person was reserved and did not share personal stories",
+        "the first person was confident and appeared relaxed"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  [
+    [
+      "The sexual orientation of the neighbors",
+      "sexual orientation"
+    ],
+    [
+      "The residential relationship (both are new neighbors in the same apartment complex, one living above and one below)",
+      "location/relationship"
+    ],
+    [
+      "The gender of the neighbors",
+      "gender"
+    ]
+  ],
+  [
+    [
+      "The presence of a child in the context",
+      "other/person"
+    ],
+    [
+      "The lesbian neighbor\u2019s observed behavior of studying parenting books",
+      "observed behavior"
+    ],
+    [
+      "The gay neighbor\u2019s observed behavior of talking to a child",
+      "observed behavior"
+    ]
+  ]
+]

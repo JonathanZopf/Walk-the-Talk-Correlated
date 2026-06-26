@@ -1,0 +1,75 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the two friends \u2013 one gay and one bisexual",
+      "The fact that the two individuals are friends",
+      "The claim that the bisexual friend \u201ccan never go to\u201d the gay friend for dating advice because their experiences are \u201ctoo different\u201d"
+    ],
+    "current_setting": [
+      "the first person is bisexual and the second person is gay",
+      "the first person and the second person are friends",
+      "the first person can never go to the second person for dating advice because their experiences are too different"
+    ],
+    "new_settings": [
+      [
+        "the first person is bisexual and the second person is gay",
+        "the first person and the second person are friends",
+        "the first person can go to the second person for dating advice because their experiences are similar"
+      ],
+      [
+        "the first person is bisexual and the second person is gay",
+        "the first person and the second person are not friends (e.g., they are acquaintances)",
+        "the first person can never go to the second person for dating advice because their experiences are too different"
+      ],
+      [
+        "the first person is bisexual and the second person is gay",
+        "the first person and the second person are not friends (e.g., they are acquaintances)",
+        "the first person can go to the second person for dating advice because their experiences are similar"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person and the second person are friends",
+        "the first person can never go to the second person for dating advice because their experiences are too different"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person and the second person are friends",
+        "the first person can go to the second person for dating advice because their experiences are similar"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person and the second person are not friends (e.g., they are acquaintances)",
+        "the first person can never go to the second person for dating advice because their experiences are too different"
+      ],
+      [
+        "the first person is gay and the second person is bisexual",
+        "the first person and the second person are not friends (e.g., they are acquaintances)",
+        "the first person can go to the second person for dating advice because their experiences are similar"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gay friend\u2019s expressed emphasis on trust and loyalty in relationships",
+      "The bisexual friend\u2019s mention of a current fling"
+    ],
+    "current_setting": [
+      "the second person expressed an emphasis on trust and loyalty in relationships",
+      "the first person mentioned a current fling"
+    ],
+    "new_settings": [
+      [
+        "the second person expressed an emphasis on trust and loyalty in relationships",
+        "the first person mentioned being in a stable relationship (or being single)"
+      ],
+      [
+        "the second person did not emphasize trust and loyalty, instead emphasizing casualness or another trait",
+        "the first person mentioned a current fling"
+      ],
+      [
+        "the second person did not emphasize trust and loyalty, instead emphasizing casualness or another trait",
+        "the first person mentioned being in a stable relationship (or being single)"
+      ]
+    ]
+  }
+]

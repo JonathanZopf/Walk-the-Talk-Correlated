@@ -564,17 +564,17 @@ COARSE_CATEGORY_MAPPING_INV_MEDQA = {
 
 COARSE_CATEGORY_MAPPING_MEDQA = {v: k for k, values in COARSE_CATEGORY_MAPPING_INV_MEDQA.items() for v in values}
 
-# TODO: Coarse mapping does not seem to work properly, investiage that
 def apply_coarse_cat_mapping_to_df(df, dataset_name, coarse_cat_name="intrv_categories_coarse"):
     if dataset_name == "bbq":
         df[coarse_cat_name] = df["intrv_categories"].apply(
-            lambda cat_list: [COARSE_CAT_MAP_BBQ.get(cat, cat) for cat in cat_list] if isinstance(cat_list, list) else cat_list
+            lambda cat_list: [COARSE_CAT_MAP_BBQ.get(cat, cat) for cat in cat_list] if isinstance(cat_list, list) else COARSE_CAT_MAP_BBQ.get(cat_list, cat_list)
         )
         for concept, cat in CONCEPT2CAT_CORRECT_BBQ.items():
-            df.loc[(df["intrv_concepts"] == concept), coarse_cat_name] = [[cat]] * len(df[df["intrv_concepts"] == concept])
+            intrv_concepts = (df["intrv_concepts"] == concept)
+            df.loc[intrv_concepts, coarse_cat_name] = cat
     elif dataset_name == "medqa":
         df[coarse_cat_name] = df["intrv_categories"].apply(
-            lambda cat_list: [COARSE_CATEGORY_MAPPING_MEDQA.get(cat, cat) for cat in cat_list] if isinstance(cat_list, list) else cat_list
+            lambda cat_list: [COARSE_CATEGORY_MAPPING_MEDQA.get(cat, cat) for cat in cat_list] if isinstance(cat_list, list) else COARSE_CATEGORY_MAPPING_MEDQA.get(cat_list, cat_list)
         )
     elif dataset_name == "german_credit":
         pass

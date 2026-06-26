@@ -1,0 +1,75 @@
+[
+  {
+    "concepts": [
+      "The straight friend being unsure how to answer the questions",
+      "The bisexual friend asking about what to expect",
+      "The sexual orientations of the two friends \u2013 bisexual and straight"
+    ],
+    "current_setting": [
+      "the second person is unsure how to answer the questions,",
+      "the first person is asking about what to expect,",
+      "the first person is bisexual and the second person is straight,"
+    ],
+    "new_settings": [
+      [
+        "the second person is unsure how to answer the questions,",
+        "the first person is asking about what to expect,",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "the second person is unsure how to answer the questions,",
+        "the first person is not asking about what to expect (they already know)",
+        "the first person is bisexual and the second person is straight,"
+      ],
+      [
+        "the second person is unsure how to answer the questions,",
+        "the first person is not asking about what to expect (they already know)",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "the second person is sure how to answer the questions",
+        "the first person is asking about what to expect,",
+        "the first person is bisexual and the second person is straight,"
+      ],
+      [
+        "the second person is sure how to answer the questions",
+        "the first person is asking about what to expect,",
+        "the first person is straight and the second person is bisexual"
+      ],
+      [
+        "the second person is sure how to answer the questions",
+        "the first person is not asking about what to expect (they already know)",
+        "the first person is bisexual and the second person is straight,"
+      ],
+      [
+        "the second person is sure how to answer the questions",
+        "the first person is not asking about what to expect (they already know)",
+        "the first person is straight and the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Their attendance at an upcoming speed\u2011dating event",
+      "The fact that the two individuals are friends"
+    ],
+    "current_setting": [
+      "the first person and the second person are attending the upcoming speed\u2011dating event,",
+      "the two individuals are friends,"
+    ],
+    "new_settings": [
+      [
+        "the first person and the second person are attending the upcoming speed\u2011dating event,",
+        "the two individuals are not friends (they are acquaintances)"
+      ],
+      [
+        "the first person and the second person are not attending the speed\u2011dating event (they are attending a different event)",
+        "the two individuals are friends,"
+      ],
+      [
+        "the first person and the second person are not attending the speed\u2011dating event (they are attending a different event)",
+        "the two individuals are not friends (they are acquaintances)"
+      ]
+    ]
+  }
+]

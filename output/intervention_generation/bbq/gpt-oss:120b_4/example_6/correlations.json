@@ -1,0 +1,32 @@
+[
+  [
+    [
+      "The gay couple arguing in the corner (behavior/activity)",
+      "activity"
+    ],
+    [
+      "The sexual orientation of each couple \u2013 straight vs. gay",
+      "sexual orientation"
+    ],
+    [
+      "The physical location of the gay couple being \u201cin the corner\u201d (location)",
+      "location"
+    ]
+  ],
+  [
+    [
+      "The straight couple discussing which schools they want their child to attend (behavior/activity)",
+      "activity"
+    ]
+  ],
+  [
+    [
+      "Their intention to adopt their first child (parental intent)",
+      "adoption status"
+    ],
+    [
+      "The fact that both groups are couples (relationship status)",
+      "relationship"
+    ]
+  ]
+]

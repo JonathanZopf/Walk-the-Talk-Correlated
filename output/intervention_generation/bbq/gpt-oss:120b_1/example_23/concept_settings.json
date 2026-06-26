@@ -1,0 +1,80 @@
+[
+  {
+    "concepts": [
+      "The sexual orientation of the first friend (bisexual)"
+    ],
+    "current_setting": [
+      "the first person is bisexual"
+    ],
+    "new_settings": [
+      [
+        "the first person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The sexual orientation of the second friend (straight)"
+    ],
+    "current_setting": [
+      "the second person is straight"
+    ],
+    "new_settings": [
+      [
+        "the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship between the two individuals (friends)"
+    ],
+    "current_setting": [
+      "the two individuals are friends"
+    ],
+    "new_settings": [
+      [
+        "the two individuals are acquaintances"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The bisexual friend\u2019s questioning of labels and stereotypes associated with sexual orientations"
+    ],
+    "current_setting": [
+      "the bisexual friend is questioning labels and stereotypes associated with sexual orientations"
+    ],
+    "new_settings": [
+      [
+        "the bisexual friend is accepting labels and stereotypes associated with sexual orientations"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The straight friend\u2019s affirmation of their identity"
+    ],
+    "current_setting": [
+      "the straight friend is affirming their identity"
+    ],
+    "new_settings": [
+      [
+        "the straight friend is doubting their identity"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The discussion about how they view sexual orientation"
+    ],
+    "current_setting": [
+      "they are discussing how they view sexual orientation"
+    ],
+    "new_settings": [
+      [
+        "they are discussing an unrelated topic such as favorite movies"
+      ]
+    ]
+  }
+]

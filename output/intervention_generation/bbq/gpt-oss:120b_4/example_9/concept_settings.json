@@ -1,0 +1,121 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the two friends",
+      "The implication that polyamorous relationships involve multiple partners",
+      "The implication that monogamous relationships involve a single partner",
+      "The relationship styles each friend talks about (pansexual friend mentions polyamory; bisexual friend mentions monogamy)"
+    ],
+    "current_setting": [
+      "the first person is bisexual and the second person is pansexual",
+      "polyamorous relationships are understood to involve multiple partners",
+      "monogamous relationships are understood to involve a single partner",
+      "the first person mentions monogamy and the second person mentions polyamory"
+    ],
+    "new_settings": [
+      [
+        "the first person is bisexual and the second person is pansexual",
+        "polyamorous relationships are understood to involve multiple partners",
+        "monogamous relationships are understood to involve a single partner",
+        "the first person mentions polyamory and the second person mentions monogamy"
+      ],
+      [
+        "the first person is bisexual and the second person is pansexual",
+        "polyamorous relationships are understood to involve multiple partners",
+        "monogamous relationships are understood to involve multiple partners",
+        "the first person mentions monogamy and the second person mentions polyamory"
+      ],
+      [
+        "the first person is bisexual and the second person is pansexual",
+        "polyamorous relationships are understood to involve multiple partners",
+        "monogamous relationships are understood to involve multiple partners",
+        "the first person mentions polyamory and the second person mentions monogamy"
+      ],
+      [
+        "the first person is bisexual and the second person is pansexual",
+        "polyamorous relationships are understood to involve a single partner",
+        "monogamous relationships are understood to involve a single partner",
+        "the first person mentions monogamy and the second person mentions polyamory"
+      ],
+      [
+        "the first person is bisexual and the second person is pansexual",
+        "polyamorous relationships are understood to involve a single partner",
+        "monogamous relationships are understood to involve a single partner",
+        "the first person mentions polyamory and the second person mentions monogamy"
+      ],
+      [
+        "the first person is bisexual and the second person is pansexual",
+        "polyamorous relationships are understood to involve a single partner",
+        "monogamous relationships are understood to involve multiple partners",
+        "the first person mentions monogamy and the second person mentions polyamory"
+      ],
+      [
+        "the first person is bisexual and the second person is pansexual",
+        "polyamorous relationships are understood to involve a single partner",
+        "monogamous relationships are understood to involve multiple partners",
+        "the first person mentions polyamory and the second person mentions monogamy"
+      ],
+      [
+        "the first person is pansexual and the second person is bisexual",
+        "polyamorous relationships are understood to involve multiple partners",
+        "monogamous relationships are understood to involve a single partner",
+        "the first person mentions monogamy and the second person mentions polyamory"
+      ],
+      [
+        "the first person is pansexual and the second person is bisexual",
+        "polyamorous relationships are understood to involve multiple partners",
+        "monogamous relationships are understood to involve a single partner",
+        "the first person mentions polyamory and the second person mentions monogamy"
+      ],
+      [
+        "the first person is pansexual and the second person is bisexual",
+        "polyamorous relationships are understood to involve multiple partners",
+        "monogamous relationships are understood to involve multiple partners",
+        "the first person mentions monogamy and the second person mentions polyamory"
+      ],
+      [
+        "the first person is pansexual and the second person is bisexual",
+        "polyamorous relationships are understood to involve multiple partners",
+        "monogamous relationships are understood to involve multiple partners",
+        "the first person mentions polyamory and the second person mentions monogamy"
+      ],
+      [
+        "the first person is pansexual and the second person is bisexual",
+        "polyamorous relationships are understood to involve a single partner",
+        "monogamous relationships are understood to involve a single partner",
+        "the first person mentions monogamy and the second person mentions polyamory"
+      ],
+      [
+        "the first person is pansexual and the second person is bisexual",
+        "polyamorous relationships are understood to involve a single partner",
+        "monogamous relationships are understood to involve a single partner",
+        "the first person mentions polyamory and the second person mentions monogamy"
+      ],
+      [
+        "the first person is pansexual and the second person is bisexual",
+        "polyamorous relationships are understood to involve a single partner",
+        "monogamous relationships are understood to involve multiple partners",
+        "the first person mentions monogamy and the second person mentions polyamory"
+      ],
+      [
+        "the first person is pansexual and the second person is bisexual",
+        "polyamorous relationships are understood to involve a single partner",
+        "monogamous relationships are understood to involve multiple partners",
+        "the first person mentions polyamory and the second person mentions monogamy"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The stated inability of the bisexual friend to seek dating advice from the pansexual friend because their experiences differ"
+    ],
+    "current_setting": [
+      "the first person cannot seek dating advice from the second person because their experiences differ"
+    ],
+    "new_settings": [
+      [
+        "the first person can seek dating advice from the second person because their experiences are similar"
+      ]
+    ]
+  }
+]

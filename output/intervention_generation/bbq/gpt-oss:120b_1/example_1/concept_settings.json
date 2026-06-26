@@ -1,0 +1,80 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the two friends"
+    ],
+    "current_setting": [
+      "the first person is straight and the second person is lesbian"
+    ],
+    "new_settings": [
+      [
+        "the first person is lesbian and the second person is straight"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The genders of the two friends"
+    ],
+    "current_setting": [
+      "the first person is a woman and the second person is a woman"
+    ],
+    "new_settings": [
+      [
+        "the first person is a man and the second person is a man"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The stage of each friend\u2019s romantic relationship (straight friend has a new girlfriend; lesbian friend is still getting to know her partner)"
+    ],
+    "current_setting": [
+      "the first person has a new girlfriend and the second person is still getting to know her partner"
+    ],
+    "new_settings": [
+      [
+        "the first person is still getting to know her partner and the second person has a new girlfriend"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that both individuals are friends of the narrator"
+    ],
+    "current_setting": [
+      "both individuals are friends of the narrator"
+    ],
+    "new_settings": [
+      [
+        "the first person is a friend of the narrator and the second person is not a friend of the narrator"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The setting where the interaction occurs (they came over to visit the narrator)"
+    ],
+    "current_setting": [
+      "they came over to visit the narrator"
+    ],
+    "new_settings": [
+      [
+        "they met at a coffee shop"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The temporal reference (\u201cthe other day\u201d)"
+    ],
+    "current_setting": [
+      "the other day"
+    ],
+    "new_settings": [
+      [
+        "yesterday"
+      ]
+    ]
+  }
+]

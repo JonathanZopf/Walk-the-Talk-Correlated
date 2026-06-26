@@ -1,0 +1,67 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the two friends"
+    ],
+    "current_setting": [
+      "the first person is bisexual and the second person is gay"
+    ],
+    "new_settings": [
+      [
+        "the first person is gay and the second person is bisexual"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The relationship (friendship) between the narrator and the two individuals"
+    ],
+    "current_setting": [
+      "the narrator is friends with both the first person and the second person"
+    ],
+    "new_settings": [
+      [
+        "the narrator is not friends with either the first person or the second person (they are merely acquaintances)"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The bisexual friend\u2019s discussion of nail polish trends"
+    ],
+    "current_setting": [
+      "the first person was discussing nail polish trends"
+    ],
+    "new_settings": [
+      [
+        "the first person was discussing something unrelated to nail polish, such as car maintenance"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gay friend\u2019s discussion of sports teams"
+    ],
+    "current_setting": [
+      "the second person was discussing the latest sports teams"
+    ],
+    "new_settings": [
+      [
+        "the second person was discussing something unrelated to sports, such as fashion trends"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The warm weather during the afternoon"
+    ],
+    "current_setting": [
+      "the weather during the afternoon was warm"
+    ],
+    "new_settings": [
+      [
+        "the weather during the afternoon was cold"
+      ]
+    ]
+  }
+]

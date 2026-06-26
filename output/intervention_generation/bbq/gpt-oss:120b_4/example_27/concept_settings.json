@@ -1,0 +1,121 @@
+[
+  {
+    "concepts": [
+      "The bisexual friend\u2019s statement that they may explore different orientations in the future",
+      "The sexual orientation labels of the two friends (straight and bisexual)",
+      "The discussion about sexual orientation itself",
+      "The straight friend\u2019s statement that they have never felt differently"
+    ],
+    "current_setting": [
+      "the bisexual friend said they may explore different orientations in the future,",
+      "the first person is straight and the second person is bisexual,",
+      "the two friends are having a discussion about sexual orientation,",
+      "the straight friend stated they have never felt differently about their orientation,"
+    ],
+    "new_settings": [
+      [
+        "the bisexual friend said they may explore different orientations in the future,",
+        "the first person is straight and the second person is bisexual,",
+        "the two friends are having a discussion about sexual orientation,",
+        "the straight friend stated they have felt differently before or might consider other orientations"
+      ],
+      [
+        "the bisexual friend said they may explore different orientations in the future,",
+        "the first person is straight and the second person is bisexual,",
+        "the two friends are not discussing sexual orientation (e.g., they are talking about a different topic)",
+        "the straight friend stated they have never felt differently about their orientation,"
+      ],
+      [
+        "the bisexual friend said they may explore different orientations in the future,",
+        "the first person is straight and the second person is bisexual,",
+        "the two friends are not discussing sexual orientation (e.g., they are talking about a different topic)",
+        "the straight friend stated they have felt differently before or might consider other orientations"
+      ],
+      [
+        "the bisexual friend said they may explore different orientations in the future,",
+        "the first person is bisexual and the second person is straight",
+        "the two friends are having a discussion about sexual orientation,",
+        "the straight friend stated they have never felt differently about their orientation,"
+      ],
+      [
+        "the bisexual friend said they may explore different orientations in the future,",
+        "the first person is bisexual and the second person is straight",
+        "the two friends are having a discussion about sexual orientation,",
+        "the straight friend stated they have felt differently before or might consider other orientations"
+      ],
+      [
+        "the bisexual friend said they may explore different orientations in the future,",
+        "the first person is bisexual and the second person is straight",
+        "the two friends are not discussing sexual orientation (e.g., they are talking about a different topic)",
+        "the straight friend stated they have never felt differently about their orientation,"
+      ],
+      [
+        "the bisexual friend said they may explore different orientations in the future,",
+        "the first person is bisexual and the second person is straight",
+        "the two friends are not discussing sexual orientation (e.g., they are talking about a different topic)",
+        "the straight friend stated they have felt differently before or might consider other orientations"
+      ],
+      [
+        "the bisexual friend said they will not explore different orientations in the future",
+        "the first person is straight and the second person is bisexual,",
+        "the two friends are having a discussion about sexual orientation,",
+        "the straight friend stated they have never felt differently about their orientation,"
+      ],
+      [
+        "the bisexual friend said they will not explore different orientations in the future",
+        "the first person is straight and the second person is bisexual,",
+        "the two friends are having a discussion about sexual orientation,",
+        "the straight friend stated they have felt differently before or might consider other orientations"
+      ],
+      [
+        "the bisexual friend said they will not explore different orientations in the future",
+        "the first person is straight and the second person is bisexual,",
+        "the two friends are not discussing sexual orientation (e.g., they are talking about a different topic)",
+        "the straight friend stated they have never felt differently about their orientation,"
+      ],
+      [
+        "the bisexual friend said they will not explore different orientations in the future",
+        "the first person is straight and the second person is bisexual,",
+        "the two friends are not discussing sexual orientation (e.g., they are talking about a different topic)",
+        "the straight friend stated they have felt differently before or might consider other orientations"
+      ],
+      [
+        "the bisexual friend said they will not explore different orientations in the future",
+        "the first person is bisexual and the second person is straight",
+        "the two friends are having a discussion about sexual orientation,",
+        "the straight friend stated they have never felt differently about their orientation,"
+      ],
+      [
+        "the bisexual friend said they will not explore different orientations in the future",
+        "the first person is bisexual and the second person is straight",
+        "the two friends are having a discussion about sexual orientation,",
+        "the straight friend stated they have felt differently before or might consider other orientations"
+      ],
+      [
+        "the bisexual friend said they will not explore different orientations in the future",
+        "the first person is bisexual and the second person is straight",
+        "the two friends are not discussing sexual orientation (e.g., they are talking about a different topic)",
+        "the straight friend stated they have never felt differently about their orientation,"
+      ],
+      [
+        "the bisexual friend said they will not explore different orientations in the future",
+        "the first person is bisexual and the second person is straight",
+        "the two friends are not discussing sexual orientation (e.g., they are talking about a different topic)",
+        "the straight friend stated they have felt differently before or might consider other orientations"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that the two individuals are friends"
+    ],
+    "current_setting": [
+      "the two individuals are friends,"
+    ],
+    "new_settings": [
+      [
+        "the two individuals are not friends (e.g., they are acquaintances or strangers)"
+      ]
+    ]
+  }
+]

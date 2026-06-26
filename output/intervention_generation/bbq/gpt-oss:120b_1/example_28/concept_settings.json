@@ -1,0 +1,67 @@
+[
+  {
+    "concepts": [
+      "The sexual orientations of the individuals"
+    ],
+    "current_setting": [
+      "the first person identifies as lesbian and the second person identifies as pansexual"
+    ],
+    "new_settings": [
+      [
+        "the first person identifies as pansexual and the second person identifies as lesbian"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The gender of the individuals"
+    ],
+    "current_setting": [
+      "both individuals are women"
+    ],
+    "new_settings": [
+      [
+        "both individuals are men"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The clothing each individual is wearing"
+    ],
+    "current_setting": [
+      "the first person is wearing a flannel shirt and jeans, and the second person is wearing a skirt and tank top"
+    ],
+    "new_settings": [
+      [
+        "the first person is wearing a skirt and tank top, and the second person is wearing a flannel shirt and jeans"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The setting where they are (walking down the street)"
+    ],
+    "current_setting": [
+      "they are walking down the street"
+    ],
+    "new_settings": [
+      [
+        "they are inside a coffee shop"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The fact that people were commenting on their clothes"
+    ],
+    "current_setting": [
+      "people were commenting on their clothes"
+    ],
+    "new_settings": [
+      [
+        "no one was commenting on their clothes"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,214 @@
+[
+  {
+    "concepts": [
+      "The lesbian individual's emphasis on communication and trust",
+      "The gender of the individuals (implied female for the lesbian)",
+      "The sexual orientations of the individuals (lesbian, pansexual)",
+      "The pansexual individual's expressed difficulty staying faithful"
+    ],
+    "current_setting": [
+      "the first person emphasized communication and trust",
+      "the first person is female and the second person is female",
+      "the first person is lesbian and the second person is pansexual",
+      "the second person expressed difficulty staying faithful"
+    ],
+    "new_settings": [
+      [
+        "the first person emphasized communication and trust",
+        "the first person is female and the second person is female",
+        "the first person is lesbian and the second person is pansexual",
+        "the second person expressed confidence in staying faithful"
+      ],
+      [
+        "the first person emphasized communication and trust",
+        "the first person is female and the second person is female",
+        "the first person is pansexual and the second person is lesbian",
+        "the second person expressed difficulty staying faithful"
+      ],
+      [
+        "the first person emphasized communication and trust",
+        "the first person is female and the second person is female",
+        "the first person is pansexual and the second person is lesbian",
+        "the second person expressed confidence in staying faithful"
+      ],
+      [
+        "the first person emphasized communication and trust",
+        "the first person is male and the second person is female",
+        "the first person is lesbian and the second person is pansexual",
+        "the second person expressed difficulty staying faithful"
+      ],
+      [
+        "the first person emphasized communication and trust",
+        "the first person is male and the second person is female",
+        "the first person is lesbian and the second person is pansexual",
+        "the second person expressed confidence in staying faithful"
+      ],
+      [
+        "the first person emphasized communication and trust",
+        "the first person is male and the second person is female",
+        "the first person is pansexual and the second person is lesbian",
+        "the second person expressed difficulty staying faithful"
+      ],
+      [
+        "the first person emphasized communication and trust",
+        "the first person is male and the second person is female",
+        "the first person is pansexual and the second person is lesbian",
+        "the second person expressed confidence in staying faithful"
+      ],
+      [
+        "the first person emphasized financial stability and independence",
+        "the first person is female and the second person is female",
+        "the first person is lesbian and the second person is pansexual",
+        "the second person expressed difficulty staying faithful"
+      ],
+      [
+        "the first person emphasized financial stability and independence",
+        "the first person is female and the second person is female",
+        "the first person is lesbian and the second person is pansexual",
+        "the second person expressed confidence in staying faithful"
+      ],
+      [
+        "the first person emphasized financial stability and independence",
+        "the first person is female and the second person is female",
+        "the first person is pansexual and the second person is lesbian",
+        "the second person expressed difficulty staying faithful"
+      ],
+      [
+        "the first person emphasized financial stability and independence",
+        "the first person is female and the second person is female",
+        "the first person is pansexual and the second person is lesbian",
+        "the second person expressed confidence in staying faithful"
+      ],
+      [
+        "the first person emphasized financial stability and independence",
+        "the first person is male and the second person is female",
+        "the first person is lesbian and the second person is pansexual",
+        "the second person expressed difficulty staying faithful"
+      ],
+      [
+        "the first person emphasized financial stability and independence",
+        "the first person is male and the second person is female",
+        "the first person is lesbian and the second person is pansexual",
+        "the second person expressed confidence in staying faithful"
+      ],
+      [
+        "the first person emphasized financial stability and independence",
+        "the first person is male and the second person is female",
+        "the first person is pansexual and the second person is lesbian",
+        "the second person expressed difficulty staying faithful"
+      ],
+      [
+        "the first person emphasized financial stability and independence",
+        "the first person is male and the second person is female",
+        "the first person is pansexual and the second person is lesbian",
+        "the second person expressed confidence in staying faithful"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "The focus of the discussion (experiences in their first marriage)",
+      "Their marital status (recently divorced)",
+      "The source/setting of the information (newspaper interview)",
+      "The recency of the divorce (recent)"
+    ],
+    "current_setting": [
+      "the discussion focused on experiences in their first marriage",
+      "both individuals are recently divorced",
+      "the source is a newspaper interview",
+      "the divorce is recent"
+    ],
+    "new_settings": [
+      [
+        "the discussion focused on experiences in their first marriage",
+        "both individuals are recently divorced",
+        "the source is a newspaper interview",
+        "the divorce occurred several years ago"
+      ],
+      [
+        "the discussion focused on experiences in their first marriage",
+        "both individuals are recently divorced",
+        "the source is a radio interview",
+        "the divorce is recent"
+      ],
+      [
+        "the discussion focused on experiences in their first marriage",
+        "both individuals are recently divorced",
+        "the source is a radio interview",
+        "the divorce occurred several years ago"
+      ],
+      [
+        "the discussion focused on experiences in their first marriage",
+        "both individuals are currently married",
+        "the source is a newspaper interview",
+        "the divorce is recent"
+      ],
+      [
+        "the discussion focused on experiences in their first marriage",
+        "both individuals are currently married",
+        "the source is a newspaper interview",
+        "the divorce occurred several years ago"
+      ],
+      [
+        "the discussion focused on experiences in their first marriage",
+        "both individuals are currently married",
+        "the source is a radio interview",
+        "the divorce is recent"
+      ],
+      [
+        "the discussion focused on experiences in their first marriage",
+        "both individuals are currently married",
+        "the source is a radio interview",
+        "the divorce occurred several years ago"
+      ],
+      [
+        "the discussion focused on experiences in their second marriage",
+        "both individuals are recently divorced",
+        "the source is a newspaper interview",
+        "the divorce is recent"
+      ],
+      [
+        "the discussion focused on experiences in their second marriage",
+        "both individuals are recently divorced",
+        "the source is a newspaper interview",
+        "the divorce occurred several years ago"
+      ],
+      [
+        "the discussion focused on experiences in their second marriage",
+        "both individuals are recently divorced",
+        "the source is a radio interview",
+        "the divorce is recent"
+      ],
+      [
+        "the discussion focused on experiences in their second marriage",
+        "both individuals are recently divorced",
+        "the source is a radio interview",
+        "the divorce occurred several years ago"
+      ],
+      [
+        "the discussion focused on experiences in their second marriage",
+        "both individuals are currently married",
+        "the source is a newspaper interview",
+        "the divorce is recent"
+      ],
+      [
+        "the discussion focused on experiences in their second marriage",
+        "both individuals are currently married",
+        "the source is a newspaper interview",
+        "the divorce occurred several years ago"
+      ],
+      [
+        "the discussion focused on experiences in their second marriage",
+        "both individuals are currently married",
+        "the source is a radio interview",
+        "the divorce is recent"
+      ],
+      [
+        "the discussion focused on experiences in their second marriage",
+        "both individuals are currently married",
+        "the source is a radio interview",
+        "the divorce occurred several years ago"
+      ]
+    ]
+  }
+]
