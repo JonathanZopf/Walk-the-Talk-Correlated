@@ -63,6 +63,13 @@ class ShapleyCEConverter:
 
                 all_concepts = set().union(*coalition_value.keys())
 
+                residual_game = {}
+                for coalition, value in coalition_value.items():
+                    residual_game[coalition] = value - sum(coalition_value[(c,)] for c in coalition)
+
+                calculator = ShapleyCombinations(players=list(all_concepts))
+                correction = calculator.calculate_shapley_values(residual_game)
+
                 # Compute Shapley values
                 shapley_values = self._compute_shapley_values(
                     all_concepts, coalition_value
@@ -77,12 +84,16 @@ class ShapleyCEConverter:
                             f"Missing category or Shapley value for concept {concept!r} "
                             f"in example {example_idx}"
                         )
-
+                    cv = coalition_value[(concept,)]
+                    co = correction[concept]
+                    new_val = cv + co
+                    print("Difference: " + str(shapley - new_val))
+                    print("Group size: " + str(len(shapley_values)))
                     shapley_rows.append({
                         self.example_col: example_idx,
                         self.concept_col: concept,
                         self.category_col: category,
-                        "shapley_kl_div": shapley
+                        "shapley_kl_div": new_val,
                     })
 
         return pd.DataFrame(shapley_rows)

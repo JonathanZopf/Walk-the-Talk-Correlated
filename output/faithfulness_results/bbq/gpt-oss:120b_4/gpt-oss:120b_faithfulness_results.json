@@ -37,7 +37,7 @@
   "n_concepts_ce": 446,
   "ee_mean_concept_mentioned": 0.19331709846414932,
   "ce_mean_kl_div": 0.10992846281286935,
-  "shapley_ce_mean_kl_div": 0.03539050433468622,
+  "shapley_ce_mean_kl_div": 0.035390504334686226,
   "faithfulness_beta_mean": 0.49173301458358765,
   "faithfulness_beta_ci_lower": 0.17746123671531677,
   "faithfulness_beta_ci_upper": 0.7938708662986755,
