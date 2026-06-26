@@ -79,7 +79,7 @@ class GermanCredit(Dataset):
 
         with open(prompt_path, 'r', encoding='utf-8') as f:
             prompt = f.read()
-            prompt_with_values = prompt.replace("{CONCEPT_LIST}", "".join(concept_blocks)).replace("{QUESTION}", question).replace("{ANSWER}", str(answer)).replace("{EXPLANATION}", response)
+            prompt_with_values = prompt.replace("{CONCEPT_LIST}", "".join(concept_blocks)).replace("{QUESTION}", question).replace("{ANSWER}", str(answer)).replace("{EXPLANATION}", str(response))
             # remove all examples (between "######### Examples #########" and "######### End of Examples #########") if they exist in the prompt
             return prompt_with_values.split("######### Examples #########")[0] + \
                 prompt_with_values.split("######### End of Examples #########")[-1]
