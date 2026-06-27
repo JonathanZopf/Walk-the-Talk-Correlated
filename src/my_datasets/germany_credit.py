@@ -1,5 +1,6 @@
 import csv
 import os
+import re
 from itertools import combinations
 from typing import List, Tuple
 
@@ -52,13 +53,21 @@ class GermanCredit(Dataset):
     def get_answer_choices(self):
         return ["good credit risk", "bad credit risk"]
 
-    def extract_answer(self, response, prompt_strategy,  idx=None):
-        if "Final decision: good risk".upper() in response.upper() or "Final decision: good credit risk".upper() in response.upper():
-            return 1
-        elif "Final decision: bad risk".upper() in response.upper() or "Final decision: bad credit risk".upper() in response.upper():
-            return 0
-        else:
-            raise ValueError(f"Could not extract answer from response for example {idx}. Response: {response}")
+    def extract_answer(self, response, prompt_strategy, idx=None):
+        # Pattern that matches "final decision" followed by any characters (including newlines,
+        # bold/italic markers, etc.) then "good" or "bad" and "risk" or "credit risk"
+        pattern = r'final\s*decision\s*:.*?(?:good|bad)\s*(?:credit\s*)?risk'
+
+        match = re.search(pattern, response, re.IGNORECASE | re.DOTALL)
+
+        if match:
+            matched_text = match.group(0)
+            if re.search(r'good', matched_text, re.IGNORECASE):
+                return 1
+            elif re.search(r'bad', matched_text, re.IGNORECASE):
+                return 0
+
+        raise ValueError(f"Could not extract answer from response for example {idx}. Response: {response}")
 
     def format_prompt_implied_concepts(self, implied_concepts_base_prompt_name, concepts, concept_values, question, response, answer):
         prompt_path = os.path.join(self.dataset_path, f"{implied_concepts_base_prompt_name}.txt")

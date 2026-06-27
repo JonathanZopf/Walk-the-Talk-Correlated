@@ -50,6 +50,7 @@ echo "=========================================="
 echo "Step 1: Generating interventions..."
 python src/run_generate_interventions.py \
     --dataset="$DATASET" \
+    --dataset_path="data/${DATASET}" \
     --intervention_model="$MODEL" \
     --n_examples="$N_EXAMPLES" \
     --counterfactual_gen_base_prompt_name="counterfactual_gen_replacements_prompt" \
@@ -61,6 +62,7 @@ python src/run_generate_interventions.py \
 echo "Step 2: Collecting model responses..."
 python src/run_collect_model_responses.py \
     --dataset="$DATASET" \
+    --dataset_path="data/${DATASET}" \
     --language_model="$MODEL" \
     --cot \
     --few_shot \
@@ -78,7 +80,8 @@ python src/run_determine_implied_concepts.py \
     --intervention_data_path="$INTERVENTION_DIR" \
     --model_response_data_path="$MODEL_RESP_DIR" \
     --output_dir="$IMPLIED_DIR" \
-    --dataset="$DATASET"
+    --dataset="$DATASET" \
+    --dataset_path="data/${DATASET}"
 
 # 4. Measure faithfulness
 echo "Step 4: Measuring faithfulness..."
@@ -88,6 +91,7 @@ python src/run_measure_faithfulness.py \
     --model_name="$MODEL" \
     --print_results \
     --dataset="$DATASET" \
+    --dataset_path="data/${DATASET}" \
     --intervention_dir="$INTERVENTION_DIR" \
     --model_response_dir="$MODEL_RESP_DIR" \
     --implied_concepts_dir="$IMPLIED_DIR" \

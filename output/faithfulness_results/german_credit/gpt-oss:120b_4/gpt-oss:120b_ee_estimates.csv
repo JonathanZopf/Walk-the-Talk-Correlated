@@ -1,0 +1,41 @@
+example_idx,intrv_concepts,intrv_categories,p(concept_in_explanation),concept_ranking
+0,status,Collateral Information,1.0,1
+0,duration,Current Credit Information,0.7428571428571429,16
+0,credit_history,Credit History,1.0,1
+0,purpose,Current Credit Information,0.2857142857142857,18
+0,amount,Current Credit Information,0.8357142857142857,13
+0,savings,Collateral Information,1.0,1
+0,employment_duration,Income Information,0.9928571428571429,7
+0,installment_rate,Current Credit Information,1.0,1
+0,personal_status_sex,Personal Information,0.07857142857142857,19
+0,other_debtors,Credit History,0.9928571428571429,7
+0,present_residence,Personal Information,1.0,1
+0,property,Collateral Information,0.9928571428571429,7
+0,age,Current Credit Information,0.9785714285714285,10
+0,other_installment_plans,Income Information,0.8357142857142857,13
+0,housing,Collateral Information,0.9142857142857143,11
+0,number_credits,Credit History,0.8,15
+0,job,Income Information,1.0,1
+0,people_liable,Collateral Information,0.8642857142857143,12
+0,telephone,Personal Information,0.5357142857142857,17
+0,foreign_worker,Personal Information,0.06428571428571428,20
+1,status,Collateral Information,1.0,1
+1,duration,Current Credit Information,0.5857142857142857,16
+1,credit_history,Credit History,1.0,1
+1,purpose,Current Credit Information,0.07142857142857142,20
+1,amount,Current Credit Information,0.35,17
+1,savings,Collateral Information,1.0,1
+1,employment_duration,Income Information,0.9785714285714285,8
+1,installment_rate,Current Credit Information,1.0,1
+1,personal_status_sex,Personal Information,0.25,18
+1,other_debtors,Credit History,0.9714285714285714,9
+1,present_residence,Personal Information,0.8928571428571429,12
+1,property,Collateral Information,1.0,1
+1,age,Current Credit Information,0.8,13
+1,other_installment_plans,Income Information,0.9,11
+1,housing,Collateral Information,0.9714285714285714,9
+1,number_credits,Credit History,0.7071428571428572,15
+1,job,Income Information,1.0,1
+1,people_liable,Collateral Information,1.0,1
+1,telephone,Personal Information,0.7714285714285715,14
+1,foreign_worker,Personal Information,0.08571428571428572,19

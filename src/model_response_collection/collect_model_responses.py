@@ -153,7 +153,7 @@ class ResponseCollector:
             # format prompt based on prompting strategy
             intervention_prompt = self.dataset.format_prompt_qa_counterfactual(prompt_dict[intrv_str], self.prompt_strategy, idx=self.example_idx)
             # get model output on intervened prompt
-            print("INTERVENTION_PROMPT:", intervention_prompt)
+            print(f"Collecting {n_completions_to_extract} responses for example={self.example_idx} counterfactual={intrv_str}.")
             intervention_responses = self.language_model.generate_response(intervention_prompt, n_completions=n_completions_to_extract)
         except Exception as e:
             raise e

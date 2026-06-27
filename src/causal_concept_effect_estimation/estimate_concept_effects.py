@@ -44,6 +44,7 @@ class ConceptEffectEstimator:
                 response_df["example_idx"] = example_idx
                 response_dfs.append(response_df)
             except Exception as e:
+                raise e
                 print(f"Error loading example {example_idx}, skipping")
         full_response_df = pd.concat(response_dfs, ignore_index=True)
         if standardize_order:
@@ -97,6 +98,9 @@ class ConceptEffectEstimator:
             response_df["reference_class"] = self.dataset.data[example_idx]["unk_idx"]
             response_df["answer_choices"] = [[self.dataset.data[example_idx][f"ans{idx}"] for idx in range(3)] for _ in
                                              range(len(response_df))]
+        elif self.dataset.name == "german_credit":
+            response_df["reference_class"] = 0
+            response_df["answer_choices"] = [[0, 1] for _ in range(len(response_df))]
         else:
             response_df["reference_class"] = 0
             response_df["answer_choices"] = [self.dataset.data[example_idx]["answer_choices"] for _ in

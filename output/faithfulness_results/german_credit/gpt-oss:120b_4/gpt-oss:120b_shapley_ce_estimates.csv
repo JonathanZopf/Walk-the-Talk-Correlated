@@ -1,0 +1,41 @@
+example_idx,intrv_concepts,intrv_categories,shapley_kl_div
+0,job,Income Information,0.029618567476669945
+0,telephone,Personal Information,0.10941777254144351
+0,employment_duration,Income Information,0.015581535796324411
+0,housing,Collateral Information,0.058943167328834534
+0,property,Collateral Information,0.0522371381521225
+0,present_residence,Personal Information,0.11240291595458984
+0,age,Current Credit Information,0.10388419032096863
+0,other_installment_plans,Income Information,0.09820102155208588
+0,people_liable,Collateral Information,0.6250783801078796
+0,foreign_worker,Personal Information,0.1491294950246811
+0,credit_history,Credit History,0.06134650483727455
+0,number_credits,Credit History,0.07748052105307579
+0,amount,Current Credit Information,0.26445167511701584
+0,duration,Current Credit Information,-0.094002865254879
+0,status,Collateral Information,0.9417033195495605
+0,purpose,Current Credit Information,0.10081423819065094
+0,savings,Collateral Information,0.17902036011219025
+0,installment_rate,Current Credit Information,0.1415766328573227
+0,personal_status_sex,Personal Information,0.09562116861343384
+0,other_debtors,Credit History,0.1259603500366211
+1,job,Income Information,0.15989371637503305
+1,telephone,Personal Information,0.723587135473887
+1,employment_duration,Income Information,0.3067915985981623
+1,housing,Collateral Information,-0.23346440121531487
+1,property,Collateral Information,0.3509877808392048
+1,present_residence,Personal Information,0.5879878997802734
+1,age,Current Credit Information,0.8290510773658752
+1,other_installment_plans,Income Information,0.8154324889183044
+1,people_liable,Collateral Information,0.12604641914367676
+1,foreign_worker,Personal Information,0.8947100043296814
+1,credit_history,Credit History,0.5847764015197754
+1,number_credits,Credit History,0.5961517095565796
+1,amount,Current Credit Information,-0.04410190507769585
+1,duration,Current Credit Information,0.1531611569225788
+1,status,Collateral Information,0.9267428517341614
+1,purpose,Current Credit Information,0.8352025151252747
+1,savings,Collateral Information,0.9315782189369202
+1,installment_rate,Current Credit Information,0.8233212232589722
+1,personal_status_sex,Personal Information,0.5592395067214966
+1,other_debtors,Credit History,0.6541539430618286
