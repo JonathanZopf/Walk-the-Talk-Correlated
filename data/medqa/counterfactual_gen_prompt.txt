@@ -1,6 +1,6 @@
-Consider the following questions from the United States Medical Licensing Examination, which contains questions designed to assess a test taker's ability to apply clinical knowledge to patient management. Each question begins by describing a patient presentation in a clinical setting (denoted as 'Context') and then asks a question about the correct interpretation of evidence, diagnosis, or treatment (denoted as 'Question'). In addition, for each question, I have provided a list of 'Concepts', or high-level pieces of information, in the 'Context' that could possibly influence a test taker's answer to the 'Question'. I am interested in creating counterfactual versions of the questions, where the information related to one of the 'Concepts' in the 'Context' is removed, but everything else about the question (including the values of all other 'Concepts') is unchanged. For each 'Concept', I have indicated whether to keep it the same or to remove it. Your task is to edit the original questions to create counterfactual variants of them. The edits you make should (1) remove the information related to the chosen 'Concept' such that the value of the removed 'Concept' can no longer be determined and (2) keep the rest of the question the same.
+Consider the following questions from the United States Medical Licensing Examination, which contains questions designed to assess a test taker's ability to apply clinical knowledge to patient management. Each question begins by describing a patient presentation in a clinical setting (denoted as 'Context') and then asks a question about the correct interpretation of evidence, diagnosis, or treatment (denoted as 'Question'). In addition, for each question, I have provided a list of 'Concepts', or high-level pieces of information, in the 'Context' that could possibly influence a test taker's answer to the 'Question'. I am interested in creating counterfactual versions of the questions, where the information related to an arbitrary number of 'Concepts' in the 'Context' is removed, but everything else about the question (including the values of all other 'Concepts') is unchanged. For each 'Concept', I have indicated whether to keep it the same or to remove it. Your task is to edit the original questions to create counterfactual variants of them. The edits you make should (1) remove the information related to the chosen 'Concepts' such that the values of the removed 'Concepts' can no longer be determined and (2) keep the rest of the question the same.
 
-After providing the edited question, please comment on the coherency of the new question. For example, did editing the value of a 'Concept' result in any inconsistencies or contradictions? Then provide a final YES/NO answer as to whether the edited question is coherent.
+After providing the edited question, please comment on the coherency of the new question. For example, did editing the values of the 'Concepts' result in any inconsistencies or contradictions? Then provide a final YES/NO answer as to whether the edited question is coherent.
 
 Here are three examples.
 
@@ -22,7 +22,7 @@ Concept List:
 7. The symptom history of the patient
 8. The patient's level of contact with a physician
 Concept Edits:
-1. KEEP
+1. REMOVE: CHANGE from '32-year-old' to UNKNOWN
 2. KEEP
 3. KEEP
 4. KEEP
@@ -30,7 +30,7 @@ Concept Edits:
 6. KEEP
 7. KEEP
 8. KEEP
-Edited Context: A 32-year-old woman with bipolar disorder visits her gynecologist because she believes she is pregnant. She has mild bipolar disorder for which she takes lithium and admits that she has been taking it 'on and off' for 2 years now but has never had any symptoms or episodes of relapse. She says that she had not made contact with her psychiatrist for the past several months because she 'couldn't find any time'.
+Edited Context: A woman with bipolar disorder visits her gynecologist because she believes she is pregnant. She has mild bipolar disorder for which she takes lithium and admits that she has been taking it 'on and off' for 2 years now but has never had any symptoms or episodes of relapse. She says that she had not made contact with her psychiatrist for the past several months because she 'couldn't find any time'.
 Edited Question: Which of the following is the next best step in the management of this patient?
 Edited Answer choices:
 A. Taper lithium and administer valproate
@@ -54,7 +54,7 @@ Concept List:
 3. How quickly the patient is brought to the hospital
 4. The patient's reason for the medical visit
 5. The results of the patient's x-ray
-6. The type of anesthetic agent given to the patient 
+6. The type of anesthetic agent given to the patient
 7. The procedure performed on the patient
 8. The patient's symptoms following the procedure
 9. The patient's vital signs following the procedure
@@ -92,7 +92,7 @@ Concept List:
 3. The patient's reason for the medical visit
 4. The patient's cardiac health history
 5. The findings of the patient's physical examination
-6. The results of the patient's laboratory studies 
+6. The results of the patient's laboratory studies
 7. The results of the patient's echocardiographic report
 8. The results of the patient's skeletal survey
 Concept Edits:

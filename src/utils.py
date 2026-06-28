@@ -8,7 +8,7 @@ import pandas as pd
 
 from language_models.ollama_model import OllamaModel
 from my_datasets.bbq import BBQDataset
-from my_datasets.germany_credit import GermanCredit
+from my_datasets.german_credit import GermanCredit
 from my_datasets.medqa import MedQADataset
 from language_models.chat_gpt import ChatGPT
 from language_models.claude import Claude

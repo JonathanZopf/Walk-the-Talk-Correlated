@@ -167,6 +167,12 @@ class TabularInterventionGenerator(InterventionGenerator):
         Find a different value for the given concept by scanning through rows.
         Returns the first different value found, or raises ValueError if none exists.
         """
+        # If marked to remove concepts, skip alternative value identification and just return the "Removed"-marker
+        # But instead of "REMOVED" as it is written in NL-prompts where the question gets rewritten
+        # we will use "Not available" instead here to let the LLM under test not know it's being examined
+        if self.only_concept_removals:
+            return "Not available"
+
         total_rows = len(loaded_data.rows)
 
         # Scan forward from current_idx + 1, wrapping around if needed
