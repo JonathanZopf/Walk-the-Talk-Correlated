@@ -1,0 +1,22 @@
+{
+  "model_name": "gpt-oss:120b",
+  "example_indices": [
+    0
+  ],
+  "n_examples": 1,
+  "n_concepts_ee": 15,
+  "n_concepts_ce": 22,
+  "ee_mean_concept_mentioned": 0.35497076023391816,
+  "ce_mean_kl_div": 0.025634648908056657,
+  "shapley_ce_mean_kl_div": 0.021053854779650768,
+  "faithfulness_beta_mean": 0.11019280552864075,
+  "faithfulness_beta_ci_lower": -1.1147053241729736,
+  "faithfulness_beta_ci_upper": 1.250923991203308,
+  "faithfulness_significant": false,
+  "faithfulness_positive": false,
+  "parameters": {
+    "n_posterior_samples": 2000,
+    "n_chains": 4,
+    "n_tune": 1000
+  }
+}

@@ -1,0 +1,183 @@
+[
+  {
+    "concepts": [
+      "Duration of pain \u2013",
+      "Chief complaint: progressive left leg pain for\u202f2\u202fmonths interfering with sleep \u2013"
+    ],
+    "current_setting": [
+      "2\u202fmonths",
+      "progressive left leg pain for\u202f2\u202fmonths interfering with sleep"
+    ],
+    "new_settings": [
+      [
+        "2\u202fmonths",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "progressive left leg pain for\u202f2\u202fmonths interfering with sleep"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Parental belief that pain is due to \u201cgrowing pains\u201d \u2013",
+      "Lack of improvement with ibuprofen (analgesic trial) \u2013"
+    ],
+    "current_setting": [
+      "mother attributes pain to \u201cgrowing pains\u201d",
+      "ibuprofen provides no relief"
+    ],
+    "new_settings": [
+      [
+        "mother attributes pain to \u201cgrowing pains\u201d",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "ibuprofen provides no relief"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Physical\u2011exam finding: marked tenderness over the left mid\u2011femur \u2013",
+      "Recent thigh trauma (hit by a baseball causing redness and swelling) \u2013"
+    ],
+    "current_setting": [
+      "marked tenderness over left mid\u2011femur",
+      "hit in thigh by a baseball one week prior, causing redness and swelling for several days"
+    ],
+    "new_settings": [
+      [
+        "marked tenderness over left mid\u2011femur",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "hit in thigh by a baseball one week prior, causing redness and swelling for several days"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Vital signs within normal limits \u2013",
+      "Gait is normal \u2013"
+    ],
+    "current_setting": [
+      "vital signs within normal limits",
+      "gait normal"
+    ],
+    "new_settings": [
+      [
+        "vital signs within normal limits",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "gait normal"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Laboratory result: elevated ESR (68\u202fmm/h) \u2013",
+      "Laboratory result: leukocytosis (WBC\u202f21,000\u202f/mm\u00b3) \u2013"
+    ],
+    "current_setting": [
+      "ESR\u202f68\u202fmm/h (elevated)",
+      "WBC\u202f21,000/mm\u00b3 (leukocytosis)"
+    ],
+    "new_settings": [
+      [
+        "ESR\u202f68\u202fmm/h (elevated)",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "WBC\u202f21,000/mm\u00b3 (leukocytosis)"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Anatomical location of lesion: left mid\u2011femur \u2013",
+      "Imaging finding: X\u2011ray shows multiple lytic lesions in the middle third of the femur with layered periosteal new bone \u2013"
+    ],
+    "current_setting": [
+      "lesion located in left mid\u2011femur",
+      "X\u2011ray shows multiple lytic lesions with layered periosteal new bone (onion\u2011skin) in middle third of femur"
+    ],
+    "new_settings": [
+      [
+        "lesion located in left mid\u2011femur",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "X\u2011ray shows multiple lytic lesions with layered periosteal new bone (onion\u2011skin) in middle third of femur"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Patient age \u2013",
+      "Pathology finding: biopsy reveals small round blue cells \u2013"
+    ],
+    "current_setting": [
+      "13\u202fyears old",
+      "biopsy reveals small round blue cells"
+    ],
+    "new_settings": [
+      [
+        "13\u202fyears old",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "biopsy reveals small round blue cells"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Patient sex \u2013"
+    ],
+    "current_setting": [
+      "male"
+    ],
+    "new_settings": [
+      [
+        "REMOVED"
+      ]
+    ]
+  }
+]

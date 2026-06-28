@@ -1,0 +1,62 @@
+[
+  [
+    [
+      "Patient sex \u2013 female",
+      "sex"
+    ],
+    [
+      "Patient age \u2013 32\u202fyears old",
+      "age"
+    ]
+  ],
+  [
+    [
+      "Reason for visit \u2013 acute onset abdominal pain",
+      "reason for visit"
+    ],
+    [
+      "Onset context \u2013 pain began suddenly during kick\u2011boxing class, left\u2011sided",
+      "symptom onset context"
+    ]
+  ],
+  [
+    [
+      "Sexual history \u2013 currently sexually active, no contraception",
+      "sexual history"
+    ],
+    [
+      "Past medical history \u2013 prior chlamydia infection",
+      "medical history"
+    ]
+  ],
+  [
+    [
+      "Menstrual history \u2013 regular 30\u2011day cycles, last menstrual period ended 2\u202fdays ago",
+      "menstrual history"
+    ],
+    [
+      "Vital signs \u2013 temperature 99\u202f\u00b0F (37.2\u202f\u00b0C), blood pressure 110/68\u202fmm\u202fHg, pulse 88/min, respirations 14/min, SpO\u2082 98% on room air",
+      "vital signs"
+    ]
+  ],
+  [
+    [
+      "Pelvic examination \u2013 clear vaginal mucous, left adnexal tenderness",
+      "pelvic exam findings"
+    ],
+    [
+      "Abdominal examination \u2013 left\u2011lower abdominal tenderness with guarding",
+      "abdominal exam findings"
+    ]
+  ],
+  [
+    [
+      "Imaging findings \u2013 pelvic Doppler ultrasound shows large amount of fluid in the rectouterine pouch",
+      "imaging findings"
+    ],
+    [
+      "Laterality of findings \u2013 left\u2011sided pain and adnexal involvement",
+      "laterality"
+    ]
+  ]
+]

@@ -1,0 +1,78 @@
+[
+  [
+    [
+      "Duration of pain \u2013",
+      "symptom duration"
+    ],
+    [
+      "Chief complaint: progressive left leg pain for\u202f2\u202fmonths interfering with sleep \u2013",
+      "symptom"
+    ]
+  ],
+  [
+    [
+      "Parental belief that pain is due to \u201cgrowing pains\u201d \u2013",
+      "patient/parent belief"
+    ],
+    [
+      "Lack of improvement with ibuprofen (analgesic trial) \u2013",
+      "treatment response"
+    ]
+  ],
+  [
+    [
+      "Recent thigh trauma (hit by a baseball causing redness and swelling) \u2013",
+      "preceding injury"
+    ],
+    [
+      "Physical\u2011exam finding: marked tenderness over the left mid\u2011femur \u2013",
+      "physical examination findings"
+    ]
+  ],
+  [
+    [
+      "Vital signs within normal limits \u2013",
+      "vital signs"
+    ],
+    [
+      "Gait is normal \u2013",
+      "gait/mobility"
+    ]
+  ],
+  [
+    [
+      "Laboratory result: elevated ESR (68\u202fmm/h) \u2013",
+      "laboratory findings\u202f\u2013\u202finflammatory marker"
+    ],
+    [
+      "Laboratory result: leukocytosis (WBC\u202f21,000\u202f/mm\u00b3) \u2013",
+      "laboratory findings\u202f\u2013\u202fwhite blood cell count"
+    ]
+  ],
+  [
+    [
+      "Imaging finding: X\u2011ray shows multiple lytic lesions in the middle third of the femur with layered periosteal new bone \u2013",
+      "imaging findings\u202f\u2013\u202fbone lesion characteristics"
+    ],
+    [
+      "Anatomical location of lesion: left mid\u2011femur \u2013",
+      "anatomical location"
+    ]
+  ],
+  [
+    [
+      "Pathology finding: biopsy reveals small round blue cells \u2013",
+      "pathology/histology findings"
+    ],
+    [
+      "Patient age \u2013",
+      "age"
+    ]
+  ],
+  [
+    [
+      "Patient sex \u2013",
+      "sex"
+    ]
+  ]
+]

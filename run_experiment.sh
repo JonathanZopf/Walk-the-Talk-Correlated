@@ -1,26 +1,32 @@
 #!/bin/bash
 set -e  # exit on error
 
-# Default values (optional)
+# Default values
 N_EXAMPLES=""
 DATASET=""
 MODEL=""
 MAX_GROUPS=""
+ONLY_CONCEPT_REMOVALS=""
+COUNTERFACTUAL_GEN_BASE_PROMPT_NAME=""
 
 # Usage
 usage() {
-    echo "Usage: $0 -n <num_examples> -d <dataset> -m <model> -g <max_groups>"
-    echo "Example: $0 -n 30 -d bbq -m gpt-oss:120b -g 4"
+    echo "Usage: $0 -n <num_examples> -d <dataset> -m <model> -g <max_groups> [-r] [-p <prompt_name>]"
+    echo "  -r : enable only_concept_removals (flag, no argument)"
+    echo "  -p : counterfactual_gen_base_prompt_name (optional)"
+    echo "Example: $0 -n 30 -d bbq -m gpt-oss:120b -g 4 -r -p counterfactual_gen_replacements_prompt.txt"
     exit 1
 }
 
 # Parse command line arguments
-while getopts "n:d:m:g:" opt; do
+while getopts "n:d:m:g:rp:" opt; do
     case $opt in
         n) N_EXAMPLES="$OPTARG" ;;
         d) DATASET="$OPTARG" ;;
         m) MODEL="$OPTARG" ;;
         g) MAX_GROUPS="$OPTARG" ;;
+        r) ONLY_CONCEPT_REMOVALS="true" ;;   # flag set
+        p) COUNTERFACTUAL_GEN_BASE_PROMPT_NAME="$OPTARG" ;;
         *) usage ;;
     esac
 done
@@ -44,19 +50,30 @@ echo "  Dataset: $DATASET"
 echo "  Model: $MODEL"
 echo "  Number of examples: $N_EXAMPLES"
 echo "  Max correlated concepts per group: $MAX_GROUPS"
+echo "  Only concept removals: ${ONLY_CONCEPT_REMOVALS:-false}"
+echo "  Counterfactual prompt name: ${COUNTERFACTUAL_GEN_BASE_PROMPT_NAME:-<default>}"
 echo "=========================================="
 
 # 1. Generate interventions
 echo "Step 1: Generating interventions..."
-python src/run_generate_interventions.py \
-    --dataset="$DATASET" \
-    --dataset_path="data/${DATASET}" \
-    --intervention_model="$MODEL" \
-    --n_examples="$N_EXAMPLES" \
-    --counterfactual_gen_base_prompt_name="counterfactual_gen_replacements_prompt" \
+CMD="python src/run_generate_interventions.py \
+    --dataset=\"$DATASET\" \
+    --dataset_path=\"data/${DATASET}\" \
+    --intervention_model=\"$MODEL\" \
+    --n_examples=\"$N_EXAMPLES\" \
     --n_workers=5 \
-    --output_dir="$INTERVENTION_DIR" \
-    --max_interventions_in_correlation_groups="$MAX_GROUPS"
+    --output_dir=\"$INTERVENTION_DIR\" \
+    --max_interventions_in_correlation_groups=\"$MAX_GROUPS\""
+
+# Conditionally add flags/arguments
+if [ -n "$ONLY_CONCEPT_REMOVALS" ]; then
+    CMD="$CMD --only_concept_removals"
+fi
+if [ -n "$COUNTERFACTUAL_GEN_BASE_PROMPT_NAME" ]; then
+    CMD="$CMD --counterfactual_gen_base_prompt_name=\"$COUNTERFACTUAL_GEN_BASE_PROMPT_NAME\""
+fi
+
+eval $CMD
 
 # 2. Collect model responses
 echo "Step 2: Collecting model responses..."

@@ -191,17 +191,12 @@ def parse_correlation_groups_with_retry(
     last_error = None
     for attempt in range(max_retries):
         response = response_func(last_error)
-        print(f"DEBUG: LLM response (attempt {attempt + 1}):\n{response}\n")
         try:
             groups = parse_correlation_groups(response, all_concepts=all_concepts)
-            print(f"Parsing succeeded on attempt {attempt + 1}.")
             return groups
         except ValueError as e:
             last_error = e
             print(f"Attempt {attempt + 1} failed: {e}")
-            # Optionally, you could modify the prompt here to include error feedback,
-            # but for simplicity we just retry. The LLM may give different output
-            # due to temperature or non-determinism.
             continue
 
     raise ValueError(f"Failed to parse after {max_retries} attempts. Last error: {last_error}")

@@ -1,0 +1,159 @@
+[
+  {
+    "concepts": [
+      "Past medical history of idiopathic arrhythmia",
+      "Current medication: daily amiodarone"
+    ],
+    "current_setting": [
+      "idiopathic arrhythmia",
+      "daily amiodarone"
+    ],
+    "new_settings": [
+      [
+        "idiopathic arrhythmia",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "daily amiodarone"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Chief complaint of breathlessness (dyspnea) for the past\u202f\u2248\u202f2\u202fweeks",
+      "Physical\u2011exam finding of inspiratory crackles over the lung bases"
+    ],
+    "current_setting": [
+      "dyspnea for \u22482\u202fweeks",
+      "inspiratory crackles over lung bases"
+    ],
+    "new_settings": [
+      [
+        "dyspnea for \u22482\u202fweeks",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "inspiratory crackles over lung bases"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Cough that is dry, hacking, and has persisted for\u202f\u2248\u202f3\u202fmonths",
+      "Chest radiograph performed"
+    ],
+    "current_setting": [
+      "dry, hacking cough for \u22483\u202fmonths",
+      "chest radiograph showing bilateral interstitial infiltrates"
+    ],
+    "new_settings": [
+      [
+        "dry, hacking cough for \u22483\u202fmonths",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "chest radiograph showing bilateral interstitial infiltrates"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Patient age",
+      "Patient sex"
+    ],
+    "current_setting": [
+      "48\u202fyears",
+      "male"
+    ],
+    "new_settings": [
+      [
+        "48\u202fyears",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "male"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Smoking status: non\u2011smoker",
+      "Alcohol use: none"
+    ],
+    "current_setting": [
+      "non\u2011smoker",
+      "no alcohol use"
+    ],
+    "new_settings": [
+      [
+        "non\u2011smoker",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "no alcohol use"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Echocardiogram showing a normal ejection fraction",
+      "Vital signs \u2013 heart rate\u202f98/min, respiratory rate\u202f16/min, temperature\u202f37.6\u202f\u00b0C, blood pressure\u202f132/70\u202fmm\u202fHg"
+    ],
+    "current_setting": [
+      "echocardiogram with normal ejection fraction",
+      "HR\u202f98/min, RR\u202f16/min, Temp\u202f37.6\u202f\u00b0C, BP\u202f132/70\u202fmm\u202fHg"
+    ],
+    "new_settings": [
+      [
+        "echocardiogram with normal ejection fraction",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "HR\u202f98/min, RR\u202f16/min, Temp\u202f37.6\u202f\u00b0C, BP\u202f132/70\u202fmm\u202fHg"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Illicit drug use: none"
+    ],
+    "current_setting": [
+      "no illicit drug use"
+    ],
+    "new_settings": [
+      [
+        "REMOVED"
+      ]
+    ]
+  }
+]

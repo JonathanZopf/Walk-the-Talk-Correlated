@@ -1,0 +1,68 @@
+[
+  [
+    [
+      "Past medical history of idiopathic arrhythmia",
+      "medical history"
+    ],
+    [
+      "Current medication: daily amiodarone",
+      "medication"
+    ]
+  ],
+  [
+    [
+      "Chief complaint of breathlessness (dyspnea) for the past\u202f\u2248\u202f2\u202fweeks",
+      "reason for visit"
+    ],
+    [
+      "Physical\u2011exam finding of inspiratory crackles over the lung bases",
+      "physical examination"
+    ]
+  ],
+  [
+    [
+      "Cough that is dry, hacking, and has persisted for\u202f\u2248\u202f3\u202fmonths",
+      "symptom"
+    ],
+    [
+      "Chest radiograph performed",
+      "imaging findings"
+    ]
+  ],
+  [
+    [
+      "Patient age",
+      "age"
+    ],
+    [
+      "Patient sex",
+      "sex"
+    ]
+  ],
+  [
+    [
+      "Smoking status: non\u2011smoker",
+      "social history"
+    ],
+    [
+      "Alcohol use: none",
+      "social history"
+    ]
+  ],
+  [
+    [
+      "Echocardiogram showing a normal ejection fraction",
+      "cardiac imaging"
+    ],
+    [
+      "Vital signs \u2013 heart rate\u202f98/min, respiratory rate\u202f16/min, temperature\u202f37.6\u202f\u00b0C, blood pressure\u202f132/70\u202fmm\u202fHg",
+      "vital signs"
+    ]
+  ],
+  [
+    [
+      "Illicit drug use: none",
+      "social history"
+    ]
+  ]
+]

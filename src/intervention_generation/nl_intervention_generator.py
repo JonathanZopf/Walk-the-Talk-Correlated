@@ -73,14 +73,6 @@ class NLInterventionGenerator(InterventionGenerator):
         # -----------------------------------------------------------------
         # 2. Get per‑concept current and alternative values from the LLM
         # -----------------------------------------------------------------
-        if self.only_concept_removals:
-            # Sometimes we want to remove concepts, not changing their value as an alternative form of creating counterfactuals
-            # In this case such as that all possible different values within a coalition are being iterated trough,
-            # we want to remove the concepts with all possible combinations: e.g. a,b -> original, then: A,b; a,B; A,B
-            # TODO
-            raise NotImplementedError("Look how to implement this")
-
-        else:
             prompt = self.dataset.format_prompt_concept_values(self.example_idx,
                                                                self.concept_values_base_prompt_name,
                                                                all_concepts)
@@ -90,6 +82,16 @@ class NLInterventionGenerator(InterventionGenerator):
                 # per_concept_settings is a list of dicts:
                 #   [{"current_setting": ..., "new_settings": [...]}, ...]
                 # in the same order as all_concepts
+                if self.only_concept_removals:
+                    # If desired, override the new values: all entries which received a new value will be replaced with "REMOVED"
+                    # If the new value matches the original value, keep it
+                    for i, concept in enumerate(all_concepts):
+                        current_value = per_concept_settings[i]["current_setting"]
+                        new_values = per_concept_settings[i]["new_settings"]
+                        new_values = ["REMOVED" if new_value != current_value else current_value for new_value in new_values]
+                        # Remove duplicate values (which may happen in MedQA)
+                        new_values = list(set(new_values))
+                        per_concept_settings[i]["new_settings"] = new_values
             except Exception as e:
                 print(traceback.format_exc())
                 raise Exception(f"Concept settings identification failed: {e}")

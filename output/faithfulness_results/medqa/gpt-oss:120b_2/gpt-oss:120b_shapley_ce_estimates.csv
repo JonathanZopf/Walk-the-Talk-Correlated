@@ -1,0 +1,16 @@
+example_idx,intrv_concepts,intrv_categories,shapley_kl_div
+0,Duration of pain –,symptoms,0.004904587403871119
+0,Chief complaint: progressive left leg pain for 2 months interfering with sleep –,symptom,0.006249778321944177
+0,Lack of improvement with ibuprofen (analgesic trial) –,treatment,-0.0055303528206422925
+0,Parental belief that pain is due to “growing pains” –,patient/parent belief,0.04009393893647939
+0,Recent thigh trauma (hit by a baseball causing redness and swelling) –,preceding injury,0.0022162101231515408
+0,Physical‑exam finding: marked tenderness over the left mid‑femur –,clinical,0.0011657127179205418
+0,Gait is normal –,clinical,0.0017671178211458027
+0,Vital signs within normal limits –,gait/mobility,0.0014903980190865695
+0,Laboratory result: elevated ESR (68 mm/h) –,laboratory findings – inflammatory marker,0.009646730497479439
+0,"Laboratory result: leukocytosis (WBC 21,000 /mm³) –",laboratory findings – white blood cell count,0.015572864562273026
+0,Imaging finding: X‑ray shows multiple lytic lesions in the middle third of the femur with layered periosteal new bone –,imaging findings – bone lesion characteristics,0.054100750014185905
+0,Anatomical location of lesion: left mid‑femur –,anatomical location,0.1690999735146761
+0,Pathology finding: biopsy reveals small round blue cells –,pathology/histology findings,0.004055930417962372
+0,Patient age –,demographics,0.005243189516477287
+0,Patient sex –,demographics,0.005730992648750544

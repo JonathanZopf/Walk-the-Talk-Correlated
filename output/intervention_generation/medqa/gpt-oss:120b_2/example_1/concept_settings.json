@@ -1,0 +1,146 @@
+[
+  {
+    "concepts": [
+      "Patient sex \u2013 female",
+      "Patient age \u2013 32\u202fyears old"
+    ],
+    "current_setting": [
+      "female",
+      "32\u202fyears old"
+    ],
+    "new_settings": [
+      [
+        "female",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "32\u202fyears old"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Reason for visit \u2013 acute onset abdominal pain",
+      "Onset context \u2013 pain began suddenly during kick\u2011boxing class, left\u2011sided"
+    ],
+    "current_setting": [
+      "acute onset abdominal pain",
+      "pain began suddenly during kick\u2011boxing class, left\u2011sided"
+    ],
+    "new_settings": [
+      [
+        "acute onset abdominal pain",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "pain began suddenly during kick\u2011boxing class, left\u2011sided"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Sexual history \u2013 currently sexually active, no contraception",
+      "Past medical history \u2013 prior chlamydia infection"
+    ],
+    "current_setting": [
+      "currently sexually active, no contraception",
+      "prior chlamydia infection"
+    ],
+    "new_settings": [
+      [
+        "currently sexually active, no contraception",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "prior chlamydia infection"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Menstrual history \u2013 regular 30\u2011day cycles, last menstrual period ended 2\u202fdays ago",
+      "Vital signs \u2013 temperature 99\u202f\u00b0F (37.2\u202f\u00b0C), blood pressure 110/68\u202fmm\u202fHg, pulse 88/min, respirations 14/min, SpO\u2082 98% on room air"
+    ],
+    "current_setting": [
+      "regular 30\u2011day cycles, last menstrual period ended 2\u202fdays ago",
+      "temperature 99\u202f\u00b0F (37.2\u202f\u00b0C), BP 110/68\u202fmm\u202fHg, pulse 88/min, respirations 14/min, SpO\u2082 98% on room air"
+    ],
+    "new_settings": [
+      [
+        "regular 30\u2011day cycles, last menstrual period ended 2\u202fdays ago",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "temperature 99\u202f\u00b0F (37.2\u202f\u00b0C), BP 110/68\u202fmm\u202fHg, pulse 88/min, respirations 14/min, SpO\u2082 98% on room air"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Pelvic examination \u2013 clear vaginal mucous, left adnexal tenderness",
+      "Abdominal examination \u2013 left\u2011lower abdominal tenderness with guarding"
+    ],
+    "current_setting": [
+      "clear vaginal mucous, left adnexal tenderness",
+      "left\u2011lower abdominal tenderness with guarding"
+    ],
+    "new_settings": [
+      [
+        "clear vaginal mucous, left adnexal tenderness",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "left\u2011lower abdominal tenderness with guarding"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  },
+  {
+    "concepts": [
+      "Imaging findings \u2013 pelvic Doppler ultrasound shows large amount of fluid in the rectouterine pouch",
+      "Laterality of findings \u2013 left\u2011sided pain and adnexal involvement"
+    ],
+    "current_setting": [
+      "pelvic Doppler ultrasound shows large amount of fluid in the rectouterine pouch",
+      "left\u2011sided pain and adnexal involvement"
+    ],
+    "new_settings": [
+      [
+        "pelvic Doppler ultrasound shows large amount of fluid in the rectouterine pouch",
+        "REMOVED"
+      ],
+      [
+        "REMOVED",
+        "left\u2011sided pain and adnexal involvement"
+      ],
+      [
+        "REMOVED",
+        "REMOVED"
+      ]
+    ]
+  }
+]
