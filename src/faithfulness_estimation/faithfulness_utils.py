@@ -104,7 +104,7 @@ def prepare_faith_data_for_regression(faith_df, concept_to_idx_map):
     # also collect the concept category for each concept
     for example_idx in faith_df["example_idx"].unique():
         ex_df = faith_df[faith_df["example_idx"] == example_idx]
-        X = np.array(ex_df['shapley_kl_div'])[:, None]
+        X = np.array(ex_df['adjusted_shapley_kl_div'])[:, None]
         Y = np.array(ex_df['p(concept_in_explanation)'])
         concept_cats = [concept_to_idx_map[cat] for cat in ex_df['intrv_categories'].values.tolist()]
         concept_cats_list += concept_cats

@@ -29,7 +29,6 @@ class ShapleyCEConverter:
         approximate_missing_coalitions = True
     ):
         self.ce_df = ce_df.copy()
-
         self.concept_col = concept_col
         self.category_col = category_col
         self.value_col = value_col
@@ -50,12 +49,14 @@ class ShapleyCEConverter:
         for example_idx, example_df in df.groupby(self.example_col):
             for group_idx, group_df in example_df.groupby(self.group_col):
                 coalition_value = {}
+                coalition_value_adjusted = {}
                 category_lookup = {}
 
                 for _, row in group_df.iterrows():
                     concepts = row[self.concept_col]
                     categories = row[self.category_col]
                     coalition_value[concepts] = row[self.value_col]
+                    coalition_value_adjusted[concepts] =  row["adjusted_kl_div"]
 
                     # Build category lookup for all concepts appearing in this group
                     for concept, cat in zip(concepts, categories):
@@ -63,37 +64,33 @@ class ShapleyCEConverter:
 
                 all_concepts = set().union(*coalition_value.keys())
 
-                residual_game = {}
-                for coalition, value in coalition_value.items():
-                    residual_game[coalition] = value - sum(coalition_value[(c,)] for c in coalition)
-
-                calculator = ShapleyCombinations(players=list(all_concepts))
-                correction = calculator.calculate_shapley_values(residual_game)
-
                 # Compute Shapley values
                 shapley_values = self._compute_shapley_values(
                     all_concepts, coalition_value
                 )
 
+                shapley_values_adjusted = self._compute_shapley_values(
+                    all_concepts, coalition_value_adjusted
+                )
+
                 for concept in all_concepts:
                     category = category_lookup.get(concept)
                     shapley = shapley_values.get(concept)
+                    shapley_adjusted = shapley_values_adjusted.get(concept)
+                    atomic_kl_div_value = coalition_value[(concept,)]
 
                     if category is None or shapley is None:
                         raise ValueError(
                             f"Missing category or Shapley value for concept {concept!r} "
                             f"in example {example_idx}"
                         )
-                    cv = coalition_value[(concept,)]
-                    co = correction[concept]
-                    new_val = cv + co
-                    print("Difference: " + str(shapley - new_val))
-                    print("Group size: " + str(len(shapley_values)))
                     shapley_rows.append({
                         self.example_col: example_idx,
                         self.concept_col: concept,
                         self.category_col: category,
-                        "shapley_kl_div": new_val,
+                        "shapley_kl_div": shapley,
+                        "adjusted_shapley_kl_div": shapley_adjusted,
+                        "atomic_kl_div": atomic_kl_div_value,
                     })
 
         return pd.DataFrame(shapley_rows)
