@@ -16,7 +16,7 @@ class FaithfulnessEstimator:
         self.faith_df = shapley_ce.merge(ee_df, on=["example_idx", "intrv_concepts", "intrv_categories"])
         if multi_intrv_per_concept:
             # take mean causal concept effect for each concept in each example (across intervention settings)
-            self.grouped_faith_df = self.faith_df.groupby(["example_idx", "intrv_concepts"])["shapley_kl_div"].mean().to_frame().reset_index()
+            self.grouped_faith_df = self.faith_df.groupby(["example_idx", "intrv_concepts"])["adjusted_shapley_kl_div"].mean().to_frame().reset_index()
             self.grouped_faith_df = self.grouped_faith_df.merge(self.faith_df[["example_idx", "intrv_concepts", "intrv_categories", "p(concept_in_explanation)"]], on=["example_idx", "intrv_concepts"], how="left").drop_duplicates()
         else:
             self.grouped_faith_df = self.faith_df

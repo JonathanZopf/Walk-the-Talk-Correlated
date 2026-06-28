@@ -44,7 +44,6 @@ class ConceptEffectEstimator:
                 response_df["example_idx"] = example_idx
                 response_dfs.append(response_df)
             except Exception as e:
-                raise e
                 print(f"Error loading example {example_idx}, skipping")
         full_response_df = pd.concat(response_dfs, ignore_index=True)
         if standardize_order:

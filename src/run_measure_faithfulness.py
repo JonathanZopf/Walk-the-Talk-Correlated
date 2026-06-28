@@ -19,6 +19,7 @@ import numpy as np
 import pandas as pd
 
 from causal_concept_effect_estimation.shapley_ce_converter import ShapleyCEConverter
+from causal_concept_effect_estimation.payout_coefficient_calculator import PayoutCoefficientCalculator
 from my_datasets.dataset import Dataset
 from utils import get_dataset
 
@@ -174,7 +175,8 @@ def estimate_causal_concept_effects(args, dataset, example_idxs):
         example_idxs: List of example indices
 
     Returns:
-        DataFrame with CE estimates
+        DataFrame with (raw) original CE estimates,
+        DataFrame with adjusted CE estimates,
     """
     if args.verbose:
         print("\n" + "=" * 60)
@@ -230,8 +232,15 @@ def estimate_causal_concept_effects(args, dataset, example_idxs):
             for cat in treatment_df['category'].unique():
                 cat_mean = treatment_df[treatment_df['category'] == cat]['kl_div'].mean()
                 print(f"  {cat}: {cat_mean:.3f}")
+        print("Now calculating t-values and adjusting kl_div")
 
-    return treatment_df
+    # Calculate t-values and merge it with ce
+    payout_coefficient_calculator = PayoutCoefficientCalculator(treatment_df)
+    payout_coefficient_df = payout_coefficient_calculator.calculate_payout_coefficient()
+    adjusted_kl_div_df = payout_coefficient_calculator.calculate_adjusted_kl_div(payout_coefficient_df)
+    adjusted_kl_div_df = pd.merge(adjusted_kl_div_df, payout_coefficient_df, on="treatment")
+
+    return pd.merge(treatment_df, adjusted_kl_div_df, on="treatment"), adjusted_kl_div_df
 
 
 def measure_faithfulness(args, ee_df, shapley_ce_df):
@@ -290,7 +299,7 @@ def measure_faithfulness(args, ee_df, shapley_ce_df):
     return faith_samples, beta_mean, beta_credible_interval
 
 
-def save_results(args, ee_df, ce_df, shapley_ce_df, beta_mean, beta_credible_interval, example_idxs):
+def save_results(args, ee_df, ce_df, adjusted_kl_div_df, shapley_ce_df, beta_mean, beta_credible_interval, example_idxs):
     """
     Save all results to files.
 
@@ -298,6 +307,7 @@ def save_results(args, ee_df, ce_df, shapley_ce_df, beta_mean, beta_credible_int
         args: Command line arguments
         ee_df: EE estimates DataFrame
         ce_df: CE estimates DataFrame
+        adjusted_kl_div_df: adjusted kl divergence DataFrame
         shapley_ce_df: Shapley CE estimates DataFrame
         beta_mean: Faithfulness beta mean
         beta_credible_interval: Faithfulness credible interval
@@ -318,6 +328,12 @@ def save_results(args, ee_df, ce_df, shapley_ce_df, beta_mean, beta_credible_int
     if args.verbose:
         print(f"CE estimates saved to: {ce_path}")
 
+    # Save adjusted CE results
+    adjusted_kl_div_path = os.path.join(args.output_dir, f"{args.model_name}_adjusted_kl_div.csv")
+    adjusted_kl_div_df.to_csv(adjusted_kl_div_path, index=False)
+    if args.verbose:
+        print(f"Adjusted KL div estimates saved to: {adjusted_kl_div_path}")
+
     # Save Shapley CE results
     shapley_ce_path = os.path.join(args.output_dir, f"{args.model_name}_shapley_ce_estimates.csv")
     shapley_ce_df.to_csv(shapley_ce_path, index=False)
@@ -333,7 +349,10 @@ def save_results(args, ee_df, ce_df, shapley_ce_df, beta_mean, beta_credible_int
         'n_concepts_ce': len(ce_df),
         'ee_mean_concept_mentioned': ee_df['p(concept_in_explanation)'].mean(),
         'ce_mean_kl_div': ce_df['kl_div'].mean(),
-        'shapley_ce_mean_kl_div': shapley_ce_df['shapley_kl_div'].mean(),
+        'ce_mean_atomic_kl_div': shapley_ce_df[  'atomic_kl_div'].mean(),
+        'adjusted_kl_div': adjusted_kl_div_df['adjusted_kl_div'].mean(),
+        'shapley_kl_div': shapley_ce_df['shapley_kl_div'].mean(),
+        'adjusted_shapley_kl_div': shapley_ce_df['adjusted_shapley_kl_div'].mean(),
         'faithfulness_beta_mean': float(beta_mean),
         'faithfulness_beta_ci_lower': float(beta_credible_interval[0]),
         'faithfulness_beta_ci_upper': float(beta_credible_interval[1]),
@@ -401,14 +420,16 @@ def print_results_to_console(args, ee_df, ce_df, shapley_ce_df, beta_mean, beta_
     print("\n" + "-" * 40)
     print("SHAPLEY CAUSAL CONCEPT EFFECTS (SCE)")
     print("-" * 40)
-    print(f"  Mean Shapley-adjusted KL divergence (correlated causal effect): {shapley_ce_df['shapley_kl_div'].mean():.3f}")
+    print(f"  Mean Shapley KL divergence (correlated causal effect): {shapley_ce_df['shapley_kl_div'].mean():.3f}")
+    print(f"  Mean Adjusted Shapley KL diveregence: {shapley_ce_df['adjusted_shapley_kl_div'].mean():.3f}")
+    print(f"  Mean Atomic KL divergence: {shapley_ce_df['atomic_kl_div'].mean():.3f}")
 
-    # Concepts with strongest causal effects (highest shapley KL divergence)
+    # Concepts with strongest causal effects (highest adjusted shapley KL divergence)
     if 'intrv_concepts' in shapley_ce_df.columns:
-        strong_concepts = shapley_ce_df.nlargest(5, 'shapley_kl_div')[['intrv_concepts', 'shapley_kl_div']]
-        print("\n  Top 5 concepts with strongest causal effects:")
+        strong_concepts = shapley_ce_df.nlargest(5, 'adjusted_shapley_kl_div')[['intrv_concepts', 'adjusted_shapley_kl_div']]
+        print("\n  Top 5 concepts with strongest causal effects (highest adjusted shapley KL divergence):")
         for _, row in strong_concepts.iterrows():
-            print(f"    - {row['intrv_concepts']}: {row['shapley_kl_div']:.3f}")
+            print(f"    - {row['intrv_concepts']}: {row['adjusted_shapley_kl_div']:.3f}")
 
     print("\n" + "-" * 40)
     print("FAITHFULNESS (EE vs CE Correlation)")
@@ -455,6 +476,9 @@ def main():
         for arg, value in vars(args).items():
             print(f"  {arg}: {value}")
 
+    if not os.path.exists(args.output_dir):
+        os.makedirs(args.output_dir)
+
     # Initialize dataset
     if args.verbose:
         print(f"\nLoading dataset: {args.dataset} from {args.dataset_path}")
@@ -481,18 +505,26 @@ def main():
 
     # Step 2: Estimate Causal Concept Effects
     if not args.skip_ce:
-        ce_df = estimate_causal_concept_effects(args, dataset, example_idxs)
+        ce_df, adjusted_kl_div_df = estimate_causal_concept_effects(args, dataset, example_idxs)
     else:
         if args.verbose:
             print("\nSkipping CE estimation (using --skip_ce flag)")
         # Load existing CE results
         ce_path = os.path.join(args.output_dir, f"{args.model_name}_ce_estimates.csv")
+        adjusted_kl_div_path = os.path.join(args.output_dir, f"{args.model_name}_adjusted_kl_div.csv")
         if os.path.exists(ce_path):
             ce_df = pd.read_csv(ce_path)
             if args.verbose:
                 print(f"Loaded CE estimates from: {ce_path}")
         else:
             raise FileNotFoundError(f"CE estimates not found at {ce_path}. Remove --skip_ce to generate them.")
+
+        if os.path.exists(adjusted_kl_div_path):
+            adjusted_kl_div_df = pd.read_csv(adjusted_kl_div_path)
+            if args.verbose:
+                print(f"Loaded Adjusted KL divergence estimates from: {adjusted_kl_div_path}")
+        else:
+            raise FileNotFoundError(f"Adjusted KL divergence estimates not found at {adjusted_kl_div_path}. Remove --skip_ce to generate them.")
 
     # Step 3: Convert CE to shapley CE
     if args.verbose:
@@ -507,7 +539,7 @@ def main():
 
     # Save
     if args.save_results:
-        save_results(args, ee_df, ce_df, shapley_ce_df, beta_mean, beta_credible_interval, example_idxs)
+        save_results(args, ee_df, ce_df, adjusted_kl_div_df, shapley_ce_df, beta_mean, beta_credible_interval, example_idxs)
 
     # Print results to console if requested
     if args.print_results:

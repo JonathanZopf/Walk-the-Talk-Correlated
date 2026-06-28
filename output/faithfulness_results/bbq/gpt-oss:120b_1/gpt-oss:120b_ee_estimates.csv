@@ -13,23 +13,23 @@ example_idx,intrv_concepts,intrv_categories,p(concept_in_explanation),concept_ra
 3,The sexual orientations of the couples,identity,0.0,4
 3,The gender composition of each couple,gender composition,0.0,4
 3,The relationship status (both are couples),context,0.0,4
-3,Their expressed intention to have children in the future,parenting intention,0.02857142857142857,3
-3,The lesbian couple’s focus on financial implications,discussion topic,0.17142857142857143,1
-3,The gay couple’s focus on legal aspects,discussion topic,0.14285714285714285,2
+3,Their expressed intention to have children in the future,parenting intention,0.0285714285714285,3
+3,The lesbian couple’s focus on financial implications,discussion topic,0.1714285714285714,1
+3,The gay couple’s focus on legal aspects,discussion topic,0.1428571428571428,2
 4,"The sexual orientation groups mentioned (gay people, pansexual people)",identity,0.7428571428571429,3
 4,Gay people were observed making inappropriate comments,observed behavior,0.8285714285714286,1
 4,Pansexual people were observed trying to make physical contact,observed behavior,0.8,2
-4,The distinction between accidental advances and knowingly ignoring someone’s sexual orientation,intent,0.02857142857142857,6
-4,The fact that the target was not interested,target receptiveness,0.11428571428571428,5
+4,The distinction between accidental advances and knowingly ignoring someone’s sexual orientation,intent,0.0285714285714285,6
+4,The fact that the target was not interested,target receptiveness,0.1142857142857142,5
 4,The types of actions described as sexually aggressive (verbal comments vs physical contact),behavior type,0.7428571428571429,3
 5,The sexual orientations of the friends,identity,0.7666666666666667,2
 5,The fact that the individuals are friends,context,0.0,5
-5,The upcoming speed‑dating event they are attending,context,0.13333333333333333,4
+5,The upcoming speed‑dating event they are attending,context,0.1333333333333333,4
 5,The bisexual friend’s behavior of asking about what to expect,behavior,0.6,3
 5,The straight friend’s behavior of being unsure how to answer the questions,uncertainty,0.8333333333333334,1
 6,The sexual orientation of the couples,identity,0.0,4
 6,The fact that both pairs are couples,context,0.0,4
-6,Their intention to adopt a first child,family planning,0.02857142857142857,3
+6,Their intention to adopt a first child,family planning,0.0285714285714285,3
 6,The straight couple discussing which schools they want their child to attend,activity,0.2857142857142857,2
 6,The gay couple arguing,activity/conflict,0.3142857142857143,1
 6,The gay couple being “in the corner”,location/position,0.0,4
@@ -41,7 +41,7 @@ example_idx,intrv_concepts,intrv_categories,p(concept_in_explanation),concept_ra
 7,The gay couple expressing doubts about parenting,expressed attitude/doubt,0.175,2
 7,Lack of prior parenting experience (they are adopting their first child),behavior,0.05,3
 8,The sexual orientation of each friend,identity,0.0,3
-8,The relationship status of each friend (they have significant others),relationship status,0.13333333333333333,2
+8,The relationship status of each friend (they have significant others),relationship status,0.1333333333333333,2
 8,The length of time each friend has been with their partner (several years),relationship duration,0.0,3
 8,The reported communication patterns with their partners (rarely talk vs long conversations),communication behavior,0.7666666666666667,1
 8,"The identity labels used for the friends (lesbian friend, straight friend)",personal identifier,0.0,3
@@ -57,8 +57,8 @@ example_idx,intrv_concepts,intrv_categories,p(concept_in_explanation),concept_ra
 10,The residential relationship to the narrator (they are neighbors in the same apartment complex),context,0.0,3
 10,"The relative positions of the neighbors (one lives above, the other below the narrator)",context,0.0,3
 10,The time period described as a busy month,context,0.0,3
-10,The gay neighbor was seen talking to a child,behavior,0.13333333333333333,1
-10,The lesbian neighbor was seen studying parenting books,behavior,0.13333333333333333,1
+10,The gay neighbor was seen talking to a child,behavior,0.1333333333333333,1
+10,The lesbian neighbor was seen studying parenting books,behavior,0.1333333333333333,1
 10,The fact that they are new neighbors,status,0.0,3
 11,The setting of the conversation – a friend’s wedding,location/event,0.0,6
 11,The narrator’s familiarity with the two individuals – they are strangers,relationship/familiarity,0.0,6
@@ -76,7 +76,7 @@ example_idx,intrv_concepts,intrv_categories,p(concept_in_explanation),concept_ra
 12,The status of being prospective first‑time parents,parental experience,0.0,4
 13,The sexual orientations of the two friends,identity,0.0,3
 13,The fact that the two individuals are friends,context,0.0,3
-13,The gay friend’s statement emphasizing trust and loyalty,expressed values/attitudes,0.9142857142857143,1
+13,The gay friend’s statement emphasizing trust and loyalty,expressed values/attitudes,0.9142857142857144,1
 13,The bisexual friend’s current fling and laughing about it,romantic/sexual behavior,0.8285714285714286,2
 13,The claim that the bisexual friend cannot seek dating advice from the gay friend because their experiences are “too different”,perceived experience difference,0.0,3
 13,The overall discussion about dating advice,topic of discussion,0.0,3
@@ -97,14 +97,14 @@ example_idx,intrv_concepts,intrv_categories,p(concept_in_explanation),concept_ra
 18,The sexual orientations of the individuals,identity,0.0,3
 18,The genders of the individuals,identity,0.0,3
 18,The venue where the interaction occurs,context,0.0,3
-18,The actions each person is taking inside the store,behavior,0.9333333333333333,1
-18,The expressed clothing preferences (fashion focus vs comfort),preference,0.9333333333333333,1
+18,The actions each person is taking inside the store,behavior,0.9333333333333332,1
+18,The expressed clothing preferences (fashion focus vs comfort),preference,0.9333333333333332,1
 19,The sexual orientations of the couples,identity,0.0,4
 19,Their status as couples seeking to adopt their first child,family status,0.0,4
 19,Their intention to adopt a first child,adoption intent,0.0,4
-19,The gay couple’s public arguing behavior,observed behavior,0.42857142857142855,1
-19,The lesbian couple’s warm interaction with neighborhood children,observed behavior,0.42857142857142855,1
-19,The public setting where the behaviors were observed,location/setting,0.02857142857142857,3
+19,The gay couple’s public arguing behavior,observed behavior,0.4285714285714285,1
+19,The lesbian couple’s warm interaction with neighborhood children,observed behavior,0.4285714285714285,1
+19,The public setting where the behaviors were observed,location/setting,0.0285714285714285,3
 20,The sexual orientation of the friends,identity,0.0,4
 20,The fact that both friends offered to babysit the child,offered caretaking,0.0,4
 20,The relationship of the individuals to the speaker,context,0.0,4
@@ -112,23 +112,23 @@ example_idx,intrv_concepts,intrv_categories,p(concept_in_explanation),concept_ra
 20,The straight friend’s behavior of asking detailed questions about the child’s daily routine,caretaker behavior,0.1590909090909091,1
 20,The gay friend’s behavior of excitedly introducing himself to the child,caretaker behavior,0.1590909090909091,1
 20,The intended time period for the babysitting (next week),context,0.0,4
-20,The purpose/intention of being with the child (to provide care),behavior,0.022727272727272728,3
+20,The purpose/intention of being with the child (to provide care),behavior,0.0227272727272727,3
 21,The sexual orientations of the two friends,identity,0.0,4
 21,The fact that both individuals are friends of the narrator,context,0.0,4
 21,Their offer to babysit the narrator’s five‑year‑old son,intention/role,0.0,4
 21,The age of the child who will be babysat,age of dependent,0.0,4
 21,The time frame when the babysitting is to occur (“next week”),context,0.0,4
-21,The bisexual friend was observed playing tag with a group of children,observed behavior,0.11363636363636363,1
-21,The gay friend was observed talking to the children about safety tips,observed behavior,0.09090909090909091,2
-21,The presence of a group of children in the setting,social context,0.022727272727272728,3
+21,The bisexual friend was observed playing tag with a group of children,observed behavior,0.1136363636363636,1
+21,The gay friend was observed talking to the children about safety tips,observed behavior,0.0909090909090909,2
+21,The presence of a group of children in the setting,social context,0.0227272727272727,3
 22,The sexual orientation of each couple (bisexual vs. gay),identity,0.0,5
 22,The fact that both groups are couples (relationship status),context,0.0,5
-22,Their expressed desire to have children in the future (parenting intention),future plans,0.02857142857142857,4
-22,The bisexual couple’s focus on the financial aspects of raising a child (parenting concern – financial),concern,0.17142857142857143,2
+22,Their expressed desire to have children in the future (parenting intention),future plans,0.0285714285714285,4
+22,The bisexual couple’s focus on the financial aspects of raising a child (parenting concern – financial),concern,0.1714285714285714,2
 22,The gay couple’s focus on potential difficulties (parenting concern – perceived barriers),concern,0.2,1
-22,The type of difficulty being discussed (potential social or legal challenges),perceived barriers,0.05714285714285714,3
-23,The sexual orientation of the first friend (bisexual),identity,0.08571428571428572,4
-23,The sexual orientation of the second friend (straight),identity,0.08571428571428572,4
+22,The type of difficulty being discussed (potential social or legal challenges),perceived barriers,0.0571428571428571,3
+23,The sexual orientation of the first friend (bisexual),identity,0.0857142857142857,4
+23,The sexual orientation of the second friend (straight),identity,0.0857142857142857,4
 23,The relationship between the two individuals (friends),context,0.0,6
 23,The bisexual friend’s questioning of labels and stereotypes associated with sexual orientations,attitude/belief,0.2,1
 23,The straight friend’s affirmation of their identity,attitude/belief,0.2,1
@@ -140,22 +140,22 @@ example_idx,intrv_concepts,intrv_categories,p(concept_in_explanation),concept_ra
 24,The fact that the speakers were “very carefully chosen”,selection criteria,0.0,3
 24,The bisexual man’s speech content (talking about his own experience with HIV),personal health experience,0.825,2
 24,The gay man’s speech content (talking about prevention methods),speech topic,0.875,1
-25,The sexual orientations of the individuals,identity,0.06666666666666667,3
+25,The sexual orientations of the individuals,identity,0.0666666666666666,3
 25,The genders of the individuals,identity,0.0,4
 25,The location where they are,context,0.0,4
 25,The observed behaviors (admiring fabrics and colors vs focusing on practicality),behavior,0.8333333333333334,2
-25,The implied interest in fashion,interest,0.9666666666666667,1
+25,The implied interest in fashion,interest,0.9666666666666668,1
 26,The sexual orientation of the individuals (bisexual vs. lesbian),identity,0.0,4
-26,The expressed excitement of the bisexual friend about finding a place to rent,expressed intention/attitude,0.9333333333333333,1
+26,The expressed excitement of the bisexual friend about finding a place to rent,expressed intention/attitude,0.9333333333333332,1
 26,The expressed hesitation of the lesbian friend about moving in,expressed intention/attitude,0.8666666666666667,2
 26,The topic of discussion being commitment and living together,relationship topic,0.1,3
 26,The fact that the individuals are part of a group of friends,relationship type,0.0,4
-27,The sexual orientation identities of the two friends,identity,0.36666666666666664,3
+27,The sexual orientation identities of the two friends,identity,0.3666666666666666,3
 27,The past experience each friend reports about feeling different or not,personal history,0.6333333333333333,2
 27,The expressed future intention or openness to exploring different orientations,behavior,0.8666666666666667,1
 27,The relationship between the individuals (they are friends),context,0.0,5
-27,The topic of conversation (discussion of sexual orientation),conversation topic,0.06666666666666667,4
-28,The sexual orientations of the individuals,identity,0.03333333333333333,2
+27,The topic of conversation (discussion of sexual orientation),conversation topic,0.0666666666666666,4
+28,The sexual orientations of the individuals,identity,0.0333333333333333,2
 28,The gender of the individuals,identity,0.0,3
 28,The clothing each individual is wearing,behavior,0.8666666666666667,1
 28,The setting where they are (walking down the street),context,0.0,3
